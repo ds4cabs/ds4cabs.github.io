@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CABS Workshop Submission</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0d1f3c;
+    --gold: #c9973a;
+    --gold-light: #f0c96b;
+    --cream: #faf8f4;
+    --slate: #4a5568;
+    --border: #ddd8ce;
+    --success: #2d6a4f;
+    --error: #b91c1c;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--navy);
+    min-height: 100vh;
+  }
+
+  /* Header */
+  .header {
+    background: var(--navy);
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .header::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 280px; height: 280px;
+    border-radius: 50%;
+    background: rgba(201,151,58,0.12);
+    pointer-events: none;
+  }
+  .header::after {
+    content: '';
+    position: absolute;
+    bottom: -40px; left: 30%;
+    width: 160px; height: 160px;
+    border-radius: 50%;
+    background: rgba(201,151,58,0.07);
+    pointer-events: none;
+  }
+  .header-inner {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 52px 32px 44px;
+    position: relative;
+    z-index: 1;
+  }
+  .cabs-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(201,151,58,0.18);
+    border: 1px solid rgba(201,151,58,0.4);
+    border-radius: 4px;
+    padding: 5px 12px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin-bottom: 20px;
+  }
+  .cabs-badge svg { flex-shrink: 0; }
+  h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(26px, 4vw, 38px);
+    font-weight: 400;
+    color: #fff;
+    line-height: 1.22;
+    margin-bottom: 12px;
+  }
+  h1 em {
+    font-style: italic;
+    color: var(--gold-light);
+  }
+  .header-sub {
+    font-size: 14px;
+    color: rgba(255,255,255,0.55);
+    font-weight: 300;
+    max-width: 480px;
+    line-height: 1.6;
+  }
+  .divider-gold {
+    width: 48px; height: 3px;
+    background: var(--gold);
+    border-radius: 2px;
+    margin: 18px 0 20px;
+  }
+
+  /* Progress bar */
+  .progress-bar {
+    height: 3px;
+    background: rgba(201,151,58,0.25);
+    position: relative;
+  }
+  .progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--gold), var(--gold-light));
+    transition: width 0.5s ease;
+    width: 0%;
+  }
+
+  /* Form body */
+  .form-wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 44px 32px 64px;
+  }
+
+  .section-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  .field-group {
+    margin-bottom: 28px;
+  }
+  .field-group.half-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  @media (max-width: 580px) {
+    .field-group.half-grid { grid-template-columns: 1fr; }
+  }
+
+  label {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--navy);
+    margin-bottom: 7px;
+    letter-spacing: 0.01em;
+  }
+  label .req {
+    color: var(--gold);
+    margin-left: 2px;
+  }
+  label .hint {
+    font-size: 11.5px;
+    font-weight: 400;
+    color: #888;
+    margin-left: 6px;
+  }
+
+  input[type="text"],
+  input[type="date"],
+  input[type="time"],
+  input[type="email"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 11px 14px;
+    border: 1.5px solid var(--border);
+    border-radius: 6px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    color: var(--navy);
+    background: #fff;
+    transition: border-color 0.18s, box-shadow 0.18s;
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+  }
+  input:focus, select:focus, textarea:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(201,151,58,0.12);
+  }
+  input.error, select.error, textarea.error {
+    border-color: var(--error);
+  }
+  .error-msg {
+    font-size: 11.5px;
+    color: var(--error);
+    margin-top: 5px;
+    display: none;
+  }
+  .error-msg.show { display: block; }
+
+  textarea {
+    resize: vertical;
+    min-height: 110px;
+    line-height: 1.55;
+  }
+
+  /* Select arrow */
+  .select-wrap {
+    position: relative;
+  }
+  .select-wrap::after {
+    content: '';
+    position: absolute;
+    right: 14px; top: 50%;
+    transform: translateY(-50%);
+    width: 0; height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #999;
+    pointer-events: none;
+  }
+
+  /* Checkbox options */
+  .options-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 2px;
+  }
+  .option-chip {
+    position: relative;
+  }
+  .option-chip input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .option-chip label {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 9px 16px;
+    border: 1.5px solid var(--border);
+    border-radius: 6px;
+    font-size: 13.5px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.15s;
+    background: #fff;
+    user-select: none;
+    margin: 0;
+  }
+  .option-chip label::before {
+    content: '';
+    width: 16px; height: 16px;
+    border: 1.5px solid var(--border);
+    border-radius: 3px;
+    transition: all 0.15s;
+    flex-shrink: 0;
+    background: #fff;
+  }
+  .option-chip input:checked + label {
+    border-color: var(--gold);
+    background: rgba(201,151,58,0.07);
+    color: var(--navy);
+    font-weight: 500;
+  }
+  .option-chip input:checked + label::before {
+    background: var(--gold);
+    border-color: var(--gold);
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 4l3 3 5-6' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 10px;
+  }
+
+  /* Character counter */
+  .char-counter {
+    font-size: 11px;
+    color: #aaa;
+    text-align: right;
+    margin-top: 5px;
+  }
+  .char-counter.near { color: var(--gold); }
+  .char-counter.over { color: var(--error); }
+
+  /* Notice box */
+  .notice {
+    background: rgba(201,151,58,0.08);
+    border-left: 3px solid var(--gold);
+    border-radius: 0 6px 6px 0;
+    padding: 12px 16px;
+    font-size: 12.5px;
+    color: var(--slate);
+    line-height: 1.6;
+    margin-bottom: 28px;
+  }
+  .notice strong { color: var(--navy); }
+
+  /* Submit button */
+  .submit-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 40px;
+    padding-top: 32px;
+    border-top: 1px solid var(--border);
+  }
+  .submit-note {
+    font-size: 12px;
+    color: #999;
+    max-width: 300px;
+    line-height: 1.5;
+  }
+  .btn-submit {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 13px 32px;
+    background: var(--navy);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    letter-spacing: 0.02em;
+    transition: background 0.18s, transform 0.12s;
+    position: relative;
+    overflow: hidden;
+  }
+  .btn-submit::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, transparent 0%, rgba(201,151,58,0.15) 100%);
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  .btn-submit:hover { background: #162d55; }
+  .btn-submit:hover::before { opacity: 1; }
+  .btn-submit:active { transform: scale(0.98); }
+  .btn-submit svg { transition: transform 0.2s; }
+  .btn-submit:hover svg { transform: translateX(3px); }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* Success state */
+  .success-screen {
+    display: none;
+    text-align: center;
+    padding: 80px 32px;
+  }
+  .success-icon {
+    width: 64px; height: 64px;
+    background: rgba(45,106,79,0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px;
+  }
+  .success-screen h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 28px;
+    color: var(--navy);
+    margin-bottom: 10px;
+  }
+  .success-screen p {
+    color: var(--slate);
+    font-size: 14px;
+    line-height: 1.7;
+    max-width: 400px;
+    margin: 0 auto 28px;
+  }
+  .btn-reset {
+    padding: 10px 24px;
+    border: 1.5px solid var(--navy);
+    border-radius: 6px;
+    background: transparent;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--navy);
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .btn-reset:hover { background: var(--navy); color: #fff; }
+
+  /* Submission preview */
+  .preview-card {
+    background: #fff;
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    padding: 24px;
+    margin-top: 28px;
+    text-align: left;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .preview-card .preview-label {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  .preview-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 8px;
+    font-size: 13px;
+  }
+  .preview-row .pk { color: var(--slate); min-width: 100px; }
+  .preview-row .pv { color: var(--navy); font-weight: 500; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-inner">
+    <div class="cabs-badge">
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.4"/><path d="M4 6h4M6 4v4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+      CABS · Workshop Request
+    </div>
+    <h1>Submit a <em>Workshop</em><br>for CABS Community</h1>
+    <div class="divider-gold"></div>
+    <p class="header-sub">Chinese American Bioscience Society — use this form to request a workshop listing, flyer, and LinkedIn post.</p>
+  </div>
+</div>
+<div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+
+<div class="form-wrap" id="formWrap">
+
+  <div class="notice">
+    <strong>Lead times:</strong> Flyer requests require at least <strong>3 days</strong> before the event. LinkedIn posts require at least <strong>1 day</strong> before the event.
+  </div>
+
+  <form id="workshopForm" novalidate>
+
+    <!-- Section 1: Workshop Details -->
+    <div class="section-label">Workshop Details</div>
+
+    <div class="field-group">
+      <label for="topicName">Workshop Topic / Name <span class="req">*</span></label>
+      <input type="text" id="topicName" name="topicName"
+        placeholder="e.g. AI-Driven Target Discovery: From Genomics to Therapeutic Hypotheses"
+        maxlength="140" />
+      <div class="char-counter" id="topicCounter">0 / 140</div>
+      <div class="error-msg" id="topicNameErr">Please enter a workshop topic.</div>
+    </div>
+
+    <div class="field-group">
+      <label for="description">What does this workshop cover? <span class="req">*</span>
+        <span class="hint">Used in LinkedIn post & flyer</span>
+      </label>
+      <textarea id="description" name="description"
+        placeholder="e.g. This workshop introduces how AI and data science are transforming early-stage drug discovery, with a focus on target identification and prioritization..."
+        maxlength="800"></textarea>
+      <div class="char-counter" id="descCounter">0 / 800</div>
+      <div class="error-msg" id="descriptionErr">Please describe what the workshop covers.</div>
+    </div>
+
+    <!-- Section 2: Date & Time -->
+    <div class="section-label" style="margin-top:12px;">Date &amp; Time</div>
+
+    <div class="field-group half-grid">
+      <div>
+        <label for="eventDate">Event Date <span class="req">*</span></label>
+        <input type="date" id="eventDate" name="eventDate" />
+        <div class="error-msg" id="eventDateErr">Please select a date.</div>
+      </div>
+      <div>
+        <label for="eventTime">Time <span class="hint">(Pacific Time)</span> <span class="req">*</span></label>
+        <input type="time" id="eventTime" name="eventTime" />
+        <div class="error-msg" id="eventTimeErr">Please select a time.</div>
+      </div>
+    </div>
+
+    <!-- Section 3: Speaker -->
+    <div class="section-label" style="margin-top:12px;">Speaker / Host</div>
+
+    <div class="field-group half-grid">
+      <div>
+        <label for="speakerName">Speaker's Name <span class="hint">(optional)</span></label>
+        <input type="text" id="speakerName" name="speakerName" placeholder="e.g. Shicheng Guo" />
+      </div>
+      <div>
+        <label for="speakerSlack">Slack Username <span class="hint">(optional)</span></label>
+        <input type="text" id="speakerSlack" name="speakerSlack" placeholder="e.g. @shicheng.guo" />
+      </div>
+    </div>
+
+    <div class="field-group">
+      <label for="speakerTitle">Speaker's Title / Affiliation <span class="hint">(optional)</span></label>
+      <input type="text" id="speakerTitle" name="speakerTitle"
+        placeholder="e.g. Senior Director, Translational Genetics — Arrowhead Pharmaceuticals" />
+    </div>
+
+    <!-- Section 4: Deliverables -->
+    <div class="section-label" style="margin-top:12px;">Deliverables Needed</div>
+
+    <div class="field-group">
+      <label>Do you need a <strong>Flyer</strong>? <span class="hint">(≥3 days notice required)</span></label>
+      <div class="options-grid">
+        <div class="option-chip">
+          <input type="checkbox" id="flyerYes" name="flyer" value="Yes">
+          <label for="flyerYes">Yes, I need a flyer</label>
+        </div>
+        <div class="option-chip">
+          <input type="checkbox" id="flyerNo" name="flyer" value="No">
+          <label for="flyerNo">No flyer needed</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="field-group">
+      <label>Do you need a <strong>LinkedIn Post</strong>? <span class="hint">(≥1 day notice required)</span></label>
+      <div class="options-grid">
+        <div class="option-chip">
+          <input type="checkbox" id="linkedinYes" name="linkedin" value="Yes">
+          <label for="linkedinYes">Yes, post to LinkedIn</label>
+        </div>
+        <div class="option-chip">
+          <input type="checkbox" id="linkedinNo" name="linkedin" value="No">
+          <label for="linkedinNo">Not needed</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 5: Submitter -->
+    <div class="section-label" style="margin-top:12px;">Your Contact Info</div>
+
+    <div class="field-group half-grid">
+      <div>
+        <label for="submitterName">Your Name <span class="req">*</span></label>
+        <input type="text" id="submitterName" name="submitterName" placeholder="Full name" />
+        <div class="error-msg" id="submitterNameErr">Please enter your name.</div>
+      </div>
+      <div>
+        <label for="submitterEmail">Your Email <span class="req">*</span></label>
+        <input type="email" id="submitterEmail" name="submitterEmail" placeholder="you@email.com" />
+        <div class="error-msg" id="submitterEmailErr">Please enter a valid email.</div>
+      </div>
+    </div>
+
+    <div class="field-group">
+      <label for="notes">Additional Notes <span class="hint">(optional)</span></label>
+      <textarea id="notes" name="notes" style="min-height:80px"
+        placeholder="Any special requests, co-speakers, registration links, or context for the CABS team..."></textarea>
+    </div>
+
+    <div class="submit-row">
+      <p class="submit-note">Fields marked <span style="color:var(--gold)">*</span> are required. Your submission goes to the CABS IT &amp; Data Science Committee.</p>
+      <button type="submit" class="btn-submit">
+        Submit Request
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+
+  </form>
+</div>
+
+<!-- Success screen -->
+<div class="success-screen" id="successScreen">
+  <div class="success-icon">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M5 14.5l6 6 12-12" stroke="#2d6a4f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </div>
+  <h2>Workshop Submitted!</h2>
+  <p>Thanks! The CABS team will review your request and follow up via email. Check your inbox for a confirmation.</p>
+  <div class="preview-card" id="previewCard">
+    <div class="preview-label">Submission Summary</div>
+  </div>
+  <br>
+  <button class="btn-reset" onclick="resetForm()">Submit Another</button>
+</div>
+
+<script>
+  // Progress tracking
+  const requiredFields = ['topicName','description','eventDate','eventTime','submitterName','submitterEmail'];
+  function updateProgress() {
+    let filled = 0;
+    requiredFields.forEach(id => {
+      const el = document.getElementById(id);
+      if (el && el.value.trim()) filled++;
+    });
+    document.getElementById('progressFill').style.width = (filled / requiredFields.length * 100) + '%';
+  }
+  document.querySelectorAll('input, textarea, select').forEach(el => {
+    el.addEventListener('input', updateProgress);
+  });
+
+  // Character counters
+  function setupCounter(fieldId, counterId, max) {
+    const field = document.getElementById(fieldId);
+    const counter = document.getElementById(counterId);
+    field.addEventListener('input', () => {
+      const len = field.value.length;
+      counter.textContent = len + ' / ' + max;
+      counter.className = 'char-counter' + (len > max * 0.9 ? (len >= max ? ' over' : ' near') : '');
+    });
+  }
+  setupCounter('topicName', 'topicCounter', 140);
+  setupCounter('description', 'descCounter', 800);
+
+  // Mutual exclusion for chips
+  function setupMutualExclusion(name) {
+    const boxes = document.querySelectorAll(`input[name="${name}"]`);
+    boxes.forEach(b => b.addEventListener('change', () => {
+      if (b.checked) boxes.forEach(o => { if (o !== b) o.checked = false; });
+    }));
+  }
+  setupMutualExclusion('flyer');
+  setupMutualExclusion('linkedin');
+
+  // Validation
+  function validate() {
+    let ok = true;
+    const checks = [
+      { id: 'topicName', errId: 'topicNameErr', test: v => v.trim().length > 2 },
+      { id: 'description', errId: 'descriptionErr', test: v => v.trim().length > 10 },
+      { id: 'eventDate', errId: 'eventDateErr', test: v => !!v },
+      { id: 'eventTime', errId: 'eventTimeErr', test: v => !!v },
+      { id: 'submitterName', errId: 'submitterNameErr', test: v => v.trim().length > 1 },
+      { id: 'submitterEmail', errId: 'submitterEmailErr', test: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) },
+    ];
+    checks.forEach(({ id, errId, test }) => {
+      const el = document.getElementById(id);
+      const err = document.getElementById(errId);
+      const pass = test(el.value);
+      el.classList.toggle('error', !pass);
+      err.classList.toggle('show', !pass);
+      if (!pass) ok = false;
+    });
+    return ok;
+  }
+
+  // ─── FORMSPREE ENDPOINT ───────────────────────────────────────────────────
+  // 1. Go to https://formspree.io → New Form → copy your form ID
+  // 2. Replace YOUR_FORM_ID below with the real ID (looks like "xpwzabcd")
+  const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID';
+  // ─────────────────────────────────────────────────────────────────────────
+
+  document.getElementById('workshopForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    if (!validate()) return;
+
+    const btn = document.querySelector('.btn-submit');
+    const originalHTML = btn.innerHTML;
+
+    // Collect data
+    const data = {
+      'Workshop Topic':     document.getElementById('topicName').value,
+      'Description':        document.getElementById('description').value,
+      'Event Date':         document.getElementById('eventDate').value,
+      'Event Time (PT)':    document.getElementById('eventTime').value,
+      'Speaker Name':       document.getElementById('speakerName').value || '—',
+      'Speaker Slack':      document.getElementById('speakerSlack').value || '—',
+      'Speaker Title':      document.getElementById('speakerTitle').value || '—',
+      'Flyer Needed':       [...document.querySelectorAll('input[name="flyer"]:checked')].map(x=>x.value).join(', ') || '—',
+      'LinkedIn Post':      [...document.querySelectorAll('input[name="linkedin"]:checked')].map(x=>x.value).join(', ') || '—',
+      'Submitted By':       document.getElementById('submitterName').value,
+      'email':              document.getElementById('submitterEmail').value,  // Formspree uses "email" for reply-to
+      'Notes':              document.getElementById('notes').value || '—',
+    };
+
+    // Loading state
+    btn.disabled = true;
+    btn.innerHTML = `<svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="animation:spin 0.8s linear infinite"><path d="M8 2a6 6 0 1 0 6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg> Sending…`;
+
+    try {
+      const res = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+
+      if (!res.ok) throw new Error('Server error ' + res.status);
+
+      // Build success preview
+      const rows = [
+        ['Topic',        data['Workshop Topic']],
+        ['Date',         data['Event Date'] + ' at ' + data['Event Time (PT)'] + ' PT'],
+        ['Speaker',      data['Speaker Name']],
+        ['Flyer',        data['Flyer Needed']],
+        ['LinkedIn',     data['LinkedIn Post']],
+        ['Submitted by', data['Submitted By'] + ' · ' + data['email']],
+      ];
+      const pc = document.getElementById('previewCard');
+      pc.innerHTML = '<div class="preview-label">Submission Summary</div>' +
+        rows.map(([k,v]) => `<div class="preview-row"><span class="pk">${k}</span><span class="pv">${v}</span></div>`).join('');
+
+      document.getElementById('formWrap').style.display = 'none';
+      document.getElementById('successScreen').style.display = 'block';
+      document.getElementById('progressFill').style.width = '100%';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    } catch (err) {
+      // Show inline error — don't lose the form
+      btn.disabled = false;
+      btn.innerHTML = originalHTML;
+      let errBanner = document.getElementById('submitError');
+      if (!errBanner) {
+        errBanner = document.createElement('p');
+        errBanner.id = 'submitError';
+        errBanner.style.cssText = 'color:#b91c1c;font-size:13px;margin-top:12px;text-align:right';
+        btn.parentElement.appendChild(errBanner);
+      }
+      errBanner.textContent = '⚠ Submission failed — check your Formspree endpoint or try again.';
+    }
+  });
+
+  function resetForm() {
+    document.getElementById('workshopForm').reset();
+    document.querySelectorAll('.error').forEach(el => el.classList.remove('error'));
+    document.querySelectorAll('.error-msg').forEach(el => el.classList.remove('show'));
+    document.getElementById('topicCounter').textContent = '0 / 140';
+    document.getElementById('descCounter').textContent = '0 / 800';
+    document.getElementById('progressFill').style.width = '0%';
+    document.getElementById('successScreen').style.display = 'none';
+    document.getElementById('formWrap').style.display = 'block';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  // Set today as min date
+  const today = new Date().toISOString().split('T')[0];
+  document.getElementById('eventDate').min = today;
+</script>
+</body>
+</html>
