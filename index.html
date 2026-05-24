@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DS4CABS — Data Science for the Chinese American Biopharmaceutical Society</title>
+  <meta name="description" content="Open-source data science, AI agents, and educational resources for biopharma. The DS4CABS initiative of the Chinese American Biopharmaceutical Society (CABS)." />
+  <meta name="theme-color" content="#0b1020" />
+
+  <meta property="og:title" content="DS4CABS — Data Science for Biopharma" />
+  <meta property="og:description" content="100+ open-source projects across AI agents, RAG, clinical trials, target discovery, and pharma analytics — built by the CABS community." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ds4cabs.github.io/" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%2310b981'/%3E%3Cstop offset='1' stop-color='%236366f1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='url(%23g)'/%3E%3Ctext x='50' y='62' font-family='Inter,Arial' font-size='42' font-weight='800' text-anchor='middle' fill='white'%3EDS%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+
+<!-- ============= NAV ============= -->
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="#top" aria-label="DS4CABS home">
+      <span class="logo" aria-hidden="true">
+        <svg viewBox="0 0 100 100" width="34" height="34">
+          <defs>
+            <linearGradient id="lg" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0" stop-color="#10b981"/>
+              <stop offset="1" stop-color="#6366f1"/>
+            </linearGradient>
+          </defs>
+          <rect width="100" height="100" rx="22" fill="url(#lg)"/>
+          <text x="50" y="62" font-family="Inter,Arial" font-size="42" font-weight="800" text-anchor="middle" fill="white">DS</text>
+        </svg>
+      </span>
+      <span class="brand-text">
+        <strong>DS4CABS</strong>
+        <small>Data Science for Biopharma</small>
+      </span>
+    </a>
+
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#featured">Featured</a>
+      <a href="#interns">2026 Cohort</a>
+      <a href="#projects">Projects</a>
+      <a href="#learn">Learn</a>
+      <a href="#about">About</a>
+      <a class="btn btn-ghost" href="https://github.com/ds4cabs" target="_blank" rel="noopener">GitHub ↗</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<!-- ============= HERO ============= -->
+<section id="top" class="hero">
+  <div class="hero-bg" aria-hidden="true">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+    <svg class="grid-svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+      <defs>
+        <pattern id="grid" width="6" height="6" patternUnits="userSpaceOnUse">
+          <path d="M 6 0 L 0 0 0 6" fill="none" stroke="currentColor" stroke-width="0.08"/>
+        </pattern>
+      </defs>
+      <rect width="100" height="100" fill="url(#grid)"/>
+    </svg>
+  </div>
+
+  <div class="container hero-inner">
+    <div class="hero-copy">
+      <span class="eyebrow">
+        <span class="dot"></span>
+        Chinese American Biopharmaceutical Society · San Francisco
+      </span>
+      <h1 class="display">
+        Open data science<br/>
+        for the future of <span class="grad-text">biopharma</span>.
+      </h1>
+      <p class="lede">
+        DS4CABS builds and shares open-source tools, AI agents, and learning resources for
+        target discovery, clinical trials, regulatory affairs, and pharma analytics —
+        powered by a global community of scientists, engineers, and interns.
+      </p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#projects">Explore projects</a>
+        <a class="btn btn-outline" href="#interns">Meet the 2026 cohort</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong id="statRepos">100+</strong><span>repositories</span></div>
+        <div><strong>9</strong><span>2026 intern projects</span></div>
+        <div><strong>20+</strong><span>DS4 functional tracks</span></div>
+        <div><strong>72+</strong><span>followers</span></div>
+      </div>
+    </div>
+
+    <div class="hero-card" aria-hidden="true">
+      <div class="terminal">
+        <div class="term-bar"><span></span><span></span><span></span><em>~/ds4cabs</em></div>
+        <pre class="term-body"><code><span class="c-com"># clone the latest from DS4CABS</span>
+$ gh repo clone <span class="c-str">ds4cabs/CompassAgent</span>
+$ cd CompassAgent &amp;&amp; uv sync
+$ python -m compass <span class="c-flag">--target</span> EGFR \
+    <span class="c-flag">--indication</span> NSCLC \
+    <span class="c-flag">--rag</span> open_targets,pubmed
+
+<span class="c-com"># → 12 candidates ranked, 3 with novel MoA</span>
+<span class="c-ok">✓ report saved to ./out/compass_report.md</span></code></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============= FEATURED ============= -->
+<section id="featured" class="section">
+  <div class="container">
+    <header class="section-head">
+      <h2>Featured projects</h2>
+      <p>Pinned by the community — the work most active right now.</p>
+    </header>
+
+    <div class="cards cards-featured" id="featuredCards"></div>
+  </div>
+</section>
+
+<!-- ============= INTERN COHORT 2026 ============= -->
+<section id="interns" class="section section-alt">
+  <div class="container">
+    <header class="section-head">
+      <span class="chip chip-accent">CABS 2026 Summer Internship</span>
+      <h2>The 2026 intern cohort</h2>
+      <p>Nine project teams shipping open-source work across discovery, trials, markets, and policy.</p>
+    </header>
+    <div class="cards cards-interns" id="internCards"></div>
+    <div class="see-more">
+      <a class="link-arrow" href="https://github.com/ds4cabs/CABS-Data-Science-Summer-Internship-Program" target="_blank" rel="noopener">
+        About the internship program →
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============= PROJECTS BROWSER ============= -->
+<section id="projects" class="section">
+  <div class="container">
+    <header class="section-head">
+      <h2>All projects</h2>
+      <p>Filter and search across the entire DS4CABS catalog.</p>
+    </header>
+
+    <div class="toolbar">
+      <div class="search">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        <input id="searchInput" type="search" placeholder="Search projects, e.g. RAG, agent, trials, NLP…" />
+      </div>
+      <div class="filters" id="filters"></div>
+    </div>
+
+    <div class="cards cards-projects" id="projectCards"></div>
+    <p class="empty" id="emptyState" hidden>No projects match that filter.</p>
+  </div>
+</section>
+
+<!-- ============= LEARN ============= -->
+<section id="learn" class="section section-alt">
+  <div class="container">
+    <header class="section-head">
+      <h2>Learn &amp; build with us</h2>
+      <p>Workshops and curricula for biologists, clinicians, and data scientists.</p>
+    </header>
+
+    <div class="learn-grid">
+      <a class="learn-card" href="https://github.com/ds4cabs/cabs-workshop-llm-agents" target="_blank" rel="noopener">
+        <div class="learn-icon icon-1">⚙️</div>
+        <h3>LLM Agents Workshop</h3>
+        <p>Build RAG pipelines, tool-calling agents, and local LLM deployments for biology.</p>
+        <span class="link-arrow">Open materials →</span>
+      </a>
+      <a class="learn-card" href="https://github.com/ds4cabs/cabs-ai-digital-productivity-series" target="_blank" rel="noopener">
+        <div class="learn-icon icon-2">🧠</div>
+        <h3>AI Digital Productivity Series</h3>
+        <p>Practical AI workflows for pharma teams: writing, analysis, automation.</p>
+        <span class="link-arrow">View series →</span>
+      </a>
+      <a class="learn-card" href="https://github.com/ds4cabs/CABS-Data-Science-Summer-Internship-Program" target="_blank" rel="noopener">
+        <div class="learn-icon icon-3">🎓</div>
+        <h3>Summer &amp; Winter Internships</h3>
+        <p>Mentored open-source projects for students — clinical, computational, commercial.</p>
+        <span class="link-arrow">Apply / learn more →</span>
+      </a>
+      <a class="learn-card" href="https://github.com/ds4cabs/CABS-R-Graph-Gallery" target="_blank" rel="noopener">
+        <div class="learn-icon icon-4">📊</div>
+        <h3>R Graph Gallery</h3>
+        <p>Reproducible R visualizations for clinical, biostatistical, and market data.</p>
+        <span class="link-arrow">Browse gallery →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============= ABOUT ============= -->
+<section id="about" class="section">
+  <div class="container about-grid">
+    <div>
+      <h2>About DS4CABS</h2>
+      <p class="lede">
+        DS4CABS is the data-science initiative of the
+        <a href="https://www.cabsweb.org/" target="_blank" rel="noopener">Chinese American Biopharmaceutical Society</a>
+        — a non-profit professional community headquartered in the San Francisco Bay Area.
+      </p>
+      <p>
+        Our open-source work spans the full biopharma value chain: from
+        <strong>target discovery</strong> and <strong>knockout analysis</strong>, to
+        <strong>clinical trial intelligence</strong> and <strong>regulatory analytics</strong>,
+        to <strong>market access</strong> and <strong>medical affairs</strong>. We publish
+        code, datasets, and educational materials so that the next generation of
+        biopharma scientists can move faster — together.
+      </p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://github.com/ds4cabs" target="_blank" rel="noopener">Follow on GitHub</a>
+        <a class="btn btn-outline" href="https://www.cabsweb.org/" target="_blank" rel="noopener">Visit cabsweb.org</a>
+      </div>
+    </div>
+
+    <aside class="about-side">
+      <h3>What we ship</h3>
+      <ul class="tag-list">
+        <li>🤖 AI agents (Compass, TrialSage, StrategiX, DataCraft, TargetScout…)</li>
+        <li>📚 RAG over scientific literature &amp; FDA documents</li>
+        <li>🧬 Genomics &amp; knockout discovery tools</li>
+        <li>🏥 Clinical trial atlas &amp; OpenTrial pipelines</li>
+        <li>📈 Pharma pricing, market access &amp; HEOR</li>
+        <li>🎓 Workshops, internships, &amp; R/Python tutorials</li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<!-- ============= FOOTER ============= -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div>
+      <div class="brand">
+        <span class="logo">
+          <svg viewBox="0 0 100 100" width="28" height="28">
+            <rect width="100" height="100" rx="22" fill="url(#lg)"/>
+            <text x="50" y="62" font-family="Inter,Arial" font-size="42" font-weight="800" text-anchor="middle" fill="white">DS</text>
+          </svg>
+        </span>
+        <span class="brand-text"><strong>DS4CABS</strong><small>Open data science for biopharma</small></span>
+      </div>
+      <p class="footer-note">
+        © <span id="year"></span> Chinese American Biopharmaceutical Society. All project code is
+        released under the licenses of the individual repositories.
+      </p>
+    </div>
+    <nav aria-label="Footer">
+      <h4>Explore</h4>
+      <a href="#featured">Featured</a>
+      <a href="#interns">2026 Cohort</a>
+      <a href="#projects">Projects</a>
+      <a href="#learn">Learn</a>
+    </nav>
+    <nav aria-label="External">
+      <h4>Community</h4>
+      <a href="https://github.com/ds4cabs" target="_blank" rel="noopener">GitHub Org</a>
+      <a href="https://www.cabsweb.org/" target="_blank" rel="noopener">CABS Website</a>
+      <a href="https://github.com/ds4cabs/CABS-Data-Science-Summer-Internship-Program" target="_blank" rel="noopener">Internships</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="assets/js/projects.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
