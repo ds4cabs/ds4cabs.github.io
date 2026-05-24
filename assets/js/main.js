@@ -3,7 +3,39 @@
 // powers search + category filtering, mobile nav, and theme toggle.
 
 (function () {
-  const data = window.DS4CABS_PROJECTS || { featured: [], interns: [], mentors: [], leadership: [], all: [], filters: [] };
+  const data = window.DS4CABS_PROJECTS || { featured: [], cohorts: {}, all: [], filters: [] };
+
+  // ---------- current cohort ----------
+  // The "current" cohort is simply the highest year-key in data.cohorts.
+  // To roll the site over to a new year, add cohorts[year+1] in projects.js.
+  function pickCohort(cohorts) {
+    const years = Object.keys(cohorts || {}).map(n => +n).filter(Number.isFinite);
+    if (years.length === 0) return { year: new Date().getFullYear(), dates: {}, mentors: [], interns: [], leadership: [] };
+    const latest = Math.max(...years);
+    return cohorts[latest];
+  }
+  const cohort = pickCohort(data.cohorts);
+
+  // Resolve a dotted path like "dates.window" against the current cohort.
+  function resolvePath(obj, path) {
+    return path.split(".").reduce((o, k) => (o == null ? o : o[k]), obj);
+  }
+
+  // Walk the DOM and fill in template attributes:
+  //   <span data-year>…</span>                  → cohort.year
+  //   <span data-cohort="dates.window">…</span> → resolved value
+  //   <a    data-tpl-href="…{year}…">           → href with {year} replaced
+  function applyTemplates(root = document) {
+    root.querySelectorAll("[data-year]").forEach(n => { n.textContent = String(cohort.year); });
+    root.querySelectorAll("[data-cohort]").forEach(n => {
+      const v = resolvePath(cohort, n.getAttribute("data-cohort"));
+      if (v != null) n.textContent = String(v);
+    });
+    root.querySelectorAll("[data-tpl-href]").forEach(n => {
+      const tpl = n.getAttribute("data-tpl-href");
+      if (tpl) n.setAttribute("href", tpl.replace(/\{year\}/g, String(cohort.year)));
+    });
+  }
 
   // ---------- helpers ----------
   const $ = (sel, ctx = document) => ctx.querySelector(sel);
@@ -144,9 +176,12 @@
   }
 
   // ---------- people grids (mentors / interns / leadership) ----------
-  renderPeople(data.mentors,    "mentorCards",     "mentorsEmpty");
-  renderPeople(data.interns,    "internCards",     "internsEmpty");
-  renderPeople(data.leadership, "leadershipCards", "leadershipEmpty");
+  renderPeople(cohort.mentors,    "mentorCards",     "mentorsEmpty");
+  renderPeople(cohort.interns,    "internCards",     "internsEmpty");
+  renderPeople(cohort.leadership, "leadershipCards", "leadershipEmpty");
+
+  // ---------- year / date template substitution ----------
+  applyTemplates(document);
 
   // ---------- filters + project cards ----------
   const filtersEl = $("#filters");
@@ -242,11 +277,11 @@
   // ---------- hero stats from data ----------
   const setStat = (id, text) => { const n = $("#" + id); if (n) n.textContent = text; };
   setStat("statRepos",   data.all.length + "+");
-  // count distinct intern projects, not individual interns
+  // count distinct intern projects in the current cohort
   const internProjects = new Set(
-    (data.interns || []).map(p => p.project && p.project.name).filter(Boolean)
+    (cohort.interns || []).map(p => p.project && p.project.name).filter(Boolean)
   ).size;
-  setStat("statInterns", String(internProjects || (data.interns || []).length));
+  setStat("statInterns", String(internProjects || (cohort.interns || []).length));
   const ds4Count = new Set(
     data.all
       .filter(p => p.cat === "ds4" || /^ds4[A-Z]/.test(p.name))

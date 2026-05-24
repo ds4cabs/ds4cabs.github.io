@@ -55,11 +55,33 @@ window.DS4CABS_PROJECTS = {
   ],
 
   // ====================================================================
-  // PEOPLE
+  // COHORTS — year-keyed program data
   // --------------------------------------------------------------------
-  // Schema (all fields except `name` are optional — missing fields are
-  // simply omitted from the rendered card; a missing `headshot` falls back
-  // to a CSS-drawn initials avatar).
+  // The site automatically displays the highest year-key found in
+  // `cohorts`. To roll over to a new year, just add a new entry
+  // (e.g. `2027: { ... }`) and the page flips: titles, dates, key facts,
+  // and the mentor / intern / leadership grids all read from that block.
+  //
+  // Per-year shape:
+  //
+  //   {
+  //     year:        2026,
+  //     dates: {
+  //       open:      "Jan 1, 2026",
+  //       deadline:  "May 15, 2026",
+  //       start:     "Jun 15, 2026",
+  //       end:       "Aug 15, 2026",
+  //       window:    "Jun 15 – Aug 15, 2026"
+  //     },
+  //     target_size: "20+",                    // shown in the facts strip
+  //     mentors:     [ /* person entries */ ],
+  //     interns:     [ /* person entries */ ],
+  //     leadership:  [ /* person entries */ ]
+  //   }
+  //
+  // Person entry schema (all fields except `name` are optional — missing
+  // fields are skipped in the rendered card; a missing `headshot` falls
+  // back to a CSS-drawn initials avatar):
   //
   //   {
   //     name:        "Jane Doe",
@@ -76,52 +98,75 @@ window.DS4CABS_PROJECTS = {
   //     org_role:    "Operations Co-Lead"                    // leadership only
   //   }
   //
-  // Drop new entries into the arrays below. Drop headshot JPGs into
-  // assets/img/people/ (see that folder's README for naming).
+  // Drop headshot JPGs into assets/img/people/ (see that folder's README
+  // for naming).
   // ====================================================================
+  cohorts: {
+    2026: {
+      year: 2026,
+      dates: {
+        open:     "Jan 1, 2026",
+        deadline: "May 15, 2026",
+        start:    "Jun 15, 2026",
+        end:      "Aug 15, 2026",
+        window:   "Jun 15 – Aug 15, 2026"
+      },
+      target_size: "20+",
 
-  // 2026 mentors — INDUSTRY & ACADEMIC EXPERTS guiding the cohort 1:1.
-  // (empty until populated — site shows a "coming soon / become a mentor" state)
-  mentors: [
-    // {
-    //   name: "Jane Doe",
-    //   affiliation: "Stanford University",
-    //   role: "Postdoc, Computational Biology",
-    //   interests: ["single-cell genomics", "causal inference"],
-    //   headshot: "assets/img/people/jane-doe.jpg",
-    //   linkedin: "https://www.linkedin.com/in/janedoe",
-    //   github: "https://github.com/janedoe"
+      // Industry & academic experts guiding the cohort 1:1.
+      // (Empty until populated — site shows a "become a mentor" CTA.)
+      mentors: [
+        // {
+        //   name: "Jane Doe",
+        //   affiliation: "Stanford University",
+        //   role: "Postdoc, Computational Biology",
+        //   interests: ["single-cell genomics", "causal inference"],
+        //   headshot: "assets/img/people/jane-doe.jpg",
+        //   linkedin: "https://www.linkedin.com/in/janedoe",
+        //   github: "https://github.com/janedoe"
+        // }
+      ],
+
+      // The "Open*" project cohort. One entry per intern; multi-author
+      // projects are split into individual entries that share a `project`.
+      interns: [
+        { name: "Reuben Addison", project: { name: "OpenTrial",      url: "https://github.com/ds4cabs/OpenTrial",      desc: "Open infrastructure for clinical trial intelligence." } },
+        { name: "Xiaoxue Li",     project: { name: "OpenTarget",     url: "https://github.com/ds4cabs/OpenTarget",     desc: "Open-source target discovery & prioritization." } },
+        { name: "Shucheng",       project: { name: "CausalSentinel", url: "https://github.com/ds4cabs/CausalSentinel", desc: "Causal-inference monitoring for real-world evidence." } },
+        { name: "Natalie",        project: { name: "CausalSentinel", url: "https://github.com/ds4cabs/CausalSentinel", desc: "Causal-inference monitoring for real-world evidence." } },
+        { name: "Shawn Phan",     project: { name: "OpenLedger",     url: "https://github.com/ds4cabs/OpenLedger",     desc: "Transparent ledger for pharma data provenance." } },
+        { name: "Kening Li",      project: { name: "OpenPulse",      url: "https://github.com/ds4cabs/OpenPulse",      desc: "Real-time signal monitoring across pharma data streams." } },
+        { name: "Jason Zhou",     project: { name: "OpenMarket",     url: "https://github.com/ds4cabs/OpenMarket",     desc: "Open market-access analytics for biopharma." } },
+        { name: "Beyza",          project: { name: "OpenRepurpose",  url: "https://github.com/ds4cabs/OpenRepurpose",  desc: "Drug-repurposing pipeline with biomedical literature integration." } },
+        { name: "Chin Hung",      project: { name: "OpenRepurpose",  url: "https://github.com/ds4cabs/OpenRepurpose",  desc: "Drug-repurposing pipeline with biomedical literature integration." } },
+        { name: "Christina",      project: { name: "OpenRepurpose",  url: "https://github.com/ds4cabs/OpenRepurpose",  desc: "Drug-repurposing pipeline with biomedical literature integration." } },
+        { name: "Aaron Wu",       project: { name: "CompassAgent",   url: "https://github.com/ds4cabs/CompassAgent",   desc: "Multi-agent system for biopharma research navigation." } }
+      ],
+
+      // Volunteer organizers. (Empty until populated.)
+      leadership: [
+        // {
+        //   name: "Jane Doe",
+        //   org_role: "Operations Co-Lead",
+        //   affiliation: "CABS",
+        //   headshot: "assets/img/people/jane-doe.jpg",
+        //   linkedin: "https://www.linkedin.com/in/janedoe"
+        // }
+      ]
+    }
+
+    // Roll over to 2027 by adding the block below (and the site flips
+    // automatically — no template edits needed):
+    //
+    // ,2027: {
+    //   year: 2027,
+    //   dates: { open: "...", deadline: "...", start: "...", end: "...", window: "..." },
+    //   target_size: "30+",
+    //   mentors: [...],
+    //   interns: [...],
+    //   leadership: [...]
     // }
-  ],
-
-  // 2026 CABS Summer Internship cohort — the "Open*" projects.
-  // One entry per intern. Multi-author projects are split into individual
-  // entries that share the same `project` block.
-  interns: [
-    { name: "Reuben Addison", project: { name: "OpenTrial",      url: "https://github.com/ds4cabs/OpenTrial",      desc: "Open infrastructure for clinical trial intelligence." } },
-    { name: "Xiaoxue Li",     project: { name: "OpenTarget",     url: "https://github.com/ds4cabs/OpenTarget",     desc: "Open-source target discovery & prioritization." } },
-    { name: "Shucheng",       project: { name: "CausalSentinel", url: "https://github.com/ds4cabs/CausalSentinel", desc: "Causal-inference monitoring for real-world evidence." } },
-    { name: "Natalie",        project: { name: "CausalSentinel", url: "https://github.com/ds4cabs/CausalSentinel", desc: "Causal-inference monitoring for real-world evidence." } },
-    { name: "Shawn Phan",     project: { name: "OpenLedger",     url: "https://github.com/ds4cabs/OpenLedger",     desc: "Transparent ledger for pharma data provenance." } },
-    { name: "Kening Li",      project: { name: "OpenPulse",      url: "https://github.com/ds4cabs/OpenPulse",      desc: "Real-time signal monitoring across pharma data streams." } },
-    { name: "Jason Zhou",     project: { name: "OpenMarket",     url: "https://github.com/ds4cabs/OpenMarket",     desc: "Open market-access analytics for biopharma." } },
-    { name: "Beyza",          project: { name: "OpenRepurpose",  url: "https://github.com/ds4cabs/OpenRepurpose",  desc: "Drug-repurposing pipeline with biomedical literature integration." } },
-    { name: "Chin Hung",      project: { name: "OpenRepurpose",  url: "https://github.com/ds4cabs/OpenRepurpose",  desc: "Drug-repurposing pipeline with biomedical literature integration." } },
-    { name: "Christina",      project: { name: "OpenRepurpose",  url: "https://github.com/ds4cabs/OpenRepurpose",  desc: "Drug-repurposing pipeline with biomedical literature integration." } },
-    { name: "Aaron Wu",       project: { name: "CompassAgent",   url: "https://github.com/ds4cabs/CompassAgent",   desc: "Multi-agent system for biopharma research navigation." } }
-  ],
-
-  // 2026 program leadership & support team — VOLUNTEER organizers.
-  // (empty until populated)
-  leadership: [
-    // {
-    //   name: "Jane Doe",
-    //   org_role: "Operations Co-Lead",
-    //   affiliation: "CABS",
-    //   headshot: "assets/img/people/jane-doe.jpg",
-    //   linkedin: "https://www.linkedin.com/in/janedoe"
-    // }
-  ],
+  },
 
   // All projects with categories
   // categories: agents, rag, trials, discovery, workshop, ds4, market, regulatory, infrastructure, misc

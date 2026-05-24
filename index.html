@@ -105,11 +105,11 @@
       </p>
       <div class="cta-row">
         <a class="btn btn-primary" href="#projects">Explore projects</a>
-        <a class="btn btn-outline" href="#interns">Meet the 2026 cohort</a>
+        <a class="btn btn-outline" href="#interns">Meet the <span data-year>2026</span> cohort</a>
       </div>
       <div class="hero-stats">
         <div><strong id="statRepos">100+</strong><span>repositories</span></div>
-        <div><strong id="statInterns">8</strong><span>2026 intern projects</span></div>
+        <div><strong id="statInterns">8</strong><span><span data-year>2026</span> intern projects</span></div>
         <div><strong id="statDs4">20+</strong><span>DS4 functional tracks</span></div>
         <div><strong>72+</strong><span>followers</span></div>
       </div>
@@ -148,24 +148,24 @@ $ python -m compass <span class="c-flag">--target</span> EGFR \
 <section id="mentors" class="section section-alt">
   <div class="container">
     <header class="section-head">
-      <span class="chip chip-accent">CABS 2026 · Mentors</span>
-      <h2>Our 2026 mentors</h2>
+      <span class="chip chip-accent">CABS <span data-year>2026</span> · Mentors</span>
+      <h2>Our <span data-year>2026</span> mentors</h2>
       <p>Industry and academic experts guiding the cohort 1:1 — weekly check-ins, technical support, and career advice.</p>
     </header>
     <div class="cards cards-people" id="mentorCards"></div>
     <div class="empty-cta" id="mentorsEmpty" hidden>
-      <p>Mentor profiles are being collected for Summer 2026.</p>
+      <p>Mentor profiles are being collected for Summer <span data-year>2026</span>.</p>
       <a class="btn btn-primary" href="https://lnkd.in/gB5psM_r" target="_blank" rel="noopener">Become a mentor →</a>
     </div>
   </div>
 </section>
 
-<!-- ============= INTERN COHORT 2026 ============= -->
+<!-- ============= INTERN COHORT ============= -->
 <section id="interns" class="section">
   <div class="container">
     <header class="section-head">
-      <span class="chip chip-accent">CABS 2026 · Interns</span>
-      <h2>The 2026 intern cohort</h2>
+      <span class="chip chip-accent">CABS <span data-year>2026</span> · Interns</span>
+      <h2>The <span data-year>2026</span> intern cohort</h2>
       <p>Students from leading universities shipping open-source work across discovery, trials, markets, and policy.</p>
     </header>
     <div class="cards cards-people" id="internCards"></div>
@@ -185,24 +185,26 @@ $ python -m compass <span class="c-flag">--target</span> EGFR \
 <section id="leadership" class="section section-alt">
   <div class="container">
     <header class="section-head">
-      <span class="chip chip-accent">CABS 2026 · Organizers</span>
+      <span class="chip chip-accent">CABS <span data-year>2026</span> · Organizers</span>
       <h2>Program leadership &amp; support team</h2>
-      <p>The volunteers running operations, sponsorship, communications, and mentorship coordination for 2026.</p>
+      <p>The volunteers running operations, sponsorship, communications, and mentorship coordination for <span data-year>2026</span>.</p>
     </header>
     <div class="cards cards-people" id="leadershipCards"></div>
     <div class="empty-cta" id="leadershipEmpty" hidden>
       <p>Leadership team profiles coming soon.</p>
-      <a class="btn btn-outline" href="mailto:internship@cabsweb.org?subject=2026%20Leadership%20Volunteer%20Interest">Express interest →</a>
+      <a class="btn btn-outline"
+         data-tpl-href="mailto:internship@cabsweb.org?subject={year}%20Leadership%20Volunteer%20Interest"
+         href="mailto:internship@cabsweb.org?subject=2026%20Leadership%20Volunteer%20Interest">Express interest →</a>
     </div>
   </div>
 </section>
 
-<!-- ============= JOIN / RECRUIT 2026 ============= -->
+<!-- ============= JOIN / RECRUIT ============= -->
 <section id="join" class="section">
   <div class="container">
     <header class="section-head">
-      <span class="chip chip-accent">Now Recruiting · 2026</span>
-      <h2>Join the 2026 Data Science Summer Program</h2>
+      <span class="chip chip-accent">Now Recruiting · <span data-year>2026</span></span>
+      <h2>Join the <span data-year>2026</span> Data Science Summer Program</h2>
       <p>
         A ~10-week immersive internship applying AI &amp; data science to drug discovery and
         development. Interns work on real-world projects with structured weekly mentorship and
@@ -212,9 +214,9 @@ $ python -m compass <span class="c-flag">--target</span> EGFR \
     </header>
 
     <ul class="facts" aria-label="Program key facts">
-      <li><strong>Jun 15 – Aug 15, 2026</strong><span>Internship dates</span></li>
-      <li><strong>May 15, 2026</strong><span>Application deadline</span></li>
-      <li><strong>20+ interns</strong><span>Summer 2026 target cohort</span></li>
+      <li><strong data-cohort="dates.window">Jun 15 – Aug 15, 2026</strong><span>Internship dates</span></li>
+      <li><strong data-cohort="dates.deadline">May 15, 2026</strong><span>Application deadline</span></li>
+      <li><strong><span data-cohort="target_size">20+</span> interns</strong><span>Summer <span data-year>2026</span> target cohort</span></li>
       <li><strong>Non-paid · 501(c)(3)</strong><span>No CPT required · remote</span></li>
     </ul>
 
@@ -248,7 +250,7 @@ $ python -m compass <span class="c-flag">--target</span> EGFR \
           <li>Matched with one mentee for the program</li>
           <li>Weekly 30-minute check-ins</li>
           <li>Guide research direction, technical support, career advice</li>
-          <li>Help scale CABS to 20+ interns in Summer 2026</li>
+          <li>Help scale CABS to <span data-cohort="target_size">20+</span> interns in Summer <span data-year>2026</span></li>
         </ul>
         <a class="btn btn-primary" href="https://lnkd.in/gB5psM_r" target="_blank" rel="noopener">
           Register as Mentor →
@@ -270,7 +272,9 @@ $ python -m compass <span class="c-flag">--target</span> EGFR \
           <li>Communications &amp; Promotion</li>
           <li>General Support Team</li>
         </ul>
-        <a class="btn btn-outline" href="mailto:internship@cabsweb.org?subject=2026%20Leadership%20Volunteer%20Interest">
+        <a class="btn btn-outline"
+           data-tpl-href="mailto:internship@cabsweb.org?subject={year}%20Leadership%20Volunteer%20Interest"
+           href="mailto:internship@cabsweb.org?subject=2026%20Leadership%20Volunteer%20Interest">
           Express interest →
         </a>
       </article>
@@ -279,10 +283,10 @@ $ python -m compass <span class="c-flag">--target</span> EGFR \
     <div class="timeline">
       <h3>Program timeline</h3>
       <ol class="timeline-list">
-        <li><span class="t-dot"></span><strong>Jan 1, 2026</strong><em>Applications open</em></li>
-        <li><span class="t-dot"></span><strong>May 15, 2026</strong><em>Application deadline</em></li>
-        <li><span class="t-dot"></span><strong>Jun 15, 2026</strong><em>Internship begins</em></li>
-        <li><span class="t-dot"></span><strong>Aug 15, 2026</strong><em>Internship ends · final posters</em></li>
+        <li><span class="t-dot"></span><strong data-cohort="dates.open">Jan 1, 2026</strong><em>Applications open</em></li>
+        <li><span class="t-dot"></span><strong data-cohort="dates.deadline">May 15, 2026</strong><em>Application deadline</em></li>
+        <li><span class="t-dot"></span><strong data-cohort="dates.start">Jun 15, 2026</strong><em>Internship begins</em></li>
+        <li><span class="t-dot"></span><strong data-cohort="dates.end">Aug 15, 2026</strong><em>Internship ends · final posters</em></li>
       </ol>
     </div>
 
@@ -341,7 +345,7 @@ $ python -m compass <span class="c-flag">--target</span> EGFR \
       <a class="learn-card" href="#join">
         <div class="learn-icon icon-3">🎓</div>
         <h3>Summer &amp; Winter Internships</h3>
-        <p>Mentored open-source projects for students — clinical, computational, commercial. 2026 program now recruiting mentees, mentors, and leadership volunteers.</p>
+        <p>Mentored open-source projects for students — clinical, computational, commercial. <span data-year>2026</span> program now recruiting mentees, mentors, and leadership volunteers.</p>
         <span class="link-arrow">Apply / learn more →</span>
       </a>
       <a class="learn-card" href="https://github.com/ds4cabs/CABS-R-Graph-Gallery" target="_blank" rel="noopener">
