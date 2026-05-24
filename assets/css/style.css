@@ -257,11 +257,18 @@ img, svg { max-width: 100%; display: block; }
 
 .eyebrow {
   display: inline-flex; align-items: center; gap: 8px;
-  padding: 6px 12px; border-radius: 999px;
+  padding: 6px 14px; border-radius: 999px;
   background: var(--surface);
   border: 1px solid var(--border);
-  color: var(--text-dim); font-size: .8rem; font-weight: 500;
+  color: var(--text-dim); font-size: .82rem; font-weight: 500;
   margin-bottom: 18px;
+  max-width: 100%;
+}
+.eyebrow strong { color: var(--text); font-weight: 700; }
+abbr[title] {
+  text-decoration: none;
+  border-bottom: 1px dotted var(--text-mute);
+  cursor: help;
 }
 .dot {
   width: 7px; height: 7px; border-radius: 50%;
