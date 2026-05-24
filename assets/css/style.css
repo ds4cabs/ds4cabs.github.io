@@ -494,6 +494,94 @@ abbr[title] {
 }
 .link-arrow:hover { gap: 10px; }
 
+/* ---------- join / recruit 2026 ---------- */
+.facts {
+  list-style: none; padding: 0; margin: 0 0 36px;
+  display: grid; gap: 12px;
+  grid-template-columns: repeat(4, 1fr);
+}
+@media (max-width: 820px) { .facts { grid-template-columns: repeat(2, 1fr); } }
+.facts li {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  display: flex; flex-direction: column;
+}
+.facts strong { font-size: 1.02rem; font-weight: 700; color: var(--text); letter-spacing: -.01em; }
+.facts span { color: var(--text-mute); font-size: .82rem; margin-top: 4px; }
+
+.cards-join { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+.role-card { padding: 26px; }
+.role-card .card-tag { margin-bottom: 14px; }
+.role-card h3 { font-size: 1.25rem; margin-bottom: 8px; }
+.role-card > p { font-size: .94rem; }
+.role-list {
+  list-style: none; padding: 0; margin: 4px 0 20px;
+  display: flex; flex-direction: column; gap: 8px;
+}
+.role-list li {
+  position: relative; padding-left: 20px;
+  font-size: .9rem; color: var(--text-dim);
+}
+.role-list li::before {
+  content: ""; position: absolute; left: 4px; top: .55em;
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--grad);
+}
+.role-card .btn { margin-top: auto; align-self: flex-start; }
+
+.timeline {
+  margin-top: 44px; padding: 28px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+.timeline h3 { margin-bottom: 18px; font-size: 1rem; text-transform: uppercase; letter-spacing: .12em; color: var(--text-mute); font-weight: 600; }
+.timeline-list {
+  list-style: none; padding: 0; margin: 0;
+  display: grid; gap: 14px;
+  grid-template-columns: repeat(4, 1fr);
+  position: relative;
+}
+.timeline-list::before {
+  content: ""; position: absolute;
+  left: 8px; right: 8px; top: 7px; height: 2px;
+  background: linear-gradient(90deg, var(--brand), var(--brand-3), var(--brand-2));
+  opacity: .45; border-radius: 2px;
+}
+.timeline-list li {
+  display: flex; flex-direction: column; gap: 2px;
+  position: relative; padding-top: 22px;
+}
+.t-dot {
+  position: absolute; top: 1px; left: 0;
+  width: 14px; height: 14px; border-radius: 50%;
+  background: var(--bg-soft);
+  border: 2px solid var(--brand-3);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--brand-3) 25%, transparent);
+}
+.timeline-list strong { font-size: .95rem; color: var(--text); font-weight: 700; }
+.timeline-list em { font-style: normal; font-size: .82rem; color: var(--text-mute); }
+@media (max-width: 820px) {
+  .timeline-list { grid-template-columns: 1fr; gap: 18px; }
+  .timeline-list::before {
+    left: 7px; right: auto; top: 8px; bottom: 8px;
+    width: 2px; height: auto;
+    background: linear-gradient(180deg, var(--brand), var(--brand-3), var(--brand-2));
+  }
+  .timeline-list li { padding-top: 0; padding-left: 28px; }
+  .t-dot { top: 3px; left: 1px; }
+}
+
+.contact-strip {
+  margin: 28px 0 0; text-align: center;
+  font-size: .92rem; color: var(--text-dim);
+}
+.contact-strip a { color: var(--brand-3); font-weight: 600; }
+.contact-strip a:hover { color: var(--text); }
+.contact-strip .sep { color: var(--text-mute); margin: 0 6px; }
+
 /* ---------- learn ---------- */
 .learn-grid {
   display: grid; gap: 18px;
