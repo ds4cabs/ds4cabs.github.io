@@ -1,30 +1,32 @@
 // DS4CABS — main.js
-// Renders featured / intern / project cards from window.DS4CABS_PROJECTS
-// and powers search + category filtering.
+// Renders featured / intern / project cards from window.DS4CABS_PROJECTS,
+// powers search + category filtering, mobile nav, and theme toggle.
 
 (function () {
   const data = window.DS4CABS_PROJECTS || { featured: [], interns: [], all: [], filters: [] };
 
   // ---------- helpers ----------
-  const $  = (sel, ctx = document) => ctx.querySelector(sel);
-  const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
-  const el = (tag, attrs = {}, ...children) => {
+  const $ = (sel, ctx = document) => ctx.querySelector(sel);
+
+  function el(tag, attrs, ...kids) {
     const node = document.createElement(tag);
-    for (const [k, v] of Object.entries(attrs)) {
-      if (k === "class") node.className = v;
-      else if (k === "html") node.innerHTML = v;
-      else if (k.startsWith("on")) node.addEventListener(k.slice(2), v);
-      else node.setAttribute(k, v);
+    if (attrs) {
+      for (const [k, v] of Object.entries(attrs)) {
+        if (v == null || v === false) continue;
+        if (k === "class") node.className = v;
+        else if (k === "html") node.innerHTML = v;
+        else if (k.startsWith("on") && typeof v === "function") node.addEventListener(k.slice(2), v);
+        else node.setAttribute(k, v === true ? "" : String(v));
+      }
     }
-    for (const c of children.flat()) {
-      if (c == null || c === false) continue;
-      node.appendChild(typeof c === "string" ? document.createTextNode(c) : c);
+    for (const c of kids.flat(Infinity)) {
+      if (c == null || c === false || c === true) continue;
+      node.appendChild(c instanceof Node ? c : document.createTextNode(String(c)));
     }
     return node;
-  };
+  }
 
-  const star = (n) => n ? el("span", { class: "pill", title: `${n} stars` },
-    el("span", { html: "★" }), ` ${n}`) : null;
+  const pill = (text, title) => el("span", { class: "pill", title: title || null }, text);
 
   // ---------- featured cards ----------
   const featuredEl = $("#featuredCards");
@@ -32,17 +34,17 @@
     data.featured.forEach(p => {
       featuredEl.appendChild(
         el("article", { class: "card" },
-          p.tag ? el("span", { class: "card-tag" }, p.tag) : null,
+          p.tag && el("span", { class: "card-tag" }, p.tag),
           el("div", { class: "card-head" },
             el("h3", { class: "card-title" },
               el("a", { href: p.url, target: "_blank", rel: "noopener" }, p.name)
             ),
-            p.lang ? el("span", { class: "card-lang" }, p.lang) : null
+            p.lang && el("span", { class: "card-lang" }, p.lang)
           ),
-          el("p", {}, p.desc || ""),
+          el("p", null, p.desc || ""),
           el("div", { class: "card-meta" },
-            star(p.stars),
-            p.forks ? el("span", { class: "pill", title: `${p.forks} forks` }, `⑂ ${p.forks}`) : null,
+            p.stars && pill("★ " + p.stars, p.stars + " stars"),
+            p.forks && pill("⑂ " + p.forks, p.forks + " forks"),
             el("a", { class: "link-arrow", href: p.url, target: "_blank", rel: "noopener" }, "View →")
           )
         )
@@ -62,14 +64,14 @@
               el("a", { href: p.url, target: "_blank", rel: "noopener" }, p.name)
             )
           ),
-          el("p", {}, p.desc || ""),
-          el("div", { class: "card-author" }, `👤 ${p.author}`)
+          el("p", null, p.desc || ""),
+          el("div", { class: "card-author" }, "👤 " + p.author)
         )
       );
     });
   }
 
-  // ---------- filters + cards ----------
+  // ---------- filters + project cards ----------
   const filtersEl = $("#filters");
   const cardsEl   = $("#projectCards");
   const emptyEl   = $("#emptyState");
@@ -78,23 +80,42 @@
   let activeFilter = "all";
   let activeQuery  = "";
 
+  function catLabel(id) {
+    const f = data.filters.find(x => x.id === id);
+    return f ? f.label : id;
+  }
+
   function renderFilters() {
     if (!filtersEl) return;
-    filtersEl.innerHTML = "";
+    filtersEl.replaceChildren();
     data.filters.forEach(f => {
-      const count = f.id === "all" ? data.all.length : data.all.filter(p => p.cat === f.id).length;
-      const btn = el("button", {
-        class: "filter-pill" + (f.id === activeFilter ? " active" : ""),
-        type: "button",
-        onclick: () => { activeFilter = f.id; renderFilters(); renderCards(); }
-      }, `${f.label} `, el("span", { html: `<span style="opacity:.6">·${count}</span>` }));
-      filtersEl.appendChild(btn);
+      const count = f.id === "all"
+        ? data.all.length
+        : data.all.filter(p => p.cat === f.id).length;
+      const pressed = f.id === activeFilter;
+      filtersEl.appendChild(
+        el("button", {
+          class: "filter-pill",
+          type: "button",
+          role: "tab",
+          "aria-pressed": pressed ? "true" : "false",
+          onclick: () => {
+            if (activeFilter === f.id) return;
+            activeFilter = f.id;
+            renderFilters();
+            renderCards();
+          }
+        },
+          f.label,
+          el("span", { class: "count" }, "· " + count)
+        )
+      );
     });
   }
 
   function renderCards() {
     if (!cardsEl) return;
-    cardsEl.innerHTML = "";
+    cardsEl.replaceChildren();
 
     const q = activeQuery.trim().toLowerCase();
     const list = data.all.filter(p => {
@@ -104,11 +125,12 @@
         p.name.toLowerCase().includes(q) ||
         (p.desc || "").toLowerCase().includes(q) ||
         (p.lang || "").toLowerCase().includes(q) ||
-        (p.cat || "").toLowerCase().includes(q)
+        (p.cat  || "").toLowerCase().includes(q) ||
+        catLabel(p.cat).toLowerCase().includes(q)
       );
     });
 
-    emptyEl.hidden = list.length !== 0;
+    if (emptyEl) emptyEl.hidden = list.length !== 0;
 
     list.forEach(p => {
       cardsEl.appendChild(
@@ -117,22 +139,17 @@
             el("h3", { class: "card-title" },
               el("a", { href: p.url, target: "_blank", rel: "noopener" }, p.name)
             ),
-            p.lang ? el("span", { class: "card-lang" }, p.lang) : null
+            p.lang && el("span", { class: "card-lang" }, p.lang)
           ),
-          el("p", {}, p.desc || ""),
+          el("p", null, p.desc || ""),
           el("div", { class: "card-meta" },
-            star(p.stars),
-            el("span", { class: "pill" }, catLabel(p.cat)),
+            p.stars && pill("★ " + p.stars, p.stars + " stars"),
+            pill(catLabel(p.cat)),
             el("a", { class: "link-arrow", href: p.url, target: "_blank", rel: "noopener" }, "Open →")
           )
         )
       );
     });
-  }
-
-  function catLabel(id) {
-    const f = data.filters.find(x => x.id === id);
-    return f ? f.label : id;
   }
 
   if (searchEl) {
@@ -145,23 +162,64 @@
   renderFilters();
   renderCards();
 
-  // ---------- stat: total repos ----------
-  const statRepos = $("#statRepos");
-  if (statRepos) {
-    statRepos.textContent = `${data.all.length}+`;
-  }
+  // ---------- hero stats from data ----------
+  const setStat = (id, text) => { const n = $("#" + id); if (n) n.textContent = text; };
+  setStat("statRepos",   data.all.length + "+");
+  setStat("statInterns", String(data.interns.length));
+  const ds4Count = new Set(
+    data.all
+      .filter(p => p.cat === "ds4" || /^ds4[A-Z]/.test(p.name))
+      .map(p => p.name)
+  ).size;
+  setStat("statDs4", ds4Count + "+");
 
   // ---------- theme toggle ----------
   const root = document.documentElement;
   const themeBtn = $("#themeToggle");
-  const stored = localStorage.getItem("ds4cabs-theme");
-  if (stored) root.setAttribute("data-theme", stored);
+  if (localStorage.getItem("ds4cabs-theme") === "light") {
+    root.setAttribute("data-theme", "light");
+  }
   if (themeBtn) {
     themeBtn.addEventListener("click", () => {
-      const cur = root.getAttribute("data-theme") === "light" ? "" : "light";
-      if (cur) root.setAttribute("data-theme", "light");
-      else root.removeAttribute("data-theme");
-      localStorage.setItem("ds4cabs-theme", cur);
+      const isLight = root.getAttribute("data-theme") === "light";
+      if (isLight) {
+        root.removeAttribute("data-theme");
+        localStorage.setItem("ds4cabs-theme", "dark");
+      } else {
+        root.setAttribute("data-theme", "light");
+        localStorage.setItem("ds4cabs-theme", "light");
+      }
+    });
+  }
+
+  // ---------- mobile nav drawer ----------
+  const navBtn  = $("#navToggle");
+  const navMenu = $("#navMenu");
+
+  function closeMenu() {
+    if (!navBtn || !navMenu) return;
+    navMenu.classList.remove("is-open");
+    navBtn.setAttribute("aria-expanded", "false");
+    navBtn.setAttribute("aria-label", "Open menu");
+  }
+  function openMenu() {
+    if (!navBtn || !navMenu) return;
+    navMenu.classList.add("is-open");
+    navBtn.setAttribute("aria-expanded", "true");
+    navBtn.setAttribute("aria-label", "Close menu");
+  }
+
+  if (navBtn && navMenu) {
+    navBtn.addEventListener("click", () => {
+      navMenu.classList.contains("is-open") ? closeMenu() : openMenu();
+    });
+    navMenu.addEventListener("click", (e) => {
+      const a = e.target.closest("a");
+      if (a && navMenu.classList.contains("is-open")) closeMenu();
+    });
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeMenu(); });
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 820) closeMenu();
     });
   }
 
