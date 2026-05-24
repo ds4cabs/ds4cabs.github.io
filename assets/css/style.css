@@ -440,6 +440,128 @@ abbr[title] {
   margin-top: 8px; font-family: var(--mono);
 }
 
+/* ---------- people: mentors, interns, leadership ---------- */
+.cards-people { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+
+.person-card {
+  padding: 22px;
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 14px;
+  align-items: start;
+}
+.avatar {
+  width: 64px; height: 64px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--grad);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid var(--border-strong);
+}
+.avatar-img {
+  width: 100%; height: 100%;
+  object-fit: cover; display: block;
+}
+.avatar-initials {
+  color: white;
+  font-weight: 700;
+  font-size: 1.4rem;
+  letter-spacing: 0.02em;
+  font-family: var(--font);
+  user-select: none;
+}
+
+.person-body { display: flex; flex-direction: column; min-width: 0; }
+.person-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 0 0 4px;
+  letter-spacing: -0.01em;
+  color: var(--text);
+}
+.person-meta {
+  font-size: .85rem;
+  color: var(--text-mute);
+  margin: 0 0 10px;
+  line-height: 1.45;
+}
+.person-tags {
+  display: flex; flex-wrap: wrap; gap: 4px;
+  margin: 0 0 12px;
+}
+.person-tag {
+  display: inline-block;
+  padding: 2px 9px;
+  border-radius: 999px;
+  font-size: .72rem;
+  font-weight: 500;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  color: var(--text-dim);
+  line-height: 1.4;
+}
+
+.person-project {
+  display: flex; align-items: flex-start; gap: 8px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: var(--grad-soft);
+  border: 1px solid var(--border);
+  color: var(--text);
+  margin-bottom: 10px;
+  transition: border-color .15s, transform .15s;
+}
+.person-project:hover {
+  color: var(--text);
+  border-color: var(--border-strong);
+  transform: translateY(-1px);
+}
+.person-project-icon { font-size: .95rem; line-height: 1.4; flex-shrink: 0; }
+.person-project-text { display: flex; flex-direction: column; min-width: 0; line-height: 1.4; }
+.person-project-text strong { font-size: .88rem; font-weight: 700; }
+.person-project-text em {
+  font-style: normal;
+  font-size: .78rem;
+  color: var(--text-dim);
+  margin-top: 2px;
+}
+
+.person-links {
+  display: flex; gap: 8px;
+  margin-top: auto;
+}
+.person-link {
+  width: 28px; height: 28px;
+  display: inline-flex; align-items: center; justify-content: center;
+  border-radius: 8px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text-dim);
+  transition: color .15s, background .15s, border-color .15s;
+}
+.person-link:hover {
+  color: var(--text);
+  background: var(--surface-2);
+  border-color: var(--border-strong);
+}
+
+/* empty-state CTA shown when a people array is empty */
+.empty-cta {
+  text-align: center;
+  padding: 40px 20px;
+  background: var(--surface);
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--radius-lg);
+}
+.empty-cta p { margin: 0 0 16px; color: var(--text-dim); }
+
+/* responsive: stack avatar above content on very narrow cards */
+@media (max-width: 380px) {
+  .person-card { grid-template-columns: 1fr; }
+  .avatar { width: 56px; height: 56px; }
+}
+
 /* ---------- toolbar / filters ---------- */
 .toolbar {
   display: flex; align-items: center; gap: 14px; flex-wrap: wrap;

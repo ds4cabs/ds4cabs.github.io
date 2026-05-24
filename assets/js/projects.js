@@ -54,16 +54,73 @@ window.DS4CABS_PROJECTS = {
     }
   ],
 
-  // 2026 CABS Summer Internship cohort — the "Open*" projects
+  // ====================================================================
+  // PEOPLE
+  // --------------------------------------------------------------------
+  // Schema (all fields except `name` are optional — missing fields are
+  // simply omitted from the rendered card; a missing `headshot` falls back
+  // to a CSS-drawn initials avatar).
+  //
+  //   {
+  //     name:        "Jane Doe",
+  //     affiliation: "Stanford University",
+  //     role:        "Postdoc, Computational Biology",       // mentors/leads
+  //     major:       "MS, Statistics",                       // interns
+  //     interests:   ["single-cell genomics", "RWE"],
+  //     headshot:    "assets/img/people/jane-doe.jpg",       // 400x400 sq
+  //     linkedin:    "https://www.linkedin.com/in/janedoe",
+  //     github:      "https://github.com/janedoe",
+  //     project:     { name: "OpenTrial",                    // interns only
+  //                    url:  "https://github.com/ds4cabs/OpenTrial",
+  //                    desc: "Open infrastructure for clinical trial intelligence." },
+  //     org_role:    "Operations Co-Lead"                    // leadership only
+  //   }
+  //
+  // Drop new entries into the arrays below. Drop headshot JPGs into
+  // assets/img/people/ (see that folder's README for naming).
+  // ====================================================================
+
+  // 2026 mentors — INDUSTRY & ACADEMIC EXPERTS guiding the cohort 1:1.
+  // (empty until populated — site shows a "coming soon / become a mentor" state)
+  mentors: [
+    // {
+    //   name: "Jane Doe",
+    //   affiliation: "Stanford University",
+    //   role: "Postdoc, Computational Biology",
+    //   interests: ["single-cell genomics", "causal inference"],
+    //   headshot: "assets/img/people/jane-doe.jpg",
+    //   linkedin: "https://www.linkedin.com/in/janedoe",
+    //   github: "https://github.com/janedoe"
+    // }
+  ],
+
+  // 2026 CABS Summer Internship cohort — the "Open*" projects.
+  // One entry per intern. Multi-author projects are split into individual
+  // entries that share the same `project` block.
   interns: [
-    { name: "OpenTrial",      author: "Reuben Addison",                desc: "Open infrastructure for clinical trial intelligence.",                url: "https://github.com/ds4cabs/OpenTrial" },
-    { name: "OpenTarget",     author: "Xiaoxue Li",                    desc: "Open-source target discovery & prioritization.",                       url: "https://github.com/ds4cabs/OpenTarget" },
-    { name: "CausalSentinel", author: "Shucheng, Natalie",             desc: "Causal-inference monitoring for real-world evidence.",                 url: "https://github.com/ds4cabs/CausalSentinel" },
-    { name: "OpenLedger",     author: "Shawn Phan",                    desc: "Transparent ledger for pharma data provenance.",                       url: "https://github.com/ds4cabs/OpenLedger" },
-    { name: "OpenPulse",      author: "Kening Li",                     desc: "Real-time signal monitoring across pharma data streams.",              url: "https://github.com/ds4cabs/OpenPulse" },
-    { name: "OpenMarket",     author: "Jason Zhou",                    desc: "Open market-access analytics for biopharma.",                          url: "https://github.com/ds4cabs/OpenMarket" },
-    { name: "OpenRepurpose",  author: "Beyza, Chin Hung, Christina",   desc: "Drug-repurposing pipeline with biomedical literature integration.",    url: "https://github.com/ds4cabs/OpenRepurpose" },
-    { name: "CompassAgent",   author: "Aaron Wu",                      desc: "Multi-agent system for biopharma research navigation.",                 url: "https://github.com/ds4cabs/CompassAgent" }
+    { name: "Reuben Addison", project: { name: "OpenTrial",      url: "https://github.com/ds4cabs/OpenTrial",      desc: "Open infrastructure for clinical trial intelligence." } },
+    { name: "Xiaoxue Li",     project: { name: "OpenTarget",     url: "https://github.com/ds4cabs/OpenTarget",     desc: "Open-source target discovery & prioritization." } },
+    { name: "Shucheng",       project: { name: "CausalSentinel", url: "https://github.com/ds4cabs/CausalSentinel", desc: "Causal-inference monitoring for real-world evidence." } },
+    { name: "Natalie",        project: { name: "CausalSentinel", url: "https://github.com/ds4cabs/CausalSentinel", desc: "Causal-inference monitoring for real-world evidence." } },
+    { name: "Shawn Phan",     project: { name: "OpenLedger",     url: "https://github.com/ds4cabs/OpenLedger",     desc: "Transparent ledger for pharma data provenance." } },
+    { name: "Kening Li",      project: { name: "OpenPulse",      url: "https://github.com/ds4cabs/OpenPulse",      desc: "Real-time signal monitoring across pharma data streams." } },
+    { name: "Jason Zhou",     project: { name: "OpenMarket",     url: "https://github.com/ds4cabs/OpenMarket",     desc: "Open market-access analytics for biopharma." } },
+    { name: "Beyza",          project: { name: "OpenRepurpose",  url: "https://github.com/ds4cabs/OpenRepurpose",  desc: "Drug-repurposing pipeline with biomedical literature integration." } },
+    { name: "Chin Hung",      project: { name: "OpenRepurpose",  url: "https://github.com/ds4cabs/OpenRepurpose",  desc: "Drug-repurposing pipeline with biomedical literature integration." } },
+    { name: "Christina",      project: { name: "OpenRepurpose",  url: "https://github.com/ds4cabs/OpenRepurpose",  desc: "Drug-repurposing pipeline with biomedical literature integration." } },
+    { name: "Aaron Wu",       project: { name: "CompassAgent",   url: "https://github.com/ds4cabs/CompassAgent",   desc: "Multi-agent system for biopharma research navigation." } }
+  ],
+
+  // 2026 program leadership & support team — VOLUNTEER organizers.
+  // (empty until populated)
+  leadership: [
+    // {
+    //   name: "Jane Doe",
+    //   org_role: "Operations Co-Lead",
+    //   affiliation: "CABS",
+    //   headshot: "assets/img/people/jane-doe.jpg",
+    //   linkedin: "https://www.linkedin.com/in/janedoe"
+    // }
   ],
 
   // All projects with categories
