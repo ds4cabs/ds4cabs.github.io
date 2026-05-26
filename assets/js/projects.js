@@ -16,7 +16,7 @@ window.DS4CABS_PROJECTS = {
     leaders: [
       { name: "Shicheng Guo",   role: "Program Lead",  affiliation: "CABS · DS4CABS", email: "shicheng.guo@cabsweb.org", headshot: "assets/img/people/shicheng-guo.jpg" },
       { name: "Sihong Zhou",    role: "Program Lead",  affiliation: "CABS · DS4CABS", email: "sihong.zhou@cabsweb.org" },
-      { name: "Liping Meng",    role: "Program Lead",  affiliation: "CABS · DS4CABS", email: "liping.meng@cabsweb.org" }
+      { name: "Liping Meng",    role: "Program Lead",  affiliation: "CABS · DS4CABS", email: "liping.meng@cabsweb.org", headshot: "assets/img/people/liping-meng.jpg" }
     ],
     mentors_admin: [
       { name: "Baixue Zhang (Doris)", role: "Admin & Mentor", email: "doris.zbx@gmail.com",       headshot: "assets/img/people/baixue-zhang.jpg" },
@@ -26,8 +26,8 @@ window.DS4CABS_PROJECTS = {
       { name: "Zuolin Cheng",         role: "Admin & Mentor", email: "zuolincheng166@gmail.com",  headshot: "assets/img/people/zuolin-cheng.jpg" },
       { name: "Yuntao Zhang",         role: "Admin & Mentor", email: "ustb.zhangyuntao@gmail.com",headshot: "assets/img/people/yuntao-zhang.jpg" },
       { name: "Alexander Wu",         role: "Admin & Mentor", email: "alexander.wu7@gmail.com",   headshot: "assets/img/people/alexander-wu.jpg" },
-      { name: "Kay Tong",             role: "Admin & Mentor", email: "kay.tong@cabsweb.org" },
-      { name: "Lena Li",              role: "Admin & Mentor", email: "lena.li@cabsweb.org" },
+      { name: "Kay Tong",             role: "Admin & Mentor", email: "kay.tong@cabsweb.org", headshot: "assets/img/people/kay-tong.jpg" },
+      { name: "Lena Li",              role: "Admin & Mentor", email: "lena.li@cabsweb.org",  headshot: "assets/img/people/lena-li.jfif" },
       { name: "Zhiqing Wang",         role: "Admin & Mentor", email: "zwang9187@gmail.com" },
       { name: "Le Cai",               role: "Admin & Mentor", email: "le.cai@cabsweb.org",        headshot: "assets/img/people/le-cai.jpg" },
       { name: "Jingyuan Huang",       role: "Admin & Mentor", email: "elvahdesign@gmail.com" }
