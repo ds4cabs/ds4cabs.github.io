@@ -27,7 +27,7 @@ window.DS4CABS_PROJECTS = {
       { name: "Yuntao Zhang",         role: "Admin & Mentor", email: "ustb.zhangyuntao@gmail.com",headshot: "assets/img/people/yuntao-zhang.jpg" },
       { name: "Alexander Wu",         role: "Admin & Mentor", email: "alexander.wu7@gmail.com",   headshot: "assets/img/people/alexander-wu.jpg" },
       { name: "Kay Tong",             role: "Admin & Mentor", email: "kay.tong@cabsweb.org", headshot: "assets/img/people/kay-tong.jpg" },
-      { name: "Lena Li",              role: "Admin & Mentor", email: "lena.li@cabsweb.org",  headshot: "assets/img/people/lena-li.jfif" },
+      { name: "Lena Li",              role: "Admin & Mentor", email: "lena.li@cabsweb.org",  headshot: "assets/img/people/lena-li.jpg" },
       { name: "Zhiqing Wang",         role: "Admin & Mentor", email: "zwang9187@gmail.com" },
       { name: "Le Cai",               role: "Admin & Mentor", email: "le.cai@cabsweb.org",        headshot: "assets/img/people/le-cai.jpg" },
       { name: "Jingyuan Huang",       role: "Admin & Mentor", email: "elvahdesign@gmail.com" }
