@@ -218,44 +218,42 @@ window.DS4CABS_PROJECTS = {
       target_size: "20+",
 
       // Industry & academic experts guiding the cohort 1:1.
-      // (Empty until populated — site shows a "become a mentor" CTA.)
       mentors: [
-        // {
-        //   name: "Jane Doe",
-        //   affiliation: "Stanford University",
-        //   role: "Postdoc, Computational Biology",
-        //   interests: ["single-cell genomics", "causal inference"],
-        //   headshot: "assets/img/people/jane-doe.jpg",
-        //   linkedin: "https://www.linkedin.com/in/janedoe",
-        //   github: "https://github.com/janedoe"
-        // }
+        { name: "Baixue Zhang (Doris)", role: "Admin & Mentor", headshot: "assets/img/people/baixue-zhang.jpg" },
+        { name: "Quinn Leng",           role: "Admin & Mentor", headshot: "assets/img/people/quinn-leng.jpeg" },
+        { name: "Yongli Shan",          role: "Admin & Mentor", headshot: "assets/img/people/yongli-shan.jpg" },
+        { name: "Ying Yang",            role: "Admin & Mentor", headshot: "assets/img/people/ying-yang.jpeg" },
+        { name: "Zuolin Cheng",         role: "Admin & Mentor", headshot: "assets/img/people/zuolin-cheng.jpg" },
+        { name: "Yuntao Zhang",         role: "Admin & Mentor", headshot: "assets/img/people/yuntao-zhang.jpg" },
+        { name: "Alexander Wu",         role: "Admin & Mentor", headshot: "assets/img/people/alexander-wu.jpg" },
+        { name: "Le Cai",               role: "Admin & Mentor", headshot: "assets/img/people/le-cai.jpg" },
+        { name: "Kay Tong",             role: "Admin & Mentor" },
+        { name: "Lena Li",              role: "Admin & Mentor" },
+        { name: "Zhiqing Wang",         role: "Admin & Mentor" },
+        { name: "Jingyuan Huang",       role: "Admin & Mentor" }
       ],
 
       // The "Open*" project cohort. One entry per intern; multi-author
       // projects are split into individual entries that share a `project`.
       interns: [
-        { name: "Reuben Addison", project: { name: "OpenTrial",      url: "https://github.com/ds4cabs/OpenTrial",      desc: "Open infrastructure for clinical trial intelligence." } },
-        { name: "Xiaoxue Li",     project: { name: "OpenTarget",     url: "https://github.com/ds4cabs/OpenTarget",     desc: "Open-source target discovery & prioritization." } },
-        { name: "Shucheng",       project: { name: "CausalSentinel", url: "https://github.com/ds4cabs/CausalSentinel", desc: "Causal-inference monitoring for real-world evidence." } },
-        { name: "Natalie",        project: { name: "CausalSentinel", url: "https://github.com/ds4cabs/CausalSentinel", desc: "Causal-inference monitoring for real-world evidence." } },
-        { name: "Shawn Phan",     project: { name: "OpenLedger",     url: "https://github.com/ds4cabs/OpenLedger",     desc: "Transparent ledger for pharma data provenance." } },
-        { name: "Kening Li",      project: { name: "OpenPulse",      url: "https://github.com/ds4cabs/OpenPulse",      desc: "Real-time signal monitoring across pharma data streams." } },
-        { name: "Jason Zhou",     project: { name: "OpenMarket",     url: "https://github.com/ds4cabs/OpenMarket",     desc: "Open market-access analytics for biopharma." } },
-        { name: "Beyza",          project: { name: "OpenRepurpose",  url: "https://github.com/ds4cabs/OpenRepurpose",  desc: "Drug-repurposing pipeline with biomedical literature integration." } },
-        { name: "Chin Hung",      project: { name: "OpenRepurpose",  url: "https://github.com/ds4cabs/OpenRepurpose",  desc: "Drug-repurposing pipeline with biomedical literature integration." } },
-        { name: "Christina",      project: { name: "OpenRepurpose",  url: "https://github.com/ds4cabs/OpenRepurpose",  desc: "Drug-repurposing pipeline with biomedical literature integration." } },
-        { name: "Aaron Wu",       project: { name: "CompassAgent",   url: "https://github.com/ds4cabs/CompassAgent",   desc: "Multi-agent system for biopharma research navigation." } }
+        { name: "Aaron Wu",        affiliation: "Northeastern University", headshot: "assets/img/people/aaron-wu.jpg",       linkedin: "https://www.linkedin.com/in/aaron-wu-10a9403a9",          github: "https://github.com/aaron123-dev",      project: { name: "CompassAgent",   url: "https://github.com/ds4cabs/CompassAgent",   desc: "Multi-agent system for biopharma research navigation." } },
+        { name: "Beyza Yoruk",     affiliation: "Muğla Sıtkı Koçman University", headshot: "assets/img/people/beyza-yoruk.jpeg",   linkedin: "https://www.linkedin.com/in/beyza-y%C3%B6r%C3%BCk-0a118b337/", github: "https://github.com/beyzolog",        project: { name: "OpenRepurpose",  url: "https://github.com/ds4cabs/OpenRepurpose",  desc: "Drug-repurposing pipeline with biomedical literature integration." } },
+        { name: "Chin Hung Lin",   affiliation: "UC Davis", linkedin: "https://www.linkedin.com/in/chin-hung-lin-407362195", github: "https://github.com/chinhunglin0-ctrl",                                                                                                    project: { name: "OpenRepurpose",  url: "https://github.com/ds4cabs/OpenRepurpose",  desc: "Drug-repurposing pipeline with biomedical literature integration." } },
+        { name: "Christina Fu",    affiliation: "Emory University",         headshot: "assets/img/people/christina-fu.jpg",     linkedin: "https://www.linkedin.com/in/christina-w-fu",              github: "https://github.com/christinawfu",       project: { name: "OpenRepurpose",  url: "https://github.com/ds4cabs/OpenRepurpose",  desc: "Drug-repurposing pipeline with biomedical literature integration." } },
+        { name: "Jason Zhou",      affiliation: "UC Santa Cruz",            headshot: "assets/img/people/jason-zhou.jpg",       github: "https://github.com/Jason-5678",                                                                                                project: { name: "OpenMarket",     url: "https://github.com/ds4cabs/OpenMarket",     desc: "Open market-access analytics for biopharma." } },
+        { name: "Kening Li",       affiliation: "UCSD & Weill Cornell",     headshot: "assets/img/people/kening-li.jpg",        linkedin: "https://www.linkedin.com/in/kening-li-8366b8255/",        github: "https://github.com/Rika-Li",            project: { name: "OpenPulse",      url: "https://github.com/ds4cabs/OpenPulse",      desc: "Real-time signal monitoring across pharma data streams." } },
+        { name: "Natalie Huang",   affiliation: "UC Davis",                 headshot: "assets/img/people/natalie-huang.heic",   linkedin: "https://www.linkedin.com/in/natalie-huang-682818342",     github: "https://github.com/nath1012",           project: { name: "CausalSentinel", url: "https://github.com/ds4cabs/CausalSentinel", desc: "Causal-inference monitoring for real-world evidence." } },
+        { name: "Reuben N Addison",affiliation: "DePauw University",        headshot: "assets/img/people/reuben-addison.jpg",   linkedin: "https://www.linkedin.com/in/reuben-newton-addison-ph-d-04394870/", github: "https://github.com/reubebe",   project: { name: "OpenTrial",      url: "https://github.com/ds4cabs/OpenTrial",      desc: "Open infrastructure for clinical trial intelligence." } },
+        { name: "Shawn Phan",      affiliation: "University of San Francisco", headshot: "assets/img/people/shawn-phan.jpg",    linkedin: "https://www.linkedin.com/in/shawnphan",                   github: "https://github.com/spphan",            project: { name: "OpenLedger",     url: "https://github.com/ds4cabs/OpenLedger",     desc: "Transparent ledger for pharma data provenance." } },
+        { name: "Shucheng Cao",    affiliation: "McGill University",        headshot: "assets/img/people/shucheng-cao.jpg",     linkedin: "https://www.linkedin.com/in/shucheng-bangli-cao/",       github: "https://github.com/SchengC",            project: { name: "CausalSentinel", url: "https://github.com/ds4cabs/CausalSentinel", desc: "Causal-inference monitoring for real-world evidence." } },
+        { name: "Xiaoxue Li",      affiliation: "University of Chicago",    headshot: "assets/img/people/xiaoxue-li.jpg",       linkedin: "https://www.linkedin.com/in/xiaoxue-l-899729259/",       github: "https://github.com/lxxglasgow-lab",     project: { name: "OpenTarget",     url: "https://github.com/ds4cabs/OpenTarget",     desc: "Open-source target discovery & prioritization." } }
       ],
 
-      // Volunteer organizers. (Empty until populated.)
+      // Program leaders.
       leadership: [
-        // {
-        //   name: "Jane Doe",
-        //   org_role: "Operations Co-Lead",
-        //   affiliation: "CABS",
-        //   headshot: "assets/img/people/jane-doe.jpg",
-        //   linkedin: "https://www.linkedin.com/in/janedoe"
-        // }
+        { name: "Shicheng Guo", org_role: "Program Lead", affiliation: "CABS · DS4CABS", headshot: "assets/img/people/shicheng-guo.jpg" },
+        { name: "Sihong Zhou",  org_role: "Program Lead", affiliation: "CABS · DS4CABS" },
+        { name: "Liping Meng",  org_role: "Program Lead", affiliation: "CABS · DS4CABS" }
       ]
     }
 
