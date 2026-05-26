@@ -15,7 +15,7 @@ window.DS4CABS_PROJECTS = {
   team: {
     leaders: [
       { name: "Shicheng Guo",   role: "Program Lead",  affiliation: "CABS · DS4CABS", email: "shicheng.guo@cabsweb.org", headshot: "assets/img/people/shicheng-guo.jpg" },
-      { name: "Sihong Zhou",    role: "Program Lead",  affiliation: "CABS · DS4CABS", email: "sihong.zhou@cabsweb.org" },
+      { name: "Sihong Zhou",    role: "Program Lead",  affiliation: "CABS · DS4CABS", email: "sihong.zhou@cabsweb.org", headshot: "assets/img/people/sihong-zhou.jpg" },
       { name: "Liping Meng",    role: "Program Lead",  affiliation: "CABS · DS4CABS", email: "liping.meng@cabsweb.org", headshot: "assets/img/people/liping-meng.jpg" }
     ],
     mentors_admin: [
@@ -30,7 +30,7 @@ window.DS4CABS_PROJECTS = {
       { name: "Lena Li",              role: "Admin & Mentor", email: "lena.li@cabsweb.org",  headshot: "assets/img/people/lena-li.jpg" },
       { name: "Zhiqing Wang",         role: "Admin & Mentor", email: "zwang9187@gmail.com" },
       { name: "Le Cai",               role: "Admin & Mentor", email: "le.cai@cabsweb.org",        headshot: "assets/img/people/le-cai.jpg" },
-      { name: "Jingyuan Huang",       role: "Admin & Mentor", email: "elvahdesign@gmail.com" }
+      { name: "Jingyuan Huang",       role: "Admin & Mentor", email: "elvahdesign@gmail.com", headshot: "assets/img/people/jingyuan-huang.jpg" }
     ],
     // Intern entries support optional `affiliation`, `linkedin`, and
     // `github` fields. Empty strings are skipped by the renderer.
@@ -230,7 +230,7 @@ window.DS4CABS_PROJECTS = {
         { name: "Kay Tong",             role: "Admin & Mentor", headshot: "assets/img/people/kay-tong.jpg" },
         { name: "Lena Li",              role: "Admin & Mentor", headshot: "assets/img/people/lena-li.jpg" },
         { name: "Zhiqing Wang",         role: "Admin & Mentor" },
-        { name: "Jingyuan Huang",       role: "Admin & Mentor" }
+        { name: "Jingyuan Huang",       role: "Admin & Mentor", headshot: "assets/img/people/jingyuan-huang.jpg" }
       ],
 
       // The "Open*" project cohort. One entry per intern; multi-author
@@ -252,7 +252,7 @@ window.DS4CABS_PROJECTS = {
       // Program leaders.
       leadership: [
         { name: "Shicheng Guo", org_role: "Program Lead", affiliation: "CABS · DS4CABS", headshot: "assets/img/people/shicheng-guo.jpg" },
-        { name: "Sihong Zhou",  org_role: "Program Lead", affiliation: "CABS · DS4CABS" },
+        { name: "Sihong Zhou",  org_role: "Program Lead", affiliation: "CABS · DS4CABS", headshot: "assets/img/people/sihong-zhou.jpg" },
         { name: "Liping Meng",  org_role: "Program Lead", affiliation: "CABS · DS4CABS", headshot: "assets/img/people/liping-meng.jpg" }
       ]
     }
