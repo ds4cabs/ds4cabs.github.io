@@ -72,7 +72,15 @@
   }
 
   function avatar(person) {
-    const wrap = el("div", { class: "avatar", "aria-hidden": "true" });
+    const wrap = person.linkedin
+      ? el("a", {
+          class: "avatar avatar-link",
+          href: person.linkedin,
+          target: "_blank",
+          rel: "noopener",
+          "aria-label": person.name + " on LinkedIn"
+        })
+      : el("div", { class: "avatar", "aria-hidden": "true" });
     if (person.headshot) {
       const img = el("img", {
         class: "avatar-img",

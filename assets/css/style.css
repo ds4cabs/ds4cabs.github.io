@@ -471,6 +471,17 @@ abbr[title] {
   font-family: var(--font);
   user-select: none;
 }
+.avatar-link {
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.avatar-link:hover,
+.avatar-link:focus-visible {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  outline: none;
+}
 
 .person-body { display: flex; flex-direction: column; min-width: 0; }
 .person-name {
