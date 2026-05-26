@@ -28,7 +28,7 @@ window.DS4CABS_PROJECTS = {
       { name: "Alexander Wu",         role: "Admin & Mentor", email: "alexander.wu7@gmail.com",   headshot: "assets/img/people/alexander-wu.jpg" },
       { name: "Kay Tong",             role: "Admin & Mentor", email: "kay.tong@cabsweb.org", headshot: "assets/img/people/kay-tong.jpg" },
       { name: "Lena Li",              role: "Admin & Mentor", email: "lena.li@cabsweb.org",  headshot: "assets/img/people/lena-li.jpg" },
-      { name: "Zhiqing Wang",         role: "Admin & Mentor", email: "zwang9187@gmail.com" },
+      { name: "Zhiqing Wang",         role: "Admin & Mentor", email: "zwang9187@gmail.com", headshot: "assets/img/people/zhiqing-wang.png" },
       { name: "Le Cai",               role: "Admin & Mentor", email: "le.cai@cabsweb.org",        headshot: "assets/img/people/le-cai.jpg" },
       { name: "Jingyuan Huang",       role: "Admin & Mentor", email: "elvahdesign@gmail.com", headshot: "assets/img/people/jingyuan-huang.jpg" }
     ],
@@ -229,7 +229,7 @@ window.DS4CABS_PROJECTS = {
         { name: "Le Cai",               role: "Admin & Mentor", headshot: "assets/img/people/le-cai.jpg" },
         { name: "Kay Tong",             role: "Admin & Mentor", headshot: "assets/img/people/kay-tong.jpg" },
         { name: "Lena Li",              role: "Admin & Mentor", headshot: "assets/img/people/lena-li.jpg" },
-        { name: "Zhiqing Wang",         role: "Admin & Mentor" },
+        { name: "Zhiqing Wang",         role: "Admin & Mentor", headshot: "assets/img/people/zhiqing-wang.png" },
         { name: "Jingyuan Huang",       role: "Admin & Mentor", headshot: "assets/img/people/jingyuan-huang.jpg" }
       ],
 
