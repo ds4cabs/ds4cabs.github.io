@@ -100,8 +100,8 @@ window.DS4CABS_PROJECTS = {
       2024: {
         year: 2024,
         interns: [
-          { name: "Linda Sun",  role: "Intern", affiliation: "Cornell University, Class of 2026", interests: ["data science", "machine learning", "healthcare tech"], linkedin: "https://www.linkedin.com/in/lindahuangsun/" },
-          { name: "Minji Kim",  role: "Intern", affiliation: "UC Berkeley, Class of 2024",         interests: ["marketing analytics", "pricing strategy", "market research"], linkedin: "https://www.linkedin.com/in/minjik30/" }
+          { name: "Linda Sun",  role: "Intern", affiliation: "Cornell University, Class of 2026", interests: ["data science", "machine learning", "healthcare tech"], linkedin: "https://www.linkedin.com/in/lindahuangsun/", headshot: "assets/img/people/linda-sun.png" },
+          { name: "Minji Kim",  role: "Intern", affiliation: "UC Berkeley, Class of 2024",         interests: ["marketing analytics", "pricing strategy", "market research"], linkedin: "https://www.linkedin.com/in/minjik30/", headshot: "assets/img/people/minji-kim.png" }
         ]
       }
     }
