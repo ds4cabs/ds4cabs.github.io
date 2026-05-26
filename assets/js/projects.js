@@ -227,8 +227,8 @@ window.DS4CABS_PROJECTS = {
         { name: "Yuntao Zhang",         role: "Admin & Mentor", headshot: "assets/img/people/yuntao-zhang.jpg" },
         { name: "Alexander Wu",         role: "Admin & Mentor", headshot: "assets/img/people/alexander-wu.jpg" },
         { name: "Le Cai",               role: "Admin & Mentor", headshot: "assets/img/people/le-cai.jpg" },
-        { name: "Kay Tong",             role: "Admin & Mentor" },
-        { name: "Lena Li",              role: "Admin & Mentor" },
+        { name: "Kay Tong",             role: "Admin & Mentor", headshot: "assets/img/people/kay-tong.jpg" },
+        { name: "Lena Li",              role: "Admin & Mentor", headshot: "assets/img/people/lena-li.jpg" },
         { name: "Zhiqing Wang",         role: "Admin & Mentor" },
         { name: "Jingyuan Huang",       role: "Admin & Mentor" }
       ],
@@ -253,7 +253,7 @@ window.DS4CABS_PROJECTS = {
       leadership: [
         { name: "Shicheng Guo", org_role: "Program Lead", affiliation: "CABS · DS4CABS", headshot: "assets/img/people/shicheng-guo.jpg" },
         { name: "Sihong Zhou",  org_role: "Program Lead", affiliation: "CABS · DS4CABS" },
-        { name: "Liping Meng",  org_role: "Program Lead", affiliation: "CABS · DS4CABS" }
+        { name: "Liping Meng",  org_role: "Program Lead", affiliation: "CABS · DS4CABS", headshot: "assets/img/people/liping-meng.jpg" }
       ]
     }
 
