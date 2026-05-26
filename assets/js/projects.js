@@ -66,7 +66,42 @@ window.DS4CABS_PROJECTS = {
       { name: "Ying Shi", role: "Intern", email: "shiying3646@gmail.com", affiliation: "", linkedin: "https://www.linkedin.com/in/yingshi-research", github: "https://github.com/yshi6125", headshot: "assets/img/people/ying-shi.jpg" },
       { name: "Yu-Jung Liang", role: "Intern", email: "angelliang112@gmail.com", affiliation: "Master Student, UCSD", linkedin: "", github: "https://github.com/amberyliang", headshot: "assets/img/people/yu-jung-liang.jpg" },
       { name: "Zechuan Shi", role: "Intern", email: "tristanzeshi@gmail.com", affiliation: "PhD Candidate, UC Irvine", linkedin: "https://www.linkedin.com/in/zechuan-tristan-shi-55b21387/", github: "https://github.com/rootze", headshot: "assets/img/people/zechuan-shi.jpeg" }
-    ]
+    ],
+
+    // Past cohort archive — rendered by /cohort.html?year=YYYY.
+    // Add a new year-keyed entry as historic rosters become available.
+    archive: {
+      2025: {
+        year: 2025,
+        interns: [
+          { name: "Ashtagandha Vartak", role: "Intern", email: "vartakashtagandha@gmail.com", affiliation: "MSc Biochemistry, Savitribai Phule Pune University", linkedin: "https://www.linkedin.com/in/ashtagandha-vartak-3484a7338" },
+          { name: "Baixue Zhang (Doris)", role: "Intern", email: "doris.zbx@gmail.com", affiliation: "Statistics Graduate Student, San Jose State University", linkedin: "https://www.linkedin.com/in/baixue-doris-zhang-2302b4306/", github: "https://github.com/DorisTheChef" },
+          { name: "Delong", role: "Intern", email: "tswayd@gmail.com", affiliation: "Manufacturing Technician, CSBio", linkedin: "https://www.linkedin.com/in/delong-tsway" },
+          { name: "Derek Tian", role: "Intern · Mentor: Zhuoqing Fang", email: "derektian310@gmail.com", affiliation: "Master's Student, Vanderbilt University", linkedin: "https://www.linkedin.com/in/derektian01/" },
+          { name: "Emily Sun", role: "Intern · Mentor: Shicheng Guo", email: "emsun@bu.edu", affiliation: "MS Bioinformatics, Northeastern University (Research Intern, Yale)", linkedin: "https://www.linkedin.com/in/emilyqs/", github: "https://github.com/2emily3" },
+          { name: "Gayathri Sundaram", role: "Intern", email: "gayagene@gmail.com", affiliation: "MIT-AI (MQU), PhD, MVSc, BVSc", linkedin: "https://www.linkedin.com/in/g3s", github: "https://github.com/GayathriMQU" },
+          { name: "Haotian Liu", role: "Intern · Mentor: Lena Li", email: "tliu0321@gmail.com", affiliation: "Graduate Student, USC", linkedin: "https://www.linkedin.com/in/haotianliutony/" },
+          { name: "Hongbi Kim", role: "Intern · Mentor: Lena Li", email: "hongbik148@berkeley.edu", affiliation: "BA Data Science, UC Berkeley (2024)", linkedin: "https://www.linkedin.com/in/hongbikim/" },
+          { name: "Jack Wang", role: "Intern · Mentor: Shicheng Guo", email: "jwangjy315@gmail.com", affiliation: "Junior, New York University", linkedin: "https://www.linkedin.com/in/jackinthebox314/" },
+          { name: "Jeffrey Ding", role: "Intern", email: "jhding235@gmail.com", affiliation: "Undergraduate, UC Berkeley", linkedin: "https://www.linkedin.com/in/jeffreyhding/", github: "https://github.com/jeffreyhding" },
+          { name: "Jiayi Zou (Judy)", role: "Intern · Mentor: Shicheng Guo", email: "judyzou1228@gmail.com", affiliation: "BA Molecular Biology & CS, Barnard College / Columbia University", linkedin: "https://linkedin.com/in/judy-zou-19b993326", github: "https://github.com/JiayiJudyZou" },
+          { name: "Jiayun Liang", role: "Intern · Mentor: Lena Li", email: "jiayunliang410@gmail.com", affiliation: "Junior, Ohio State University", linkedin: "https://www.linkedin.com/in/jiayun-sophia-liang" },
+          { name: "Jinhao Wang", role: "Intern · Mentor: Shicheng Guo", email: "wjhlang@umich.edu", affiliation: "PhD Candidate, University of Michigan", linkedin: "https://www.linkedin.com/in/wjhlang" },
+          { name: "Jun Xiao", role: "Intern · Mentor: Shicheng Guo", email: "jun.xiao2@mail.mcgill.ca", affiliation: "Undergraduate, McGill University", linkedin: "https://www.linkedin.com/in/%E4%BF%8A-%E8%90%A7-5a7883361/", github: "https://github.com/junxiao0601" },
+          { name: "Lily Niu", role: "Intern · Mentor: Lena Li", email: "lilyniu86@gmail.com", affiliation: "Student, University of Pennsylvania", linkedin: "https://www.linkedin.com/in/lily-niu-87b6072a4/", github: "https://github.com/lilyniu88" },
+          { name: "Shujie Li", role: "Intern · Mentor: Lena Li", email: "sl5625@columbia.edu", affiliation: "Student, Columbia University", linkedin: "https://www.linkedin.com/in/shujie-li/" },
+          { name: "Sidharth Mallela", role: "Intern · Mentor: Max Ma", email: "snmallela@berkeley.edu", affiliation: "Undergraduate Data Science, UC Berkeley", linkedin: "https://www.linkedin.com/in/sideveloper/", github: "https://github.com/sidharth-05" },
+          { name: "Sion Zhan", role: "Intern", email: "sszhan24@gmail.com", affiliation: "Student, UC Davis" },
+          { name: "Tejhas Annamalai", role: "Intern", email: "tejhasannamalai@gmail.com", affiliation: "Student", linkedin: "https://www.linkedin.com/in/tejhasannamalai/" },
+          { name: "Xiaokun Wei", role: "Intern", email: "dwei2002@gmail.com", affiliation: "Master Student, University of Chicago", linkedin: "https://www.linkedin.com/in/david-wei-628a7226a" },
+          { name: "Xiaolong Zheng", role: "Intern · Mentor: Max Ma", email: "zxl205023@gmail.com", linkedin: "https://www.linkedin.com/in/xiaolong-zheng-a87a94248/", github: "https://github.com/RobertZheng050" }
+        ]
+      },
+      2024: {
+        year: 2024,
+        interns: [] // roster to be added when data is available
+      }
+    }
   },
 
   featured: [

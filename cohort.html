@@ -3,14 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Team — DS4CABS · Chinese American Biopharmaceutical Society</title>
-  <meta name="description" content="The DS4CABS team — program leaders, admin & mentor team, and the intern/mentee cohort." />
+  <title>Past Cohorts — DS4CABS · Chinese American Biopharmaceutical Society</title>
+  <meta name="description" content="Archive of past DS4CABS intern cohorts — 2025, 2024, and beyond." />
   <meta name="theme-color" content="#0b1020" />
-
-  <meta property="og:title" content="DS4CABS Team — Leaders, Mentors, Interns" />
-  <meta property="og:description" content="Meet the volunteers, mentors, and interns building DS4CABS — the data-science initiative of CABS." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://ds4cabs.github.io/team.html" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -53,12 +48,11 @@
 
     <nav class="nav-links" id="navMenu" aria-label="Primary">
       <a href="index.html#featured">Featured</a>
-      <a href="team.html" aria-current="page">Team</a>
-      <a href="cohort.html">Past cohorts</a>
+      <a href="team.html">Team</a>
+      <a href="cohort.html" aria-current="page">Past cohorts</a>
       <a href="index.html#join">Apply</a>
       <a href="index.html#projects">Projects</a>
       <a href="index.html#learn">Learn</a>
-      <a href="index.html#about">About</a>
       <a class="btn btn-ghost" href="https://github.com/ds4cabs" target="_blank" rel="noopener">GitHub ↗</a>
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle color theme" title="Toggle color theme">
         <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
@@ -68,59 +62,21 @@
   </div>
 </header>
 
-<!-- ============= PAGE HEADER ============= -->
+<!-- ============= PAGE ============= -->
 <section id="top" class="section">
   <div class="container">
     <header class="section-head">
-      <span class="chip chip-accent">DS4CABS · Team</span>
-      <h2>The people behind DS4CABS</h2>
+      <span class="chip chip-accent">DS4CABS · Archive</span>
+      <h2 id="cohortYearHeading">Past intern cohorts</h2>
       <p>
-        Program leaders, mentors, admins, and the intern cohort — the volunteers building
-        open data science for biopharma at the
-        <a href="https://www.cabsweb.org/" target="_blank" rel="noopener">Chinese American Biopharmaceutical Society</a>.
+        Previous DS4CABS Data Science Summer Internship cohorts. Pick a year below.
+        Looking for the current cohort? <a href="team.html">Visit the Team page</a>.
       </p>
+      <div class="filters" id="cohortYearPicker" role="tablist" aria-label="Cohort year"></div>
     </header>
-  </div>
-</section>
 
-<!-- ============= PROGRAM LEADERS ============= -->
-<section id="leaders" class="section section-alt">
-  <div class="container">
-    <header class="section-head">
-      <span class="chip chip-accent">Program Leaders</span>
-      <h2>Program leadership</h2>
-      <p>The leads running the DS4CABS internship program day to day.</p>
-    </header>
-    <div class="cards cards-people" id="teamLeaderCards"></div>
-  </div>
-</section>
-
-<!-- ============= MENTORS / ADMIN ============= -->
-<section id="mentors-admin" class="section">
-  <div class="container">
-    <header class="section-head">
-      <span class="chip chip-accent">Admin &amp; Mentors</span>
-      <h2>Admin &amp; mentor team</h2>
-      <p>Industry and academic volunteers running operations and guiding the cohort 1:1.</p>
-    </header>
-    <div class="cards cards-people" id="teamMentorCards"></div>
-  </div>
-</section>
-
-<!-- ============= INTERNS / MENTEES ============= -->
-<section id="interns-mentees" class="section section-alt">
-  <div class="container">
-    <header class="section-head">
-      <span class="chip chip-accent">Interns &amp; Mentees</span>
-      <h2>Intern &amp; mentee team</h2>
-      <p>Students from leading universities shipping open-source work across discovery, trials, markets, and policy.</p>
-    </header>
-    <div class="cards cards-people" id="teamInternCards"></div>
-    <div class="see-more">
-      <a class="link-arrow" href="index.html#interns">See the current cohort's projects →</a>
-      <span style="margin: 0 10px; opacity: .4">·</span>
-      <a class="link-arrow" href="cohort.html">Browse past cohorts →</a>
-    </div>
+    <div class="cards cards-people" id="pastCohortCards"></div>
+    <p class="empty" id="pastCohortEmpty" hidden>Roster for this year is being collected — check back soon.</p>
   </div>
 </section>
 
@@ -139,7 +95,6 @@
       </div>
       <p class="footer-note">
         © <span id="year"></span> CABS — Chinese American Biopharmaceutical Society.
-        All project code is released under the licenses of the individual repositories.
       </p>
     </div>
     <nav aria-label="Footer">

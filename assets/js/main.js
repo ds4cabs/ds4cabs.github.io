@@ -193,6 +193,39 @@
   renderPeople(team.mentors_admin,   "teamMentorCards");
   renderPeople(team.interns_mentees, "teamInternCards");
 
+  // ---------- past cohort page (/cohort.html?year=YYYY) ----------
+  const cohortMount = $("#pastCohortCards");
+  if (cohortMount) {
+    const archive = (team.archive) || {};
+    const years = Object.keys(archive).map(n => +n).filter(Number.isFinite).sort((a, b) => b - a);
+    const params = new URLSearchParams(window.location.search);
+    const requested = +params.get("year");
+    const activeYear = years.includes(requested) ? requested : (years[0] || null);
+
+    // year selector
+    const picker = $("#cohortYearPicker");
+    if (picker) {
+      picker.replaceChildren();
+      years.forEach(y => {
+        const active = y === activeYear;
+        picker.appendChild(el("a", {
+          class: "filter-pill" + (active ? " is-active" : ""),
+          href: "?year=" + y,
+          "aria-pressed": active ? "true" : "false"
+        }, String(y)));
+      });
+    }
+
+    // heading text
+    const heading = $("#cohortYearHeading");
+    if (heading && activeYear) heading.textContent = activeYear + " intern cohort";
+
+    // render the chosen cohort
+    const entry = activeYear ? archive[activeYear] : null;
+    const interns = entry ? (entry.interns || []) : [];
+    renderPeople(interns, "pastCohortCards", "pastCohortEmpty");
+  }
+
   // ---------- year / date template substitution ----------
   applyTemplates(document);
 
