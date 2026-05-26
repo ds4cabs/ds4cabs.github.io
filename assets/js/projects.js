@@ -99,7 +99,10 @@ window.DS4CABS_PROJECTS = {
       },
       2024: {
         year: 2024,
-        interns: [] // roster to be added when data is available
+        interns: [
+          { name: "Linda Sun",  role: "Intern", affiliation: "Cornell University, Class of 2026", interests: ["data science", "machine learning", "healthcare tech"], linkedin: "https://www.linkedin.com/in/lindahuangsun/" },
+          { name: "Minji Kim",  role: "Intern", affiliation: "UC Berkeley, Class of 2024",         interests: ["marketing analytics", "pricing strategy", "market research"], linkedin: "https://www.linkedin.com/in/minjik30/" }
+        ]
       }
     }
   },
