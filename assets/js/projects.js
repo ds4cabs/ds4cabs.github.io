@@ -3,6 +3,68 @@
 // Edit this file to add/update projects. The site reads from window.DS4CABS_PROJECTS.
 
 window.DS4CABS_PROJECTS = {
+  // ====================================================================
+  // TEAM — full DS4CABS roster (cross-cohort, evergreen).
+  // --------------------------------------------------------------------
+  // Rendered on /team.html. The current-cohort grids on the home page
+  // still read from `cohorts.<year>` (mentors / interns / leadership).
+  //
+  // Person entry schema is the same as cohort entries, plus an optional
+  // `email` field that renders as a mailto link.
+  // ====================================================================
+  team: {
+    leaders: [
+      { name: "Shicheng Guo",   role: "Program Lead",  affiliation: "CABS · DS4CABS", email: "shicheng.guo@cabsweb.org", headshot: "assets/img/people/shicheng-guo.jpg" },
+      { name: "Sihong Zhou",    role: "Program Lead",  affiliation: "CABS · DS4CABS", email: "sihong.zhou@cabsweb.org" },
+      { name: "Liping Meng",    role: "Program Lead",  affiliation: "CABS · DS4CABS", email: "liping.meng@cabsweb.org" }
+    ],
+    mentors_admin: [
+      { name: "Baixue Zhang (Doris)", role: "Admin & Mentor", email: "doris.zbx@gmail.com",       headshot: "assets/img/people/baixue-zhang.jpg" },
+      { name: "Quinn Leng",           role: "Admin & Mentor", email: "quinn.leng.666@gmail.com",  headshot: "assets/img/people/quinn-leng.jpeg" },
+      { name: "Yongli Shan",          role: "Admin & Mentor", email: "shan.yongli@gmail.com",     headshot: "assets/img/people/yongli-shan.jpg" },
+      { name: "Ying Yang",            role: "Admin & Mentor", email: "yangying2013@gmail.com",    headshot: "assets/img/people/ying-yang.jpeg" },
+      { name: "Zuolin Cheng",         role: "Admin & Mentor", email: "zuolincheng166@gmail.com",  headshot: "assets/img/people/zuolin-cheng.jpg" },
+      { name: "Yuntao Zhang",         role: "Admin & Mentor", email: "ustb.zhangyuntao@gmail.com",headshot: "assets/img/people/yuntao-zhang.jpg" },
+      { name: "Alexander Wu",         role: "Admin & Mentor", email: "alexander.wu7@gmail.com",   headshot: "assets/img/people/alexander-wu.jpg" },
+      { name: "Kay Tong",             role: "Admin & Mentor", email: "kay.tong@cabsweb.org" },
+      { name: "Lena Li",              role: "Admin & Mentor", email: "lena.li@cabsweb.org" },
+      { name: "Zhiqing Wang",         role: "Admin & Mentor", email: "zwang9187@gmail.com" },
+      { name: "Le Cai",               role: "Admin & Mentor", email: "le.cai@cabsweb.org",        headshot: "assets/img/people/le-cai.jpg" },
+      { name: "Jingyuan Huang",       role: "Admin & Mentor", email: "elvahdesign@gmail.com" }
+    ],
+    interns_mentees: [
+      { name: "Jia Chen",        role: "Intern", email: "jiabreaker@gmail.com",          headshot: "assets/img/people/jia-chen.jpg" },
+      { name: "Yu-Jung Liang",   role: "Intern", email: "angelliang112@gmail.com",       headshot: "assets/img/people/yu-jung-liang.jpg" },
+      { name: "Anagha Gardane",  role: "Intern", email: "angdata09@gmail.com",           headshot: "assets/img/people/anagha-gardane.jpg" },
+      { name: "Chengxi Zhang",   role: "Intern", email: "zhangcx318@gmail.com",          headshot: "assets/img/people/chengxi-zhang.jpg" },
+      { name: "Hubert Chen",     role: "Intern", email: "hubertchen2020@gmail.com",      headshot: "assets/img/people/hubert-chen.jpg" },
+      { name: "Zechuan Shi",     role: "Intern", email: "tristanzeshi@gmail.com",        headshot: "assets/img/people/zechuan-shi.jpeg" },
+      { name: "Yichen Dai",      role: "Intern", email: "yichendai3@gmail.com",          headshot: "assets/img/people/yichen-dai.heic" },
+      { name: "Ying Shi",        role: "Intern", email: "shiying3646@gmail.com",         headshot: "assets/img/people/ying-shi.jpg" },
+      { name: "Reuben N Addison",role: "Intern", email: "reuben.addison@gmail.com",      headshot: "assets/img/people/reuben-addison.jpg" },
+      { name: "Karen Wang",      role: "Intern", email: "K27wang@gmail.com",             headshot: "assets/img/people/karen-wong.png" },
+      { name: "Xiaoxue Li",      role: "Intern", email: "lxx.glasgow@gmail.com",         headshot: "assets/img/people/xiaoxue-li.jpg" },
+      { name: "Wendi Ma",        role: "Intern", email: "mawendi2019@gmail.com",         headshot: "assets/img/people/wendi-ma.jpg" },
+      { name: "Sicheng Chen",    role: "Intern", email: "sc2977786@gmail.com",           headshot: "assets/img/people/sicheng-chen.png" },
+      { name: "Beyza Yoruk",     role: "Intern", email: "yorukbeyza02@gmail.com",        headshot: "assets/img/people/beyza-yoruk.jpeg" },
+      { name: "Tobias Lin",      role: "Intern", email: "tobiaslin338@gmail.com",        headshot: "assets/img/people/tobias-lin.jpg" },
+      { name: "Yifeng Liang",    role: "Intern", email: "yl11795@nyu.edu",               headshot: "assets/img/people/yifeng-liang.png" },
+      { name: "Jingrui Mu",      role: "Intern", email: "mujingrui.uibe@gmail.com",      headshot: "assets/img/people/jingrui-mu.jpg" },
+      { name: "Ivan Yu",         role: "Intern", email: "icstivan@gmail.com",            headshot: "assets/img/people/ivan-yu.jpeg" },
+      { name: "Chang Li",        role: "Intern", email: "lic052463@gmail.com",           headshot: "assets/img/people/chang-li.jpg" },
+      { name: "Shawn Phan",      role: "Intern", email: "shawnphan23@gmail.com",         headshot: "assets/img/people/shawn-phan.jpg" },
+      { name: "Lengxi Huang",    role: "Intern", email: "lengxi.huang@gmail.com",        headshot: "assets/img/people/lengxi-huang.jpeg" },
+      { name: "Jason Zhou",      role: "Intern", email: "zhoujason371@gmail.com",        headshot: "assets/img/people/jason-zhou.jpg" },
+      { name: "Chin Hung Lin",   role: "Intern", email: "chinhunglin0@gmail.com" },
+      { name: "Matias",          role: "Intern", email: "tashibama@gmail.com",           headshot: "assets/img/people/matias-pinto.png" },
+      { name: "Shucheng Cao",    role: "Intern", email: "shucheng.cao@mail.mcgill.ca",   headshot: "assets/img/people/shucheng-cao.jpg" },
+      { name: "Aaron Wu",        role: "Intern", email: "wu.aaron.0001@gmail.com",       headshot: "assets/img/people/aaron-wu.jpg" },
+      { name: "Natalie Huang",   role: "Intern", email: "nathuang10@gmail.com",          headshot: "assets/img/people/natalie-huang.heic" },
+      { name: "Christina Fu",    role: "Intern", email: "christinawfu@gmail.com",        headshot: "assets/img/people/christina-fu.jpg" },
+      { name: "Kening Li",       role: "Intern", email: "mkeningli@gmail.com",           headshot: "assets/img/people/kening-li.jpg" }
+    ]
+  },
+
   featured: [
     {
       name: "CABS_Smart_Website",
