@@ -14,7 +14,7 @@ window.DS4CABS_PROJECTS = {
   // ====================================================================
   team: {
     leaders: [
-      { name: "Shicheng Guo",   role: "Program Lead",  affiliation: "CABS · DS4CABS", email: "shicheng.guo@cabsweb.org", headshot: "assets/img/people/shicheng-guo.jpg" },
+      { name: "Shicheng Guo",   role: "Program Lead",  affiliation: "CABS · DS4CABS", email: "shicheng.guo@cabsweb.org", headshot: "assets/img/people/shicheng-guo.jpg", profile: "people/shicheng-guo.html" },
       { name: "Sihong Zhou",    role: "Program Lead",  affiliation: "CABS · DS4CABS", email: "sihong.zhou@cabsweb.org", headshot: "assets/img/people/sihong-zhou.jpg" },
       { name: "Liping Meng",    role: "Program Lead",  affiliation: "CABS · DS4CABS", email: "liping.meng@cabsweb.org", headshot: "assets/img/people/liping-meng.jpg" }
     ],
@@ -251,7 +251,7 @@ window.DS4CABS_PROJECTS = {
 
       // Program leaders.
       leadership: [
-        { name: "Shicheng Guo", org_role: "Program Lead", affiliation: "CABS · DS4CABS", headshot: "assets/img/people/shicheng-guo.jpg" },
+        { name: "Shicheng Guo", org_role: "Program Lead", affiliation: "CABS · DS4CABS", headshot: "assets/img/people/shicheng-guo.jpg", profile: "people/shicheng-guo.html" },
         { name: "Sihong Zhou",  org_role: "Program Lead", affiliation: "CABS · DS4CABS", headshot: "assets/img/people/sihong-zhou.jpg" },
         { name: "Liping Meng",  org_role: "Program Lead", affiliation: "CABS · DS4CABS", headshot: "assets/img/people/liping-meng.jpg" }
       ]

@@ -129,7 +129,14 @@
     }, iconMail()));
 
     return el("article", { class: "card person-card" },
-      avatar(person),
+      el("div", { class: "person-avatar-col" },
+        avatar(person),
+        person.profile && el("a", {
+          class: "person-profile-link",
+          href: person.profile,
+          "aria-label": "View " + person.name + "'s profile"
+        }, "Profile →")
+      ),
       el("div", { class: "person-body" },
         el("h3", { class: "person-name" }, person.name),
         metaParts.length > 0 && el("p", { class: "person-meta" }, metaParts.join(" · ")),

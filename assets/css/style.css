@@ -483,6 +483,20 @@ abbr[title] {
   outline: none;
 }
 
+/* avatar + optional "Profile →" link stacked in the card's first column */
+.person-avatar-col {
+  display: flex; flex-direction: column;
+  align-items: center; gap: 7px;
+}
+.person-profile-link {
+  font-size: .72rem; font-weight: 700;
+  color: var(--brand-3);
+  text-align: center; line-height: 1.2;
+  white-space: nowrap;
+  transition: color .15s;
+}
+.person-profile-link:hover { color: var(--brand); }
+
 .person-body { display: flex; flex-direction: column; min-width: 0; }
 .person-name {
   font-size: 1.05rem;
