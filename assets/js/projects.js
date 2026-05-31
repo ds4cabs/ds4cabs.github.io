@@ -400,3 +400,14 @@ window.DS4CABS_PROJECTS = {
     { id: "misc",           label: "Specialty" }
   ]
 };
+
+// The 2026 cohort roster lives in `team.interns_mentees` (shown on /team.html).
+// Mirror it into the cohort archive so /cohort.html?year=2026 lists the same
+// people, without duplicating the roster. When 2026 becomes historic, replace
+// this with a static `archive[2026]` entry and drop the wiring below.
+(function () {
+  var t = window.DS4CABS_PROJECTS && window.DS4CABS_PROJECTS.team;
+  if (t && t.archive && t.interns_mentees && !t.archive[2026]) {
+    t.archive[2026] = { year: 2026, interns: t.interns_mentees };
+  }
+})();
