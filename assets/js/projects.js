@@ -149,6 +149,20 @@ window.DS4CABS_PROJECTS = {
       url: "https://github.com/ds4cabs/AlphaGenomeBench"
     },
     {
+      name: "DrugSAGE",
+      desc: "Self-evolving LLM agents that accumulate cross-task experience to build SOTA molecular-property models — memory-augmented MCTS + zero-test-time transfer.",
+      lang: "Python",
+      tag: "Agents",
+      url: "https://github.com/ds4cabs/DrugSAGE"
+    },
+    {
+      name: "PerturbAI",
+      desc: "Analysis toolkit for whole-brain in vivo Perturb-seq CRISPR atlases — differential expression, effect scoring, cell-type clustering, and functional perturbation modules.",
+      lang: "Python",
+      tag: "Perturb-seq",
+      url: "https://github.com/ds4cabs/PerturbAI"
+    },
+    {
       name: "cabs-workshop-llm-agents",
       desc: "Hands-on workshop for biologists: RAG, tool-calling agents, and local LLM deployments — privacy-preserving by default.",
       lang: "Jupyter",
@@ -295,6 +309,8 @@ window.DS4CABS_PROJECTS = {
 
     // ---------- Discovery / Genomics ----------
     { name: "AlphaGenomeBench",        cat: "discovery", lang: "Python",  desc: "Benchmarks for genome-scale foundation models.",                       stars: 3, url: "https://github.com/ds4cabs/AlphaGenomeBench" },
+    { name: "DrugSAGE",                cat: "discovery", lang: "Python",  desc: "Self-evolving agent experience for SOTA drug-discovery modeling (memory-augmented MCTS + DrugSAGE-Zero).", url: "https://github.com/ds4cabs/DrugSAGE" },
+    { name: "PerturbAI",               cat: "discovery", lang: "Python",  desc: "Whole-brain in vivo Perturb-seq CRISPR atlas analysis: DE, effect scoring, clustering, functional modules.", url: "https://github.com/ds4cabs/PerturbAI" },
     { name: "VirtualCellChallenge2025",cat: "discovery", lang: "Jupyter", desc: "Single-cell perturbation modeling challenge.",                          stars: 9, url: "https://github.com/ds4cabs/VirtualCellChallenge2025" },
     { name: "Virtual-Cell-Challenge",  cat: "discovery", lang: "Python",  desc: "Reference pipeline for single-cell perturbation data loading.",         stars: 1, url: "https://github.com/ds4cabs/Virtual-Cell-Challenge" },
     { name: "knockout-discovery",      cat: "discovery", lang: "Python",  desc: "Predict drug efficacy and side effects from human knockouts.",          url: "https://github.com/ds4cabs/knockout-discovery" },
