@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<!-- saved from url=(0067)file:///C:/Users/Shich/Dropbox/PC/Downloads/CABS_2026_EC_Map_4.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CABS 2026 — EC Members Map</title>
+<link rel="stylesheet" href="./CABS 2026 — EC Members Map_files/leaflet.css">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Arial, sans-serif; display: flex; flex-direction: column; height: 100vh; }
+  #header { background:#1F3864; color:white; padding:12px 20px; display:flex; align-items:center; justify-content:space-between; flex-shrink:0; }
+  #header h1 { font-size:15px; font-weight:600; }
+  #header span { font-size:12px; opacity:0.75; }
+  #map { flex:1; }
+  #legend { position:absolute; bottom:36px; left:12px; background:white; border-radius:8px; border:1px solid #ddd; padding:10px 14px; font-size:12px; z-index:999; box-shadow:0 2px 6px rgba(0,0,0,0.15); }
+  #legend h3 { font-size:12px; font-weight:600; color:#333; margin-bottom:6px; }
+  .leg-item { display:flex; align-items:center; gap:7px; margin-bottom:5px; color:#444; }
+  .leg-dot { width:12px; height:12px; border-radius:50%; flex-shrink:0; }
+  .popup-name { font-size:15px; font-weight:700; color:#111; margin-bottom:4px; }
+  .popup-row { font-size:12px; color:#555; margin-bottom:3px; }
+  .popup-badge { display:inline-block; padding:3px 10px; border-radius:12px; font-size:11px; font-weight:600; color:white; margin:5px 0 4px; }
+  .popup-email { font-size:12px; margin-top:4px; }
+  .popup-email a { color:#185FA5; text-decoration:none; }
+</style>
+</head>
+<body>
+<div id="header">
+  <h1>CABS 2026 Executive Committee — Bay Area Members Map</h1>
+  <span>43 EC members · All names visible · Click any pin for details</span>
+</div>
+<div id="map" class="leaflet-container leaflet-touch leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom" tabindex="0" style="position: relative;"><div class="leaflet-pane leaflet-map-pane" style="transform: translate3d(0px, 0px, 0px);"><div class="leaflet-pane leaflet-tile-pane"><div class="leaflet-layer " style="z-index: 1; opacity: 1;"><div class="leaflet-tile-container leaflet-zoom-animated" style="z-index: 18; transform: translate3d(0px, 0px, 0px) scale(1);"><img alt="" src="./CABS 2026 — EC Members Map_files/396.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(783px, 280px, 0px); opacity: 1;"><img alt="" src="./CABS 2026 — EC Members Map_files/395.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(783px, 24px, 0px); opacity: 1;"><img alt="" src="./CABS 2026 — EC Members Map_files/396(1).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(527px, 280px, 0px); opacity: 1;"><img alt="" src="./CABS 2026 — EC Members Map_files/396(2).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1039px, 280px, 0px); opacity: 1;"><img alt="" src="./CABS 2026 — EC Members Map_files/397.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(783px, 536px, 0px); opacity: 1;"><img alt="" src="./CABS 2026 — EC Members Map_files/395(1).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(527px, 24px, 0px); opacity: 1;"><img alt="" src="./CABS 2026 — EC Members Map_files/395(2).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1039px, 24px, 0px); opacity: 1;"><img alt="" src="./CABS 2026 — EC Members Map_files/397(1).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(527px, 536px, 0px); opacity: 1;"><img alt="" src="./CABS 2026 — EC Members Map_files/397(2).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1039px, 536px, 0px); opacity: 1;"><img alt="" src="./CABS 2026 — EC Members Map_files/394.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(783px, -232px, 0px); opacity: 1;"><img alt="" src="./CABS 2026 — EC Members Map_files/396(3).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(271px, 280px, 0px); opacity: 1;"><img alt="" src="./CABS 2026 — EC Members Map_files/396(4).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1295px, 280px, 0px); opacity: 1;"><img alt="" src="./CABS 2026 — EC Members Map_files/398.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(783px, 792px, 0px); opacity: 1;"><img alt="" src="./CABS 2026 — EC Members Map_files/394(1).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(527px, -232px, 0px); opacity: 1;"><img alt="" src="./CABS 2026 — EC Members Map_files/394(2).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1039px, -232px, 0px); opacity: 1;"><img alt="" src="./CABS 2026 — EC Members Map_files/395(3).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(271px, 24px, 0px); opacity: 1;"><img alt="" src="./CABS 2026 — EC Members Map_files/395(4).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1295px, 24px, 0px); opacity: 1;"><img alt="" src="./CABS 2026 — EC Members Map_files/397(3).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(271px, 536px, 0px); opacity: 1;"><img alt="" src="./CABS 2026 — EC Members Map_files/397(4).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1295px, 536px, 0px); opacity: 1;"><img alt="" src="./CABS 2026 — EC Members Map_files/398(1).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(527px, 792px, 0px); opacity: 1;"><img alt="" src="./CABS 2026 — EC Members Map_files/398(2).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1039px, 792px, 0px); opacity: 1;"><img alt="" src="./CABS 2026 — EC Members Map_files/394(3).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(271px, -232px, 0px); opacity: 1;"><img alt="" src="./CABS 2026 — EC Members Map_files/394(4).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1295px, -232px, 0px); opacity: 1;"><img alt="" src="./CABS 2026 — EC Members Map_files/398(3).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(271px, 792px, 0px); opacity: 1;"><img alt="" src="./CABS 2026 — EC Members Map_files/398(4).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1295px, 792px, 0px); opacity: 1;"><img alt="" src="./CABS 2026 — EC Members Map_files/396(5).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(15px, 280px, 0px); opacity: 1;"><img alt="" src="./CABS 2026 — EC Members Map_files/396(6).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1551px, 280px, 0px); opacity: 1;"><img alt="" src="./CABS 2026 — EC Members Map_files/395(5).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(15px, 24px, 0px); opacity: 1;"><img alt="" src="./CABS 2026 — EC Members Map_files/395(6).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1551px, 24px, 0px); opacity: 1;"><img alt="" src="./CABS 2026 — EC Members Map_files/397(5).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(15px, 536px, 0px); opacity: 1;"><img alt="" src="./CABS 2026 — EC Members Map_files/397(6).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1551px, 536px, 0px); opacity: 1;"><img alt="" src="./CABS 2026 — EC Members Map_files/394(5).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(15px, -232px, 0px); opacity: 1;"><img alt="" src="./CABS 2026 — EC Members Map_files/394(6).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1551px, -232px, 0px); opacity: 1;"><img alt="" src="./CABS 2026 — EC Members Map_files/398(5).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(15px, 792px, 0px); opacity: 1;"><img alt="" src="./CABS 2026 — EC Members Map_files/398(6).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1551px, 792px, 0px); opacity: 1;"><img alt="" src="./CABS 2026 — EC Members Map_files/396(7).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-241px, 280px, 0px); opacity: 1;"><img alt="" src="./CABS 2026 — EC Members Map_files/396(8).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1807px, 280px, 0px); opacity: 1;"><img alt="" src="./CABS 2026 — EC Members Map_files/395(7).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-241px, 24px, 0px); opacity: 1;"><img alt="" src="./CABS 2026 — EC Members Map_files/395(8).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1807px, 24px, 0px); opacity: 1;"><img alt="" src="./CABS 2026 — EC Members Map_files/397(7).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-241px, 536px, 0px); opacity: 1;"><img alt="" src="./CABS 2026 — EC Members Map_files/397(8).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1807px, 536px, 0px); opacity: 1;"><img alt="" src="./CABS 2026 — EC Members Map_files/394(7).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-241px, -232px, 0px); opacity: 1;"><img alt="" src="./CABS 2026 — EC Members Map_files/394(8).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1807px, -232px, 0px); opacity: 1;"><img alt="" src="./CABS 2026 — EC Members Map_files/398(7).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-241px, 792px, 0px); opacity: 1;"><img alt="" src="./CABS 2026 — EC Members Map_files/398(8).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1807px, 792px, 0px); opacity: 1;"></div></div></div><div class="leaflet-pane leaflet-overlay-pane"></div><div class="leaflet-pane leaflet-shadow-pane"></div><div class="leaflet-pane leaflet-marker-pane"><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -41.25px; margin-top: -58px; width: 82.5px; height: 58px; transform: translate3d(835px, 139px, 0px); z-index: 139;">
+    <div style="display:flex;flex-direction:column;align-items:center;">
+      <div style="
+        background:white; border:1px solid #bbb; border-radius:4px;
+        padding:2px 6px; font-family:Arial,sans-serif;
+        font-size:10.5px; font-weight:600; color:#111;
+        white-space:nowrap; box-shadow:0 1px 3px rgba(0,0,0,0.15);
+        text-align:center; line-height:1.4; margin-bottom:3px;
+      ">Yang, Amy</div>
+      <div style="
+        width:36px; height:36px; border-radius:50%;
+        background:#888780; border:2.5px solid white;
+        box-shadow:0 2px 6px rgba(0,0,0,0.3);
+        display:flex; align-items:center; justify-content:center;
+        font-family:Arial,sans-serif; font-size:13px; font-weight:700; color:white;
+      ">Y</div>
+    </div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -51px; margin-top: -58px; width: 102px; height: 58px; transform: translate3d(691px, 318px, 0px); z-index: 318;">
+    <div style="display:flex;flex-direction:column;align-items:center;">
+      <div style="
+        background:white; border:1px solid #bbb; border-radius:4px;
+        padding:2px 6px; font-family:Arial,sans-serif;
+        font-size:10.5px; font-weight:600; color:#111;
+        white-space:nowrap; box-shadow:0 1px 3px rgba(0,0,0,0.15);
+        text-align:center; line-height:1.4; margin-bottom:3px;
+      ">Tan, Crystal</div>
+      <div style="
+        width:36px; height:36px; border-radius:50%;
+        background:#D4537E; border:2.5px solid white;
+        box-shadow:0 2px 6px rgba(0,0,0,0.3);
+        display:flex; align-items:center; justify-content:center;
+        font-family:Arial,sans-serif; font-size:13px; font-weight:700; color:white;
+      ">T</div>
+    </div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -54.25px; margin-top: -58px; width: 108.5px; height: 58px; transform: translate3d(691px, 298px, 0px); z-index: 298;">
+    <div style="display:flex;flex-direction:column;align-items:center;">
+      <div style="
+        background:white; border:1px solid #bbb; border-radius:4px;
+        padding:2px 6px; font-family:Arial,sans-serif;
+        font-size:10.5px; font-weight:600; color:#111;
+        white-space:nowrap; box-shadow:0 1px 3px rgba(0,0,0,0.15);
+        text-align:center; line-height:1.4; margin-bottom:3px;
+      ">Guo, Shicheng</div>
+      <div style="
+        width:36px; height:36px; border-radius:50%;
+        background:#534AB7; border:2.5px solid white;
+        box-shadow:0 2px 6px rgba(0,0,0,0.3);
+        display:flex; align-items:center; justify-content:center;
+        font-family:Arial,sans-serif; font-size:13px; font-weight:700; color:white;
+      ">G</div>
+    </div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -51px; margin-top: -58px; width: 102px; height: 58px; transform: translate3d(991px, 401px, 0px); z-index: 401;">
+    <div style="display:flex;flex-direction:column;align-items:center;">
+      <div style="
+        background:white; border:1px solid #bbb; border-radius:4px;
+        padding:2px 6px; font-family:Arial,sans-serif;
+        font-size:10.5px; font-weight:600; color:#111;
+        white-space:nowrap; box-shadow:0 1px 3px rgba(0,0,0,0.15);
+        text-align:center; line-height:1.4; margin-bottom:3px;
+      ">Kwang, Denna</div>
+      <div style="
+        width:36px; height:36px; border-radius:50%;
+        background:#378ADD; border:2.5px solid white;
+        box-shadow:0 2px 6px rgba(0,0,0,0.3);
+        display:flex; align-items:center; justify-content:center;
+        font-family:Arial,sans-serif; font-size:13px; font-weight:700; color:white;
+      ">K</div>
+    </div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -41.25px; margin-top: -58px; width: 82.5px; height: 58px; transform: translate3d(948px, 523px, 0px); z-index: 523;">
+    <div style="display:flex;flex-direction:column;align-items:center;">
+      <div style="
+        background:white; border:1px solid #bbb; border-radius:4px;
+        padding:2px 6px; font-family:Arial,sans-serif;
+        font-size:10.5px; font-weight:600; color:#111;
+        white-space:nowrap; box-shadow:0 1px 3px rgba(0,0,0,0.15);
+        text-align:center; line-height:1.4; margin-bottom:3px;
+      ">Pan, Feng</div>
+      <div style="
+        width:36px; height:36px; border-radius:50%;
+        background:#D85A30; border:2.5px solid white;
+        box-shadow:0 2px 6px rgba(0,0,0,0.3);
+        display:flex; align-items:center; justify-content:center;
+        font-family:Arial,sans-serif; font-size:13px; font-weight:700; color:white;
+      ">P</div>
+    </div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -41.25px; margin-top: -58px; width: 82.5px; height: 58px; transform: translate3d(817px, 445px, 0px); z-index: 445;">
+    <div style="display:flex;flex-direction:column;align-items:center;">
+      <div style="
+        background:white; border:1px solid #bbb; border-radius:4px;
+        padding:2px 6px; font-family:Arial,sans-serif;
+        font-size:10.5px; font-weight:600; color:#111;
+        white-space:nowrap; box-shadow:0 1px 3px rgba(0,0,0,0.15);
+        text-align:center; line-height:1.4; margin-bottom:3px;
+      ">Zhu, Jack</div>
+      <div style="
+        width:36px; height:36px; border-radius:50%;
+        background:#378ADD; border:2.5px solid white;
+        box-shadow:0 2px 6px rgba(0,0,0,0.3);
+        display:flex; align-items:center; justify-content:center;
+        font-family:Arial,sans-serif; font-size:13px; font-weight:700; color:white;
+      ">Z</div>
+    </div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -38px; margin-top: -58px; width: 76px; height: 58px; transform: translate3d(832px, 437px, 0px); z-index: 437;">
+    <div style="display:flex;flex-direction:column;align-items:center;">
+      <div style="
+        background:white; border:1px solid #bbb; border-radius:4px;
+        padding:2px 6px; font-family:Arial,sans-serif;
+        font-size:10.5px; font-weight:600; color:#111;
+        white-space:nowrap; box-shadow:0 1px 3px rgba(0,0,0,0.15);
+        text-align:center; line-height:1.4; margin-bottom:3px;
+      ">Wang, Li</div>
+      <div style="
+        width:36px; height:36px; border-radius:50%;
+        background:#D4537E; border:2.5px solid white;
+        box-shadow:0 2px 6px rgba(0,0,0,0.3);
+        display:flex; align-items:center; justify-content:center;
+        font-family:Arial,sans-serif; font-size:13px; font-weight:700; color:white;
+      ">W</div>
+    </div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -44.5px; margin-top: -58px; width: 89px; height: 58px; transform: translate3d(832px, 420px, 0px); z-index: 420;">
+    <div style="display:flex;flex-direction:column;align-items:center;">
+      <div style="
+        background:white; border:1px solid #bbb; border-radius:4px;
+        padding:2px 6px; font-family:Arial,sans-serif;
+        font-size:10.5px; font-weight:600; color:#111;
+        white-space:nowrap; box-shadow:0 1px 3px rgba(0,0,0,0.15);
+        text-align:center; line-height:1.4; margin-bottom:3px;
+      ">Gu, Wenjia</div>
+      <div style="
+        width:36px; height:36px; border-radius:50%;
+        background:#378ADD; border:2.5px solid white;
+        box-shadow:0 2px 6px rgba(0,0,0,0.3);
+        display:flex; align-items:center; justify-content:center;
+        font-family:Arial,sans-serif; font-size:13px; font-weight:700; color:white;
+      ">G</div>
+    </div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -51px; margin-top: -58px; width: 102px; height: 58px; transform: translate3d(817px, 412px, 0px); z-index: 412;">
+    <div style="display:flex;flex-direction:column;align-items:center;">
+      <div style="
+        background:white; border:1px solid #bbb; border-radius:4px;
+        padding:2px 6px; font-family:Arial,sans-serif;
+        font-size:10.5px; font-weight:600; color:#111;
+        white-space:nowrap; box-shadow:0 1px 3px rgba(0,0,0,0.15);
+        text-align:center; line-height:1.4; margin-bottom:3px;
+      ">Ring, Huijun</div>
+      <div style="
+        width:36px; height:36px; border-radius:50%;
+        background:#378ADD; border:2.5px solid white;
+        box-shadow:0 2px 6px rgba(0,0,0,0.3);
+        display:flex; align-items:center; justify-content:center;
+        font-family:Arial,sans-serif; font-size:13px; font-weight:700; color:white;
+      ">R</div>
+    </div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -57.5px; margin-top: -58px; width: 115px; height: 58px; transform: translate3d(801px, 420px, 0px); z-index: 420;">
+    <div style="display:flex;flex-direction:column;align-items:center;">
+      <div style="
+        background:white; border:1px solid #bbb; border-radius:4px;
+        padding:2px 6px; font-family:Arial,sans-serif;
+        font-size:10.5px; font-weight:600; color:#111;
+        white-space:nowrap; box-shadow:0 1px 3px rgba(0,0,0,0.15);
+        text-align:center; line-height:1.4; margin-bottom:3px;
+      ">Shang, Tiffany</div>
+      <div style="
+        width:36px; height:36px; border-radius:50%;
+        background:#378ADD; border:2.5px solid white;
+        box-shadow:0 2px 6px rgba(0,0,0,0.3);
+        display:flex; align-items:center; justify-content:center;
+        font-family:Arial,sans-serif; font-size:13px; font-weight:700; color:white;
+      ">S</div>
+    </div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -41.25px; margin-top: -58px; width: 82.5px; height: 58px; transform: translate3d(801px, 437px, 0px); z-index: 437;">
+    <div style="display:flex;flex-direction:column;align-items:center;">
+      <div style="
+        background:white; border:1px solid #bbb; border-radius:4px;
+        padding:2px 6px; font-family:Arial,sans-serif;
+        font-size:10.5px; font-weight:600; color:#111;
+        white-space:nowrap; box-shadow:0 1px 3px rgba(0,0,0,0.15);
+        text-align:center; line-height:1.4; margin-bottom:3px;
+      ">Wang, Lin</div>
+      <div style="
+        width:36px; height:36px; border-radius:50%;
+        background:#1D9E75; border:2.5px solid white;
+        box-shadow:0 2px 6px rgba(0,0,0,0.3);
+        display:flex; align-items:center; justify-content:center;
+        font-family:Arial,sans-serif; font-size:13px; font-weight:700; color:white;
+      ">W</div>
+    </div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -57.5px; margin-top: -58px; width: 115px; height: 58px; transform: translate3d(735px, 230px, 0px); z-index: 230;">
+    <div style="display:flex;flex-direction:column;align-items:center;">
+      <div style="
+        background:white; border:1px solid #bbb; border-radius:4px;
+        padding:2px 6px; font-family:Arial,sans-serif;
+        font-size:10.5px; font-weight:600; color:#111;
+        white-space:nowrap; box-shadow:0 1px 3px rgba(0,0,0,0.15);
+        text-align:center; line-height:1.4; margin-bottom:3px;
+      ">Wong, Jonathan</div>
+      <div style="
+        width:36px; height:36px; border-radius:50%;
+        background:#378ADD; border:2.5px solid white;
+        box-shadow:0 2px 6px rgba(0,0,0,0.3);
+        display:flex; align-items:center; justify-content:center;
+        font-family:Arial,sans-serif; font-size:13px; font-weight:700; color:white;
+      ">W</div>
+    </div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -60.75px; margin-top: -58px; width: 121.5px; height: 58px; transform: translate3d(737px, 353px, 0px); z-index: 353;">
+    <div style="display:flex;flex-direction:column;align-items:center;">
+      <div style="
+        background:white; border:1px solid #bbb; border-radius:4px;
+        padding:2px 6px; font-family:Arial,sans-serif;
+        font-size:10.5px; font-weight:600; color:#111;
+        white-space:nowrap; box-shadow:0 1px 3px rgba(0,0,0,0.15);
+        text-align:center; line-height:1.4; margin-bottom:3px;
+      ">Guan, Katherine</div>
+      <div style="
+        width:36px; height:36px; border-radius:50%;
+        background:#D85A30; border:2.5px solid white;
+        box-shadow:0 2px 6px rgba(0,0,0,0.3);
+        display:flex; align-items:center; justify-content:center;
+        font-family:Arial,sans-serif; font-size:13px; font-weight:700; color:white;
+      ">G</div>
+    </div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -41.25px; margin-top: -58px; width: 82.5px; height: 58px; transform: translate3d(737px, 333px, 0px); z-index: 333;">
+    <div style="display:flex;flex-direction:column;align-items:center;">
+      <div style="
+        background:white; border:1px solid #bbb; border-radius:4px;
+        padding:2px 6px; font-family:Arial,sans-serif;
+        font-size:10.5px; font-weight:600; color:#111;
+        white-space:nowrap; box-shadow:0 1px 3px rgba(0,0,0,0.15);
+        text-align:center; line-height:1.4; margin-bottom:3px;
+      ">Tian, Tim</div>
+      <div style="
+        width:36px; height:36px; border-radius:50%;
+        background:#BA7517; border:2.5px solid white;
+        box-shadow:0 2px 6px rgba(0,0,0,0.3);
+        display:flex; align-items:center; justify-content:center;
+        font-family:Arial,sans-serif; font-size:13px; font-weight:700; color:white;
+      ">T</div>
+    </div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -34.75px; margin-top: -58px; width: 69.5px; height: 58px; transform: translate3d(1066px, 615px, 0px); z-index: 615;">
+    <div style="display:flex;flex-direction:column;align-items:center;">
+      <div style="
+        background:white; border:1px solid #bbb; border-radius:4px;
+        padding:2px 6px; font-family:Arial,sans-serif;
+        font-size:10.5px; font-weight:600; color:#111;
+        white-space:nowrap; box-shadow:0 1px 3px rgba(0,0,0,0.15);
+        text-align:center; line-height:1.4; margin-bottom:3px;
+      ">Cai, Le</div>
+      <div style="
+        width:36px; height:36px; border-radius:50%;
+        background:#378ADD; border:2.5px solid white;
+        box-shadow:0 2px 6px rgba(0,0,0,0.3);
+        display:flex; align-items:center; justify-content:center;
+        font-family:Arial,sans-serif; font-size:13px; font-weight:700; color:white;
+      ">C</div>
+    </div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -41.25px; margin-top: -58px; width: 82.5px; height: 58px; transform: translate3d(937px, 565px, 0px); z-index: 565;">
+    <div style="display:flex;flex-direction:column;align-items:center;">
+      <div style="
+        background:white; border:1px solid #bbb; border-radius:4px;
+        padding:2px 6px; font-family:Arial,sans-serif;
+        font-size:10.5px; font-weight:600; color:#111;
+        white-space:nowrap; box-shadow:0 1px 3px rgba(0,0,0,0.15);
+        text-align:center; line-height:1.4; margin-bottom:3px;
+      ">He, Liang</div>
+      <div style="
+        width:36px; height:36px; border-radius:50%;
+        background:#534AB7; border:2.5px solid white;
+        box-shadow:0 2px 6px rgba(0,0,0,0.3);
+        display:flex; align-items:center; justify-content:center;
+        font-family:Arial,sans-serif; font-size:13px; font-weight:700; color:white;
+      ">H</div>
+    </div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -47.75px; margin-top: -58px; width: 95.5px; height: 58px; transform: translate3d(937px, 545px, 0px); z-index: 545;">
+    <div style="display:flex;flex-direction:column;align-items:center;">
+      <div style="
+        background:white; border:1px solid #bbb; border-radius:4px;
+        padding:2px 6px; font-family:Arial,sans-serif;
+        font-size:10.5px; font-weight:600; color:#111;
+        white-space:nowrap; box-shadow:0 1px 3px rgba(0,0,0,0.15);
+        text-align:center; line-height:1.4; margin-bottom:3px;
+      ">Guo, Wenhui</div>
+      <div style="
+        width:36px; height:36px; border-radius:50%;
+        background:#1D9E75; border:2.5px solid white;
+        box-shadow:0 2px 6px rgba(0,0,0,0.3);
+        display:flex; align-items:center; justify-content:center;
+        font-family:Arial,sans-serif; font-size:13px; font-weight:700; color:white;
+      ">G</div>
+    </div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -47.75px; margin-top: -58px; width: 95.5px; height: 58px; transform: translate3d(814px, 93px, 0px); z-index: 93;">
+    <div style="display:flex;flex-direction:column;align-items:center;">
+      <div style="
+        background:white; border:1px solid #bbb; border-radius:4px;
+        padding:2px 6px; font-family:Arial,sans-serif;
+        font-size:10.5px; font-weight:600; color:#111;
+        white-space:nowrap; box-shadow:0 1px 3px rgba(0,0,0,0.15);
+        text-align:center; line-height:1.4; margin-bottom:3px;
+      ">Yang, Lifei</div>
+      <div style="
+        width:36px; height:36px; border-radius:50%;
+        background:#1D9E75; border:2.5px solid white;
+        box-shadow:0 2px 6px rgba(0,0,0,0.3);
+        display:flex; align-items:center; justify-content:center;
+        font-family:Arial,sans-serif; font-size:13px; font-weight:700; color:white;
+      ">Y</div>
+    </div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -57.5px; margin-top: -58px; width: 115px; height: 58px; transform: translate3d(734px, 362px, 0px); z-index: 362;">
+    <div style="display:flex;flex-direction:column;align-items:center;">
+      <div style="
+        background:white; border:1px solid #bbb; border-radius:4px;
+        padding:2px 6px; font-family:Arial,sans-serif;
+        font-size:10.5px; font-weight:600; color:#111;
+        white-space:nowrap; box-shadow:0 1px 3px rgba(0,0,0,0.15);
+        text-align:center; line-height:1.4; margin-bottom:3px;
+      ">Jiang, Lillian</div>
+      <div style="
+        width:36px; height:36px; border-radius:50%;
+        background:#0F6E56; border:2.5px solid white;
+        box-shadow:0 2px 6px rgba(0,0,0,0.3);
+        display:flex; align-items:center; justify-content:center;
+        font-family:Arial,sans-serif; font-size:13px; font-weight:700; color:white;
+      ">J</div>
+    </div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -77px; margin-top: -58px; width: 154px; height: 58px; transform: translate3d(744px, 238px, 0px); z-index: 238;">
+    <div style="display:flex;flex-direction:column;align-items:center;">
+      <div style="
+        background:white; border:1px solid #bbb; border-radius:4px;
+        padding:2px 6px; font-family:Arial,sans-serif;
+        font-size:10.5px; font-weight:600; color:#111;
+        white-space:nowrap; box-shadow:0 1px 3px rgba(0,0,0,0.15);
+        text-align:center; line-height:1.4; margin-bottom:3px;
+      ">Kretschmer, Lin Song</div>
+      <div style="
+        width:36px; height:36px; border-radius:50%;
+        background:#378ADD; border:2.5px solid white;
+        box-shadow:0 2px 6px rgba(0,0,0,0.3);
+        display:flex; align-items:center; justify-content:center;
+        font-family:Arial,sans-serif; font-size:13px; font-weight:700; color:white;
+      ">K</div>
+    </div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -57.5px; margin-top: -58px; width: 115px; height: 58px; transform: translate3d(955px, 607px, 0px); z-index: 607;">
+    <div style="display:flex;flex-direction:column;align-items:center;">
+      <div style="
+        background:white; border:1px solid #bbb; border-radius:4px;
+        padding:2px 6px; font-family:Arial,sans-serif;
+        font-size:10.5px; font-weight:600; color:#111;
+        white-space:nowrap; box-shadow:0 1px 3px rgba(0,0,0,0.15);
+        text-align:center; line-height:1.4; margin-bottom:3px;
+      ">Peng, Lingling</div>
+      <div style="
+        width:36px; height:36px; border-radius:50%;
+        background:#BA7517; border:2.5px solid white;
+        box-shadow:0 2px 6px rgba(0,0,0,0.3);
+        display:flex; align-items:center; justify-content:center;
+        font-family:Arial,sans-serif; font-size:13px; font-weight:700; color:white;
+      ">P</div>
+    </div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -44.5px; margin-top: -58px; width: 89px; height: 58px; transform: translate3d(955px, 587px, 0px); z-index: 587;">
+    <div style="display:flex;flex-direction:column;align-items:center;">
+      <div style="
+        background:white; border:1px solid #bbb; border-radius:4px;
+        padding:2px 6px; font-family:Arial,sans-serif;
+        font-size:10.5px; font-weight:600; color:#111;
+        white-space:nowrap; box-shadow:0 1px 3px rgba(0,0,0,0.15);
+        text-align:center; line-height:1.4; margin-bottom:3px;
+      ">Chou, Will</div>
+      <div style="
+        width:36px; height:36px; border-radius:50%;
+        background:#D4537E; border:2.5px solid white;
+        box-shadow:0 2px 6px rgba(0,0,0,0.3);
+        display:flex; align-items:center; justify-content:center;
+        font-family:Arial,sans-serif; font-size:13px; font-weight:700; color:white;
+      ">C</div>
+    </div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -31.5px; margin-top: -58px; width: 63px; height: 58px; transform: translate3d(849px, 478px, 0px); z-index: 478;">
+    <div style="display:flex;flex-direction:column;align-items:center;">
+      <div style="
+        background:white; border:1px solid #bbb; border-radius:4px;
+        padding:2px 6px; font-family:Arial,sans-serif;
+        font-size:10.5px; font-weight:600; color:#111;
+        white-space:nowrap; box-shadow:0 1px 3px rgba(0,0,0,0.15);
+        text-align:center; line-height:1.4; margin-bottom:3px;
+      ">Lu, Lu</div>
+      <div style="
+        width:36px; height:36px; border-radius:50%;
+        background:#378ADD; border:2.5px solid white;
+        box-shadow:0 2px 6px rgba(0,0,0,0.3);
+        display:flex; align-items:center; justify-content:center;
+        font-family:Arial,sans-serif; font-size:13px; font-weight:700; color:white;
+      ">L</div>
+    </div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -73.75px; margin-top: -58px; width: 147.5px; height: 58px; transform: translate3d(849px, 458px, 0px); z-index: 458;">
+    <div style="display:flex;flex-direction:column;align-items:center;">
+      <div style="
+        background:white; border:1px solid #bbb; border-radius:4px;
+        padding:2px 6px; font-family:Arial,sans-serif;
+        font-size:10.5px; font-weight:600; color:#111;
+        white-space:nowrap; box-shadow:0 1px 3px rgba(0,0,0,0.15);
+        text-align:center; line-height:1.4; margin-bottom:3px;
+      ">Zhang, Baixue Doris</div>
+      <div style="
+        width:36px; height:36px; border-radius:50%;
+        background:#534AB7; border:2.5px solid white;
+        box-shadow:0 2px 6px rgba(0,0,0,0.3);
+        display:flex; align-items:center; justify-content:center;
+        font-family:Arial,sans-serif; font-size:13px; font-weight:700; color:white;
+      ">Z</div>
+    </div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -54.25px; margin-top: -58px; width: 108.5px; height: 58px; transform: translate3d(991px, 370px, 0px); z-index: 370;">
+    <div style="display:flex;flex-direction:column;align-items:center;">
+      <div style="
+        background:white; border:1px solid #bbb; border-radius:4px;
+        padding:2px 6px; font-family:Arial,sans-serif;
+        font-size:10.5px; font-weight:600; color:#111;
+        white-space:nowrap; box-shadow:0 1px 3px rgba(0,0,0,0.15);
+        text-align:center; line-height:1.4; margin-bottom:3px;
+      ">Tan, Mingdian</div>
+      <div style="
+        width:36px; height:36px; border-radius:50%;
+        background:#378ADD; border:2.5px solid white;
+        box-shadow:0 2px 6px rgba(0,0,0,0.3);
+        display:flex; align-items:center; justify-content:center;
+        font-family:Arial,sans-serif; font-size:13px; font-weight:700; color:white;
+      ">T</div>
+    </div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -47.75px; margin-top: -58px; width: 95.5px; height: 58px; transform: translate3d(814px, 451px, 0px); z-index: 451;">
+    <div style="display:flex;flex-direction:column;align-items:center;">
+      <div style="
+        background:white; border:1px solid #bbb; border-radius:4px;
+        padding:2px 6px; font-family:Arial,sans-serif;
+        font-size:10.5px; font-weight:600; color:#111;
+        white-space:nowrap; box-shadow:0 1px 3px rgba(0,0,0,0.15);
+        text-align:center; line-height:1.4; margin-bottom:3px;
+      ">Liu, Pengan</div>
+      <div style="
+        width:36px; height:36px; border-radius:50%;
+        background:#D85A30; border:2.5px solid white;
+        box-shadow:0 2px 6px rgba(0,0,0,0.3);
+        display:flex; align-items:center; justify-content:center;
+        font-family:Arial,sans-serif; font-size:13px; font-weight:700; color:white;
+      ">L</div>
+    </div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -34.75px; margin-top: -58px; width: 69.5px; height: 58px; transform: translate3d(814px, 431px, 0px); z-index: 431;">
+    <div style="display:flex;flex-direction:column;align-items:center;">
+      <div style="
+        background:white; border:1px solid #bbb; border-radius:4px;
+        padding:2px 6px; font-family:Arial,sans-serif;
+        font-size:10.5px; font-weight:600; color:#111;
+        white-space:nowrap; box-shadow:0 1px 3px rgba(0,0,0,0.15);
+        text-align:center; line-height:1.4; margin-bottom:3px;
+      ">Su, Dan</div>
+      <div style="
+        width:36px; height:36px; border-radius:50%;
+        background:#1D9E75; border:2.5px solid white;
+        box-shadow:0 2px 6px rgba(0,0,0,0.3);
+        display:flex; align-items:center; justify-content:center;
+        font-family:Arial,sans-serif; font-size:13px; font-weight:700; color:white;
+      ">S</div>
+    </div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -47.75px; margin-top: -58px; width: 95.5px; height: 58px; transform: translate3d(1121px, 619px, 0px); z-index: 619;">
+    <div style="display:flex;flex-direction:column;align-items:center;">
+      <div style="
+        background:white; border:1px solid #bbb; border-radius:4px;
+        padding:2px 6px; font-family:Arial,sans-serif;
+        font-size:10.5px; font-weight:600; color:#111;
+        white-space:nowrap; box-shadow:0 1px 3px rgba(0,0,0,0.15);
+        text-align:center; line-height:1.4; margin-bottom:3px;
+      ">Liu, Vivian</div>
+      <div style="
+        width:36px; height:36px; border-radius:50%;
+        background:#0F6E56; border:2.5px solid white;
+        box-shadow:0 2px 6px rgba(0,0,0,0.3);
+        display:flex; align-items:center; justify-content:center;
+        font-family:Arial,sans-serif; font-size:13px; font-weight:700; color:white;
+      ">L</div>
+    </div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -54.25px; margin-top: -58px; width: 108.5px; height: 58px; transform: translate3d(1106px, 543px, 0px); z-index: 543;">
+    <div style="display:flex;flex-direction:column;align-items:center;">
+      <div style="
+        background:white; border:1px solid #bbb; border-radius:4px;
+        padding:2px 6px; font-family:Arial,sans-serif;
+        font-size:10.5px; font-weight:600; color:#111;
+        white-space:nowrap; box-shadow:0 1px 3px rgba(0,0,0,0.15);
+        text-align:center; line-height:1.4; margin-bottom:3px;
+      ">Zheng, Weibin</div>
+      <div style="
+        width:36px; height:36px; border-radius:50%;
+        background:#378ADD; border:2.5px solid white;
+        box-shadow:0 2px 6px rgba(0,0,0,0.3);
+        display:flex; align-items:center; justify-content:center;
+        font-family:Arial,sans-serif; font-size:13px; font-weight:700; color:white;
+      ">Z</div>
+    </div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -41.25px; margin-top: -58px; width: 82.5px; height: 58px; transform: translate3d(680px, 257px, 0px); z-index: 257;">
+    <div style="display:flex;flex-direction:column;align-items:center;">
+      <div style="
+        background:white; border:1px solid #bbb; border-radius:4px;
+        padding:2px 6px; font-family:Arial,sans-serif;
+        font-size:10.5px; font-weight:600; color:#111;
+        white-space:nowrap; box-shadow:0 1px 3px rgba(0,0,0,0.15);
+        text-align:center; line-height:1.4; margin-bottom:3px;
+      ">Wang, Yan</div>
+      <div style="
+        width:36px; height:36px; border-radius:50%;
+        background:#378ADD; border:2.5px solid white;
+        box-shadow:0 2px 6px rgba(0,0,0,0.3);
+        display:flex; align-items:center; justify-content:center;
+        font-family:Arial,sans-serif; font-size:13px; font-weight:700; color:white;
+      ">W</div>
+    </div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -47.75px; margin-top: -58px; width: 95.5px; height: 58px; transform: translate3d(1105px, 702px, 0px); z-index: 702;">
+    <div style="display:flex;flex-direction:column;align-items:center;">
+      <div style="
+        background:white; border:1px solid #bbb; border-radius:4px;
+        padding:2px 6px; font-family:Arial,sans-serif;
+        font-size:10.5px; font-weight:600; color:#111;
+        white-space:nowrap; box-shadow:0 1px 3px rgba(0,0,0,0.15);
+        text-align:center; line-height:1.4; margin-bottom:3px;
+      ">Wang, Yanan</div>
+      <div style="
+        width:36px; height:36px; border-radius:50%;
+        background:#D85A30; border:2.5px solid white;
+        box-shadow:0 2px 6px rgba(0,0,0,0.3);
+        display:flex; align-items:center; justify-content:center;
+        font-family:Arial,sans-serif; font-size:13px; font-weight:700; color:white;
+      ">W</div>
+    </div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -38px; margin-top: -58px; width: 76px; height: 58px; transform: translate3d(767px, 454px, 0px); z-index: 454;">
+    <div style="display:flex;flex-direction:column;align-items:center;">
+      <div style="
+        background:white; border:1px solid #bbb; border-radius:4px;
+        padding:2px 6px; font-family:Arial,sans-serif;
+        font-size:10.5px; font-weight:600; color:#111;
+        white-space:nowrap; box-shadow:0 1px 3px rgba(0,0,0,0.15);
+        text-align:center; line-height:1.4; margin-bottom:3px;
+      ">Yang, Yu</div>
+      <div style="
+        width:36px; height:36px; border-radius:50%;
+        background:#BA7517; border:2.5px solid white;
+        box-shadow:0 2px 6px rgba(0,0,0,0.3);
+        display:flex; align-items:center; justify-content:center;
+        font-family:Arial,sans-serif; font-size:13px; font-weight:700; color:white;
+      ">Y</div>
+    </div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -54.25px; margin-top: -58px; width: 108.5px; height: 58px; transform: translate3d(858px, 227px, 0px); z-index: 227;">
+    <div style="display:flex;flex-direction:column;align-items:center;">
+      <div style="
+        background:white; border:1px solid #bbb; border-radius:4px;
+        padding:2px 6px; font-family:Arial,sans-serif;
+        font-size:10.5px; font-weight:600; color:#111;
+        white-space:nowrap; box-shadow:0 1px 3px rgba(0,0,0,0.15);
+        text-align:center; line-height:1.4; margin-bottom:3px;
+      ">Zhang, Yujiao</div>
+      <div style="
+        width:36px; height:36px; border-radius:50%;
+        background:#378ADD; border:2.5px solid white;
+        box-shadow:0 2px 6px rgba(0,0,0,0.3);
+        display:flex; align-items:center; justify-content:center;
+        font-family:Arial,sans-serif; font-size:13px; font-weight:700; color:white;
+      ">Z</div>
+    </div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -44.5px; margin-top: -58px; width: 89px; height: 58px; transform: translate3d(1095px, 585px, 0px); z-index: 585;">
+    <div style="display:flex;flex-direction:column;align-items:center;">
+      <div style="
+        background:white; border:1px solid #bbb; border-radius:4px;
+        padding:2px 6px; font-family:Arial,sans-serif;
+        font-size:10.5px; font-weight:600; color:#111;
+        white-space:nowrap; box-shadow:0 1px 3px rgba(0,0,0,0.15);
+        text-align:center; line-height:1.4; margin-bottom:3px;
+      ">Cai, Zheng</div>
+      <div style="
+        width:36px; height:36px; border-radius:50%;
+        background:#1D9E75; border:2.5px solid white;
+        box-shadow:0 2px 6px rgba(0,0,0,0.3);
+        display:flex; align-items:center; justify-content:center;
+        font-family:Arial,sans-serif; font-size:13px; font-weight:700; color:white;
+      ">C</div>
+    </div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -54.25px; margin-top: -58px; width: 108.5px; height: 58px; transform: translate3d(832px, 172px, 0px); z-index: 172;">
+    <div style="display:flex;flex-direction:column;align-items:center;">
+      <div style="
+        background:white; border:1px solid #bbb; border-radius:4px;
+        padding:2px 6px; font-family:Arial,sans-serif;
+        font-size:10.5px; font-weight:600; color:#111;
+        white-space:nowrap; box-shadow:0 1px 3px rgba(0,0,0,0.15);
+        text-align:center; line-height:1.4; margin-bottom:3px;
+      ">Wang, Zhiqing</div>
+      <div style="
+        width:36px; height:36px; border-radius:50%;
+        background:#0F6E56; border:2.5px solid white;
+        box-shadow:0 2px 6px rgba(0,0,0,0.3);
+        display:flex; align-items:center; justify-content:center;
+        font-family:Arial,sans-serif; font-size:13px; font-weight:700; color:white;
+      ">W</div>
+    </div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -54.25px; margin-top: -58px; width: 108.5px; height: 58px; transform: translate3d(1000px, 648px, 0px); z-index: 648;">
+    <div style="display:flex;flex-direction:column;align-items:center;">
+      <div style="
+        background:white; border:1px solid #bbb; border-radius:4px;
+        padding:2px 6px; font-family:Arial,sans-serif;
+        font-size:10.5px; font-weight:600; color:#111;
+        white-space:nowrap; box-shadow:0 1px 3px rgba(0,0,0,0.15);
+        text-align:center; line-height:1.4; margin-bottom:3px;
+      ">Cheng, Zuolin</div>
+      <div style="
+        width:36px; height:36px; border-radius:50%;
+        background:#534AB7; border:2.5px solid white;
+        box-shadow:0 2px 6px rgba(0,0,0,0.3);
+        display:flex; align-items:center; justify-content:center;
+        font-family:Arial,sans-serif; font-size:13px; font-weight:700; color:white;
+      ">C</div>
+    </div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -44.5px; margin-top: -58px; width: 89px; height: 58px; transform: translate3d(1056px, 230px, 0px); z-index: 230;">
+    <div style="display:flex;flex-direction:column;align-items:center;">
+      <div style="
+        background:white; border:1px solid #bbb; border-radius:4px;
+        padding:2px 6px; font-family:Arial,sans-serif;
+        font-size:10.5px; font-weight:600; color:#111;
+        white-space:nowrap; box-shadow:0 1px 3px rgba(0,0,0,0.15);
+        text-align:center; line-height:1.4; margin-bottom:3px;
+      ">Li, Xinxin</div>
+      <div style="
+        width:36px; height:36px; border-radius:50%;
+        background:#BA7517; border:2.5px solid white;
+        box-shadow:0 2px 6px rgba(0,0,0,0.3);
+        display:flex; align-items:center; justify-content:center;
+        font-family:Arial,sans-serif; font-size:13px; font-weight:700; color:white;
+      ">L</div>
+    </div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -54.25px; margin-top: -58px; width: 108.5px; height: 58px; transform: translate3d(1081px, 282px, 0px); z-index: 282;">
+    <div style="display:flex;flex-direction:column;align-items:center;">
+      <div style="
+        background:white; border:1px solid #bbb; border-radius:4px;
+        padding:2px 6px; font-family:Arial,sans-serif;
+        font-size:10.5px; font-weight:600; color:#111;
+        white-space:nowrap; box-shadow:0 1px 3px rgba(0,0,0,0.15);
+        text-align:center; line-height:1.4; margin-bottom:3px;
+      ">Han, Guanghui</div>
+      <div style="
+        width:36px; height:36px; border-radius:50%;
+        background:#D85A30; border:2.5px solid white;
+        box-shadow:0 2px 6px rgba(0,0,0,0.3);
+        display:flex; align-items:center; justify-content:center;
+        font-family:Arial,sans-serif; font-size:13px; font-weight:700; color:white;
+      ">H</div>
+    </div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -57.5px; margin-top: -58px; width: 115px; height: 58px; transform: translate3d(928px, 571px, 0px); z-index: 571;">
+    <div style="display:flex;flex-direction:column;align-items:center;">
+      <div style="
+        background:white; border:1px solid #bbb; border-radius:4px;
+        padding:2px 6px; font-family:Arial,sans-serif;
+        font-size:10.5px; font-weight:600; color:#111;
+        white-space:nowrap; box-shadow:0 1px 3px rgba(0,0,0,0.15);
+        text-align:center; line-height:1.4; margin-bottom:3px;
+      ">Fang, Zhuoqing</div>
+      <div style="
+        width:36px; height:36px; border-radius:50%;
+        background:#534AB7; border:2.5px solid white;
+        box-shadow:0 2px 6px rgba(0,0,0,0.3);
+        display:flex; align-items:center; justify-content:center;
+        font-family:Arial,sans-serif; font-size:13px; font-weight:700; color:white;
+      ">F</div>
+    </div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -57.5px; margin-top: -58px; width: 115px; height: 58px; transform: translate3d(832px, 462px, 0px); z-index: 462;">
+    <div style="display:flex;flex-direction:column;align-items:center;">
+      <div style="
+        background:white; border:1px solid #bbb; border-radius:4px;
+        padding:2px 6px; font-family:Arial,sans-serif;
+        font-size:10.5px; font-weight:600; color:#111;
+        white-space:nowrap; box-shadow:0 1px 3px rgba(0,0,0,0.15);
+        text-align:center; line-height:1.4; margin-bottom:3px;
+      ">Wang, Chunling</div>
+      <div style="
+        width:36px; height:36px; border-radius:50%;
+        background:#378ADD; border:2.5px solid white;
+        box-shadow:0 2px 6px rgba(0,0,0,0.3);
+        display:flex; align-items:center; justify-content:center;
+        font-family:Arial,sans-serif; font-size:13px; font-weight:700; color:white;
+      ">W</div>
+    </div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -70.5px; margin-top: -58px; width: 141px; height: 58px; transform: translate3d(1044px, 662px, 0px); z-index: 662;">
+    <div style="display:flex;flex-direction:column;align-items:center;">
+      <div style="
+        background:white; border:1px solid #bbb; border-radius:4px;
+        padding:2px 6px; font-family:Arial,sans-serif;
+        font-size:10.5px; font-weight:600; color:#111;
+        white-space:nowrap; box-shadow:0 1px 3px rgba(0,0,0,0.15);
+        text-align:center; line-height:1.4; margin-bottom:3px;
+      ">Wang, Lijuan Jenny</div>
+      <div style="
+        width:36px; height:36px; border-radius:50%;
+        background:#BA7517; border:2.5px solid white;
+        box-shadow:0 2px 6px rgba(0,0,0,0.3);
+        display:flex; align-items:center; justify-content:center;
+        font-family:Arial,sans-serif; font-size:13px; font-weight:700; color:white;
+      ">W</div>
+    </div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -47.75px; margin-top: -58px; width: 95.5px; height: 58px; transform: translate3d(1014px, 583px, 0px); z-index: 583;">
+    <div style="display:flex;flex-direction:column;align-items:center;">
+      <div style="
+        background:white; border:1px solid #bbb; border-radius:4px;
+        padding:2px 6px; font-family:Arial,sans-serif;
+        font-size:10.5px; font-weight:600; color:#111;
+        white-space:nowrap; box-shadow:0 1px 3px rgba(0,0,0,0.15);
+        text-align:center; line-height:1.4; margin-bottom:3px;
+      ">Wan, Hailun</div>
+      <div style="
+        width:36px; height:36px; border-radius:50%;
+        background:#378ADD; border:2.5px solid white;
+        box-shadow:0 2px 6px rgba(0,0,0,0.3);
+        display:flex; align-items:center; justify-content:center;
+        font-family:Arial,sans-serif; font-size:13px; font-weight:700; color:white;
+      ">W</div>
+    </div></div><div class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -47.75px; margin-top: -58px; width: 95.5px; height: 58px; transform: translate3d(994px, 427px, 0px); z-index: 427;">
+    <div style="display:flex;flex-direction:column;align-items:center;">
+      <div style="
+        background:white; border:1px solid #bbb; border-radius:4px;
+        padding:2px 6px; font-family:Arial,sans-serif;
+        font-size:10.5px; font-weight:600; color:#111;
+        white-space:nowrap; box-shadow:0 1px 3px rgba(0,0,0,0.15);
+        text-align:center; line-height:1.4; margin-bottom:3px;
+      ">Zhou, Frank</div>
+      <div style="
+        width:36px; height:36px; border-radius:50%;
+        background:#378ADD; border:2.5px solid white;
+        box-shadow:0 2px 6px rgba(0,0,0,0.3);
+        display:flex; align-items:center; justify-content:center;
+        font-family:Arial,sans-serif; font-size:13px; font-weight:700; color:white;
+      ">Z</div>
+    </div></div></div><div class="leaflet-pane leaflet-tooltip-pane"></div><div class="leaflet-pane leaflet-popup-pane"></div><div class="leaflet-proxy leaflet-zoom-animated" style="transform: translate3d(42161.5px, 101531px, 0px) scale(512);"></div></div><div class="leaflet-control-container"><div class="leaflet-top leaflet-left"><div class="leaflet-control-zoom leaflet-bar leaflet-control"><a class="leaflet-control-zoom-in" href="file:///C:/Users/Shich/Dropbox/PC/Downloads/CABS_2026_EC_Map_4.html#" title="Zoom in" role="button" aria-label="Zoom in" aria-disabled="false"><span aria-hidden="true">+</span></a><a class="leaflet-control-zoom-out" href="file:///C:/Users/Shich/Dropbox/PC/Downloads/CABS_2026_EC_Map_4.html#" title="Zoom out" role="button" aria-label="Zoom out" aria-disabled="false"><span aria-hidden="true">−</span></a></div></div><div class="leaflet-top leaflet-right"></div><div class="leaflet-bottom leaflet-left"></div><div class="leaflet-bottom leaflet-right"><div class="leaflet-control-attribution leaflet-control"><a href="https://leafletjs.com/" title="A JavaScript library for interactive maps"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8" class="leaflet-attribution-flag"><path fill="#4C7BE1" d="M0 0h12v4H0z"></path><path fill="#FFD500" d="M0 4h12v3H0z"></path><path fill="#E0BC00" d="M0 7h12v1H0z"></path></svg> Leaflet</a> <span aria-hidden="true">|</span> © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a></div></div></div></div>
+<div id="legend">
+  <h3>Primary Committee</h3>
+  <div class="leg-item"><div class="leg-dot" style="background:#378ADD"></div>BCD (Business &amp; Career)</div>
+  <div class="leg-item"><div class="leg-dot" style="background:#1D9E75"></div>STC (Science &amp; Technology)</div>
+  <div class="leg-item"><div class="leg-dot" style="background:#D85A30"></div>AMC (Alliance Management)</div>
+  <div class="leg-item"><div class="leg-dot" style="background:#534AB7"></div>O2 (IT &amp; Data Science)</div>
+  <div class="leg-item"><div class="leg-dot" style="background:#D4537E"></div>SLC (Social Life)</div>
+  <div class="leg-item"><div class="leg-dot" style="background:#BA7517"></div>ICC (International Collab)</div>
+  <div class="leg-item"><div class="leg-dot" style="background:#0F6E56"></div>PRC (Public Relations)</div>
+  <div class="leg-item"><div class="leg-dot" style="background:#888780"></div>MEM / Other</div>
+</div>
+<script src="./CABS 2026 — EC Members Map_files/leaflet.js.download"></script>
+<script>
+const RAW_EC = [
+  { name:"Amy Yang",            lastName:"Yang",       lat:37.8716, lng:-122.2727, title:"Staff Scientist, Bayer",                        email:"amy88zhao@gmail.com",        committee:"MEM", color:"#888780" },
+  { name:"Crystal Tan",         lastName:"Tan",        lat:37.6879, lng:-122.4702, title:"Nurse, SF General Hospital (Ophthalmology)",     email:"mimiwhite2311@gmail.com",    committee:"SLC", color:"#D4537E" },
+  { name:"Denna Kwang",         lastName:"Kwang",      lat:37.5875, lng:-122.0583, title:"Senior Associate Scientist, BMS",               email:"dennakwang0606@gmail.com",   committee:"BCD", color:"#378ADD" },
+  { name:"Feng Pan",            lastName:"Pan",        lat:37.4539, lng:-122.1178, title:"President, LexigenBio",                         email:"fengpan.fox@gmail.com",      committee:"AMC", color:"#D85A30" },
+  { name:"Jack Zhu",            lastName:"Zhu",        lat:37.5572, lng:-122.2977, title:"Associate Director, Rigel Pharmaceutical",      email:"jackningzhu@gmail.com",      committee:"BCD", color:"#378ADD" },
+  { name:"Jonathan Wong",       lastName:"Wong",       lat:37.7726, lng:-122.4099, title:"Founder & CEO, Enigma Search",                 email:"jwong@enigmarecruiters.com", committee:"BCD", color:"#378ADD" },
+  { name:"Katherine Guan",      lastName:"Guan",       lat:37.6502, lng:-122.4072, title:"Scientist II, AbbVie",                          email:"katherine.guan@cabsweb.org", committee:"AMC", color:"#D85A30" },
+  { name:"Le Cai",              lastName:"Cai",        lat:37.3541, lng:-121.9552, title:"Scientist, A&P Inphatec",                       email:"lecai@alumni.stanford.edu",  committee:"BCD", color:"#378ADD" },
+  { name:"Li Wang",             lastName:"Wang",       lat:37.5572, lng:-122.2977, title:"Scientist, Arcus Biosciences",                 email:"ffya18@gmail.com",           committee:"SLC", color:"#D4537E" },
+  { name:"Liang He",            lastName:"He",         lat:37.4195, lng:-122.1328, title:"Scientist, Frontage / O2 Chair",                email:"heliangsu2018@gmail.com",    committee:"O2",  color:"#534AB7" },
+  { name:"Lifei Yang",          lastName:"Yang",       lat:37.9219, lng:-122.3014, title:"Senior Scientist, Vir Biotechnology",          email:"alex.yang919@gmail.com",     committee:"STC", color:"#1D9E75" },
+  { name:"Lillian Jiang",       lastName:"Jiang",      lat:37.6290, lng:-122.4114, title:"BD Manager, iHealth Labs",                     email:"ljiang721@gmail.com",        committee:"PRC", color:"#0F6E56" },
+  { name:"Lin Song Kretschmer", lastName:"Kretschmer", lat:37.7647, lng:-122.3967, title:"Postdoc, UCSF (drug discovery)",               email:"lin.song0102@gmail.com",     committee:"BCD", color:"#378ADD" },
+  { name:"Lingling Peng",       lastName:"Peng",       lat:37.3735, lng:-122.1069, title:"Scientist, Genentech",                         email:"lpengtutu2015@gmail.com",    committee:"ICC", color:"#BA7517" },
+  { name:"Lu Lu",               lastName:"Lu",         lat:37.5143, lng:-122.2527, title:"SD of BD, MicuRx",                             email:"lulu.maktub@gmail.com",      committee:"BCD", color:"#378ADD" },
+  { name:"Mingdian Tan",        lastName:"Tan",        lat:37.6213, lng:-122.0575, title:"Research Scientist, Stanford",                 email:"tanmd2087@gmail.com",        committee:"BCD", color:"#378ADD" },
+  { name:"Pengan Liu",          lastName:"Liu",        lat:37.5432, lng:-122.3013, title:"Research Associate Scientist II",             email:"jlau6667@gmail.com",         committee:"AMC", color:"#D85A30" },
+  { name:"Shicheng Guo",        lastName:"Guo",        lat:37.6879, lng:-122.4702, title:"Sr. Director, Arrowhead Pharmaceuticals",      email:"shihcheng.guo@gmail.com",    committee:"O2",  color:"#534AB7" },
+  { name:"Tim Tian",            lastName:"Tian",       lat:37.6502, lng:-122.4072, title:"Independent (cancer biology, BD, CMC)",        email:"timaoxin@gmail.com",         committee:"ICC", color:"#BA7517" },
+  { name:"Vivian Liu",          lastName:"Liu",        lat:37.3490, lng:-121.8795, title:"Sr. Product Manager, Novogene",               email:"vivian.halloween@gmail.com", committee:"PRC", color:"#0F6E56" },
+  { name:"Weibin Zheng",        lastName:"Zheng",      lat:37.4323, lng:-121.8997, title:"BD Manager, Vazyme Biotech",                   email:"weibinzheng0688@gmail.com",  committee:"BCD", color:"#378ADD" },
+  { name:"Wenjia Gu",           lastName:"Gu",         lat:37.5572, lng:-122.2977, title:"Scientist, Sutro Biopharma",                   email:"guwenjia135@gmail.com",      committee:"BCD", color:"#378ADD" },
+  { name:"Yan Wang",            lastName:"Wang",       lat:37.7440, lng:-122.4857, title:"Director, Vilya Tx",                           email:"yanwx88@gmail.com",          committee:"BCD", color:"#378ADD" },
+  { name:"Yanan Wang",          lastName:"Wang",       lat:37.2583, lng:-121.9016, title:"Senior Scientist, QLSF Biotherapeutics",      email:"ynwang403@gmail.com",        committee:"AMC", color:"#D85A30" },
+  { name:"Yu Yang",             lastName:"Yang",       lat:37.5297, lng:-122.3652, title:"CEO, Hanhai Silicon Valley Center",            email:"cosmosyang2018@gmail.com",   committee:"ICC", color:"#BA7517" },
+  { name:"Yujiao Zhang",        lastName:"Zhang",      lat:37.7758, lng:-122.2413, title:"Senior BD Manager, KACTUS",                   email:"cicizhang1990@gmail.com",    committee:"BCD", color:"#378ADD" },
+  { name:"Zheng Cai",           lastName:"Cai",        lat:37.3866, lng:-121.9148, title:"Biomedical Informatics / AI for biology",      email:"jane.cai2015@gmail.com",     committee:"STC", color:"#1D9E75" },
+  { name:"Zhiqing Wang",        lastName:"Wang",       lat:37.8360, lng:-122.2762, title:"Scientist, Metagenomi",                       email:"zwang9187@gmail.com",        committee:"PRC", color:"#0F6E56" },
+  { name:"Zuolin Cheng",        lastName:"Cheng",      lat:37.3174, lng:-122.0458, title:"Postdoc, Stanford University",                email:"zuolincheng166@gmail.com",   committee:"O2",  color:"#534AB7" },
+  { name:"Xinxin Li",           lastName:"Li",         lat:37.7727, lng:-121.9682, title:"Principal Advisor, PharmCube",               email:"xinxin.mybio@gmail.com",     committee:"ICC", color:"#BA7517" },
+  { name:"Guanghui Han",        lastName:"Han",        lat:37.7168, lng:-121.9341, title:"Head of Proteomics, PTM BIO LLC",             email:"zhileng@gmail.com",          committee:"AMC", color:"#D85A30" },
+  { name:"Huijun Ring",         lastName:"Ring",       lat:37.5572, lng:-122.2977, title:"Adjunct Professor, Stanford University",      email:"hzring@gmail.com",           committee:"BCD", color:"#378ADD" },
+  { name:"Zhuoqing Fang",       lastName:"Fang",       lat:37.4015, lng:-122.1440, title:"Research Engineer, Stanford",                 email:"fzq518@gmail.com",           committee:"O2",  color:"#534AB7" },
+  { name:"Chunling Wang",       lastName:"Wang",       lat:37.5204, lng:-122.2766, title:"Staff Scientist, Thermo Fisher Scientific",  email:"chunlingwangsf@gmail.com",   committee:"BCD", color:"#378ADD" },
+  { name:"Tiffany Shang",       lastName:"Shang",      lat:37.5572, lng:-122.2977, title:"Director, Medical & Clinical Ops, Allakos",  email:"tiffanyshang@gmail.com",     committee:"BCD", color:"#378ADD" },
+  { name:"Baixue Doris Zhang",  lastName:"Zhang",      lat:37.5143, lng:-122.2527, title:"Graduate Student / Teaching Associate, SJSU",email:"baixue.zhang@sjsu.edu",      committee:"O2",  color:"#534AB7" },
+  { name:"Lijuan Jenny Wang",   lastName:"Wang",       lat:37.3029, lng:-121.9855, title:"VP Clinical Affairs, Acotec",                email:"wanglijuan@gmail.com",       committee:"ICC", color:"#BA7517" },
+  { name:"Dan Su",              lastName:"Su",         lat:37.5432, lng:-122.3013, title:"Postdoc, Stanford (mRNA therapeutics)",       email:"dansu201605@gmail.com",      committee:"STC", color:"#1D9E75" },
+  { name:"Hailun Wan",          lastName:"Wan",        lat:37.3882, lng:-122.0263, title:"BD Manager, HitChem",                        email:"ellenw0418@gmail.com",       committee:"BCD", color:"#378ADD" },
+  { name:"Frank Zhou",          lastName:"Zhou",       lat:37.5587, lng:-122.0535, title:"Financial Planner, MassMutual",             email:"zhou.mengning@gmail.com",    committee:"BCD", color:"#378ADD" },
+  { name:"Will Chou",           lastName:"Chou",       lat:37.3735, lng:-122.1069, title:"Physician / VP Clinical Dev (MD+JD Yale)",   email:"willis.chou@att.net",        committee:"SLC", color:"#D4537E" },
+  { name:"Lin Wang",            lastName:"Wang",       lat:37.5572, lng:-122.2977, title:"Director, Gilead Sciences",                 email:"wanglinfirst@gmail.com",     committee:"STC", color:"#1D9E75" },
+  { name:"Wenhui Guo",          lastName:"Guo",        lat:37.4195, lng:-122.1328, title:"Postdoc, Stanford (immunotherapy)",          email:"bimcoong@gmail.com",         committee:"STC", color:"#1D9E75" },
+];
+
+// Spread pins that share the same lat/lng using a spiral pattern
+function spreadDuplicates(members) {
+  const SPREAD = 0.018; // degrees (~1.5 km spread radius)
+  const groups = {};
+  members.forEach(m => {
+    const key = m.lat.toFixed(3) + ',' + m.lng.toFixed(3);
+    if (!groups[key]) groups[key] = [];
+    groups[key].push(m);
+  });
+  const result = [];
+  Object.values(groups).forEach(group => {
+    if (group.length === 1) {
+      result.push({...group[0]});
+    } else {
+      group.forEach((m, i) => {
+        const angle = (2 * Math.PI * i) / group.length - Math.PI / 2;
+        const r = group.length <= 3 ? SPREAD * 0.6 : SPREAD;
+        result.push({
+          ...m,
+          lat: m.lat + r * Math.sin(angle),
+          lng: m.lng + r * Math.cos(angle) * 1.4
+        });
+      });
+    }
+  });
+  return result;
+}
+
+const EC = spreadDuplicates(RAW_EC);
+
+const map = L.map('map').setView([37.55, -122.10], 10);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+  maxZoom: 18
+}).addTo(map);
+
+EC.forEach(ec => {
+  const firstName = ec.name.replace(ec.lastName, '').trim();
+  const displayName = ec.lastName + ', ' + firstName;
+  const labelW = Math.max(displayName.length * 6.5 + 14, 40);
+  const totalH = 58;
+
+  const iconHtml = `
+    <div style="display:flex;flex-direction:column;align-items:center;">
+      <div style="
+        background:white; border:1px solid #bbb; border-radius:4px;
+        padding:2px 6px; font-family:Arial,sans-serif;
+        font-size:10.5px; font-weight:600; color:#111;
+        white-space:nowrap; box-shadow:0 1px 3px rgba(0,0,0,0.15);
+        text-align:center; line-height:1.4; margin-bottom:3px;
+      ">${displayName}</div>
+      <div style="
+        width:36px; height:36px; border-radius:50%;
+        background:${ec.color}; border:2.5px solid white;
+        box-shadow:0 2px 6px rgba(0,0,0,0.3);
+        display:flex; align-items:center; justify-content:center;
+        font-family:Arial,sans-serif; font-size:13px; font-weight:700; color:white;
+      ">${ec.lastName[0]}</div>
+    </div>`;
+
+  const icon = L.divIcon({
+    html: iconHtml,
+    className: '',
+    iconSize: [labelW + 10, totalH],
+    iconAnchor: [(labelW + 10) / 2, totalH],
+    popupAnchor: [0, -totalH]
+  });
+
+  const popup = `
+    <div style="min-width:220px;font-family:Arial,sans-serif;">
+      <div class="popup-name">${ec.lastName}, ${firstName}</div>
+      <div class="popup-row"><b>Title:</b> ${ec.title}</div>
+      <div><span class="popup-badge" style="background:${ec.color}">${ec.committee}</span></div>
+      <div class="popup-email"><a href="mailto:${ec.email}">${ec.email}</a></div>
+    </div>`;
+
+  L.marker([ec.lat, ec.lng], { icon })
+    .addTo(map)
+    .bindPopup(popup, { maxWidth: 280 });
+});
+</script>
+
+
+</body></html>

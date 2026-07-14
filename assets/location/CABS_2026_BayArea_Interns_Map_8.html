@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CABS 2026 — Bay Area Interns Map</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Arial, sans-serif; display: flex; flex-direction: column; height: 100vh; }
+  #header {
+    background: #1F3864; color: white;
+    padding: 12px 20px;
+    display: flex; align-items: center; justify-content: space-between;
+    flex-shrink: 0;
+  }
+  #header h1 { font-size: 15px; font-weight: 600; }
+  #header span { font-size: 12px; opacity: 0.75; }
+  #map { flex: 1; }
+  #legend {
+    position: absolute; bottom: 36px; left: 12px;
+    background: white; border-radius: 8px;
+    border: 1px solid #ddd; padding: 10px 14px;
+    font-size: 12px; z-index: 999;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  }
+  #legend h3 { font-size: 12px; font-weight: 600; color: #333; margin-bottom: 6px; }
+  .leg-item { display: flex; align-items: center; gap: 7px; margin-bottom: 5px; color: #444; }
+  .leg-dot { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; }
+  .popup-name { font-size: 15px; font-weight: 700; color: #111; margin-bottom: 4px; }
+  .popup-row { font-size: 12px; color: #555; margin-bottom: 3px; }
+  .popup-badge { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 11px; font-weight: 600; color: white; margin: 5px 0 4px; }
+  .popup-email { font-size: 12px; margin-top: 4px; }
+  .popup-email a { color: #185FA5; text-decoration: none; }
+</style>
+</head>
+<body>
+
+<div id="header">
+  <h1>CABS 2026 Data Science Summer Intern Program — Bay Area Interns</h1>
+  <span>12 interns · Volunteer &amp; EC conversion pipeline</span>
+</div>
+
+<div id="map"></div>
+
+<div id="legend">
+  <h3>Program Track</h3>
+  <div class="leg-item"><div class="leg-dot" style="background:#1D9E75"></div>Target ID</div>
+  <div class="leg-item"><div class="leg-dot" style="background:#D85A30"></div>Preclinical</div>
+  <div class="leg-item"><div class="leg-dot" style="background:#378ADD"></div>Clinical Dev</div>
+  <div class="leg-item"><div class="leg-dot" style="background:#D4537E"></div>Commercial</div>
+  <div class="leg-item"><div class="leg-dot" style="background:#534AB7"></div>Digital Infra</div>
+  <div class="leg-item"><div class="leg-dot" style="background:#BA7517"></div>Agentic AI</div>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+const INTERNS = [
+  { name:"Karen Wang",     lastName:"Wang",    lat:37.700, lng:-122.068, track:"Target ID",    color:"#1D9E75", loc:"Castro Valley, CA", level:"Bachelor / UCSC",                 ecPath:"O2 or AMC Committee Member",  email:"K27wang@gmail.com" },
+  { name:"Chin Hung Lin",  lastName:"Lin",     lat:37.287, lng:-121.950, track:"Target ID",    color:"#1D9E75", loc:"Campbell, CA",       level:"PhD + 2yr Industry / UC Davis",   ecPath:"AMC or STC Committee Member", email:"chinhunglin0@gmail.com" },
+  { name:"Christina Fu",   lastName:"Fu",      lat:37.520, lng:-122.276, track:"Preclinical",  color:"#D85A30", loc:"Belmont, CA",         level:"Bachelor (recent) / Emory",       ecPath:"STC or BCD Committee Member", email:"christinawfu@gmail.com" },
+  { name:"Natalie Huang",  lastName:"Huang",   lat:37.562, lng:-122.322, track:"Preclinical",  color:"#D85A30", loc:"San Mateo, CA",       level:"Undergrad / UC Davis",            ecPath:"Student Board → PRC",         email:"nathuang10@gmail.com" },
+  { name:"Shawn Phan",     lastName:"Phan",    lat:37.576, lng:-122.342, track:"Commercial",   color:"#D4537E", loc:"San Mateo, CA",       level:"Bachelor / Univ of San Francisco",ecPath:"BCD Committee Member",        email:"shawnphan23@gmail.com" },
+  { name:"Ying Shi",       lastName:"Shi",     lat:37.360, lng:-121.878, track:"Preclinical",  color:"#D85A30", loc:"San Jose, CA",        level:"PhD + CS Master / GT OMSCS",      ecPath:"STC or BCD Committee Member", email:"shiying3646@gmail.com" },
+  { name:"Anagha Gardane", lastName:"Gardane", lat:37.333, lng:-121.863, track:"Clinical Dev", color:"#378ADD", loc:"San Jose, CA",        level:"Master / Univ of Delaware",       ecPath:"BCD → STC Committee Member",  email:"angdata09@gmail.com" },
+  { name:"Chang Li",       lastName:"Li",      lat:37.315, lng:-121.902, track:"Agentic AI",   color:"#BA7517", loc:"San Jose, CA",        level:"Master / SJSU",                   ecPath:"O2 → ITD Committee Member",   email:"lic052463@gmail.com" },
+  { name:"Nicole Lee",     lastName:"Lee",     lat:37.660, lng:-121.876, track:"Clinical Dev", color:"#378ADD", loc:"Pleasanton, CA",      level:"High School Senior",              ecPath:"Student Board → SLC",         email:"nlee1248@gmail.com" },
+  { name:"Ivan Yu",        lastName:"Yu",      lat:37.775, lng:-122.419, track:"Commercial",   color:"#D4537E", loc:"San Francisco, CA",   level:"Bachelor / USFCA",                ecPath:"BCD Committee Member",        email:"icstivan@gmail.com" },
+  { name:"Jason Zhou",     lastName:"Zhou",    lat:36.974, lng:-122.028, track:"Commercial",   color:"#D4537E", loc:"Santa Cruz, CA",      level:"Bachelor Freshman / UCSC",        ecPath:"Student Board → BCD",         email:"zhoujason371@gmail.com" },
+  { name:"Yichen Dai",     lastName:"Dai",     lat:37.236, lng:-121.962, track:"Digital Infra",color:"#534AB7", loc:"Los Gatos, CA",       level:"Bachelor / UCSB",                 ecPath:"O2 Committee Member",         email:"yichendai3@gmail.com" },
+];
+
+const map = L.map('map').setView([37.48, -122.05], 10);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+  maxZoom: 18
+}).addTo(map);
+
+INTERNS.forEach(intern => {
+  const firstName = intern.name.replace(intern.lastName, '').trim();
+  const displayName = intern.lastName + ', ' + firstName;
+  const labelW = Math.max(displayName.length * 6.5 + 14, 40);
+  const totalH = 58; // label(18) + gap(4) + circle(36)
+
+  // Name label on TOP, circle on BOTTOM — iconAnchor at bottom of circle
+  const iconHtml = `
+    <div style="display:flex;flex-direction:column;align-items:center;">
+      <div style="
+        background: white;
+        border: 1px solid #bbb;
+        border-radius: 4px;
+        padding: 2px 6px;
+        font-family: Arial, sans-serif;
+        font-size: 10.5px; font-weight: 600; color: #111;
+        white-space: nowrap;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+        text-align: center;
+        line-height: 1.4;
+        margin-bottom: 3px;
+      ">${displayName}</div>
+      <div style="
+        width: 36px; height: 36px; border-radius: 50%;
+        background: ${intern.color};
+        border: 2.5px solid white;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+        display: flex; align-items: center; justify-content: center;
+        font-family: Arial, sans-serif;
+        font-size: 13px; font-weight: 700; color: white;
+        flex-shrink: 0;
+      ">${intern.lastName[0]}</div>
+    </div>`;
+
+  const icon = L.divIcon({
+    html: iconHtml,
+    className: '',
+    iconSize: [labelW + 10, totalH],
+    iconAnchor: [(labelW + 10) / 2, totalH],   // anchor = bottom of circle = map point
+    popupAnchor: [0, -totalH]
+  });
+
+  const popup = `
+    <div style="min-width:210px;font-family:Arial,sans-serif;">
+      <div class="popup-name">${intern.lastName}, ${firstName}</div>
+      <div class="popup-row"><b>Location:</b> ${intern.loc}</div>
+      <div class="popup-row"><b>Level:</b> ${intern.level}</div>
+      <div><span class="popup-badge" style="background:${intern.color}">${intern.track}</span></div>
+      <div class="popup-row"><b>EC path:</b> ${intern.ecPath}</div>
+      <div class="popup-email"><a href="mailto:${intern.email}">${intern.email}</a></div>
+    </div>`;
+
+  L.marker([intern.lat, intern.lng], { icon })
+    .addTo(map)
+    .bindPopup(popup, { maxWidth: 260 });
+});
+</script>
+</body>
+</html>
