@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Reuben N. Addison, Ph.D. — DS4CABS Summer Intern</title>
+  <meta name="description" content="Reuben N. Addison, Ph.D. — clinical research scientist, quantitative researcher, and DS4CABS 2026 Summer Intern. Developer of OpenTrial, a Bayesian clinical trial design engine." />
+  <meta name="theme-color" content="#0b1020" />
+
+  <meta property="og:title" content="Reuben N. Addison, Ph.D. — DS4CABS 2026 Summer Intern" />
+  <meta property="og:description" content="Clinical research scientist and quantitative researcher. Developer of OpenTrial, a Bayesian clinical trial design engine." />
+  <meta property="og:type" content="profile" />
+  <meta property="og:url" content="https://ds4cabs.github.io/people/reuben-addison.html" />
+  <meta property="og:image" content="https://ds4cabs.github.io/assets/img/people/reuben-addison.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%2310b981'/%3E%3Cstop offset='1' stop-color='%236366f1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='url(%23g)'/%3E%3Ctext x='50' y='62' font-family='Inter,Arial' font-size='42' font-weight='800' text-anchor='middle' fill='white'%3EDS%3C/text%3E%3C/svg%3E" />
+
+  <style>
+    .profile-hero { padding-top: 56px; padding-bottom: 56px; }
+    .profile-card {
+      display: grid;
+      grid-template-columns: 168px 1fr;
+      gap: 32px;
+      align-items: center;
+    }
+    .profile-photo {
+      width: 168px;
+      height: 168px;
+      border-radius: 24px;
+      overflow: hidden;
+      background: var(--grad);
+      border: 1px solid var(--border-strong);
+      box-shadow: var(--shadow-md);
+    }
+    .profile-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .profile-name {
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      margin-bottom: 6px;
+    }
+    .profile-title {
+      font-size: 1.08rem;
+      color: var(--text-dim);
+      margin: 0 0 4px;
+      font-weight: 600;
+    }
+    .profile-org {
+      color: var(--text-mute);
+      margin: 0 0 16px;
+    }
+    .profile-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .profile-actions .btn { font-size: .9rem; }
+
+    .profile-body {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+    .profile-section { margin-bottom: 40px; }
+    .profile-section h3 {
+      font-size: 1.25rem;
+      margin-bottom: 14px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    .profile-section p {
+      font-size: 1.02rem;
+      line-height: 1.7;
+    }
+
+    .timeline {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 18px;
+    }
+    .timeline li {
+      padding: 16px 18px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+    .timeline .ti-role {
+      font-weight: 700;
+      color: var(--text);
+    }
+    .timeline .ti-org { color: var(--text-dim); }
+    .timeline .ti-when {
+      display: block;
+      color: var(--text-mute);
+      font-size: .85rem;
+      margin-top: 4px;
+      font-family: var(--mono);
+    }
+
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .pill-list li {
+      padding: 6px 13px;
+      border-radius: 999px;
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      color: var(--text-dim);
+      font-size: .85rem;
+      font-weight: 500;
+    }
+
+    .result-card {
+      padding: 18px 20px;
+      margin-top: 16px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+    .result-card strong { color: var(--text); }
+
+    .back-link { margin-bottom: 22px; }
+
+    @media (max-width: 640px) {
+      .profile-card {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        text-align: center;
+      }
+      .profile-photo { margin: 0 auto; }
+      .profile-actions { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="brandGrad" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#10b981"/>
+      <stop offset="1" stop-color="#6366f1"/>
+    </linearGradient>
+  </defs>
+</svg>
+
+<!-- ============= NAV ============= -->
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="../index.html" aria-label="DS4CABS home">
+      <span class="logo" aria-hidden="true">
+        <svg viewBox="0 0 100 100" width="34" height="34">
+          <rect width="100" height="100" rx="22" fill="url(#brandGrad)"/>
+          <text x="50" y="62" font-family="Inter,Arial" font-size="42" font-weight="800" text-anchor="middle" fill="white">DS</text>
+        </svg>
+      </span>
+      <span class="brand-text">
+        <strong>DS4CABS</strong>
+        <small>Chinese American Biopharmaceutical Society</small>
+      </span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navMenu">
+      <svg class="icon-menu" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      <svg class="icon-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+
+    <nav class="nav-links" id="navMenu" aria-label="Primary">
+      <a href="../index.html#featured">Featured</a>
+      <a href="../trending.html">Trending</a>
+      <a href="../team.html" aria-current="page">Team</a>
+      <a href="../cohort.html">Cohorts</a>
+      <a href="../index.html#join">Apply</a>
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#donation">Donation</a>
+      <a href="../index.html#about">About</a>
+      <a class="btn btn-ghost" href="https://github.com/ds4cabs" target="_blank" rel="noopener">GitHub</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle color theme" title="Toggle color theme">
+        <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<!-- ============= HERO ============= -->
+<section class="section profile-hero">
+  <div class="container">
+    <div class="back-link">
+      <a class="link-arrow" href="../team.html">← Back to the team</a>
+    </div>
+
+    <span class="chip chip-accent">DS4CABS · 2026 Summer Intern</span>
+
+    <div class="profile-card">
+      <div class="profile-photo">
+        <img src="../assets/img/people/reuben-addison.jpg" alt="Portrait of Reuben N. Addison" />
+      </div>
+
+      <div>
+        <h1 class="profile-name">Reuben N. Addison, Ph.D.</h1>
+        <p class="profile-title">Clinical Research Scientist · Quantitative Researcher</p>
+        <p class="profile-org">DePauw University · DS4CABS 2026 Summer Intern</p>
+
+        <div class="profile-actions">
+          <a class="btn btn-primary" href="https://www.linkedin.com/in/rnaddison/" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a class="btn btn-ghost" href="https://github.com/reubebe" target="_blank" rel="noopener">GitHub ↗</a>
+          <a class="btn btn-ghost" href="https://github.com/ds4cabs/OpenTrial" target="_blank" rel="noopener">OpenTrial ↗</a>
+          <a class="btn btn-ghost" href="https://reubebe.github.io/" target="_blank" rel="noopener">Personal site ↗</a>
+          <a class="btn btn-ghost" href="mailto:reuben.addison@gmail.com">Email</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============= BODY ============= -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="profile-body">
+
+      <div class="profile-section">
+        <h3>About</h3>
+        <p>
+          Reuben Addison is a clinical research scientist and quantitative researcher working at the
+          intersection of study design, Bayesian statistics, and biomedical data science. His work
+          focuses on making the assumptions behind scientific and clinical decisions explicit,
+          traceable, and testable.
+        </p>
+        <p>
+          His research spans Parkinson's disease, longitudinal clinical outcomes, cardiovascular
+          risk, movement science, and clinical trial design. He is an Assistant Professor of
+          Kinesiology and Director of the Motor Control Lab at DePauw University, holds a Ph.D. in
+          Motor Behavior, and completed the Computational Data Analytics Track, the data science
+          track, of Georgia Tech's M.S. in Analytics.
+        </p>
+      </div>
+
+      <div class="profile-section">
+        <h3>CABS Internship Project</h3>
+        <p>
+          During the 2026 CABS Data Science Summer Internship, Reuben developed
+          <strong>OpenTrial</strong>, a Bayesian clinical trial design engine under the mentorship
+          of Prof. Shicheng Guo.
+        </p>
+        <p>
+          OpenTrial starts with a treatment and endpoint, gathers relevant public evidence, and
+          produces a traceable study-design report. It integrates sources including
+          ClinicalTrials.gov, PubMed, openFDA, DailyMed, Open Targets, PharmGKB, and Semantic
+          Scholar, then connects that evidence to power, assurance, prior-sensitivity analysis,
+          predictive probability of success, and simulation-based design calculations.
+        </p>
+        <p>
+          The central rule is simple: only evidence with a quantifiable effect size and associated
+          standard error is allowed to update the prior. Other records remain visible for provenance,
+          but they do not quietly influence the mathematics.
+        </p>
+      </div>
+
+      <div class="profile-section">
+        <h3>Validation and Sensitivity Analysis</h3>
+        <p>
+          Reuben treated validation as part of the research problem, not as a final software check.
+          OpenTrial includes 100 offline tests and 46 independent validation checks against SciPy,
+          statsmodels, closed-form calculations, and separately written Monte Carlo implementations.
+        </p>
+        <p>
+          That process exposed implementation problems that ordinary unit testing had missed,
+          including a Type I error calculation that appeared correct because calibration and
+          evaluation had reused the same simulated paths, and a heterogeneity calculation that
+          double-counted sampling error. Both were corrected.
+        </p>
+        <div class="result-card">
+          <strong>Type I error:</strong> 0.0234 against a 0.025 target.
+        </div>
+        <div class="result-card">
+          <strong>Prior sensitivity:</strong> in a seeded Type 2 diabetes example, the same
+          80-patient-per-arm design produced an estimated probability of success of 0.87 under the
+          evidence-derived prior and 0.18 under a skeptical prior. The design did not change. The
+          assumption did.
+        </div>
+      </div>
+
+      <div class="profile-section">
+        <h3>Areas of Focus</h3>
+        <ul class="pill-list">
+          <li>Clinical trial design</li>
+          <li>Bayesian statistics</li>
+          <li>Biostatistics</li>
+          <li>Longitudinal modeling</li>
+          <li>Real-world evidence</li>
+          <li>Biomedical machine learning</li>
+          <li>Parkinson's disease</li>
+          <li>Movement science</li>
+          <li>Reproducible research</li>
+          <li>Evidence provenance</li>
+        </ul>
+      </div>
+
+      <div class="profile-section">
+        <h3>What's Next</h3>
+        <p>
+          Reuben is continuing to work at the intersection of clinical research, Bayesian trial
+          design, biomedical machine learning, and reproducible evidence pipelines through his lab
+          at DePauw and collaborations in biopharma.
+        </p>
+        <p>
+          He is particularly interested in problems where quantitative methods can make a clinical
+          or development decision more transparent, reproducible, and easier to defend. OpenTrial
+          remains a learning-oriented research tool and is not validated for real-world clinical use.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============= FOOTER ============= -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div>
+      <div class="brand">
+        <span class="logo" aria-hidden="true">
+          <svg viewBox="0 0 100 100" width="28" height="28">
+            <rect width="100" height="100" rx="22" fill="url(#brandGrad)"/>
+            <text x="50" y="62" font-family="Inter,Arial" font-size="42" font-weight="800" text-anchor="middle" fill="white">DS</text>
+          </svg>
+        </span>
+        <span class="brand-text"><strong>DS4CABS</strong><small>Open data science for biopharma</small></span>
+      </div>
+      <p class="footer-note">
+        © <span id="year"></span> CABS, Chinese American Biopharmaceutical Society.
+        All project code is released under the licenses of the individual repositories.
+      </p>
+    </div>
+
+    <nav aria-label="Footer">
+      <h4>Explore</h4>
+      <a href="../index.html#featured">Featured</a>
+      <a href="../trending.html">Trending</a>
+      <a href="../team.html">Team</a>
+      <a href="../cohort.html">Cohorts</a>
+      <a href="../index.html#join">Apply</a>
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#donation">Donation</a>
+    </nav>
+
+    <nav aria-label="External">
+      <h4>Community</h4>
+      <a href="https://github.com/ds4cabs" target="_blank" rel="noopener">GitHub Org</a>
+      <a href="https://www.cabsweb.org/" target="_blank" rel="noopener">CABS Website</a>
+      <a href="https://github.com/ds4cabs/CABS-Data-Science-Summer-Internship-Program" target="_blank" rel="noopener">Internships</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="../assets/js/projects.js"></script>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
