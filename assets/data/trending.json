@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-26T10:22:44.528Z",
+  "generated": "2026-09-26T15:11:47.314Z",
   "sets": {
     "all|7": [
       {
@@ -100,19 +100,24 @@
         "topics": []
       },
       {
+        "full_name": "Dhritirajkalitacolab/nigellidine-ftsz-computational-drug-discovery",
+        "html_url": "https://github.com/Dhritirajkalitacolab/nigellidine-ftsz-computational-drug-discovery",
+        "description": "Three Nigella sativa alkaloids (indazoles nigellidine, nigellicine; isoquinoline nigellimine) vs S. aureus FtsZ (PDB 3VOA): ADMET screening; docking with Vina, AutoDock4, GNINA, DiffDock-L (redock RMSD 0.307 Å); 4I55 tubulin counter-screen; 100 ns MD; MM-GBSA −13.28 ± 0.97 kcal/mol (SD). Computational predictions only.",
+        "language": null,
+        "stargazers_count": 1,
+        "forks_count": 0,
+        "topics": [
+          "autodock-vina",
+          "autodock4",
+          "cgenff",
+          "charmm36"
+        ]
+      },
+      {
         "full_name": "RafaelGallo/Drug-Discovery-Virtual",
         "html_url": "https://github.com/RafaelGallo/Drug-Discovery-Virtual",
         "description": null,
         "language": "Jupyter Notebook",
-        "stargazers_count": 1,
-        "forks_count": 0,
-        "topics": []
-      },
-      {
-        "full_name": "Dhritirajkalitacolab/nigellidine-ftsz-computational-drug-discovery",
-        "html_url": "https://github.com/Dhritirajkalitacolab/nigellidine-ftsz-computational-drug-discovery",
-        "description": null,
-        "language": null,
         "stargazers_count": 1,
         "forks_count": 0,
         "topics": []
@@ -215,7 +220,7 @@
       {
         "full_name": "xxPcy/PharmaLLM",
         "html_url": "https://github.com/xxPcy/PharmaLLM",
-        "description": null,
+        "description": "Chinese medical LLM fine-tuning, evaluation, and vLLM serving pipeline based on Qwen3-8B-Base.",
         "language": "Python",
         "stargazers_count": 1,
         "forks_count": 0,
@@ -369,6 +374,20 @@
         ]
       },
       {
+        "full_name": "NingyuSUN/bioai-evidence-validator",
+        "html_url": "https://github.com/NingyuSUN/bioai-evidence-validator",
+        "description": "Evidence validation and policy engine for AI-assisted biological curation",
+        "language": "Python",
+        "stargazers_count": 17,
+        "forks_count": 1,
+        "topics": [
+          "ai-safety",
+          "biocuration",
+          "bioinformatics",
+          "knowledge-graph"
+        ]
+      },
+      {
         "full_name": "recklesswater/lipidomics-graph-audit",
         "html_url": "https://github.com/recklesswater/lipidomics-graph-audit",
         "description": "Three pre-flight checks before building a graph over lipid structures: relational field coverage, molecular fingerprint saturation, and co-occurrence null models.",
@@ -380,20 +399,6 @@
           "cheminformatics",
           "gnn",
           "graph-neural-networks"
-        ]
-      },
-      {
-        "full_name": "NingyuSUN/bioai-evidence-validator",
-        "html_url": "https://github.com/NingyuSUN/bioai-evidence-validator",
-        "description": "Evidence validation and policy engine for AI-assisted biological curation",
-        "language": "Python",
-        "stargazers_count": 13,
-        "forks_count": 1,
-        "topics": [
-          "ai-safety",
-          "biocuration",
-          "bioinformatics",
-          "knowledge-graph"
         ]
       },
       {
@@ -445,6 +450,20 @@
           "genetics",
           "hgvs",
           "rna-seq"
+        ]
+      },
+      {
+        "full_name": "recklesswater/omics-ae-classifier",
+        "html_url": "https://github.com/recklesswater/omics-ae-classifier",
+        "description": "Latent-space representation learning for high-dimensional, low-sample-size omics. Pre-train an autoencoder on a discovery cohort, freeze the encoder, adapt the head. Binary/multiclass/multilabel heads. Cross-cohort transfer today; cross-modal latent alignment is the roadmap.",
+        "language": "Python",
+        "stargazers_count": 8,
+        "forks_count": 0,
+        "topics": [
+          "autoencoder",
+          "bioinformatics",
+          "dimensionality-reduction",
+          "latent-space"
         ]
       },
       {
@@ -688,20 +707,6 @@
           "genpark-skill",
           "local-alignment"
         ]
-      },
-      {
-        "full_name": "recklesswater/omics-ae-classifier",
-        "html_url": "https://github.com/recklesswater/omics-ae-classifier",
-        "description": "Latent-space representation learning for high-dimensional, low-sample-size omics. Pre-train an autoencoder on a discovery cohort, freeze the encoder, adapt the head. Binary/multiclass/multilabel heads. Cross-cohort transfer today; cross-modal latent alignment is the roadmap.",
-        "language": "Python",
-        "stargazers_count": 7,
-        "forks_count": 0,
-        "topics": [
-          "autoencoder",
-          "bioinformatics",
-          "dimensionality-reduction",
-          "latent-space"
-        ]
       }
     ],
     "all|90": [
@@ -710,8 +715,8 @@
         "html_url": "https://github.com/aipoch/open-science",
         "description": "The open-source AI research workbench for scientific research and agent workflows. Local-first, model-agnostic desktop app with extensible skills, MCP tools and connectors, Python/R execution and traceable artifacts for reproducible research on macOS, Windows and Linux.",
         "language": "TypeScript",
-        "stargazers_count": 4936,
-        "forks_count": 416,
+        "stargazers_count": 4941,
+        "forks_count": 450,
         "topics": [
           "agent-skills",
           "ai-agent",
@@ -724,7 +729,7 @@
         "html_url": "https://github.com/synthetic-sciences/openscience",
         "description": "The open-source AI workbench for scientific research",
         "language": "TypeScript",
-        "stargazers_count": 3643,
+        "stargazers_count": 3644,
         "forks_count": 490,
         "topics": [
           "agent",
@@ -835,7 +840,7 @@
         "html_url": "https://github.com/NVIDIA-BioNeMo/BioNeMo-Inference-Runtime",
         "description": "Easy, fast, and memory-efficient structure prediction inference",
         "language": "Python",
-        "stargazers_count": 63,
+        "stargazers_count": 64,
         "forks_count": 4,
         "topics": [
           "cuda",
@@ -993,6 +998,20 @@
         ]
       },
       {
+        "full_name": "NingyuSUN/bioai-evidence-validator",
+        "html_url": "https://github.com/NingyuSUN/bioai-evidence-validator",
+        "description": "Evidence validation and policy engine for AI-assisted biological curation",
+        "language": "Python",
+        "stargazers_count": 17,
+        "forks_count": 1,
+        "topics": [
+          "ai-safety",
+          "biocuration",
+          "bioinformatics",
+          "knowledge-graph"
+        ]
+      },
+      {
         "full_name": "genome-spy/MutGlyph",
         "html_url": "https://github.com/genome-spy/MutGlyph",
         "description": "GenomeSpy-based mutation plots for R",
@@ -1074,20 +1093,6 @@
           "bioconductor",
           "bioinformatics"
         ]
-      },
-      {
-        "full_name": "recklesswater/lipidomics-graph-audit",
-        "html_url": "https://github.com/recklesswater/lipidomics-graph-audit",
-        "description": "Three pre-flight checks before building a graph over lipid structures: relational field coverage, molecular fingerprint saturation, and co-occurrence null models.",
-        "language": "Python",
-        "stargazers_count": 13,
-        "forks_count": 0,
-        "topics": [
-          "audit",
-          "cheminformatics",
-          "gnn",
-          "graph-neural-networks"
-        ]
       }
     ],
     "all|365": [
@@ -1096,8 +1101,8 @@
         "html_url": "https://github.com/K-Dense-AI/scientific-agent-skills",
         "description": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 190,000+ scientists worldwide. 165 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
         "language": "Python",
-        "stargazers_count": 46694,
-        "forks_count": 4220,
+        "stargazers_count": 46715,
+        "forks_count": 4225,
         "topics": [
           "agent-skills",
           "ai-scientist",
@@ -1110,8 +1115,8 @@
         "html_url": "https://github.com/aipoch/open-science",
         "description": "The open-source AI research workbench for scientific research and agent workflows. Local-first, model-agnostic desktop app with extensible skills, MCP tools and connectors, Python/R execution and traceable artifacts for reproducible research on macOS, Windows and Linux.",
         "language": "TypeScript",
-        "stargazers_count": 4936,
-        "forks_count": 416,
+        "stargazers_count": 4941,
+        "forks_count": 450,
         "topics": [
           "agent-skills",
           "ai-agent",
@@ -1124,7 +1129,7 @@
         "html_url": "https://github.com/synthetic-sciences/openscience",
         "description": "The open-source AI workbench for scientific research",
         "language": "TypeScript",
-        "stargazers_count": 3643,
+        "stargazers_count": 3644,
         "forks_count": 490,
         "topics": [
           "agent",
@@ -1152,8 +1157,8 @@
         "html_url": "https://github.com/aipoch/medical-research-skills",
         "description": "Hundreds of agent skills for medical research, including protocol design, data analysis, evidence insights, and academic writing.",
         "language": "Python",
-        "stargazers_count": 1922,
-        "forks_count": 175,
+        "stargazers_count": 1924,
+        "forks_count": 177,
         "topics": [
           "ai",
           "bioinformatics",
@@ -1167,7 +1172,7 @@
         "description": "The AI-native health data engine — collect, translate, and reason with AI Agents over labs results, wearables & genomics.",
         "language": "Python",
         "stargazers_count": 1339,
-        "forks_count": 233,
+        "forks_count": 234,
         "topics": [
           "ai-agents",
           "apple-health",
@@ -1180,7 +1185,7 @@
         "html_url": "https://github.com/K-Dense-AI/k-dense-byok",
         "description": "An AI co-scientist running on your desktop. Claude Science but better.",
         "language": "TypeScript",
-        "stargazers_count": 1256,
+        "stargazers_count": 1258,
         "forks_count": 156,
         "topics": [
           "agentic-ai",
@@ -1245,7 +1250,7 @@
         "html_url": "https://github.com/LeonChaoX/qinyan-academic-skills",
         "description": "A curated, multilingual library of 182 installable AI agent skills for end-to-end academic research—spanning literature discovery, scientific writing, grant development, bioinformatics, drug discovery, clinical research, machine learning, and data analysis.",
         "language": "Python",
-        "stargazers_count": 925,
+        "stargazers_count": 926,
         "forks_count": 78,
         "topics": [
           "academic",
@@ -1302,7 +1307,7 @@
         "description": "Open-source AI research assistant for biomedicine — chat to run RNA-seq, drug discovery, clinical analysis, and more. Built on Claude Code with 140 K-Dense scientific skills, real-time dashboard, and RStudio/JupyterLab integration. | 开源生物医学 AI 研究助手，对话即可驱动转录组、药物发现、临床分析等工作流，集成 140 个科学技能与实时研究看板。",
         "language": "TeX",
         "stargazers_count": 641,
-        "forks_count": 148,
+        "forks_count": 147,
         "topics": []
       },
       {
@@ -1319,7 +1324,7 @@
         "html_url": "https://github.com/oncologylab/craftgrn",
         "description": "Combined RNA and ATAC Footprint Training of Gene Regulatory Network",
         "language": "R",
-        "stargazers_count": 458,
+        "stargazers_count": 459,
         "forks_count": 3,
         "topics": [
           "atac-seq",
@@ -1467,7 +1472,7 @@
         "html_url": "https://github.com/BioTender-max/awesome-bio-agent-skills",
         "description": "A curated collection of AI agent skills for biomedical research, covering genomics, proteomics, single-cell analysis, clinical AI, and protein design.",
         "language": "Python",
-        "stargazers_count": 189,
+        "stargazers_count": 190,
         "forks_count": 32,
         "topics": [
           "agent-skills",
@@ -1502,20 +1507,6 @@
         ]
       },
       {
-        "full_name": "jonatas/pg_bio",
-        "html_url": "https://github.com/jonatas/pg_bio",
-        "description": "pg_bio: The PostgreSQL Bioinformatics OS",
-        "language": "Python",
-        "stargazers_count": 2,
-        "forks_count": 0,
-        "topics": [
-          "alphafold",
-          "bioinformatics",
-          "data-engineering",
-          "data-science"
-        ]
-      },
-      {
         "full_name": "Jxuanrui/CSCCD-MetagenomeFlow",
         "html_url": "https://github.com/Jxuanrui/CSCCD-MetagenomeFlow",
         "description": "Gut-metagenome multi-kingdom analysis platform: 183-script + Snakemake pipeline, agent-driven mining loop, MCP visualization — VibeCoding-ready",
@@ -1527,6 +1518,20 @@
           "bioinformatics",
           "bioinformatics-pipeline",
           "gut-microbiome"
+        ]
+      },
+      {
+        "full_name": "jonatas/pg_bio",
+        "html_url": "https://github.com/jonatas/pg_bio",
+        "description": "pg_bio: The PostgreSQL Bioinformatics OS",
+        "language": "Python",
+        "stargazers_count": 2,
+        "forks_count": 0,
+        "topics": [
+          "alphafold",
+          "bioinformatics",
+          "data-engineering",
+          "data-science"
         ]
       },
       {
@@ -1656,6 +1661,20 @@
         ]
       },
       {
+        "full_name": "vrtys4c5tk-dev/bio-mathematical-resilience",
+        "html_url": "https://github.com/vrtys4c5tk-dev/bio-mathematical-resilience",
+        "description": "Python simulation framework for studying systemic resilience under high-entropy stress via hexagonal lattice networks.",
+        "language": "Python",
+        "stargazers_count": 1,
+        "forks_count": 0,
+        "topics": [
+          "bioinformatics",
+          "biomathematics",
+          "biophysics",
+          "entropy"
+        ]
+      },
+      {
         "full_name": "Gaoyuan-0423/readbox",
         "html_url": "https://github.com/Gaoyuan-0423/readbox",
         "description": "本地文献阅读与研究设计助手：PDF 图文提取、证据报告与可编辑 PPT | Local-first research assistant for macOS and Windows",
@@ -1695,20 +1714,6 @@
           "antimicrobial-resistance",
           "bioinformatics",
           "bioremediation"
-        ]
-      },
-      {
-        "full_name": "vrtys4c5tk-dev/bio-mathematical-resilience",
-        "html_url": "https://github.com/vrtys4c5tk-dev/bio-mathematical-resilience",
-        "description": "Python simulation framework for studying systemic resilience under high-entropy stress via hexagonal lattice networks.",
-        "language": "Python",
-        "stargazers_count": 1,
-        "forks_count": 0,
-        "topics": [
-          "bioinformatics",
-          "biomathematics",
-          "biophysics",
-          "entropy"
         ]
       },
       {
@@ -1942,7 +1947,7 @@
         "html_url": "https://github.com/NingyuSUN/bioai-evidence-validator",
         "description": "Evidence validation and policy engine for AI-assisted biological curation",
         "language": "Python",
-        "stargazers_count": 13,
+        "stargazers_count": 17,
         "forks_count": 1,
         "topics": [
           "ai-safety",
@@ -1963,6 +1968,20 @@
           "gaussian-network-model",
           "protein-dynamics",
           "protein-structure"
+        ]
+      },
+      {
+        "full_name": "recklesswater/omics-ae-classifier",
+        "html_url": "https://github.com/recklesswater/omics-ae-classifier",
+        "description": "Latent-space representation learning for high-dimensional, low-sample-size omics. Pre-train an autoencoder on a discovery cohort, freeze the encoder, adapt the head. Binary/multiclass/multilabel heads. Cross-cohort transfer today; cross-modal latent alignment is the roadmap.",
+        "language": "Python",
+        "stargazers_count": 8,
+        "forks_count": 0,
+        "topics": [
+          "autoencoder",
+          "bioinformatics",
+          "dimensionality-reduction",
+          "latent-space"
         ]
       },
       {
@@ -2005,20 +2024,6 @@
           "bioinformatics",
           "cpg-islands",
           "epigenetics"
-        ]
-      },
-      {
-        "full_name": "recklesswater/omics-ae-classifier",
-        "html_url": "https://github.com/recklesswater/omics-ae-classifier",
-        "description": "Latent-space representation learning for high-dimensional, low-sample-size omics. Pre-train an autoencoder on a discovery cohort, freeze the encoder, adapt the head. Binary/multiclass/multilabel heads. Cross-cohort transfer today; cross-modal latent alignment is the roadmap.",
-        "language": "Python",
-        "stargazers_count": 7,
-        "forks_count": 0,
-        "topics": [
-          "autoencoder",
-          "bioinformatics",
-          "dimensionality-reduction",
-          "latent-space"
         ]
       },
       {
@@ -2078,34 +2083,6 @@
         ]
       },
       {
-        "full_name": "alphaparkinc/genpark-viterbi-hidden-markov-cpg-islands-skill",
-        "html_url": "https://github.com/alphaparkinc/genpark-viterbi-hidden-markov-cpg-islands-skill",
-        "description": "Production-grade genpark-viterbi-hidden-markov-cpg-islands-skill skill for AI agents",
-        "language": "Python",
-        "stargazers_count": 7,
-        "forks_count": 0,
-        "topics": [
-          "agentic-ai",
-          "bioinformatics",
-          "cpg-islands",
-          "genomics"
-        ]
-      },
-      {
-        "full_name": "Alpha-Park/genpark-viterbi-hidden-markov-cpg-islands-skill",
-        "html_url": "https://github.com/Alpha-Park/genpark-viterbi-hidden-markov-cpg-islands-skill",
-        "description": "Production-grade genpark-viterbi-hidden-markov-cpg-islands-skill skill for AI agents",
-        "language": "Python",
-        "stargazers_count": 7,
-        "forks_count": 0,
-        "topics": [
-          "agentic-ai",
-          "bioinformatics",
-          "cpg-islands",
-          "genomics"
-        ]
-      },
-      {
         "full_name": "alphaparkinc/genpark-neighbor-joining-phylogenetic-tree-skill",
         "html_url": "https://github.com/alphaparkinc/genpark-neighbor-joining-phylogenetic-tree-skill",
         "description": "Production-grade genpark-neighbor-joining-phylogenetic-tree-skill skill for AI agents",
@@ -2131,6 +2108,34 @@
           "bioinformatics",
           "genpark-skill",
           "local-alignment"
+        ]
+      },
+      {
+        "full_name": "alphaparkinc/genpark-viterbi-hidden-markov-cpg-islands-skill",
+        "html_url": "https://github.com/alphaparkinc/genpark-viterbi-hidden-markov-cpg-islands-skill",
+        "description": "Production-grade genpark-viterbi-hidden-markov-cpg-islands-skill skill for AI agents",
+        "language": "Python",
+        "stargazers_count": 7,
+        "forks_count": 0,
+        "topics": [
+          "agentic-ai",
+          "bioinformatics",
+          "cpg-islands",
+          "genomics"
+        ]
+      },
+      {
+        "full_name": "Alpha-Park/genpark-viterbi-hidden-markov-cpg-islands-skill",
+        "html_url": "https://github.com/Alpha-Park/genpark-viterbi-hidden-markov-cpg-islands-skill",
+        "description": "Production-grade genpark-viterbi-hidden-markov-cpg-islands-skill skill for AI agents",
+        "language": "Python",
+        "stargazers_count": 7,
+        "forks_count": 0,
+        "topics": [
+          "agentic-ai",
+          "bioinformatics",
+          "cpg-islands",
+          "genomics"
         ]
       },
       {
@@ -2335,8 +2340,8 @@
         "html_url": "https://github.com/aipoch/open-science",
         "description": "The open-source AI research workbench for scientific research and agent workflows. Local-first, model-agnostic desktop app with extensible skills, MCP tools and connectors, Python/R execution and traceable artifacts for reproducible research on macOS, Windows and Linux.",
         "language": "TypeScript",
-        "stargazers_count": 4936,
-        "forks_count": 416,
+        "stargazers_count": 4941,
+        "forks_count": 450,
         "topics": [
           "agent-skills",
           "ai-agent",
@@ -2349,7 +2354,7 @@
         "html_url": "https://github.com/synthetic-sciences/openscience",
         "description": "The open-source AI workbench for scientific research",
         "language": "TypeScript",
-        "stargazers_count": 3643,
+        "stargazers_count": 3644,
         "forks_count": 490,
         "topics": [
           "agent",
@@ -2527,6 +2532,20 @@
         ]
       },
       {
+        "full_name": "NingyuSUN/bioai-evidence-validator",
+        "html_url": "https://github.com/NingyuSUN/bioai-evidence-validator",
+        "description": "Evidence validation and policy engine for AI-assisted biological curation",
+        "language": "Python",
+        "stargazers_count": 17,
+        "forks_count": 1,
+        "topics": [
+          "ai-safety",
+          "biocuration",
+          "bioinformatics",
+          "knowledge-graph"
+        ]
+      },
+      {
         "full_name": "lucashuizinga/DNAdistiller",
         "html_url": "https://github.com/lucashuizinga/DNAdistiller",
         "description": "Distil your genome down to what matters, and share only that. Local-first longevity profiles from consumer DNA files, for discussing with an LLM without handing over all 640,000 variants.",
@@ -2594,20 +2613,6 @@
           "agents",
           "bioconductor",
           "bioinformatics"
-        ]
-      },
-      {
-        "full_name": "NingyuSUN/bioai-evidence-validator",
-        "html_url": "https://github.com/NingyuSUN/bioai-evidence-validator",
-        "description": "Evidence validation and policy engine for AI-assisted biological curation",
-        "language": "Python",
-        "stargazers_count": 13,
-        "forks_count": 1,
-        "topics": [
-          "ai-safety",
-          "biocuration",
-          "bioinformatics",
-          "knowledge-graph"
         ]
       },
       {
@@ -2721,20 +2726,6 @@
         ]
       },
       {
-        "full_name": "YuliaNuzhnenko/bioinformatics-agent-skills",
-        "html_url": "https://github.com/YuliaNuzhnenko/bioinformatics-agent-skills",
-        "description": "The #1 open-source collection of scientific AI Agent Skills, tool specifications, and prompt protocols for Bioinformatics, Genomics, Drug Discovery, and Multi-Omics. Compatible with Cursor, Claude Code, Antigravity, and LangChain.",
-        "language": "Python",
-        "stargazers_count": 9,
-        "forks_count": 3,
-        "topics": [
-          "agent-skills",
-          "ai-scientist",
-          "antigravity",
-          "bioinformatics"
-        ]
-      },
-      {
         "full_name": "Scigantic/scigantic-chembl",
         "html_url": "https://github.com/Scigantic/scigantic-chembl",
         "description": "Query ChEMBL directly from a public S3 mirror with DuckDB. No download, no local database.",
@@ -2747,6 +2738,20 @@
           "cheminformatics",
           "drug-discovery"
         ]
+      },
+      {
+        "full_name": "YuliaNuzhnenko/bioinformatics-agent-skills",
+        "html_url": "https://github.com/YuliaNuzhnenko/bioinformatics-agent-skills",
+        "description": "The #1 open-source collection of scientific AI Agent Skills, tool specifications, and prompt protocols for Bioinformatics, Genomics, Drug Discovery, and Multi-Omics. Compatible with Cursor, Claude Code, Antigravity, and LangChain.",
+        "language": "Python",
+        "stargazers_count": 9,
+        "forks_count": 3,
+        "topics": [
+          "agent-skills",
+          "ai-scientist",
+          "antigravity",
+          "bioinformatics"
+        ]
       }
     ],
     "bioinformatics|365": [
@@ -2755,8 +2760,8 @@
         "html_url": "https://github.com/K-Dense-AI/scientific-agent-skills",
         "description": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 190,000+ scientists worldwide. 165 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
         "language": "Python",
-        "stargazers_count": 46694,
-        "forks_count": 4220,
+        "stargazers_count": 46715,
+        "forks_count": 4225,
         "topics": [
           "agent-skills",
           "ai-scientist",
@@ -2769,8 +2774,8 @@
         "html_url": "https://github.com/aipoch/open-science",
         "description": "The open-source AI research workbench for scientific research and agent workflows. Local-first, model-agnostic desktop app with extensible skills, MCP tools and connectors, Python/R execution and traceable artifacts for reproducible research on macOS, Windows and Linux.",
         "language": "TypeScript",
-        "stargazers_count": 4936,
-        "forks_count": 416,
+        "stargazers_count": 4941,
+        "forks_count": 450,
         "topics": [
           "agent-skills",
           "ai-agent",
@@ -2783,7 +2788,7 @@
         "html_url": "https://github.com/synthetic-sciences/openscience",
         "description": "The open-source AI workbench for scientific research",
         "language": "TypeScript",
-        "stargazers_count": 3643,
+        "stargazers_count": 3644,
         "forks_count": 490,
         "topics": [
           "agent",
@@ -2811,8 +2816,8 @@
         "html_url": "https://github.com/aipoch/medical-research-skills",
         "description": "Hundreds of agent skills for medical research, including protocol design, data analysis, evidence insights, and academic writing.",
         "language": "Python",
-        "stargazers_count": 1922,
-        "forks_count": 175,
+        "stargazers_count": 1924,
+        "forks_count": 177,
         "topics": [
           "ai",
           "bioinformatics",
@@ -2825,7 +2830,7 @@
         "html_url": "https://github.com/K-Dense-AI/k-dense-byok",
         "description": "An AI co-scientist running on your desktop. Claude Science but better.",
         "language": "TypeScript",
-        "stargazers_count": 1256,
+        "stargazers_count": 1258,
         "forks_count": 156,
         "topics": [
           "agentic-ai",
@@ -2909,7 +2914,7 @@
         "html_url": "https://github.com/oncologylab/craftgrn",
         "description": "Combined RNA and ATAC Footprint Training of Gene Regulatory Network",
         "language": "R",
-        "stargazers_count": 458,
+        "stargazers_count": 459,
         "forks_count": 3,
         "topics": [
           "atac-seq",
@@ -3048,7 +3053,7 @@
         "html_url": "https://github.com/BioTender-max/awesome-bio-agent-skills",
         "description": "A curated collection of AI agent skills for biomedical research, covering genomics, proteomics, single-cell analysis, clinical AI, and protein design.",
         "language": "Python",
-        "stargazers_count": 189,
+        "stargazers_count": 190,
         "forks_count": 32,
         "topics": [
           "agent-skills",
@@ -3076,7 +3081,7 @@
         "html_url": "https://github.com/Dsadd4/AgentFigureGallery",
         "description": "Drop-in scientific plotting skill for Claude Code, Codex, Cursor, and other coding agents.",
         "language": "Python",
-        "stargazers_count": 156,
+        "stargazers_count": 157,
         "forks_count": 3,
         "topics": [
           "agent-skill",
@@ -3172,6 +3177,20 @@
     ],
     "drug-discovery|7": [
       {
+        "full_name": "Dhritirajkalitacolab/nigellidine-ftsz-computational-drug-discovery",
+        "html_url": "https://github.com/Dhritirajkalitacolab/nigellidine-ftsz-computational-drug-discovery",
+        "description": "Three Nigella sativa alkaloids (indazoles nigellidine, nigellicine; isoquinoline nigellimine) vs S. aureus FtsZ (PDB 3VOA): ADMET screening; docking with Vina, AutoDock4, GNINA, DiffDock-L (redock RMSD 0.307 Å); 4I55 tubulin counter-screen; 100 ns MD; MM-GBSA −13.28 ± 0.97 kcal/mol (SD). Computational predictions only.",
+        "language": null,
+        "stargazers_count": 1,
+        "forks_count": 0,
+        "topics": [
+          "autodock-vina",
+          "autodock4",
+          "cgenff",
+          "charmm36"
+        ]
+      },
+      {
         "full_name": "MasterDGL/admet-literature",
         "html_url": "https://github.com/MasterDGL/admet-literature",
         "description": "Literature notes on ADMET and pharmacokinetic prediction: papers, datasets, methods and findings. English / 简体中文.",
@@ -3183,6 +3202,62 @@
           "aidd",
           "cheminformatics",
           "drug-discovery"
+        ]
+      },
+      {
+        "full_name": "AshanSomasiri/Phytochemical-Engine",
+        "html_url": "https://github.com/AshanSomasiri/Phytochemical-Engine",
+        "description": "An automated cheminformatics pipeline for phytochemical discovery, drug-likeness screening, and brief bioactivity profiling.",
+        "language": "Python",
+        "stargazers_count": 0,
+        "forks_count": 0,
+        "topics": [
+          "bioinformatics",
+          "bioinformatics-pipeline",
+          "cheminformatics",
+          "cheminformatics-drug-discovery"
+        ]
+      },
+      {
+        "full_name": "dataRichinsightPoor/protein-clock-check",
+        "html_url": "https://github.com/dataRichinsightPoor/protein-clock-check",
+        "description": "Research-use timing audit: is weak protein knockdown a weak perturbation or a premature measurement? RNA-driven turnover model with explicit mathematics and synthetic cases. No. 04 in 99 Small Problems.",
+        "language": "JavaScript",
+        "stargazers_count": 0,
+        "forks_count": 0,
+        "topics": [
+          "computational-biology",
+          "data-rich-insight-poor",
+          "drug-discovery",
+          "protein-turnover"
+        ]
+      },
+      {
+        "full_name": "drjoykarmakar/admet-gnn-benchmark",
+        "html_url": "https://github.com/drjoykarmakar/admet-gnn-benchmark",
+        "description": "Reproducible ADMET benchmark comparing molecular fingerprints and graph neural networks under random and scaffold splits.",
+        "language": "Python",
+        "stargazers_count": 0,
+        "forks_count": 0,
+        "topics": [
+          "admet",
+          "admet-prediction",
+          "cheminformatics",
+          "drug-discovery"
+        ]
+      },
+      {
+        "full_name": "barlowa124/dockops",
+        "html_url": "https://github.com/barlowa124/dockops",
+        "description": "Reproducible docking pipeline - batch ligand prep + Vina backend, DUD-E benchmark, AFDB-vs-PDB structure QC, OpenMM mechanics, FastAPI service with provenance",
+        "language": "Python",
+        "stargazers_count": 0,
+        "forks_count": 0,
+        "topics": [
+          "alphafold",
+          "autodock-vina",
+          "drug-discovery",
+          "molecular-docking"
         ]
       },
       {
@@ -3225,48 +3300,6 @@
           "computational-chemistry",
           "drug-discovery",
           "molecular-design"
-        ]
-      },
-      {
-        "full_name": "dataRichinsightPoor/protein-clock-check",
-        "html_url": "https://github.com/dataRichinsightPoor/protein-clock-check",
-        "description": "Research-use timing audit: is weak protein knockdown a weak perturbation or a premature measurement? RNA-driven turnover model with explicit mathematics and synthetic cases. No. 04 in 99 Small Problems.",
-        "language": "JavaScript",
-        "stargazers_count": 0,
-        "forks_count": 0,
-        "topics": [
-          "computational-biology",
-          "data-rich-insight-poor",
-          "drug-discovery",
-          "protein-turnover"
-        ]
-      },
-      {
-        "full_name": "barlowa124/dockops",
-        "html_url": "https://github.com/barlowa124/dockops",
-        "description": "Reproducible docking pipeline - batch ligand prep + Vina backend, DUD-E benchmark, AFDB-vs-PDB structure QC, OpenMM mechanics, FastAPI service with provenance",
-        "language": "Python",
-        "stargazers_count": 0,
-        "forks_count": 0,
-        "topics": [
-          "alphafold",
-          "autodock-vina",
-          "drug-discovery",
-          "molecular-docking"
-        ]
-      },
-      {
-        "full_name": "drjoykarmakar/admet-gnn-benchmark",
-        "html_url": "https://github.com/drjoykarmakar/admet-gnn-benchmark",
-        "description": "Reproducible ADMET benchmark comparing molecular fingerprints and graph neural networks under random and scaffold splits.",
-        "language": "Python",
-        "stargazers_count": 0,
-        "forks_count": 0,
-        "topics": [
-          "admet",
-          "admet-prediction",
-          "cheminformatics",
-          "drug-discovery"
         ]
       },
       {
@@ -3551,17 +3584,17 @@
         ]
       },
       {
-        "full_name": "sammargolis/DrugTargetBench",
-        "html_url": "https://github.com/sammargolis/DrugTargetBench",
-        "description": "An Environment for Therapeutic Target Discovery",
-        "language": null,
+        "full_name": "eobi/pancreatic_cancer_research",
+        "html_url": "https://github.com/eobi/pancreatic_cancer_research",
+        "description": "Validated computational drug-discovery pipeline for KRAS in pancreatic ductal adenocarcinoma (PDAC). Four validated targets (G12C/G12D/G12V/G12R), 518,662 gated compounds, three virtual screens, MM-GBSA rescoring, and a self-audit of a generative campaign whose molecules could not be synthesised. All negative results released.",
+        "language": "Jupyter Notebook",
         "stargazers_count": 1,
         "forks_count": 0,
         "topics": [
-          "agentic-ai",
-          "benchmark",
-          "cardiovascular",
-          "causal-inference"
+          "admet",
+          "autodock-vina",
+          "bioinformatics",
+          "cheminformatics"
         ]
       },
       {
@@ -3579,17 +3612,17 @@
         ]
       },
       {
-        "full_name": "CliffVale/dockforge-app",
-        "html_url": "https://github.com/CliffVale/dockforge-app",
-        "description": "DockForge — learn molecular docking by doing it, in your browser: beginner course + in-browser Webina (AutoDock Vina) lab + result viewer. Zero install.",
-        "language": "JavaScript",
+        "full_name": "sammargolis/DrugTargetBench",
+        "html_url": "https://github.com/sammargolis/DrugTargetBench",
+        "description": "An Environment for Therapeutic Target Discovery",
+        "language": null,
         "stargazers_count": 1,
         "forks_count": 0,
         "topics": [
-          "autodock-vina",
-          "bioinformatics",
-          "drug-discovery",
-          "molecular-docking"
+          "agentic-ai",
+          "benchmark",
+          "cardiovascular",
+          "causal-inference"
         ]
       },
       {
@@ -3607,6 +3640,20 @@
         ]
       },
       {
+        "full_name": "CliffVale/dockforge-app",
+        "html_url": "https://github.com/CliffVale/dockforge-app",
+        "description": "DockForge — learn molecular docking by doing it, in your browser: beginner course + in-browser Webina (AutoDock Vina) lab + result viewer. Zero install.",
+        "language": "JavaScript",
+        "stargazers_count": 1,
+        "forks_count": 0,
+        "topics": [
+          "autodock-vina",
+          "bioinformatics",
+          "drug-discovery",
+          "molecular-docking"
+        ]
+      },
+      {
         "full_name": "yeyuan98/bioresearcher-skills",
         "html_url": "https://github.com/yeyuan98/bioresearcher-skills",
         "description": "Agent Skills/Plugins/Connectors for biomedical research with the biomcp-ts MCP server.",
@@ -3621,17 +3668,17 @@
         ]
       },
       {
-        "full_name": "eobi/pancreatic_cancer_research",
-        "html_url": "https://github.com/eobi/pancreatic_cancer_research",
-        "description": "Validated computational drug-discovery pipeline for KRAS in pancreatic ductal adenocarcinoma (PDAC). Four validated targets (G12C/G12D/G12V/G12R), 518,662 gated compounds, three virtual screens, MM-GBSA rescoring, and a self-audit of a generative campaign whose molecules could not be synthesised. All negative results released.",
-        "language": "Jupyter Notebook",
+        "full_name": "Dhritirajkalitacolab/nigellidine-ftsz-computational-drug-discovery",
+        "html_url": "https://github.com/Dhritirajkalitacolab/nigellidine-ftsz-computational-drug-discovery",
+        "description": "Three Nigella sativa alkaloids (indazoles nigellidine, nigellicine; isoquinoline nigellimine) vs S. aureus FtsZ (PDB 3VOA): ADMET screening; docking with Vina, AutoDock4, GNINA, DiffDock-L (redock RMSD 0.307 Å); 4I55 tubulin counter-screen; 100 ns MD; MM-GBSA −13.28 ± 0.97 kcal/mol (SD). Computational predictions only.",
+        "language": null,
         "stargazers_count": 1,
         "forks_count": 0,
         "topics": [
-          "admet",
           "autodock-vina",
-          "bioinformatics",
-          "cheminformatics"
+          "autodock4",
+          "cgenff",
+          "charmm36"
         ]
       },
       {
@@ -3857,20 +3904,6 @@
           "drug-discovery",
           "machine-learning"
         ]
-      },
-      {
-        "full_name": "sanyalmoupiya-netizen/cancer-target-discovery-agent",
-        "html_url": "https://github.com/sanyalmoupiya-netizen/cancer-target-discovery-agent",
-        "description": "Autonomous computational drug-discovery agent: real literature (Europe PMC) -> real PDB structure (EGFR 1M17) -> RDKit chemistry -> AutoDock Vina docking -> ranked candidates with provenance. Built with FastAPI, Next.js, Amazon Bedrock.",
-        "language": "TypeScript",
-        "stargazers_count": 0,
-        "forks_count": 0,
-        "topics": [
-          "amazon-bedrock",
-          "autodock-vina",
-          "aws",
-          "bioinformatics"
-        ]
       }
     ],
     "drug-discovery|90": [
@@ -3879,7 +3912,7 @@
         "html_url": "https://github.com/NVIDIA-BioNeMo/BioNeMo-Inference-Runtime",
         "description": "Easy, fast, and memory-efficient structure prediction inference",
         "language": "Python",
-        "stargazers_count": 63,
+        "stargazers_count": 64,
         "forks_count": 4,
         "topics": [
           "cuda",
@@ -4042,20 +4075,6 @@
         ]
       },
       {
-        "full_name": "ZJUFanLab/MolNexus",
-        "html_url": "https://github.com/ZJUFanLab/MolNexus",
-        "description": "Knowledge graph-enhanced prediction of biomedical molecular relationships with MolNexus",
-        "language": "Python",
-        "stargazers_count": 3,
-        "forks_count": 0,
-        "topics": [
-          "chemical",
-          "drug-discovery",
-          "drug-repurposing",
-          "drug-response-prediction"
-        ]
-      },
-      {
         "full_name": "Islamomar-1/ShapePharm3D",
         "html_url": "https://github.com/Islamomar-1/ShapePharm3D",
         "description": "3D pharmacophore-conditioned molecular diffusion with an E(3)-equivariant EGNN backbone. Generates shape-complementary, drug-like molecules conditioned on pharmacophore point clouds and PMI/SSD shape descriptors. Inspired by ShEPhERD (Adams et al., ICLR Oral 2025). PyTorch · e3nn · RDKit.",
@@ -4067,6 +4086,20 @@
           "bioisostere",
           "cheminformatics",
           "computational-chemistry"
+        ]
+      },
+      {
+        "full_name": "ZJUFanLab/MolNexus",
+        "html_url": "https://github.com/ZJUFanLab/MolNexus",
+        "description": "Knowledge graph-enhanced prediction of biomedical molecular relationships with MolNexus",
+        "language": "Python",
+        "stargazers_count": 3,
+        "forks_count": 0,
+        "topics": [
+          "chemical",
+          "drug-discovery",
+          "drug-repurposing",
+          "drug-response-prediction"
         ]
       },
       {
@@ -4182,20 +4215,6 @@
         ]
       },
       {
-        "full_name": "dsk-dev-ai/GenomeAI",
-        "html_url": "https://github.com/dsk-dev-ai/GenomeAI",
-        "description": "Open-source AI platform for genomics & bioinformatics — 18 free public genome research tools",
-        "language": "Python",
-        "stargazers_count": 2,
-        "forks_count": 0,
-        "topics": [
-          "ai",
-          "bioinformatics",
-          "biology",
-          "biomedical"
-        ]
-      },
-      {
         "full_name": "Ichor44/Ultron_Workflow",
         "html_url": "https://github.com/Ichor44/Ultron_Workflow",
         "description": "?? Ultron Workflow - Where Science Meets Sarcasm ??? | Visual workflows, protein & DNA labs, drug discovery, 3-D mech/circuit, all powered by Ultron - your brilliantly sarcastic superintelligence. He roasts, then results. ????",
@@ -4221,6 +4240,20 @@
           "cheminformatics",
           "drug-discovery",
           "duckdb"
+        ]
+      },
+      {
+        "full_name": "dsk-dev-ai/GenomeAI",
+        "html_url": "https://github.com/dsk-dev-ai/GenomeAI",
+        "description": "Open-source AI platform for genomics & bioinformatics — 18 free public genome research tools",
+        "language": "Python",
+        "stargazers_count": 2,
+        "forks_count": 0,
+        "topics": [
+          "ai",
+          "bioinformatics",
+          "biology",
+          "biomedical"
         ]
       },
       {
@@ -4300,8 +4333,8 @@
         "html_url": "https://github.com/K-Dense-AI/scientific-agent-skills",
         "description": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 190,000+ scientists worldwide. 165 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
         "language": "Python",
-        "stargazers_count": 46694,
-        "forks_count": 4220,
+        "stargazers_count": 46715,
+        "forks_count": 4225,
         "topics": [
           "agent-skills",
           "ai-scientist",
@@ -4314,7 +4347,7 @@
         "html_url": "https://github.com/K-Dense-AI/k-dense-byok",
         "description": "An AI co-scientist running on your desktop. Claude Science but better.",
         "language": "TypeScript",
-        "stargazers_count": 1256,
+        "stargazers_count": 1258,
         "forks_count": 156,
         "topics": [
           "agentic-ai",
@@ -4398,7 +4431,7 @@
         "html_url": "https://github.com/BioTender-max/awesome-bio-agent-skills",
         "description": "A curated collection of AI agent skills for biomedical research, covering genomics, proteomics, single-cell analysis, clinical AI, and protein design.",
         "language": "Python",
-        "stargazers_count": 189,
+        "stargazers_count": 190,
         "forks_count": 32,
         "topics": [
           "agent-skills",
@@ -4482,7 +4515,7 @@
         "html_url": "https://github.com/NVIDIA-BioNeMo/BioNeMo-Inference-Runtime",
         "description": "Easy, fast, and memory-efficient structure prediction inference",
         "language": "Python",
-        "stargazers_count": 63,
+        "stargazers_count": 64,
         "forks_count": 4,
         "topics": [
           "cuda",
@@ -4744,6 +4777,20 @@
         ]
       },
       {
+        "full_name": "frankheart6540/23andme-premium-2026",
+        "html_url": "https://github.com/frankheart6540/23andme-premium-2026",
+        "description": "⭐️ 2026 Dna Test Kit | Unlock Ancestry Health Ethnicity Data | Genetic Report Carrier Trait Disease Risk | Complete Ethnic Genealogy Heritage Results | Genomic Insights Trait Disease Carrier Risk | Ethnicity Report Heritage Match Relative Finder ⭐️",
+        "language": "C",
+        "stargazers_count": 1,
+        "forks_count": 0,
+        "topics": [
+          "23andme",
+          "ancestry",
+          "genomics",
+          "gnomics"
+        ]
+      },
+      {
         "full_name": "shailendra-codes/Maliklang-V2",
         "html_url": "https://github.com/shailendra-codes/Maliklang-V2",
         "description": "Medical-grade Genomic AI engine for Predictive cancer anomaly tracking, engineering with multi- agent legal-tech compliance.",
@@ -4755,20 +4802,6 @@
           "bionformatics",
           "genomics",
           "hippa-compliant"
-        ]
-      },
-      {
-        "full_name": "naveen-astra/dna-longread-sv-classifier",
-        "html_url": "https://github.com/naveen-astra/dna-longread-sv-classifier",
-        "description": "ML pipeline for structural variant detection from ONT/PacBio long-read sequencing: Minimap2 + Sniffles2/cuteSV candidates, Random Forest/XGBoost classification, GIAB HG002 benchmarking, SHAP explainability. Snakemake-orchestrated, reproducible.",
-        "language": "Python",
-        "stargazers_count": 0,
-        "forks_count": 0,
-        "topics": [
-          "bioinformatics",
-          "genomics",
-          "giab",
-          "long-read-sequencing"
         ]
       },
       {
@@ -4786,17 +4819,29 @@
         ]
       },
       {
-        "full_name": "mehdi-abedini/kian-nano",
-        "html_url": "https://github.com/mehdi-abedini/kian-nano",
-        "description": "Evidence-grounded scientific research agent for literature, patents, bioinformatics, drug discovery and delivery, process engineering, technology intelligence, and quantitative research.",
+        "full_name": "naveen-astra/dna-longread-sv-classifier",
+        "html_url": "https://github.com/naveen-astra/dna-longread-sv-classifier",
+        "description": "ML pipeline for structural variant detection from ONT/PacBio long-read sequencing: Minimap2 + Sniffles2/cuteSV candidates, Random Forest/XGBoost classification, GIAB HG002 benchmarking, SHAP explainability. Snakemake-orchestrated, reproducible.",
         "language": "Python",
         "stargazers_count": 0,
         "forks_count": 0,
         "topics": [
-          "agent-skills",
-          "ai-agent",
           "bioinformatics",
-          "drug-delivery"
+          "genomics",
+          "giab",
+          "long-read-sequencing"
+        ]
+      },
+      {
+        "full_name": "Francesco-Tagliabue/Advanced_Genomics_project",
+        "html_url": "https://github.com/Francesco-Tagliabue/Advanced_Genomics_project",
+        "description": "Advanced Genomics project, A.Y. 2025/2026",
+        "language": "Jupyter Notebook",
+        "stargazers_count": 0,
+        "forks_count": 0,
+        "topics": [
+          "genomics",
+          "transcriptomics"
         ]
       },
       {
@@ -4824,6 +4869,34 @@
           "bedgraph",
           "bioinformatics",
           "data-quality",
+          "genomics"
+        ]
+      },
+      {
+        "full_name": "mehdi-abedini/kian-nano",
+        "html_url": "https://github.com/mehdi-abedini/kian-nano",
+        "description": "Evidence-grounded scientific research agent for literature, patents, bioinformatics, drug discovery and delivery, process engineering, technology intelligence, and quantitative research.",
+        "language": "Python",
+        "stargazers_count": 0,
+        "forks_count": 0,
+        "topics": [
+          "agent-skills",
+          "ai-agent",
+          "bioinformatics",
+          "drug-delivery"
+        ]
+      },
+      {
+        "full_name": "willykeenan/strand-dna",
+        "html_url": "https://github.com/willykeenan/strand-dna",
+        "description": "Privacy-first DNA report that runs entirely in your browser. Your raw 23andMe or AncestryDNA file never leaves your device.",
+        "language": "TypeScript",
+        "stargazers_count": 0,
+        "forks_count": 0,
+        "topics": [
+          "23andme",
+          "browser",
+          "dna",
           "genomics"
         ]
       },
@@ -4870,20 +4943,6 @@
         ]
       },
       {
-        "full_name": "WiliamZepka-Biomed/introducao-bioinformatica",
-        "html_url": "https://github.com/WiliamZepka-Biomed/introducao-bioinformatica",
-        "description": "Portfólio de Bioinformática focado em Genômica Clínica e automação com Python",
-        "language": "Python",
-        "stargazers_count": 0,
-        "forks_count": 0,
-        "topics": [
-          "bioinformatics",
-          "data-analysis",
-          "genomics",
-          "python"
-        ]
-      },
-      {
         "full_name": "antonambroa/phage-host-association-pipeline",
         "html_url": "https://github.com/antonambroa/phage-host-association-pipeline",
         "description": "Sequence-based workflow for building candidate phage–host associations from BLAST evidence, with reproducible HPC/Slurm execution and genome-level features.",
@@ -4909,6 +4968,34 @@
           "gene-expression",
           "genomics",
           "meta-analysis"
+        ]
+      },
+      {
+        "full_name": "WiliamZepka-Biomed/introducao-bioinformatica",
+        "html_url": "https://github.com/WiliamZepka-Biomed/introducao-bioinformatica",
+        "description": "Portfólio de Bioinformática focado em Genômica Clínica e automação com Python",
+        "language": "Python",
+        "stargazers_count": 0,
+        "forks_count": 0,
+        "topics": [
+          "bioinformatics",
+          "data-analysis",
+          "genomics",
+          "python"
+        ]
+      },
+      {
+        "full_name": "Cobos-Bioinfo/enaportal",
+        "html_url": "https://github.com/Cobos-Bioinfo/enaportal",
+        "description": "A typed Python client for the ENA Portal and Browser APIs. Maintained replacement for the abandoned enasearch.",
+        "language": "Python",
+        "stargazers_count": 0,
+        "forks_count": 0,
+        "topics": [
+          "api-client",
+          "bioinformatics",
+          "embl-ebi",
+          "ena"
         ]
       },
       {
@@ -4954,16 +5041,16 @@
         ]
       },
       {
-        "full_name": "narvall018/orfeval",
-        "html_url": "https://github.com/narvall018/orfeval",
-        "description": "Prédiction auto-entraînée de gènes procaryotes (Python, Biopython) et évaluation rigoureuse face à l'annotation GenBank : CLI, rapport HTML, dashboard Streamlit.",
-        "language": "Python",
+        "full_name": "avik94ab/rhie-quiz",
+        "html_url": "https://github.com/avik94ab/rhie-quiz",
+        "description": "Six bioinformatics quizzes: HOMER peak annotation, HiC-Pro to ICE-normalized matrices, GENCODE GTF parsing in R, Needleman-Wunsch alignment, Akita contact-map prediction, and NANOME methylation calling with haplotype phasing. Code, outputs and a write-up for each.",
+        "language": "Jupyter Notebook",
         "stargazers_count": 0,
         "forks_count": 0,
         "topics": [
           "bioinformatics",
-          "biopython",
-          "gene-prediction",
+          "deep-learning",
+          "dna-methylation",
           "genomics"
         ]
       },
@@ -4982,16 +5069,16 @@
         ]
       },
       {
-        "full_name": "avik94ab/rhie-quiz",
-        "html_url": "https://github.com/avik94ab/rhie-quiz",
-        "description": "Six bioinformatics quizzes: HOMER peak annotation, HiC-Pro to ICE-normalized matrices, GENCODE GTF parsing in R, Needleman-Wunsch alignment, Akita contact-map prediction, and NANOME methylation calling with haplotype phasing. Code, outputs and a write-up for each.",
-        "language": "Jupyter Notebook",
+        "full_name": "narvall018/orfeval",
+        "html_url": "https://github.com/narvall018/orfeval",
+        "description": "Prédiction auto-entraînée de gènes procaryotes (Python, Biopython) et évaluation rigoureuse face à l'annotation GenBank : CLI, rapport HTML, dashboard Streamlit.",
+        "language": "Python",
         "stargazers_count": 0,
         "forks_count": 0,
         "topics": [
           "bioinformatics",
-          "deep-learning",
-          "dna-methylation",
+          "biopython",
+          "gene-prediction",
           "genomics"
         ]
       },
@@ -5024,34 +5111,6 @@
         ]
       },
       {
-        "full_name": "UDC-GAC/MPI-RMapAlign3N",
-        "html_url": "https://github.com/UDC-GAC/MPI-RMapAlign3N",
-        "description": "MPI-parallel read mapping and alignment for 3N-converted sequencing data (e.g. WGBS-seq, SLAM-seq...), scaling RmapAlign3N across HPC cluster nodes.",
-        "language": "C++",
-        "stargazers_count": 0,
-        "forks_count": 0,
-        "topics": [
-          "bioinformatics",
-          "bisulfite-sequencing",
-          "distributed-systems",
-          "dna-methylation"
-        ]
-      },
-      {
-        "full_name": "seandavi/peakwhere",
-        "html_url": "https://github.com/seandavi/peakwhere",
-        "description": "Where do your peaks land? Browser-only genomic region annotation for ChIP-seq, CUT&RUN and ATAC-seq peaks.",
-        "language": "JavaScript",
-        "stargazers_count": 0,
-        "forks_count": 0,
-        "topics": [
-          "atac-seq",
-          "bioinformatics",
-          "browser",
-          "chip-seq"
-        ]
-      },
-      {
         "full_name": "dark-bio/.github",
         "html_url": "https://github.com/dark-bio/.github",
         "description": "GitHub organization profile page",
@@ -5080,59 +5139,31 @@
         ]
       },
       {
-        "full_name": "agenticluke/genome-search-plus",
-        "html_url": "https://github.com/agenticluke/genome-search-plus",
-        "description": "Claude Code skill to search genome data, fetch DNA or protein sequences, and run quick alignments. Built on affaan-m/ECC by @affaan-m.",
-        "language": null,
+        "full_name": "UDC-GAC/MPI-RMapAlign3N",
+        "html_url": "https://github.com/UDC-GAC/MPI-RMapAlign3N",
+        "description": "MPI-parallel read mapping and alignment for 3N-converted sequencing data (e.g. WGBS-seq, SLAM-seq...), scaling RmapAlign3N across HPC cluster nodes.",
+        "language": "C++",
         "stargazers_count": 0,
         "forks_count": 0,
         "topics": [
           "bioinformatics",
-          "blast",
-          "blat",
-          "claude-code"
+          "bisulfite-sequencing",
+          "distributed-systems",
+          "dna-methylation"
         ]
       },
       {
-        "full_name": "ishandutta2007/Awesome-Genomics-Data-Platform",
-        "html_url": "https://github.com/ishandutta2007/Awesome-Genomics-Data-Platform",
-        "description": "Top Genomics Data Platform (Opensource) 🌟 Star if you like it! 🌟",
-        "language": null,
+        "full_name": "seandavi/peakwhere",
+        "html_url": "https://github.com/seandavi/peakwhere",
+        "description": "Where do your peaks land? Browser-only genomic region annotation for ChIP-seq, CUT&RUN and ATAC-seq peaks.",
+        "language": "JavaScript",
         "stargazers_count": 0,
         "forks_count": 0,
         "topics": [
-          "awesome-list",
+          "atac-seq",
           "bioinformatics",
-          "curated-list",
-          "data-platform"
-        ]
-      },
-      {
-        "full_name": "VahsirRush/crispr-ontarget-efficiency",
-        "html_url": "https://github.com/VahsirRush/crispr-ontarget-efficiency",
-        "description": "CNN + attention for CRISPR/Cas9 sgRNA on-target efficiency, benchmarked against a reproduced Rule Set 2 GBT baseline, with attention interpretability, conformal prediction intervals, and 39 adversarial validation checks.",
-        "language": "HTML",
-        "stargazers_count": 0,
-        "forks_count": 0,
-        "topics": [
-          "attention",
-          "bioinformatics",
-          "cnn",
-          "computational-biology"
-        ]
-      },
-      {
-        "full_name": "ephraimrv/probiotic-genome-analysis",
-        "html_url": "https://github.com/ephraimrv/probiotic-genome-analysis",
-        "description": "Reproducible figure pipeline for the draft genome of lactic acid bacterium isolate S1A: a circular genome map, a class II bacteriocin locus diagram, and predicted regulator families stratified by evidence tier. Genomic figure contribution to a study of LAB-loaded cellulose hydrogels. Predicted gene content, not measured activity.",
-        "language": "Python",
-        "stargazers_count": 0,
-        "forks_count": 0,
-        "topics": [
-          "bacterial-genomics",
-          "bacteriocin",
-          "bioinformatics",
-          "genome-visualization"
+          "browser",
+          "chip-seq"
         ]
       }
     ],
@@ -5334,6 +5365,20 @@
         ]
       },
       {
+        "full_name": "vxxqv/openomicsbench",
+        "html_url": "https://github.com/vxxqv/openomicsbench",
+        "description": "Traceable omics benchmarks, deterministic sequence tools and CI-ready validation reports.",
+        "language": "Python",
+        "stargazers_count": 2,
+        "forks_count": 0,
+        "topics": [
+          "benchmarking",
+          "bioinformatics",
+          "bulk-rna-seq",
+          "continuous-integration"
+        ]
+      },
+      {
         "full_name": "samuelbharti/genomes-prompts-shiny",
         "html_url": "https://github.com/samuelbharti/genomes-prompts-shiny",
         "description": "Talk about the Shiny applications and packages for computational biology built during a 2026 Posit internship",
@@ -5376,20 +5421,6 @@
         ]
       },
       {
-        "full_name": "riscoss63/sqsketch",
-        "html_url": "https://github.com/riscoss63/sqsketch",
-        "description": "Fixed-size sketches of probability distributions: Bhattacharyya coefficient and Hellinger distance from ~1 KB per profile, with error independent of alphabet size. Library + fully verified paper (every number traced to a committed script).",
-        "language": "Python",
-        "stargazers_count": 1,
-        "forks_count": 0,
-        "topics": [
-          "bhattacharyya",
-          "dimensionality-reduction",
-          "genomics",
-          "hellinger-distance"
-        ]
-      },
-      {
         "full_name": "Xuzhen-Li/gene-function-annotation",
         "html_url": "https://github.com/Xuzhen-Li/gene-function-annotation",
         "description": "Labels after proteins (GO/domains/names); upstream gene-structure-annotation",
@@ -5401,6 +5432,20 @@
           "gene-annotation",
           "genomics",
           "plant-genomics"
+        ]
+      },
+      {
+        "full_name": "riscoss63/sqsketch",
+        "html_url": "https://github.com/riscoss63/sqsketch",
+        "description": "Fixed-size sketches of probability distributions: Bhattacharyya coefficient and Hellinger distance from ~1 KB per profile, with error independent of alphabet size. Library + fully verified paper (every number traced to a committed script).",
+        "language": "Python",
+        "stargazers_count": 1,
+        "forks_count": 0,
+        "topics": [
+          "bhattacharyya",
+          "dimensionality-reduction",
+          "genomics",
+          "hellinger-distance"
         ]
       },
       {
@@ -5487,6 +5532,20 @@
         ]
       },
       {
+        "full_name": "frankheart6540/23andme-premium-2026",
+        "html_url": "https://github.com/frankheart6540/23andme-premium-2026",
+        "description": "⭐️ 2026 Dna Test Kit | Unlock Ancestry Health Ethnicity Data | Genetic Report Carrier Trait Disease Risk | Complete Ethnic Genealogy Heritage Results | Genomic Insights Trait Disease Carrier Risk | Ethnicity Report Heritage Match Relative Finder ⭐️",
+        "language": "C",
+        "stargazers_count": 1,
+        "forks_count": 0,
+        "topics": [
+          "23andme",
+          "ancestry",
+          "genomics",
+          "gnomics"
+        ]
+      },
+      {
         "full_name": "bio-silico/genemolx-wgs",
         "html_url": "https://github.com/bio-silico/genemolx-wgs",
         "description": "Whole-genome sequencing pipeline: FASTQ to clinical variant report. GATK4 best practices, ACMG/AMP classification.",
@@ -5526,34 +5585,6 @@
           "bionformatics",
           "genomics",
           "hippa-compliant"
-        ]
-      },
-      {
-        "full_name": "YaaOppong/rbcl-generative-biology",
-        "html_url": "https://github.com/YaaOppong/rbcl-generative-biology",
-        "description": "Prompt-conditioned generation and LoRA finetuning of Evo 2 on rbcL, with a reproducible evaluation harness",
-        "language": "Python",
-        "stargazers_count": 0,
-        "forks_count": 0,
-        "topics": [
-          "bioinformatics",
-          "evo2",
-          "foundation-models",
-          "genomics"
-        ]
-      },
-      {
-        "full_name": "terravic/alphagenome-variant-visualization-skill",
-        "html_url": "https://github.com/terravic/alphagenome-variant-visualization-skill",
-        "description": "Multi-modal AI agent skill and interactive HTML5/WebGL dashboard workbench for quantifying, visualizing, and interpreting regulatory consequences of human genetic variants across 11 molecular modalities.",
-        "language": "HTML",
-        "stargazers_count": 0,
-        "forks_count": 0,
-        "topics": [
-          "acmg-guidelines",
-          "agent-skill",
-          "bioinformatics",
-          "computational-biology"
         ]
       }
     ],
@@ -5909,20 +5940,6 @@
         ]
       },
       {
-        "full_name": "CrossRead/scholion",
-        "html_url": "https://github.com/CrossRead/scholion",
-        "description": "Your genome, labs, prescriptions and wearables sit in silos that never compare notes, so contradictions go unnoticed. This reads them against each other, with the source behind every answer — one local engine behind a web UI, a CLI, a Claude skill, and an Ouroboros plugin.",
-        "language": "Python",
-        "stargazers_count": 3,
-        "forks_count": 0,
-        "topics": [
-          "activity-tracker",
-          "bioinformatics",
-          "claude",
-          "claude-skills"
-        ]
-      },
-      {
         "full_name": "samuelbharti/recount-explorer",
         "html_url": "https://github.com/samuelbharti/recount-explorer",
         "description": "Shiny app to browse, analyze, and export recount3 RNA-seq studies: 18,998 datasets, quality checks, and PCA.",
@@ -5937,17 +5954,17 @@
         ]
       },
       {
-        "full_name": "erdikilic/whittle",
-        "html_url": "https://github.com/erdikilic/whittle",
-        "description": "whittle: coordinate-consistent trimming of long-read uBAM and tagged FASTQ",
-        "language": "Rust",
+        "full_name": "CrossRead/scholion",
+        "html_url": "https://github.com/CrossRead/scholion",
+        "description": "Your genome, labs, prescriptions and wearables sit in silos that never compare notes, so contradictions go unnoticed. This reads them against each other, with the source behind every answer — one local engine behind a web UI, a CLI, a Claude skill, and an Ouroboros plugin.",
+        "language": "Python",
         "stargazers_count": 3,
         "forks_count": 0,
         "topics": [
-          "bam",
-          "base-modification",
+          "activity-tracker",
           "bioinformatics",
-          "dna-methylation"
+          "claude",
+          "claude-skills"
         ]
       },
       {
@@ -5962,6 +5979,20 @@
           "genomics",
           "rust",
           "svg"
+        ]
+      },
+      {
+        "full_name": "erdikilic/whittle",
+        "html_url": "https://github.com/erdikilic/whittle",
+        "description": "whittle: coordinate-consistent trimming of long-read uBAM and tagged FASTQ",
+        "language": "Rust",
+        "stargazers_count": 3,
+        "forks_count": 0,
+        "topics": [
+          "bam",
+          "base-modification",
+          "bioinformatics",
+          "dna-methylation"
         ]
       },
       {
@@ -5985,8 +6016,8 @@
         "html_url": "https://github.com/K-Dense-AI/scientific-agent-skills",
         "description": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 190,000+ scientists worldwide. 165 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
         "language": "Python",
-        "stargazers_count": 46694,
-        "forks_count": 4220,
+        "stargazers_count": 46715,
+        "forks_count": 4225,
         "topics": [
           "agent-skills",
           "ai-scientist",
@@ -5999,8 +6030,8 @@
         "html_url": "https://github.com/aipoch/medical-research-skills",
         "description": "Hundreds of agent skills for medical research, including protocol design, data analysis, evidence insights, and academic writing.",
         "language": "Python",
-        "stargazers_count": 1922,
-        "forks_count": 175,
+        "stargazers_count": 1924,
+        "forks_count": 177,
         "topics": [
           "ai",
           "bioinformatics",
@@ -6068,7 +6099,7 @@
         "html_url": "https://github.com/BioTender-max/awesome-bio-agent-skills",
         "description": "A curated collection of AI agent skills for biomedical research, covering genomics, proteomics, single-cell analysis, clinical AI, and protein design.",
         "language": "Python",
-        "stargazers_count": 189,
+        "stargazers_count": 190,
         "forks_count": 32,
         "topics": [
           "agent-skills",
@@ -6577,6 +6608,20 @@
         ]
       },
       {
+        "full_name": "dataRichinsightPoor/washout-check",
+        "html_url": "https://github.com/dataRichinsightPoor/washout-check",
+        "description": "Research-use washout audit: explicit loading, finite-dose mass balance, residual exposure, reassociation, and reversible retention. No. 03 in 99 Small Problems.",
+        "language": "JavaScript",
+        "stargazers_count": 0,
+        "forks_count": 0,
+        "topics": [
+          "bioassay",
+          "computational-biology",
+          "data-rich-insight-poor",
+          "drug-discovery"
+        ]
+      },
+      {
         "full_name": "terravic/jaspar-database-visualize-skill",
         "html_url": "https://github.com/terravic/jaspar-database-visualize-skill",
         "description": "Computational biology toolkit and agent skill for JASPAR transcription factor binding profile visualization, sequence logo rendering, PFM/PPM/PWM matrix analysis, dual-strand DNA sequence scanning, and interactive HTML5 dashboards.",
@@ -6619,48 +6664,6 @@
         ]
       },
       {
-        "full_name": "dataRichinsightPoor/washout-check",
-        "html_url": "https://github.com/dataRichinsightPoor/washout-check",
-        "description": "Research-use washout audit: explicit loading, finite-dose mass balance, residual exposure, reassociation, and reversible retention. No. 03 in 99 Small Problems.",
-        "language": "JavaScript",
-        "stargazers_count": 0,
-        "forks_count": 0,
-        "topics": [
-          "bioassay",
-          "computational-biology",
-          "data-rich-insight-poor",
-          "drug-discovery"
-        ]
-      },
-      {
-        "full_name": "msingh-compbio/epigenome-ra",
-        "html_url": "https://github.com/msingh-compbio/epigenome-ra",
-        "description": "A three-language (Python/R/bash) 15-stage EWAS + ML pipeline on 689 real human blood methylomes (GSE42861, RA vs control, 485,512 CpGs): cell-type deconvolution, adjusted EWAS, chromatin-state context, epigenetic clock, leakage-controlled classifier, and molecular subtyping — all data downloaded live from NCBI GEO.",
-        "language": "Jupyter Notebook",
-        "stargazers_count": 0,
-        "forks_count": 0,
-        "topics": [
-          "bioinformatics",
-          "biomarker-discovery",
-          "computational-biology",
-          "dna-methylation"
-        ]
-      },
-      {
-        "full_name": "Qasim-Hussain-Code/colabfold_boltz_structure_confidence_pipeline",
-        "html_url": "https://github.com/Qasim-Hussain-Code/colabfold_boltz_structure_confidence_pipeline",
-        "description": "A measured benchmark of structure prediction confidence, reporting pLDDT calibration against lDDT, the physical validity of predicted structures, and what docking into a predicted receptor costs against docking into the crystal structure it was built from.",
-        "language": "Python",
-        "stargazers_count": 0,
-        "forks_count": 0,
-        "topics": [
-          "alphafold2",
-          "bash",
-          "benchmark",
-          "boltz"
-        ]
-      },
-      {
         "full_name": "ZichenSheng/MeasureQual",
         "html_url": "https://github.com/ZichenSheng/MeasureQual",
         "description": "Claim-scoped qualification of computational measurements in R",
@@ -6700,6 +6703,34 @@
           "computational-biology",
           "ising-model",
           "latex"
+        ]
+      },
+      {
+        "full_name": "msingh-compbio/epigenome-ra",
+        "html_url": "https://github.com/msingh-compbio/epigenome-ra",
+        "description": "A three-language (Python/R/bash) 15-stage EWAS + ML pipeline on 689 real human blood methylomes (GSE42861, RA vs control, 485,512 CpGs): cell-type deconvolution, adjusted EWAS, chromatin-state context, epigenetic clock, leakage-controlled classifier, and molecular subtyping — all data downloaded live from NCBI GEO.",
+        "language": "Jupyter Notebook",
+        "stargazers_count": 0,
+        "forks_count": 0,
+        "topics": [
+          "bioinformatics",
+          "biomarker-discovery",
+          "computational-biology",
+          "dna-methylation"
+        ]
+      },
+      {
+        "full_name": "Qasim-Hussain-Code/colabfold_boltz_structure_confidence_pipeline",
+        "html_url": "https://github.com/Qasim-Hussain-Code/colabfold_boltz_structure_confidence_pipeline",
+        "description": "A measured benchmark of structure prediction confidence, reporting pLDDT calibration against lDDT, the physical validity of predicted structures, and what docking into a predicted receptor costs against docking into the crystal structure it was built from.",
+        "language": "Python",
+        "stargazers_count": 0,
+        "forks_count": 0,
+        "topics": [
+          "alphafold2",
+          "bash",
+          "benchmark",
+          "boltz"
         ]
       },
       {
@@ -6887,20 +6918,6 @@
         ]
       },
       {
-        "full_name": "Nrj-33/SpikeNet",
-        "html_url": "https://github.com/Nrj-33/SpikeNet",
-        "description": "This is a small project created by me to demonstrate Spiking Neural Networks using C++ code. This code demonstrates the Leaky Integrate and Fire model  using its equations to show simple neuron firing and R-STDP module along with Adaptive Threshold, Lateral Inhibition, and Weight Normalization. ",
-        "language": "C++",
-        "stargazers_count": 2,
-        "forks_count": 0,
-        "topics": [
-          "computational-biology",
-          "computational-neuroscience",
-          "neuron-simulator",
-          "neuroscience"
-        ]
-      },
-      {
         "full_name": "Aquiles-ai/Evo2-transformers",
         "html_url": "https://github.com/Aquiles-ai/Evo2-transformers",
         "description": "Unofficial PyTorch and Transformers port of Arc Institute Evo 2 for DNA modeling and generation. Loads official checkpoints with no Vortex or custom kernels needed.",
@@ -6912,6 +6929,20 @@
           "computational-biology",
           "dna",
           "dna-language-model"
+        ]
+      },
+      {
+        "full_name": "Nrj-33/SpikeNet",
+        "html_url": "https://github.com/Nrj-33/SpikeNet",
+        "description": "This is a small project created by me to demonstrate Spiking Neural Networks using C++ code. This code demonstrates the Leaky Integrate and Fire model  using its equations to show simple neuron firing and R-STDP module along with Adaptive Threshold, Lateral Inhibition, and Weight Normalization. ",
+        "language": "C++",
+        "stargazers_count": 2,
+        "forks_count": 0,
+        "topics": [
+          "computational-biology",
+          "computational-neuroscience",
+          "neuron-simulator",
+          "neuroscience"
         ]
       },
       {
@@ -7180,34 +7211,6 @@
         ]
       },
       {
-        "full_name": "moniramehzabin/Bioremediation-Pathway-Tool",
-        "html_url": "https://github.com/moniramehzabin/Bioremediation-Pathway-Tool",
-        "description": "A pathway-level bioinformatics tool for conservative evidence-based detection of bioremediation capabilities from bacterial genome annotations.",
-        "language": "Python",
-        "stargazers_count": 1,
-        "forks_count": 0,
-        "topics": [
-          "bacterial-genomics",
-          "biodegradation",
-          "bioinformatics",
-          "bioremediation"
-        ]
-      },
-      {
-        "full_name": "swt-nyk/song-prion",
-        "html_url": "https://github.com/swt-nyk/song-prion",
-        "description": "High throughput computational pipeline for identifying and characterizing prion-like domains (PrDs) and intrinsically disordered regions across proteomes.",
-        "language": "Python",
-        "stargazers_count": 1,
-        "forks_count": 0,
-        "topics": [
-          "bioinformatics",
-          "computational-biology",
-          "prions",
-          "python"
-        ]
-      },
-      {
         "full_name": "ateferos77/scstability",
         "html_url": "https://github.com/ateferos77/scstability",
         "description": "Bootstrap cluster stability for single-cell RNA-seq",
@@ -7233,6 +7236,34 @@
           "computational-biology",
           "epidemic-simulations",
           "epidemiology"
+        ]
+      },
+      {
+        "full_name": "moalimjaveed/MOCS-Cert",
+        "html_url": "https://github.com/moalimjaveed/MOCS-Cert",
+        "description": "Molecular dynamics trajectory query engine with certified interval pruning; Kleene three-valued logic, cost-based query planning, and RFC 8785 + SHA-256 evidence certificates. FastAPI backend, React/Mol* 3D viewer.",
+        "language": "TypeScript",
+        "stargazers_count": 1,
+        "forks_count": 0,
+        "topics": [
+          "bioinformatics",
+          "biophysics",
+          "certificate-generation",
+          "computational-biology"
+        ]
+      },
+      {
+        "full_name": "moniramehzabin/Bioremediation-Pathway-Tool",
+        "html_url": "https://github.com/moniramehzabin/Bioremediation-Pathway-Tool",
+        "description": "A pathway-level bioinformatics tool for conservative evidence-based detection of bioremediation capabilities from bacterial genome annotations.",
+        "language": "Python",
+        "stargazers_count": 1,
+        "forks_count": 0,
+        "topics": [
+          "bacterial-genomics",
+          "biodegradation",
+          "bioinformatics",
+          "bioremediation"
         ]
       }
     ],
@@ -7588,20 +7619,6 @@
         ]
       },
       {
-        "full_name": "paulina-duda/on-growth-and-form",
-        "html_url": "https://github.com/paulina-duda/on-growth-and-form",
-        "description": "Biological processes filmed as the algorithms they are — renders for @ekspertodniczego. Morphogenesis, mycelium, active matter, artificial life.",
-        "language": "Python",
-        "stargazers_count": 3,
-        "forks_count": 1,
-        "topics": [
-          "artificial-life",
-          "computational-biology",
-          "generative-art",
-          "morphogenesis"
-        ]
-      },
-      {
         "full_name": "ahmedanees-m/pen-stack",
         "html_url": "https://github.com/ahmedanees-m/pen-stack",
         "description": "A verification and grounding layer for AI-driven genome writing. Foundation models and a grounded co-scientist agent propose edits; PEN-STACK checks each against validated tools, never a language model: where a write is safe and durable, which enzyme makes it, and where it goes off-target. Calibrated, provenance-tracked, pre-registered.",
@@ -7627,6 +7644,20 @@
           "comparative-genomics",
           "computational-biology",
           "molecular-evolution"
+        ]
+      },
+      {
+        "full_name": "paulina-duda/on-growth-and-form",
+        "html_url": "https://github.com/paulina-duda/on-growth-and-form",
+        "description": "Biological processes filmed as the algorithms they are — renders for @ekspertodniczego. Morphogenesis, mycelium, active matter, artificial life.",
+        "language": "Python",
+        "stargazers_count": 3,
+        "forks_count": 1,
+        "topics": [
+          "artificial-life",
+          "computational-biology",
+          "generative-art",
+          "morphogenesis"
         ]
       },
       {
@@ -7664,8 +7695,8 @@
         "html_url": "https://github.com/K-Dense-AI/scientific-agent-skills",
         "description": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 190,000+ scientists worldwide. 165 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
         "language": "Python",
-        "stargazers_count": 46694,
-        "forks_count": 4220,
+        "stargazers_count": 46715,
+        "forks_count": 4225,
         "topics": [
           "agent-skills",
           "ai-scientist",
@@ -7678,8 +7709,8 @@
         "html_url": "https://github.com/aipoch/medical-research-skills",
         "description": "Hundreds of agent skills for medical research, including protocol design, data analysis, evidence insights, and academic writing.",
         "language": "Python",
-        "stargazers_count": 1922,
-        "forks_count": 175,
+        "stargazers_count": 1924,
+        "forks_count": 177,
         "topics": [
           "ai",
           "bioinformatics",
@@ -7720,7 +7751,7 @@
         "html_url": "https://github.com/oncologylab/craftgrn",
         "description": "Combined RNA and ATAC Footprint Training of Gene Regulatory Network",
         "language": "R",
-        "stargazers_count": 458,
+        "stargazers_count": 459,
         "forks_count": 3,
         "topics": [
           "atac-seq",
@@ -7762,7 +7793,7 @@
         "html_url": "https://github.com/BioTender-max/awesome-bio-agent-skills",
         "description": "A curated collection of AI agent skills for biomedical research, covering genomics, proteomics, single-cell analysis, clinical AI, and protein design.",
         "language": "Python",
-        "stargazers_count": 189,
+        "stargazers_count": 190,
         "forks_count": 32,
         "topics": [
           "agent-skills",
@@ -8096,6 +8127,20 @@
         ]
       },
       {
+        "full_name": "Dhritirajkalitacolab/nigellidine-ftsz-computational-drug-discovery",
+        "html_url": "https://github.com/Dhritirajkalitacolab/nigellidine-ftsz-computational-drug-discovery",
+        "description": "Three Nigella sativa alkaloids (indazoles nigellidine, nigellicine; isoquinoline nigellimine) vs S. aureus FtsZ (PDB 3VOA): ADMET screening; docking with Vina, AutoDock4, GNINA, DiffDock-L (redock RMSD 0.307 Å); 4I55 tubulin counter-screen; 100 ns MD; MM-GBSA −13.28 ± 0.97 kcal/mol (SD). Computational predictions only.",
+        "language": null,
+        "stargazers_count": 1,
+        "forks_count": 0,
+        "topics": [
+          "autodock-vina",
+          "autodock4",
+          "cgenff",
+          "charmm36"
+        ]
+      },
+      {
         "full_name": "kshirsagarkiran/molecular-property-prediction-gnn",
         "html_url": "https://github.com/kshirsagarkiran/molecular-property-prediction-gnn",
         "description": "GNNs for molecular property prediction — 130K molecules, GNNExplainer interpretability, solar-cell screening",
@@ -8163,6 +8208,20 @@
           "cheminformatics",
           "coursework",
           "data-science"
+        ]
+      },
+      {
+        "full_name": "AshanSomasiri/Phytochemical-Engine",
+        "html_url": "https://github.com/AshanSomasiri/Phytochemical-Engine",
+        "description": "An automated cheminformatics pipeline for phytochemical discovery, drug-likeness screening, and brief bioactivity profiling.",
+        "language": "Python",
+        "stargazers_count": 0,
+        "forks_count": 0,
+        "topics": [
+          "bioinformatics",
+          "bioinformatics-pipeline",
+          "cheminformatics",
+          "cheminformatics-drug-discovery"
         ]
       },
       {
@@ -8236,20 +8295,6 @@
         ]
       },
       {
-        "full_name": "narvall018/msannot",
-        "html_url": "https://github.com/narvall018/msannot",
-        "description": "Annotation de petites molécules par spectres MS/MS (RDKit, cosine, modified cosine, entropie spectrale) et évaluation rigoureuse sur MassBank : CLI, rapport HTML, dashboard Streamlit.",
-        "language": "Python",
-        "stargazers_count": 0,
-        "forks_count": 0,
-        "topics": [
-          "cheminformatics",
-          "mass-spectrometry",
-          "massbank",
-          "metabolomics"
-        ]
-      },
-      {
         "full_name": "drjoykarmakar/admet-gnn-benchmark",
         "html_url": "https://github.com/drjoykarmakar/admet-gnn-benchmark",
         "description": "Reproducible ADMET benchmark comparing molecular fingerprints and graph neural networks under random and scaffold splits.",
@@ -8261,6 +8306,20 @@
           "admet-prediction",
           "cheminformatics",
           "drug-discovery"
+        ]
+      },
+      {
+        "full_name": "narvall018/msannot",
+        "html_url": "https://github.com/narvall018/msannot",
+        "description": "Annotation de petites molécules par spectres MS/MS (RDKit, cosine, modified cosine, entropie spectrale) et évaluation rigoureuse sur MassBank : CLI, rapport HTML, dashboard Streamlit.",
+        "language": "Python",
+        "stargazers_count": 0,
+        "forks_count": 0,
+        "topics": [
+          "cheminformatics",
+          "mass-spectrometry",
+          "massbank",
+          "metabolomics"
         ]
       },
       {
@@ -8434,20 +8493,6 @@
         ]
       },
       {
-        "full_name": "eobi/pancreatic_cancer_research",
-        "html_url": "https://github.com/eobi/pancreatic_cancer_research",
-        "description": "Validated computational drug-discovery pipeline for KRAS in pancreatic ductal adenocarcinoma (PDAC). Four validated targets (G12C/G12D/G12V/G12R), 518,662 gated compounds, three virtual screens, MM-GBSA rescoring, and a self-audit of a generative campaign whose molecules could not be synthesised. All negative results released.",
-        "language": "Jupyter Notebook",
-        "stargazers_count": 1,
-        "forks_count": 0,
-        "topics": [
-          "admet",
-          "autodock-vina",
-          "bioinformatics",
-          "cheminformatics"
-        ]
-      },
-      {
         "full_name": "MankoMara/molar-mass",
         "html_url": "https://github.com/MankoMara/molar-mass",
         "description": "A Python script designed for calculating the molar mass of simple chemical formulas and elements.",
@@ -8476,6 +8521,20 @@
         ]
       },
       {
+        "full_name": "eobi/pancreatic_cancer_research",
+        "html_url": "https://github.com/eobi/pancreatic_cancer_research",
+        "description": "Validated computational drug-discovery pipeline for KRAS in pancreatic ductal adenocarcinoma (PDAC). Four validated targets (G12C/G12D/G12V/G12R), 518,662 gated compounds, three virtual screens, MM-GBSA rescoring, and a self-audit of a generative campaign whose molecules could not be synthesised. All negative results released.",
+        "language": "Jupyter Notebook",
+        "stargazers_count": 1,
+        "forks_count": 0,
+        "topics": [
+          "admet",
+          "autodock-vina",
+          "bioinformatics",
+          "cheminformatics"
+        ]
+      },
+      {
         "full_name": "cloudbywu/dshchem",
         "html_url": "https://github.com/cloudbywu/dshchem",
         "description": "DSH (DeepSeek Harness) 化学科研 Agent 预设与插件：24 个 chem_* 工具，RDKit / ASE / xtb / AutoDock Vina / admet_ai 后端",
@@ -8487,6 +8546,20 @@
           "cheminformatics",
           "deepseek-harness",
           "dsh-plugin"
+        ]
+      },
+      {
+        "full_name": "Dhritirajkalitacolab/nigellidine-ftsz-computational-drug-discovery",
+        "html_url": "https://github.com/Dhritirajkalitacolab/nigellidine-ftsz-computational-drug-discovery",
+        "description": "Three Nigella sativa alkaloids (indazoles nigellidine, nigellicine; isoquinoline nigellimine) vs S. aureus FtsZ (PDB 3VOA): ADMET screening; docking with Vina, AutoDock4, GNINA, DiffDock-L (redock RMSD 0.307 Å); 4I55 tubulin counter-screen; 100 ns MD; MM-GBSA −13.28 ± 0.97 kcal/mol (SD). Computational predictions only.",
+        "language": null,
+        "stargazers_count": 1,
+        "forks_count": 0,
+        "topics": [
+          "autodock-vina",
+          "autodock4",
+          "cgenff",
+          "charmm36"
         ]
       },
       {
@@ -8697,20 +8770,6 @@
           "chembl",
           "cheminformatics",
           "drug-discovery"
-        ]
-      },
-      {
-        "full_name": "OJ102/OPV-Chemist",
-        "html_url": "https://github.com/OJ102/OPV-Chemist",
-        "description": "Extended CycleChemist to become a hardened, DFT-validated RL framework for organic photovoltaic (OPV) discovery, combining generative transformers, structural plausibility gating, and TD-DFTB oracle validation.",
-        "language": "Python",
-        "stargazers_count": 0,
-        "forks_count": 0,
-        "topics": [
-          "cheminformatics",
-          "graph-neural-networks",
-          "materials-discovery",
-          "organic-photovoltaics"
         ]
       },
       {
@@ -8926,20 +8985,6 @@
         ]
       },
       {
-        "full_name": "Islamomar-1/ShapePharm3D",
-        "html_url": "https://github.com/Islamomar-1/ShapePharm3D",
-        "description": "3D pharmacophore-conditioned molecular diffusion with an E(3)-equivariant EGNN backbone. Generates shape-complementary, drug-like molecules conditioned on pharmacophore point clouds and PMI/SSD shape descriptors. Inspired by ShEPhERD (Adams et al., ICLR Oral 2025). PyTorch · e3nn · RDKit.",
-        "language": null,
-        "stargazers_count": 3,
-        "forks_count": 0,
-        "topics": [
-          "3d-molecules",
-          "bioisostere",
-          "cheminformatics",
-          "computational-chemistry"
-        ]
-      },
-      {
         "full_name": "Benitmulindwa/Autoscreen",
         "html_url": "https://github.com/Benitmulindwa/Autoscreen",
         "description": "An autonomous ligand-based virtual screening pipeline built with Python.",
@@ -8951,6 +8996,20 @@
           "chemistry",
           "ml",
           "python"
+        ]
+      },
+      {
+        "full_name": "Islamomar-1/ShapePharm3D",
+        "html_url": "https://github.com/Islamomar-1/ShapePharm3D",
+        "description": "3D pharmacophore-conditioned molecular diffusion with an E(3)-equivariant EGNN backbone. Generates shape-complementary, drug-like molecules conditioned on pharmacophore point clouds and PMI/SSD shape descriptors. Inspired by ShEPhERD (Adams et al., ICLR Oral 2025). PyTorch · e3nn · RDKit.",
+        "language": null,
+        "stargazers_count": 3,
+        "forks_count": 0,
+        "topics": [
+          "3d-molecules",
+          "bioisostere",
+          "cheminformatics",
+          "computational-chemistry"
         ]
       },
       {
@@ -9710,6 +9769,20 @@
         ]
       },
       {
+        "full_name": "MMatinGerami/zero-shot-perturbation",
+        "html_url": "https://github.com/MMatinGerami/zero-shot-perturbation",
+        "description": "Zero-shot CRISPRi perturbation response prediction across cell contexts, with per-prediction uncertainty — Virtual Cell Challenge 2026 entry",
+        "language": "Python",
+        "stargazers_count": 0,
+        "forks_count": 0,
+        "topics": [
+          "bioinformatics",
+          "crispri",
+          "machine-learning",
+          "perturb-seq"
+        ]
+      },
+      {
         "full_name": "leahmatzat/corpus-checker",
         "html_url": "https://github.com/leahmatzat/corpus-checker",
         "description": "Checks whether evaluation datasets are contained in single-cell foundation model training sets.  A human-verified registry, deterministic CLI, and static site. ",
@@ -9721,20 +9794,6 @@
           "bioinformatics",
           "data-provenance",
           "foundation-models"
-        ]
-      },
-      {
-        "full_name": "cxinsys/genoar",
-        "html_url": "https://github.com/cxinsys/genoar",
-        "description": "GENOAR: GEO discovery, UMLS annotation and Cell Ranger pipeline for single-cell RNA-seq",
-        "language": "Python",
-        "stargazers_count": 0,
-        "forks_count": 0,
-        "topics": [
-          "bioinformatics",
-          "cell-ranger",
-          "geo",
-          "pipeline"
         ]
       },
       {
@@ -9763,6 +9822,20 @@
           "isoform-analysis",
           "long-read-sequencing",
           "r"
+        ]
+      },
+      {
+        "full_name": "cxinsys/genoar",
+        "html_url": "https://github.com/cxinsys/genoar",
+        "description": "GENOAR: GEO discovery, UMLS annotation and Cell Ranger pipeline for single-cell RNA-seq",
+        "language": "Python",
+        "stargazers_count": 0,
+        "forks_count": 0,
+        "topics": [
+          "bioinformatics",
+          "cell-ranger",
+          "geo",
+          "pipeline"
         ]
       },
       {
@@ -9935,20 +10008,6 @@
         ]
       },
       {
-        "full_name": "ZhaoLabs-SJTU/majorbio-omics-download",
-        "html_url": "https://github.com/ZhaoLabs-SJTU/majorbio-omics-download",
-        "description": "美吉云(Majorbio)组学数据批量下载 + scRNA 质控 + Word/Excel/PPT 三件套报告",
-        "language": "Python",
-        "stargazers_count": 1,
-        "forks_count": 0,
-        "topics": [
-          "bioinformatics",
-          "majorbio",
-          "omics",
-          "quality-control"
-        ]
-      },
-      {
         "full_name": "huakaiguozi/CellMap-MR",
         "html_url": "https://github.com/huakaiguozi/CellMap-MR",
         "description": "CellMap-MR: R package for cellular attribution of tissue-level gene expression effects.",
@@ -9960,6 +10019,20 @@
           "eqtl",
           "mendelian-randomization",
           "r"
+        ]
+      },
+      {
+        "full_name": "ZhaoLabs-SJTU/majorbio-omics-download",
+        "html_url": "https://github.com/ZhaoLabs-SJTU/majorbio-omics-download",
+        "description": "美吉云(Majorbio)组学数据批量下载 + scRNA 质控 + Word/Excel/PPT 三件套报告",
+        "language": "Python",
+        "stargazers_count": 1,
+        "forks_count": 0,
+        "topics": [
+          "bioinformatics",
+          "majorbio",
+          "omics",
+          "quality-control"
         ]
       },
       {
@@ -10480,20 +10553,6 @@
         ]
       },
       {
-        "full_name": "samuelbharti/tahoe-explorer",
-        "html_url": "https://github.com/samuelbharti/tahoe-explorer",
-        "description": "Shiny app for exploring Tahoe-100M single-cell perturbation metadata and building reproducible subsets",
-        "language": "R",
-        "stargazers_count": 3,
-        "forks_count": 0,
-        "topics": [
-          "bioinformatics",
-          "bslib",
-          "data-visualization",
-          "duckdb"
-        ]
-      },
-      {
         "full_name": "Genentech/PerturbME",
         "html_url": "https://github.com/Genentech/PerturbME",
         "description": "Analysis code for Perturb-ME: scalable mechanism discovery from phenotype-enriched genome-wide CRISPR screens (Wang, Gu, Frangieh et al., bioRxiv 2026)",
@@ -10505,6 +10564,20 @@
           "crispr-screen",
           "functional-genomics",
           "melanoma"
+        ]
+      },
+      {
+        "full_name": "samuelbharti/tahoe-explorer",
+        "html_url": "https://github.com/samuelbharti/tahoe-explorer",
+        "description": "Shiny app for exploring Tahoe-100M single-cell perturbation metadata and building reproducible subsets",
+        "language": "R",
+        "stargazers_count": 3,
+        "forks_count": 0,
+        "topics": [
+          "bioinformatics",
+          "bslib",
+          "data-visualization",
+          "duckdb"
         ]
       },
       {
@@ -10639,8 +10712,8 @@
         "html_url": "https://github.com/aipoch/medical-research-skills",
         "description": "Hundreds of agent skills for medical research, including protocol design, data analysis, evidence insights, and academic writing.",
         "language": "Python",
-        "stargazers_count": 1922,
-        "forks_count": 175,
+        "stargazers_count": 1924,
+        "forks_count": 177,
         "topics": [
           "ai",
           "bioinformatics",
@@ -10667,7 +10740,7 @@
         "html_url": "https://github.com/BioTender-max/awesome-bio-agent-skills",
         "description": "A curated collection of AI agent skills for biomedical research, covering genomics, proteomics, single-cell analysis, clinical AI, and protein design.",
         "language": "Python",
-        "stargazers_count": 189,
+        "stargazers_count": 190,
         "forks_count": 32,
         "topics": [
           "agent-skills",
