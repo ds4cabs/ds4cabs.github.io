@@ -31,19 +31,23 @@ test('the production registry contains every roster and profile page', () => {
   const people = JSON.parse(fs.readFileSync(registryPath, 'utf8'));
   const views = buildPeopleViews(people, 2026);
 
-  assert.equal(people.length, 74);
-  assert.equal(new Set(people.map(person => person.id)).size, 74);
+  assert.equal(people.length, 75);
+  assert.equal(new Set(people.map(person => person.id)).size, 75);
   assert.equal(views.homepage.leadership.length, 3);
   assert.equal(views.homepage.mentors.length, 16);
   assert.equal(views.homepage.mentees.length, 30);
-  assert.equal(views.cohorts[2025].length, 21);
+  assert.equal(views.cohorts[2025].length, 22);
   assert.equal(views.cohorts[2024].length, 2);
 
   const profileFiles = fs.readdirSync(path.join(__dirname, '..', 'people'))
     .filter(name => name.endsWith('.html') && name !== 'profile-template.html')
     .map(name => `people/${name}`);
-  const registeredProfiles = people.map(person => person.profile).filter(Boolean);
+  const registeredProfiles = new Set(people.map(person => person.profile).filter(Boolean));
   assert.deepEqual([...registeredProfiles].sort(), [...profileFiles].sort());
+
+  const baixue = people.filter(person => person.name === 'Baixue Zhang (Doris)');
+  assert.equal(baixue.length, 2);
+  assert.ok(baixue.every(person => person.profile === 'people/baixue-zhang.html'));
 });
 
 test('every page that renders cards loads the people registry helper before main.js', () => {
@@ -107,7 +111,7 @@ test('people folder provides the template and every permanent profile carries re
   const directory = 'people';
   assert.ok(fs.existsSync(path.join(root, directory, 'profile-template.html')), 'people template is missing');
   const profiles = fs.readdirSync(path.join(root, directory)).filter(name => name.endsWith('.html') && name !== 'profile-template.html');
-  assert.equal(profiles.length, 38);
+  assert.equal(profiles.length, 50);
   for (const name of profiles) {
     const html = fs.readFileSync(path.join(root, directory, name), 'utf8');
     assert.match(html, /<meta name="ds4cabs-name" content="[^"]+"\s*\/?>/, `${directory}/${name} is missing ds4cabs-name`);
@@ -128,7 +132,7 @@ test('current-year role folders contain generated redirects to permanent people 
   const fs = require('node:fs');
   const path = require('node:path');
   const root = path.join(__dirname, '..');
-  const expected = { mentor: 5, admin: 2, mentee: 30 };
+  const expected = { mentor: 6, admin: 3, mentee: 30 };
   for (const [directory, count] of Object.entries(expected)) {
     const files = fs.readdirSync(path.join(root, directory)).filter(name => name.endsWith('.html') && name !== 'profile-template.html');
     assert.equal(files.length, count, `${directory} redirect count`);

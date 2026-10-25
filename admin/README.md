@@ -7,7 +7,7 @@ Current program leadership and administrator directory. Permanent profile pages 
 | Shicheng Guo | Program Lead | CABS · DS4CABS | — | — | [View](https://ds4cabs.github.io/people/shicheng-guo.html) |
 | Sihong Zhou | Program Lead | CABS · DS4CABS | — | — | — |
 | Liping Meng | Program Lead | CABS · DS4CABS | — | — | — |
-| Baixue Zhang (Doris) | Admin & Mentor | — | — | — | — |
+| Baixue Zhang (Doris) | Admin & Mentor | — | — | — | [View](https://ds4cabs.github.io/people/baixue-zhang.html) |
 | Quinn Leng | Admin & Mentor | — | — | — | — |
 | Yongli Shan | Admin & Mentor | — | — | [Profile](https://www.linkedin.com/in/yongli-shan-3aa99235/) | [View](https://ds4cabs.github.io/people/yongli-shan.html) |
 | Ying Yang | Admin & Mentor | — | — | — | — |

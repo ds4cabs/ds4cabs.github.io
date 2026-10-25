@@ -115,12 +115,22 @@ def build_registry() -> list[dict]:
         new_record["active"] = record["type"] != "applicant"
         output.append(new_record)
 
+    # One permanent page represents a person across multiple program years or
+    # roles (for example, a former mentee who is now an administrator).
+    profiles_by_name: dict[str, str] = {}
+    for record in output:
+        if record.get("profile"):
+            name, profile = str(record["name"]), str(record["profile"])
+            if name in profiles_by_name and profiles_by_name[name] != profile:
+                raise ValueError(f"multiple permanent profile pages found for {name}")
+            profiles_by_name[name] = profile
+    for record in output:
+        if str(record["name"]) in profiles_by_name:
+            record["profile"] = profiles_by_name[str(record["name"])]
+
     ids = [p.get("id") for p in output]
     if any(not value for value in ids) or len(ids) != len(set(ids)):
         raise ValueError("people registry contains missing or duplicate ids")
-    profiles = [p.get("profile") for p in output if p.get("profile")]
-    if len(profiles) != len(set(profiles)):
-        raise ValueError("people registry contains duplicate profile paths")
     return output
 
 
@@ -202,7 +212,13 @@ def generate_readmes(people: list[dict]) -> dict[Path, str]:
     mentors = [p for p in people if p.get("active", True) and p.get("type") in {"mentor", "admin"}]
     administrators = [p for p in people if p.get("active", True) and p.get("type") in {"leader", "admin"}]
     mentees = [p for p in people if p.get("active", True) and p.get("type") == "mentee" and p.get("year") == year]
-    all_profiles = [p for p in people if p.get("profile")]
+    all_profiles = []
+    seen_profiles: set[str] = set()
+    for person in people:
+        profile = person.get("profile")
+        if profile and str(profile) not in seen_profiles:
+            all_profiles.append(person)
+            seen_profiles.add(str(profile))
     people_rows = [[p["name"], p.get("role") or str(p["type"]).title(), str(p.get("year") or "—"), p.get("affiliation") or "—", github_link(p.get("github")), md_link("Profile", p.get("linkedin")), profile_link(p.get("profile"))] for p in all_profiles]
     mentee_rows = [[p["name"], str(p["year"]), p.get("major") or "—", p.get("affiliation") or "—", github_link(p.get("github")), md_link("Profile", p.get("linkedin")), profile_link(p.get("profile"))] for p in mentees]
     return {
@@ -251,7 +267,8 @@ def main() -> int:
         print(f"Profile registry validation failed: {exc}")
         return 1
     if args.validate:
-        print(f"Validated {len(people)} people and {sum(bool(p.get('profile')) for p in people)} permanent profiles.")
+        profile_count = len({str(p["profile"]) for p in people if p.get("profile")})
+        print(f"Validated {len(people)} people and {profile_count} permanent profiles.")
         return 0
     stale = [path for path, content in outputs.items() if not path.exists() or path.read_text(encoding="utf-8") != content]
     stale.extend(stale_role_files(outputs))
@@ -264,7 +281,8 @@ def main() -> int:
         path.unlink()
     for path, content in outputs.items():
         path.write_text(content, encoding="utf-8")
-    print(f"Generated {len(people)} people, {sum(bool(p.get('profile')) for p in people)} permanent profiles, and current-year role redirects.")
+    profile_count = len({str(p["profile"]) for p in people if p.get("profile")})
+    print(f"Generated {len(people)} people, {profile_count} permanent profiles, and current-year role redirects.")
     return 0
 
 

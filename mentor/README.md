@@ -4,7 +4,7 @@ Current mentor and admin directory. Permanent profile pages live in [`people/`](
 
 | Person | Role | Affiliation | GitHub | LinkedIn | Profile |
 |---|---|---|---|---|---|
-| Baixue Zhang (Doris) | Admin & Mentor | — | — | — | — |
+| Baixue Zhang (Doris) | Admin & Mentor | — | — | — | [View](https://ds4cabs.github.io/people/baixue-zhang.html) |
 | Quinn Leng | Admin & Mentor | — | — | — | — |
 | Yongli Shan | Admin & Mentor | — | — | [Profile](https://www.linkedin.com/in/yongli-shan-3aa99235/) | [View](https://ds4cabs.github.io/people/yongli-shan.html) |
 | Andrews Acheampong | Mentor | — | [@AcheampongAndy](https://github.com/AcheampongAndy) | [Profile](https://www.linkedin.com/in/andrews-acheampong-a889aa195) | [View](https://ds4cabs.github.io/people/andrews-acheampong.html) |
