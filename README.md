@@ -1,5 +1,10 @@
 # ds4cabs.github.io
 
+[![Live website](https://img.shields.io/website?url=https%3A%2F%2Fds4cabs.github.io&label=website&logo=github)](https://ds4cabs.github.io/)
+[![Sync people registry](https://github.com/ds4cabs/ds4cabs.github.io/actions/workflows/sync-people.yml/badge.svg)](https://github.com/ds4cabs/ds4cabs.github.io/actions/workflows/sync-people.yml)
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-live-2ea44f?logo=github)](https://ds4cabs.github.io/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](#license)
+
 Landing page for **DS4CABS** — the data science initiative of the
 [Chinese American Biopharmaceutical Society](https://www.cabsweb.org/).
 
