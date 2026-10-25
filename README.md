@@ -18,10 +18,10 @@ workshops, and the 2026 summer intern cohort.
 ├── mentor.html               # mentors and administrators directory
 ├── cohort.html               # current and past mentee cohorts
 ├── people.json               # generated public registry used by the website
-├── mentor/                   # mentor profiles + upload template
-├── admin/                    # admin/program-lead profiles + upload template
-├── mentee/                   # mentee profiles + upload template
-├── people/                   # legacy redirects for previously shared URLs
+├── people/                   # permanent profiles across every year and role
+├── mentor/                   # generated current-year mentor shortcuts
+├── admin/                    # generated current-year admin shortcuts
+├── mentee/                   # generated current-year mentee shortcuts
 ├── assets/
 │   ├── css/style.css         # all styling, theme variables, light/dark
 │   ├── data/people-base.json # records that do not yet have standalone pages
@@ -49,17 +49,12 @@ Each entry is just `{ name, desc, url, cat, lang?, stars?, forks?, tag? }`.
 
 ## Updating profile pages
 
-Store standalone profiles by role:
+Store every permanent profile in `people/`, regardless of year or role.
+Contributors copy [`people/profile-template.html`](people/profile-template.html),
+rename it to `firstname-lastname.html`, fill its visible content and
+`ds4cabs-*` metadata, and submit that one HTML file.
 
-- `mentor/<name>.html`
-- `admin/<name>.html`
-- `mentee/<name>.html`
-
-Contributors add a profile by copying `profile-template.html` inside the
-appropriate `mentor/`, `admin/`, or `mentee/` folder. Fill the visible page and
-the `ds4cabs-*` metadata in its `<head>`, then submit that one HTML file.
-
-The generator discovers the new page, infers its role from the folder, merges
+The generator discovers each page, reads its `ds4cabs-type` and year metadata, merges
 it with records that do not yet have pages, and rebuilds the root
 [`people.json`](people.json) registry. The homepage, Mentors page, Cohorts page,
 and role README tables all derive from that generated registry.
@@ -71,7 +66,8 @@ python3 scripts/generate_people_readmes.py
 node --test tests/people-registry.test.js
 ```
 
-Keep compatibility redirects under `people/` when moving an existing public URL.
+The `mentor/`, `admin/`, and `mentee/` folders are generated current-year views.
+Historical participants remain permanently available under `people/`.
 
 Categories used today:
 `agents`, `rag`, `discovery`, `trials`, `regulatory`, `market`,
@@ -91,8 +87,8 @@ python3 -m http.server 8080
 - **Dark by default, light toggleable** — persisted via `localStorage`.
 - **One source of truth** for the project list lives in `projects.js`, so
   adding a new repo is a 4-line edit.
-- **One-file profile contributions** use standardized HTML metadata in the
-  `mentor/`, `admin/`, and `mentee/` folders; automation generates `people.json`.
+- **One-file profile contributions** use standardized HTML metadata in
+  `people/`; automation generates `people.json` and current-year role shortcuts.
 - **Accessible**: semantic landmarks, focusable controls, reduced-motion respected.
 
 ## License

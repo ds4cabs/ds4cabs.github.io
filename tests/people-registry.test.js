@@ -31,18 +31,17 @@ test('the production registry contains every roster and profile page', () => {
   const people = JSON.parse(fs.readFileSync(registryPath, 'utf8'));
   const views = buildPeopleViews(people, 2026);
 
-  assert.equal(people.length, 72);
-  assert.equal(new Set(people.map(person => person.id)).size, 72);
+  assert.equal(people.length, 74);
+  assert.equal(new Set(people.map(person => person.id)).size, 74);
   assert.equal(views.homepage.leadership.length, 3);
   assert.equal(views.homepage.mentors.length, 16);
   assert.equal(views.homepage.mentees.length, 30);
   assert.equal(views.cohorts[2025].length, 21);
   assert.equal(views.cohorts[2024].length, 2);
 
-  const profileFiles = ['mentor', 'admin', 'mentee']
-    .flatMap(directory => fs.readdirSync(path.join(__dirname, '..', directory))
-      .filter(name => name.endsWith('.html') && name !== 'profile-template.html')
-      .map(name => `${directory}/${name}`));
+  const profileFiles = fs.readdirSync(path.join(__dirname, '..', 'people'))
+    .filter(name => name.endsWith('.html') && name !== 'profile-template.html')
+    .map(name => `people/${name}`);
   const registeredProfiles = people.map(person => person.profile).filter(Boolean);
   assert.deepEqual([...registeredProfiles].sort(), [...profileFiles].sort());
 });
@@ -101,21 +100,21 @@ test('role README files are generated from people.json', () => {
   assert.equal(result.status, 0, result.stdout + result.stderr);
 });
 
-test('role folders provide templates and every profile carries registration metadata', () => {
+test('people folder provides the template and every permanent profile carries registration metadata', () => {
   const fs = require('node:fs');
   const path = require('node:path');
   const root = path.join(__dirname, '..');
-
-  for (const directory of ['mentor', 'admin', 'mentee']) {
-    assert.ok(fs.existsSync(path.join(root, directory, 'profile-template.html')), `${directory} template is missing`);
-    const profiles = fs.readdirSync(path.join(root, directory)).filter(name => name.endsWith('.html') && name !== 'profile-template.html');
-    for (const name of profiles) {
-      const html = fs.readFileSync(path.join(root, directory, name), 'utf8');
-      assert.match(html, /<meta name="ds4cabs-name" content="[^"]+"\s*\/?>/, `${directory}/${name} is missing ds4cabs-name`);
-      assert.match(html, /<meta name="ds4cabs-role" content="[^"]+"\s*\/?>/, `${directory}/${name} is missing ds4cabs-role`);
-      if (directory === 'mentee') {
-        assert.match(html, /<meta name="ds4cabs-year" content="\d{4}"\s*\/?>/, `${directory}/${name} is missing ds4cabs-year`);
-      }
+  const directory = 'people';
+  assert.ok(fs.existsSync(path.join(root, directory, 'profile-template.html')), 'people template is missing');
+  const profiles = fs.readdirSync(path.join(root, directory)).filter(name => name.endsWith('.html') && name !== 'profile-template.html');
+  assert.equal(profiles.length, 38);
+  for (const name of profiles) {
+    const html = fs.readFileSync(path.join(root, directory, name), 'utf8');
+    assert.match(html, /<meta name="ds4cabs-name" content="[^"]+"\s*\/?>/, `${directory}/${name} is missing ds4cabs-name`);
+    assert.match(html, /<meta name="ds4cabs-role" content="[^"]+"\s*\/?>/, `${directory}/${name} is missing ds4cabs-role`);
+    assert.match(html, /<meta name="ds4cabs-type" content="[^"]+"\s*\/?>/, `${directory}/${name} is missing ds4cabs-type`);
+    if (/content="(?:mentee|applicant)"/.test(html)) {
+      assert.match(html, /<meta name="ds4cabs-year" content="\d{4}"\s*\/?>/, `${directory}/${name} is missing ds4cabs-year`);
     }
   }
 
@@ -123,6 +122,21 @@ test('role folders provide templates and every profile carries registration meta
   const { spawnSync } = require('node:child_process');
   const result = spawnSync('python3', [script, '--validate'], { encoding: 'utf8' });
   assert.equal(result.status, 0, result.stdout + result.stderr);
+});
+
+test('current-year role folders contain generated redirects to permanent people profiles', () => {
+  const fs = require('node:fs');
+  const path = require('node:path');
+  const root = path.join(__dirname, '..');
+  const expected = { mentor: 5, admin: 2, mentee: 30 };
+  for (const [directory, count] of Object.entries(expected)) {
+    const files = fs.readdirSync(path.join(root, directory)).filter(name => name.endsWith('.html') && name !== 'profile-template.html');
+    assert.equal(files.length, count, `${directory} redirect count`);
+    for (const name of files) {
+      const html = fs.readFileSync(path.join(root, directory, name), 'utf8');
+      assert.match(html, /http-equiv="refresh" content="0; url=\.\.\/people\//, `${directory}/${name} is not a people redirect`);
+    }
+  }
 });
 
 test('GitHub Actions validates profile uploads and regenerates the public registry', () => {
