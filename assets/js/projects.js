@@ -4,10 +4,10 @@
 
 window.DS4CABS_PROJECTS = {
   // ====================================================================
-  // TEAM — full DS4CABS roster (cross-cohort, evergreen).
+  // MENTOR PAGE — DS4CABS leaders, mentors, and admins (evergreen).
   // --------------------------------------------------------------------
-  // Rendered on /team.html. The current-cohort grids on the home page
-  // still read from `cohorts.<year>` (mentors / interns / leadership).
+  // Leaders and mentors/admins are rendered on /team.html. Current-cohort
+  // interns are rendered on /cohort.html and the home page.
   //
   // Person entry schema is the same as cohort entries, plus an optional
   // `email` field that renders as a mailto link.
@@ -417,7 +417,7 @@ window.DS4CABS_PROJECTS = {
   ]
 };
 
-// The 2026 cohort roster lives in `team.interns_mentees` (shown on /team.html).
+// The 2026 cohort roster lives in `team.interns_mentees` (shown on /cohort.html).
 // Mirror it into the cohort archive so /cohort.html?year=2026 lists the same
 // people, without duplicating the roster. When 2026 becomes historic, replace
 // this with a static `archive[2026]` entry and drop the wiring below.

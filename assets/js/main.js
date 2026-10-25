@@ -204,9 +204,8 @@
 
   // ---------- team page grids (rendered only if mount points exist) ----------
   const team = data.team || {};
-  renderPeople(team.leaders,         "teamLeaderCards");
-  renderPeople(team.mentors_admin,   "teamMentorCards");
-  renderPeople(team.interns_mentees, "teamInternCards");
+  renderPeople(team.leaders,       "teamLeaderCards");
+  renderPeople(team.mentors_admin, "teamMentorCards");
 
   // ---------- past cohort page (/cohort.html?year=YYYY) ----------
   const cohortMount = $("#pastCohortCards");
