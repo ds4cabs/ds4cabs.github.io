@@ -21,7 +21,11 @@ window.DS4CABS_PROJECTS = {
     mentors_admin: [
       { name: "Baixue Zhang (Doris)", role: "Admin & Mentor", email: "doris.zbx@gmail.com",       headshot: "assets/img/people/baixue-zhang.jpg" },
       { name: "Quinn Leng",           role: "Admin & Mentor", email: "quinn.leng.666@gmail.com",  headshot: "assets/img/people/quinn-leng.jpeg" },
-      { name: "Yongli Shan",          role: "Admin & Mentor", email: "shan.yongli@gmail.com",     headshot: "assets/img/people/yongli-shan.jpg" },
+      { name: "Yongli Shan",          role: "Admin & Mentor", email: "shan.yongli@gmail.com", linkedin: "https://www.linkedin.com/in/yongli-shan-3aa99235/", headshot: "assets/img/people/yongli-shan.jpg", profile: "people/yongli-shan.html" },
+      { name: "Andrews Acheampong",   role: "Mentor", email: "acheampongandrews1999@gmail.com", linkedin: "https://www.linkedin.com/in/andrews-acheampong-a889aa195", github: "https://github.com/AcheampongAndy", headshot: "assets/img/people/andrews-acheampong.JPEG", profile: "people/andrews-acheampong.html" },
+      { name: "Fan Wang, PhD",        role: "Mentor", github: "https://github.com/FanWang0216", profile: "people/fan-wang.html" },
+      { name: "Mahdi Akbarzadeh, Ph.D.", role: "Mentor", email: "akbarzadeh.ms@gmail.com", github: "https://github.com/akbarzadehms", headshot: "https://avatars.githubusercontent.com/u/13052910?v=4", profile: "people/mahdi-akbarzadeh.html" },
+      { name: "Rakesh Ramakrishna Pai", role: "Mentor", email: "rakesh.pai@ieee.org", github: "https://github.com/developer-rpai", headshot: "https://github.com/developer-rpai.png", profile: "people/rakesh-pai.html" },
       { name: "Ying Yang",            role: "Admin & Mentor", email: "yangying2013@gmail.com",    headshot: "assets/img/people/ying-yang.jpeg" },
       { name: "Zuolin Cheng",         role: "Admin & Mentor", email: "zuolincheng166@gmail.com",  headshot: "assets/img/people/zuolin-cheng.jpg" },
       { name: "Yuntao Zhang",         role: "Admin & Mentor", email: "ustb.zhangyuntao@gmail.com",headshot: "assets/img/people/yuntao-zhang.jpg" },
