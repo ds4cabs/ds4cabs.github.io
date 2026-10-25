@@ -102,7 +102,22 @@ test('main.js loads people.json and builds page views from the registry', () => 
   assert.match(source, /new URL\("\.\.\/\.\.\/people\.json"/);
   assert.doesNotMatch(source, /data\/people\.json/);
   assert.match(source, /buildPeopleViews\(/);
+  assert.match(source, /window\.DS4CABS_PEOPLE/);
   assert.doesNotMatch(source, /cohort\.mentors|cohort\.interns|cohort\.leadership|data\.team/);
+});
+
+test('generated people-data.js mirrors people.json for file previews', () => {
+  const fs = require('node:fs');
+  const path = require('node:path');
+  const root = path.join(__dirname, '..');
+  const people = JSON.parse(fs.readFileSync(path.join(root, 'people.json'), 'utf8'));
+  const script = fs.readFileSync(path.join(root, 'people-data.js'), 'utf8');
+  const mirrored = JSON.parse(script.replace(/^window\.DS4CABS_PEOPLE = /, '').replace(/;\s*$/, ''));
+  assert.deepEqual(mirrored, people);
+  for (const page of ['index.html', 'mentor.html', 'cohort.html']) {
+    const html = fs.readFileSync(path.join(root, page), 'utf8');
+    assert.ok(html.indexOf('people-data.js') < html.indexOf('assets/js/main.js'), `${page} loads the file-preview registry too late`);
+  }
 });
 
 test('projects.js contains cohort metadata but no duplicated person rosters', () => {

@@ -12,6 +12,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 BASE_REGISTRY = ROOT / "assets" / "data" / "people-base.json"
 PUBLIC_REGISTRY = ROOT / "people.json"
+PUBLIC_REGISTRY_SCRIPT = ROOT / "people-data.js"
 PROFILE_DIR = ROOT / "people"
 BASE_URL = "https://ds4cabs.github.io"
 ROLE_DIRS = ("mentor", "admin", "mentee")
@@ -257,6 +258,7 @@ def expected_outputs(people: list[dict]) -> dict[Path, str]:
     outputs = generate_readmes(people)
     outputs.update(role_redirects(people))
     outputs[PUBLIC_REGISTRY] = json.dumps(people, ensure_ascii=False, indent=2) + "\n"
+    outputs[PUBLIC_REGISTRY_SCRIPT] = "window.DS4CABS_PEOPLE = " + json.dumps(people, ensure_ascii=False, indent=2) + ";\n"
     return outputs
 
 

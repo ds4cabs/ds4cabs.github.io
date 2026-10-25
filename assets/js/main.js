@@ -18,13 +18,15 @@
   const registryApi = window.DS4CABS_PEOPLE_REGISTRY;
   const mainScriptUrl = new URL(document.currentScript.src);
   const peopleUrl = new URL("../../people.json", mainScriptUrl);
-  let people = [];
-  try {
-    const response = await fetch(peopleUrl);
-    if (!response.ok) throw new Error(`People registry request failed: ${response.status}`);
-    people = await response.json();
-  } catch (error) {
-    console.error("Unable to load the DS4CABS people registry.", error);
+  let people = Array.isArray(window.DS4CABS_PEOPLE) ? window.DS4CABS_PEOPLE : [];
+  if (people.length === 0) {
+    try {
+      const response = await fetch(peopleUrl);
+      if (!response.ok) throw new Error(`People registry request failed: ${response.status}`);
+      people = await response.json();
+    } catch (error) {
+      console.error("Unable to load the DS4CABS people registry.", error);
+    }
   }
   const peopleViews = registryApi
     ? registryApi.buildPeopleViews(people, cohort.year)
