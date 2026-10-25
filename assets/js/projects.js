@@ -6,7 +6,7 @@ window.DS4CABS_PROJECTS = {
   // ====================================================================
   // MENTOR PAGE — DS4CABS leaders, mentors, and admins (evergreen).
   // --------------------------------------------------------------------
-  // Leaders and mentors/admins are rendered on /team.html. Current-cohort
+  // Leaders and mentors/admins are rendered on /mentor.html. Current-cohort
   // interns are rendered on /cohort.html and the home page.
   //
   // Person entry schema is the same as cohort entries, plus an optional

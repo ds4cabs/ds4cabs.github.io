@@ -202,7 +202,7 @@
   renderPeople(cohort.interns,    "internCards",     "internsEmpty");
   renderPeople(cohort.leadership, "leadershipCards", "leadershipEmpty");
 
-  // ---------- team page grids (rendered only if mount points exist) ----------
+  // ---------- mentor page grids (rendered only if mount points exist) ----------
   const team = data.team || {};
   renderPeople(team.leaders,       "teamLeaderCards");
   renderPeople(team.mentors_admin, "teamMentorCards");
