@@ -15,6 +15,12 @@ workshops, and the 2026 summer intern cohort.
 ```
 .
 ├── index.html                # main page
+├── mentor.html               # mentors and administrators directory
+├── cohort.html               # current and past mentee cohorts
+├── mentor/                   # standalone mentor profile pages
+├── admin/                    # admin and program-lead profile pages
+├── mentee/                   # standalone mentee profile pages
+├── people/                   # legacy redirects for previously shared URLs
 ├── assets/
 │   ├── css/style.css         # all styling, theme variables, light/dark
 │   └── js/
@@ -30,11 +36,23 @@ No build step, no dependencies. Push to `main` and GitHub Pages serves it.
 Edit [`assets/js/projects.js`](assets/js/projects.js):
 
 - `featured[]` — the big tiles at the top
-- `interns[]` — the 2026 summer cohort grid
+- `team` — evergreen leaders, mentors, admins, and cohort profile data
+- `cohorts` — year-specific mentors, mentees, leadership, dates, and application data
 - `all[]` — the searchable/filterable catalog
 - `filters[]` — the category chips
 
 Each entry is just `{ name, desc, url, cat, lang?, stars?, forks?, tag? }`.
+
+## Updating profile pages
+
+Store standalone profiles by role:
+
+- `mentor/<name>.html`
+- `admin/<name>.html`
+- `mentee/<name>.html`
+
+Set the matching person's `profile` field in `assets/js/projects.js`. Keep
+compatibility redirects under `people/` when moving an existing public URL.
 
 Categories used today:
 `agents`, `rag`, `discovery`, `trials`, `regulatory`, `market`,
