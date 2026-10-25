@@ -3,113 +3,8 @@
 // Edit this file to add/update projects. The site reads from window.DS4CABS_PROJECTS.
 
 window.DS4CABS_PROJECTS = {
-  // ====================================================================
-  // MENTOR PAGE — DS4CABS leaders, mentors, and admins (evergreen).
-  // --------------------------------------------------------------------
-  // Leaders and mentors/admins are rendered on /mentor.html. Current-cohort
-  // interns are rendered on /cohort.html and the home page.
-  //
-  // Person entry schema is the same as cohort entries, plus an optional
-  // `email` field that renders as a mailto link.
-  // ====================================================================
-  team: {
-    leaders: [
-      { name: "Shicheng Guo",   role: "Program Lead",  affiliation: "CABS · DS4CABS", email: "shicheng.guo@cabsweb.org", headshot: "assets/img/people/shicheng-guo.jpg", profile: "admin/shicheng-guo.html" },
-      { name: "Sihong Zhou",    role: "Program Lead",  affiliation: "CABS · DS4CABS", email: "sihong.zhou@cabsweb.org", headshot: "assets/img/people/sihong-zhou.jpg" },
-      { name: "Liping Meng",    role: "Program Lead",  affiliation: "CABS · DS4CABS", email: "liping.meng@cabsweb.org", headshot: "assets/img/people/liping-meng.jpg" }
-    ],
-    mentors_admin: [
-      { name: "Baixue Zhang (Doris)", role: "Admin & Mentor", email: "doris.zbx@gmail.com",       headshot: "assets/img/people/baixue-zhang.jpg" },
-      { name: "Quinn Leng",           role: "Admin & Mentor", email: "quinn.leng.666@gmail.com",  headshot: "assets/img/people/quinn-leng.jpeg" },
-      { name: "Yongli Shan",          role: "Admin & Mentor", email: "shan.yongli@gmail.com", linkedin: "https://www.linkedin.com/in/yongli-shan-3aa99235/", headshot: "assets/img/people/yongli-shan.jpg", profile: "mentor/yongli-shan.html" },
-      { name: "Andrews Acheampong",   role: "Mentor", email: "acheampongandrews1999@gmail.com", linkedin: "https://www.linkedin.com/in/andrews-acheampong-a889aa195", github: "https://github.com/AcheampongAndy", headshot: "assets/img/people/andrews-acheampong.JPEG", profile: "mentor/andrews-acheampong.html" },
-      { name: "Fan Wang, PhD",        role: "Mentor", github: "https://github.com/FanWang0216", profile: "mentor/fan-wang.html" },
-      { name: "Mahdi Akbarzadeh, Ph.D.", role: "Mentor", email: "akbarzadeh.ms@gmail.com", github: "https://github.com/akbarzadehms", headshot: "https://avatars.githubusercontent.com/u/13052910?v=4", profile: "mentor/mahdi-akbarzadeh.html" },
-      { name: "Rakesh Ramakrishna Pai", role: "Mentor", email: "rakesh.pai@ieee.org", github: "https://github.com/developer-rpai", headshot: "https://github.com/developer-rpai.png", profile: "mentor/rakesh-pai.html" },
-      { name: "Ying Yang",            role: "Admin & Mentor", email: "yangying2013@gmail.com",    headshot: "assets/img/people/ying-yang.jpeg" },
-      { name: "Zuolin Cheng",         role: "Admin & Mentor", email: "zuolincheng166@gmail.com",  headshot: "assets/img/people/zuolin-cheng.jpg" },
-      { name: "Yuntao Zhang",         role: "Admin & Mentor", email: "ustb.zhangyuntao@gmail.com",headshot: "assets/img/people/yuntao-zhang.jpg" },
-      { name: "Alexander Wu",         role: "Admin & Mentor", email: "alexander.wu7@gmail.com",   headshot: "assets/img/people/alexander-wu.jpg" },
-      { name: "Kay Tong",             role: "Admin & Mentor", email: "kay.tong@cabsweb.org", headshot: "assets/img/people/kay-tong.jpg" },
-      { name: "Lena Li",              role: "Admin & Mentor", email: "lena.li@cabsweb.org",  headshot: "assets/img/people/lena-li.jpg" },
-      { name: "Zhiqing Wang",         role: "Admin & Mentor", email: "zwang9187@gmail.com", headshot: "assets/img/people/zhiqing-wang.png" },
-      { name: "Le Cai",               role: "Admin & Mentor", email: "le.cai@cabsweb.org",        headshot: "assets/img/people/le-cai.jpg" },
-      { name: "Jingyuan Huang",       role: "Admin & Mentor", email: "elvahdesign@gmail.com", headshot: "assets/img/people/jingyuan-huang.jpg" }
-    ],
-    // Intern entries support optional `affiliation`, `linkedin`, and
-    // `github` fields. Empty strings are skipped by the renderer.
-    // Data sourced from assets/img/people/CABS_2026_Interns_Master_Merged.xlsx.
-    interns_mentees: [
-      { name: "Aaron Wu", role: "Intern", email: "wu.aaron.0001@gmail.com", affiliation: "Undergraduate, Northeastern University (Data Science & Psychology)", linkedin: "https://www.linkedin.com/in/aaron-wu-10a9403a9", github: "https://github.com/aaron123-dev", headshot: "assets/img/people/aaron-wu.jpg" },
-      { name: "Anagha Gardane", role: "Intern", email: "angdata09@gmail.com", affiliation: "MS, University of Delaware", linkedin: "https://www.linkedin.com/in/93006b68/", github: "", headshot: "assets/img/people/anagha-gardane.jpg" },
-      { name: "Beyza Yoruk", role: "Intern", email: "yorukbeyza02@gmail.com", affiliation: "Undergraduate, Muğla Sıtkı Koçman University", linkedin: "https://www.linkedin.com/in/beyza-y%C3%B6r%C3%BCk-0a118b337/", github: "https://github.com/beyzolog", headshot: "assets/img/people/beyza-yoruk.jpeg" },
-      { name: "Chang Li", role: "Intern", email: "lic052463@gmail.com", affiliation: "MS Statistics, San José State University", linkedin: "https://www.linkedin.com/in/chang-li-b56a06396", github: "https://github.com/Chang-Lii", headshot: "assets/img/people/chang-li.jpg" },
-      { name: "Chengxi Zhang", role: "Intern", email: "zhangcx318@gmail.com", affiliation: "Graduate Student, Georgia Tech", linkedin: "https://linkedin.com/in/chengxizhang", github: "https://github.com/AngryMonsta", headshot: "assets/img/people/chengxi-zhang.jpg" },
-      { name: "Chin Hung Lin", role: "Intern", email: "chinhunglin0@gmail.com", affiliation: "Graduate Student, UC Davis", linkedin: "https://www.linkedin.com/in/chin-hung-lin-407362195", github: "https://github.com/chinhunglin0-ctrl" },
-      { name: "Christina Fu", role: "Intern", email: "christinawfu@gmail.com", affiliation: "BS Biology, Emory University", linkedin: "https://www.linkedin.com/in/christina-w-fu", github: "https://github.com/christinawfu", headshot: "assets/img/people/christina-fu.jpg" },
-      { name: "Endeshaw Assefa Derso", role: "Intern", email: "enduass@gmail.com", affiliation: "Postdoc, University of Milano-Bicocca", linkedin: "https://www.linkedin.com/in/endeshaw-assefa-d-2363a3132/", github: "", headshot: "assets/img/people/endeshaw-assefa.png" },
-      { name: "Hubert Chen", role: "Intern", email: "hubertchen2020@gmail.com", affiliation: "Vanderbilt University", linkedin: "https://www.linkedin.com/in/hubertychen/", github: "https://github.com/hubertchen2020", headshot: "assets/img/people/hubert-chen.jpg" },
-      { name: "Ivan Yu", role: "Intern", email: "icstivan@gmail.com", affiliation: "Student, USF", linkedin: "https://www.linkedin.com/in/ivan-yu-a25a32334/", github: "https://github.com/dataByIvan", headshot: "assets/img/people/ivan-yu.jpeg" },
-      { name: "Jason Zhou", role: "Intern", email: "zhoujason371@gmail.com", affiliation: "Undergraduate, UC Santa Cruz", linkedin: "", github: "https://github.com/Jason-5678", headshot: "assets/img/people/jason-zhou.jpg" },
-      { name: "Jia Chen", role: "Intern", email: "jiabreaker@gmail.com", affiliation: "Student @ University of Washington, Information School", linkedin: "https://www.linkedin.com/in/jah-chen-at-uw/", github: "https://github.com/JahMeat", headshot: "assets/img/people/jia-chen.jpg" },
-      { name: "Jingrui Mu", role: "Intern", email: "mujingrui.uibe@gmail.com", affiliation: "Statistics PhD Candidate, McGill University", linkedin: "https://www.linkedin.com/in/jingrui-mu/", github: "https://github.com/Mujingrui", headshot: "assets/img/people/jingrui-mu.jpg" },
-      { name: "Karen Wang", role: "Intern", email: "K27wang@gmail.com", affiliation: "UC Santa Cruz", linkedin: "https://www.linkedin.com/in/karen-wang-bio/", github: "https://github.com/ka2ren", headshot: "assets/img/people/karen-wong.png" },
-      { name: "Kening Li", role: "Intern", email: "mkeningli@gmail.com", affiliation: "Student, UCSD & Weill Cornell", linkedin: "https://www.linkedin.com/in/kening-li-8366b8255/", github: "https://github.com/Rika-Li", headshot: "assets/img/people/kening-li.jpg" },
-      { name: "Lengxi Huang", role: "Intern", email: "lengxi.huang@gmail.com", affiliation: "Graduate Student, Yale University", linkedin: "https://www.linkedin.com/in/lengxi-huang-6270071b2/", github: "https://github.com/lexihuang05", headshot: "assets/img/people/lengxi-huang.jpeg" },
-      { name: "Matias", role: "Intern", email: "tashibama@gmail.com", affiliation: "Undergraduate, Duke University", linkedin: "https://linkedin.com/in/matias-ignacio-pinto-chavez-a18512297", github: "https://github.com/MatiPinto03", headshot: "assets/img/people/matias-pinto.png" },
-      { name: "Natalie Huang", role: "Intern", email: "nathuang10@gmail.com", affiliation: "Undergraduate, UC Davis", linkedin: "https://www.linkedin.com/in/natalie-huang-682818342", github: "https://github.com/nath1012", headshot: "assets/img/people/natalie-huang.heic" },
-      { name: "Reuben N Addison", role: "Intern", email: "reuben.addison@gmail.com", affiliation: "Assistant Professor, DePauw University", linkedin: "https://www.linkedin.com/in/reuben-newton-addison-ph-d-04394870/", github: "https://github.com/reubebe", headshot: "assets/img/people/reuben-addison.jpg", profile: "mentee/reuben-addison.html" },
-      { name: "Shawn Phan", role: "Intern", email: "shawnphan23@gmail.com", affiliation: "Data Science Student, University of San Francisco", linkedin: "https://www.linkedin.com/in/shawnphan", github: "https://github.com/spphan", headshot: "assets/img/people/shawn-phan.jpg", profile: "mentee/shawn-phan.html" },
-      { name: "Shucheng Cao", role: "Intern", email: "shucheng.cao@mail.mcgill.ca", affiliation: "PhD Candidate, McGill University", linkedin: "https://www.linkedin.com/in/shucheng-bangli-cao/", github: "https://github.com/SchengC", headshot: "assets/img/people/shucheng-cao.jpg", profile: "mentee/shucheng-cao.html" },
-      { name: "Sicheng Chen", role: "Intern", email: "sc2977786@gmail.com", affiliation: "BPharmSci (Advanced) Graduate, Monash University", linkedin: "https://www.linkedin.com/in/sicheng-c-899762306", github: "https://github.com/SichengChen-web", headshot: "assets/img/people/sicheng-chen.jpg", profile: "mentee/sicheng-chen.html" },
-      { name: "Tobias Lin", role: "Intern", email: "tobiaslin338@gmail.com", affiliation: "Undergraduate Student", linkedin: "https://www.linkedin.com/in/tobias-lin/", github: "https://github.com/TobiasLin6", headshot: "assets/img/people/tobias-lin.jpg" },
-      { name: "Wendi Ma", role: "Intern", email: "mawendi2019@gmail.com", affiliation: "Graduate Student, University of Miami", linkedin: "https://www.linkedin.com/in/wend1/", github: "https://github.com/Wend1MMM", headshot: "assets/img/people/wendi-ma.jpg" },
-      { name: "Xiaoxue Li", role: "Intern", email: "lxx.glasgow@gmail.com", affiliation: "University of Chicago", linkedin: "https://www.linkedin.com/in/xiaoxue-l-899729259/", github: "https://github.com/lxxglasgow-lab", headshot: "assets/img/people/xiaoxue-li.jpg" },
-      { name: "Yichen Dai", role: "Intern", email: "yichendai3@gmail.com", affiliation: "Student", linkedin: "https://www.linkedin.com/in/yichen-dai-76849b326", github: "https://github.com/daiyichen27", headshot: "assets/img/people/yichen-dai.heic" },
-      { name: "Yifeng Liang", role: "Intern", email: "yl11795@nyu.edu", affiliation: "MPH Epidemiology, NYU", linkedin: "https://www.linkedin.com/in/yifeng-liang/", github: "https://github.com/leungyeefong", headshot: "assets/img/people/yifeng-liang.png" },
-      { name: "Ying Shi", role: "Intern", email: "shiying3646@gmail.com", affiliation: "", linkedin: "https://www.linkedin.com/in/yingshi-research", github: "https://github.com/yshi6125", headshot: "assets/img/people/ying-shi.jpg" },
-      { name: "Yu-Jung Liang", role: "Intern", email: "angelliang112@gmail.com", affiliation: "Master Student, UCSD", linkedin: "", github: "https://github.com/amberyliang", headshot: "assets/img/people/yu-jung-liang.jpg" },
-      { name: "Zechuan Shi", role: "Intern", email: "tristanzeshi@gmail.com", affiliation: "PhD Candidate, UC Irvine", linkedin: "https://www.linkedin.com/in/zechuan-tristan-shi-55b21387/", github: "https://github.com/rootze", headshot: "assets/img/people/zechuan-shi.jpeg" }
-    ],
-
-    // Past cohort archive — rendered by /cohort.html?year=YYYY.
-    // Add a new year-keyed entry as historic rosters become available.
-    archive: {
-      2025: {
-        year: 2025,
-        interns: [
-          { name: "Ashtagandha Vartak", role: "Intern", email: "vartakashtagandha@gmail.com", affiliation: "MSc Biochemistry, Savitribai Phule Pune University", linkedin: "https://www.linkedin.com/in/ashtagandha-vartak-3484a7338", headshot: "assets/img/people/ashtagandha-vartak.jpg" },
-          { name: "Baixue Zhang (Doris)", role: "Intern", email: "doris.zbx@gmail.com", affiliation: "Statistics Graduate Student, San Jose State University", linkedin: "https://www.linkedin.com/in/baixue-doris-zhang-2302b4306/", github: "https://github.com/DorisTheChef", headshot: "assets/img/people/baixue-zhang.jpg" },
-          { name: "David Wei", role: "Intern", email: "dwei2002@gmail.com", affiliation: "Master Student, University of Chicago", linkedin: "https://www.linkedin.com/in/david-wei-628a7226a", headshot: "assets/img/people/david-wei.jpg" },
-          { name: "Delong Tsway", role: "Intern", email: "tswayd@gmail.com", affiliation: "Manufacturing Technician, CSBio", linkedin: "https://www.linkedin.com/in/delong-tsway", headshot: "assets/img/people/delong-tsway.jpeg" },
-          { name: "Derek Tian", role: "Intern · Mentor: Zhuoqing Fang", email: "derektian310@gmail.com", affiliation: "Master's Student, Vanderbilt University", linkedin: "https://www.linkedin.com/in/derektian01/" },
-          { name: "Emily Sun", role: "Intern · Mentor: Shicheng Guo", email: "emsun@bu.edu", affiliation: "MS Bioinformatics, Northeastern University (Research Intern, Yale)", linkedin: "https://www.linkedin.com/in/emilyqs/", github: "https://github.com/2emily3" },
-          { name: "Gayathri Sundaram", role: "Intern", email: "gayagene@gmail.com", affiliation: "MIT-AI (MQU), PhD, MVSc, BVSc", linkedin: "https://www.linkedin.com/in/g3s", github: "https://github.com/GayathriMQU", headshot: "assets/img/people/gayathri-sundaram.jpg" },
-          { name: "Haotian Liu", role: "Intern · Mentor: Lena Li", email: "tliu0321@gmail.com", affiliation: "Graduate Student, USC", linkedin: "https://www.linkedin.com/in/haotianliutony/" },
-          { name: "Hongbi Kim", role: "Intern · Mentor: Lena Li", email: "hongbik148@berkeley.edu", affiliation: "BA Data Science, UC Berkeley (2024)", linkedin: "https://www.linkedin.com/in/hongbikim/" },
-          { name: "Jack Wang", role: "Intern · Mentor: Shicheng Guo", email: "jwangjy315@gmail.com", affiliation: "Junior, New York University", linkedin: "https://www.linkedin.com/in/jackinthebox314/" },
-          { name: "Jeffrey Ding", role: "Intern", email: "jhding235@gmail.com", affiliation: "Undergraduate, UC Berkeley", linkedin: "https://www.linkedin.com/in/jeffreyhding/", github: "https://github.com/jeffreyhding" },
-          { name: "Jiayi Zou (Judy)", role: "Intern · Mentor: Shicheng Guo", email: "judyzou1228@gmail.com", affiliation: "BA Molecular Biology & CS, Barnard College / Columbia University", linkedin: "https://linkedin.com/in/judy-zou-19b993326", github: "https://github.com/JiayiJudyZou", headshot: "assets/img/people/jiayi-zou.jpg" },
-          { name: "Jiayun Liang", role: "Intern · Mentor: Lena Li", email: "jiayunliang410@gmail.com", affiliation: "Junior, Ohio State University", linkedin: "https://www.linkedin.com/in/jiayun-sophia-liang" },
-          { name: "Jinhao Wang", role: "Intern · Mentor: Shicheng Guo", email: "wjhlang@umich.edu", affiliation: "PhD Candidate, University of Michigan", linkedin: "https://www.linkedin.com/in/wjhlang" },
-          { name: "Jun Xiao", role: "Intern · Mentor: Shicheng Guo", email: "jun.xiao2@mail.mcgill.ca", affiliation: "Undergraduate, McGill University", linkedin: "https://www.linkedin.com/in/%E4%BF%8A-%E8%90%A7-5a7883361/", github: "https://github.com/junxiao0601", headshot: "assets/img/people/jun-xiao.jpg" },
-          { name: "Lily Niu", role: "Intern · Mentor: Lena Li", email: "lilyniu86@gmail.com", affiliation: "Student, University of Pennsylvania", linkedin: "https://www.linkedin.com/in/niulily/", github: "https://github.com/lilyniu88", headshot: "assets/img/people/lily-niu.jpg" },
-          { name: "Shujie Li", role: "Intern · Mentor: Lena Li", email: "sl5625@columbia.edu", affiliation: "Student, Columbia University", linkedin: "https://www.linkedin.com/in/shujie-li/" },
-          { name: "Sidharth Mallela", role: "Intern · Mentor: Max Ma", email: "snmallela@berkeley.edu", affiliation: "Undergraduate Data Science, UC Berkeley", linkedin: "https://www.linkedin.com/in/sideveloper/", github: "https://github.com/sidharth-05", headshot: "assets/img/people/sidharth-mallela.jpg" },
-          { name: "Sion Zhan", role: "Intern", email: "sszhan24@gmail.com", affiliation: "Student, UC Davis", linkedin: "https://www.linkedin.com/in/sion-zhan-333137366/" },
-          { name: "Tejhas Annamalai", role: "Intern", email: "tejhasannamalai@gmail.com", affiliation: "Student", linkedin: "https://www.linkedin.com/in/tejhasannamalai/", headshot: "assets/img/people/tejhas-annamalai.jpeg" },
-          { name: "Xiaolong Zheng", role: "Intern · Mentor: Max Ma", email: "zxl205023@gmail.com", linkedin: "https://www.linkedin.com/in/xiaolong-zheng-a87a94248/", github: "https://github.com/RobertZheng050" }
-        ]
-      },
-      2024: {
-        year: 2024,
-        interns: [
-          { name: "Linda Sun",  role: "Intern", affiliation: "Cornell University, Class of 2026", interests: ["data science", "machine learning", "healthcare tech"], linkedin: "https://www.linkedin.com/in/lindahuangsun/", headshot: "assets/img/people/linda-sun.png" },
-          { name: "Minji Kim",  role: "Intern", affiliation: "UC Berkeley, Class of 2024",         interests: ["marketing analytics", "pricing strategy", "market research"], linkedin: "https://www.linkedin.com/in/minjik30/", headshot: "assets/img/people/minji-kim.png" }
-        ]
-      }
-    }
-  },
+  // People rosters live in assets/data/people.json.
+  // This file now contains only project catalog and cohort schedule metadata.
 
   featured: [
     {
@@ -182,46 +77,10 @@ window.DS4CABS_PROJECTS = {
   // The site automatically displays the highest year-key found in
   // `cohorts`. To roll over to a new year, just add a new entry
   // (e.g. `2027: { ... }`) and the page flips: titles, dates, key facts,
-  // and the mentor / intern / leadership grids all read from that block.
+  // and the people grids select matching entries from assets/data/people.json.
   //
-  // Per-year shape:
-  //
-  //   {
-  //     year:        2026,
-  //     dates: {
-  //       open:      "Jan 1, 2026",
-  //       deadline:  "May 15, 2026",
-  //       start:     "Jun 15, 2026",
-  //       end:       "Aug 15, 2026",
-  //       window:    "Jun 15 – Aug 15, 2026"
-  //     },
-  //     target_size: "20+",                    // shown in the facts strip
-  //     mentors:     [ /* person entries */ ],
-  //     interns:     [ /* person entries */ ],
-  //     leadership:  [ /* person entries */ ]
-  //   }
-  //
-  // Person entry schema (all fields except `name` are optional — missing
-  // fields are skipped in the rendered card; a missing `headshot` falls
-  // back to a CSS-drawn initials avatar):
-  //
-  //   {
-  //     name:        "Jane Doe",
-  //     affiliation: "Stanford University",
-  //     role:        "Postdoc, Computational Biology",       // mentors/leads
-  //     major:       "MS, Statistics",                       // interns
-  //     interests:   ["single-cell genomics", "RWE"],
-  //     headshot:    "assets/img/people/jane-doe.jpg",       // 400x400 sq
-  //     linkedin:    "https://www.linkedin.com/in/janedoe",
-  //     github:      "https://github.com/janedoe",
-  //     project:     { name: "OpenTrial",                    // interns only
-  //                    url:  "https://github.com/ds4cabs/OpenTrial",
-  //                    desc: "Open infrastructure for clinical trial intelligence." },
-  //     org_role:    "Operations Co-Lead"                    // leadership only
-  //   }
-  //
-  // Drop headshot JPGs into assets/img/people/ (see that folder's README
-  // for naming).
+  // Per-year blocks contain schedule/application metadata only. Add people,
+  // roles, years, profile links, and social links to assets/data/people.json.
   // ====================================================================
   cohorts: {
     2026: {
@@ -234,45 +93,6 @@ window.DS4CABS_PROJECTS = {
         window:   "Jun 15 – Aug 15, 2026"
       },
       target_size: "20+",
-
-      // Industry & academic experts guiding the cohort 1:1.
-      mentors: [
-        { name: "Baixue Zhang (Doris)", role: "Admin & Mentor", headshot: "assets/img/people/baixue-zhang.jpg" },
-        { name: "Quinn Leng",           role: "Admin & Mentor", headshot: "assets/img/people/quinn-leng.jpeg" },
-        { name: "Yongli Shan",          role: "Admin & Mentor", headshot: "assets/img/people/yongli-shan.jpg" },
-        { name: "Ying Yang",            role: "Admin & Mentor", headshot: "assets/img/people/ying-yang.jpeg" },
-        { name: "Zuolin Cheng",         role: "Admin & Mentor", headshot: "assets/img/people/zuolin-cheng.jpg" },
-        { name: "Yuntao Zhang",         role: "Admin & Mentor", headshot: "assets/img/people/yuntao-zhang.jpg" },
-        { name: "Alexander Wu",         role: "Admin & Mentor", headshot: "assets/img/people/alexander-wu.jpg" },
-        { name: "Le Cai",               role: "Admin & Mentor", headshot: "assets/img/people/le-cai.jpg" },
-        { name: "Kay Tong",             role: "Admin & Mentor", headshot: "assets/img/people/kay-tong.jpg" },
-        { name: "Lena Li",              role: "Admin & Mentor", headshot: "assets/img/people/lena-li.jpg" },
-        { name: "Zhiqing Wang",         role: "Admin & Mentor", headshot: "assets/img/people/zhiqing-wang.png" },
-        { name: "Jingyuan Huang",       role: "Admin & Mentor", headshot: "assets/img/people/jingyuan-huang.jpg" }
-      ],
-
-      // The "Open*" project cohort. One entry per intern; multi-author
-      // projects are split into individual entries that share a `project`.
-      interns: [
-        { name: "Aaron Wu",        affiliation: "Northeastern University", headshot: "assets/img/people/aaron-wu.jpg",       linkedin: "https://www.linkedin.com/in/aaron-wu-10a9403a9",          github: "https://github.com/aaron123-dev",      project: { name: "CompassAgent",   url: "https://github.com/ds4cabs/CompassAgent",   desc: "Multi-agent system for biopharma research navigation." } },
-        { name: "Beyza Yoruk",     affiliation: "Muğla Sıtkı Koçman University", headshot: "assets/img/people/beyza-yoruk.jpeg",   linkedin: "https://www.linkedin.com/in/beyza-y%C3%B6r%C3%BCk-0a118b337/", github: "https://github.com/beyzolog",        project: { name: "OpenRepurpose",  url: "https://github.com/ds4cabs/OpenRepurpose",  desc: "Drug-repurposing pipeline with biomedical literature integration." } },
-        { name: "Chin Hung Lin",   affiliation: "UC Davis", linkedin: "https://www.linkedin.com/in/chin-hung-lin-407362195", github: "https://github.com/chinhunglin0-ctrl",                                                                                                    project: { name: "OpenRepurpose",  url: "https://github.com/ds4cabs/OpenRepurpose",  desc: "Drug-repurposing pipeline with biomedical literature integration." } },
-        { name: "Christina Fu",    affiliation: "Emory University",         headshot: "assets/img/people/christina-fu.jpg",     linkedin: "https://www.linkedin.com/in/christina-w-fu",              github: "https://github.com/christinawfu",       project: { name: "OpenRepurpose",  url: "https://github.com/ds4cabs/OpenRepurpose",  desc: "Drug-repurposing pipeline with biomedical literature integration." } },
-        { name: "Jason Zhou",      affiliation: "UC Santa Cruz",            headshot: "assets/img/people/jason-zhou.jpg",       github: "https://github.com/Jason-5678",                                                                                                project: { name: "OpenMarket",     url: "https://github.com/ds4cabs/OpenMarket",     desc: "Open market-access analytics for biopharma." } },
-        { name: "Kening Li",       affiliation: "UCSD & Weill Cornell",     headshot: "assets/img/people/kening-li.jpg",        linkedin: "https://www.linkedin.com/in/kening-li-8366b8255/",        github: "https://github.com/Rika-Li",            project: { name: "OpenPulse",      url: "https://github.com/ds4cabs/OpenPulse",      desc: "Real-time signal monitoring across pharma data streams." } },
-        { name: "Natalie Huang",   affiliation: "UC Davis",                 headshot: "assets/img/people/natalie-huang.heic",   linkedin: "https://www.linkedin.com/in/natalie-huang-682818342",     github: "https://github.com/nath1012",           project: { name: "CausalSentinel", url: "https://github.com/ds4cabs/CausalSentinel", desc: "Causal-inference monitoring for real-world evidence." } },
-        { name: "Reuben N Addison",affiliation: "DePauw University",        headshot: "assets/img/people/reuben-addison.jpg",   linkedin: "https://www.linkedin.com/in/reuben-newton-addison-ph-d-04394870/", github: "https://github.com/reubebe", profile: "mentee/reuben-addison.html",   project: { name: "OpenTrial",      url: "https://github.com/ds4cabs/OpenTrial",      desc: "Open infrastructure for clinical trial intelligence." } },
-        { name: "Shawn Phan",      affiliation: "University of San Francisco", headshot: "assets/img/people/shawn-phan.jpg",    linkedin: "https://www.linkedin.com/in/shawnphan",                   github: "https://github.com/spphan", profile: "mentee/shawn-phan.html",            project: { name: "OpenLedger",     url: "https://github.com/ds4cabs/OpenLedger",     desc: "Transparent ledger for pharma data provenance." } },
-        { name: "Shucheng Cao",    affiliation: "McGill University",        headshot: "assets/img/people/shucheng-cao.jpg",     linkedin: "https://www.linkedin.com/in/shucheng-bangli-cao/",       github: "https://github.com/SchengC", profile: "mentee/shucheng-cao.html",            project: { name: "CausalSentinel", url: "https://github.com/ds4cabs/CausalSentinel", desc: "Causal-inference monitoring for real-world evidence." } },
-        { name: "Xiaoxue Li",      affiliation: "University of Chicago",    headshot: "assets/img/people/xiaoxue-li.jpg",       linkedin: "https://www.linkedin.com/in/xiaoxue-l-899729259/",       github: "https://github.com/lxxglasgow-lab",     project: { name: "OpenTarget",     url: "https://github.com/ds4cabs/OpenTarget",     desc: "Open-source target discovery & prioritization." } }
-      ],
-
-      // Program leaders.
-      leadership: [
-        { name: "Shicheng Guo", org_role: "Program Lead", affiliation: "CABS · DS4CABS", headshot: "assets/img/people/shicheng-guo.jpg", profile: "admin/shicheng-guo.html" },
-        { name: "Sihong Zhou",  org_role: "Program Lead", affiliation: "CABS · DS4CABS", headshot: "assets/img/people/sihong-zhou.jpg" },
-        { name: "Liping Meng",  org_role: "Program Lead", affiliation: "CABS · DS4CABS", headshot: "assets/img/people/liping-meng.jpg" }
-      ]
     }
 
     // Roll over to 2027 by adding the block below (and the site flips
@@ -281,10 +101,7 @@ window.DS4CABS_PROJECTS = {
     // ,2027: {
     //   year: 2027,
     //   dates: { open: "...", deadline: "...", start: "...", end: "...", window: "..." },
-    //   target_size: "30+",
-    //   mentors: [...],
-    //   interns: [...],
-    //   leadership: [...]
+    //   target_size: "30+"
     // }
   },
 
@@ -420,14 +237,3 @@ window.DS4CABS_PROJECTS = {
     { id: "misc",           label: "Specialty" }
   ]
 };
-
-// The 2026 cohort roster lives in `team.interns_mentees` (shown on /cohort.html).
-// Mirror it into the cohort archive so /cohort.html?year=2026 lists the same
-// people, without duplicating the roster. When 2026 becomes historic, replace
-// this with a static `archive[2026]` entry and drop the wiring below.
-(function () {
-  var t = window.DS4CABS_PROJECTS && window.DS4CABS_PROJECTS.team;
-  if (t && t.archive && t.interns_mentees && !t.archive[2026]) {
-    t.archive[2026] = { year: 2026, interns: t.interns_mentees };
-  }
-})();

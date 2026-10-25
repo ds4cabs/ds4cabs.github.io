@@ -1,8 +1,8 @@
 // DS4CABS — main.js
-// Renders featured / intern / project cards from window.DS4CABS_PROJECTS,
-// powers search + category filtering, mobile nav, and theme toggle.
+// Renders project cards from window.DS4CABS_PROJECTS and people cards from
+// assets/data/people.json, then powers filtering, navigation, and themes.
 
-(function () {
+(async function () {
   const data = window.DS4CABS_PROJECTS || { featured: [], cohorts: {}, all: [], filters: [] };
 
   // ---------- current cohort ----------
@@ -10,11 +10,25 @@
   // To roll the site over to a new year, add cohorts[year+1] in projects.js.
   function pickCohort(cohorts) {
     const years = Object.keys(cohorts || {}).map(n => +n).filter(Number.isFinite);
-    if (years.length === 0) return { year: new Date().getFullYear(), dates: {}, mentors: [], interns: [], leadership: [] };
+    if (years.length === 0) return { year: new Date().getFullYear(), dates: {} };
     const latest = Math.max(...years);
     return cohorts[latest];
   }
   const cohort = pickCohort(data.cohorts);
+  const registryApi = window.DS4CABS_PEOPLE_REGISTRY;
+  const mainScriptUrl = new URL(document.currentScript.src);
+  const peopleUrl = new URL("../data/people.json", mainScriptUrl);
+  let people = [];
+  try {
+    const response = await fetch(peopleUrl);
+    if (!response.ok) throw new Error(`People registry request failed: ${response.status}`);
+    people = await response.json();
+  } catch (error) {
+    console.error("Unable to load the DS4CABS people registry.", error);
+  }
+  const peopleViews = registryApi
+    ? registryApi.buildPeopleViews(people, cohort.year)
+    : { homepage: { leadership: [], mentors: [], mentees: [] }, mentorPage: { leadership: [], mentors: [] }, cohorts: {} };
 
   // Resolve a dotted path like "dates.window" against the current cohort.
   function resolvePath(obj, path) {
@@ -197,20 +211,19 @@
     });
   }
 
-  // ---------- people grids (mentors / interns / leadership) ----------
-  renderPeople(cohort.mentors,    "mentorCards",     "mentorsEmpty");
-  renderPeople(cohort.interns,    "internCards",     "internsEmpty");
-  renderPeople(cohort.leadership, "leadershipCards", "leadershipEmpty");
+  // ---------- homepage people grids ----------
+  renderPeople(peopleViews.homepage.mentors,    "mentorCards",     "mentorsEmpty");
+  renderPeople(peopleViews.homepage.mentees,    "internCards",     "internsEmpty");
+  renderPeople(peopleViews.homepage.leadership, "leadershipCards", "leadershipEmpty");
 
   // ---------- mentor page grids (rendered only if mount points exist) ----------
-  const team = data.team || {};
-  renderPeople(team.leaders,       "teamLeaderCards");
-  renderPeople(team.mentors_admin, "teamMentorCards");
+  renderPeople(peopleViews.mentorPage.leadership, "teamLeaderCards");
+  renderPeople(peopleViews.mentorPage.mentors,    "teamMentorCards");
 
   // ---------- past cohort page (/cohort.html?year=YYYY) ----------
   const cohortMount = $("#pastCohortCards");
   if (cohortMount) {
-    const archive = (team.archive) || {};
+    const archive = peopleViews.cohorts;
     const years = Object.keys(archive).map(n => +n).filter(Number.isFinite).sort((a, b) => b - a);
     const params = new URLSearchParams(window.location.search);
     const requested = +params.get("year");
@@ -235,8 +248,7 @@
     if (heading && activeYear) heading.textContent = activeYear + " intern cohort";
 
     // render the chosen cohort
-    const entry = activeYear ? archive[activeYear] : null;
-    const interns = entry ? (entry.interns || []) : [];
+    const interns = activeYear ? (archive[activeYear] || []) : [];
     renderPeople(interns, "pastCohortCards", "pastCohortEmpty");
   }
 
@@ -338,10 +350,11 @@
   const setStat = (id, text) => { const n = $("#" + id); if (n) n.textContent = text; };
   setStat("statRepos",   data.all.length + "+");
   // count distinct intern projects in the current cohort
+  const currentMentees = peopleViews.homepage.mentees;
   const internProjects = new Set(
-    (cohort.interns || []).map(p => p.project && p.project.name).filter(Boolean)
+    currentMentees.map(p => p.project && p.project.name).filter(Boolean)
   ).size;
-  setStat("statInterns", String(internProjects || (cohort.interns || []).length));
+  setStat("statInterns", String(internProjects || currentMentees.length));
   const ds4Count = new Set(
     data.all
       .filter(p => p.cat === "ds4" || /^ds4[A-Z]/.test(p.name))

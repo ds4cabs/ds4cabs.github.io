@@ -23,9 +23,13 @@ workshops, and the 2026 summer intern cohort.
 ├── people/                   # legacy redirects for previously shared URLs
 ├── assets/
 │   ├── css/style.css         # all styling, theme variables, light/dark
+│   ├── data/people.json      # single source of truth for every person roster
 │   └── js/
-│       ├── projects.js       # editable project catalog (data)
+│       ├── projects.js       # project catalog + cohort schedule metadata
+│       ├── people-registry.js# tested roster selectors
 │       └── main.js           # renders cards, search, filters, theme toggle
+├── scripts/
+│   └── generate_people_readmes.py # regenerates role directory tables
 └── cabs_workshop_form.html   # (existing) workshop signup form
 ```
 
@@ -36,8 +40,7 @@ No build step, no dependencies. Push to `main` and GitHub Pages serves it.
 Edit [`assets/js/projects.js`](assets/js/projects.js):
 
 - `featured[]` — the big tiles at the top
-- `team` — evergreen leaders, mentors, admins, and cohort profile data
-- `cohorts` — year-specific mentors, mentees, leadership, dates, and application data
+- `cohorts` — year-specific dates and application metadata
 - `all[]` — the searchable/filterable catalog
 - `filters[]` — the category chips
 
@@ -51,8 +54,19 @@ Store standalone profiles by role:
 - `admin/<name>.html`
 - `mentee/<name>.html`
 
-Set the matching person's `profile` field in `assets/js/projects.js`. Keep
-compatibility redirects under `people/` when moving an existing public URL.
+Add or update the person in [`assets/data/people.json`](assets/data/people.json).
+The homepage, Mentors page, and Cohorts page all derive their rosters from this
+registry. Use `type` (`leader`, `admin`, `mentor`, or `mentee`), set `year` for
+mentees, and set `profile` when a standalone profile exists.
+
+Regenerate the role directory tables after editing the registry:
+
+```bash
+python3 scripts/generate_people_readmes.py
+node --test tests/people-registry.test.js
+```
+
+Keep compatibility redirects under `people/` when moving an existing public URL.
 
 Categories used today:
 `agents`, `rag`, `discovery`, `trials`, `regulatory`, `market`,
@@ -72,6 +86,8 @@ python3 -m http.server 8080
 - **Dark by default, light toggleable** — persisted via `localStorage`.
 - **One source of truth** for the project list lives in `projects.js`, so
   adding a new repo is a 4-line edit.
+- **One source of truth for people** lives in `assets/data/people.json`; every
+  roster and generated directory table is derived from it.
 - **Accessible**: semantic landmarks, focusable controls, reduced-motion respected.
 
 ## License
