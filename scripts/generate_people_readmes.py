@@ -23,6 +23,7 @@ META_FIELDS = {
     "ds4cabs-major": "major",
     "ds4cabs-affiliation": "affiliation",
     "ds4cabs-github": "github",
+    "ds4cabs-github-status": "github_status",
     "ds4cabs-linkedin": "linkedin",
     "ds4cabs-headshot": "headshot",
     "ds4cabs-email": "email",
@@ -128,6 +129,21 @@ def build_registry() -> list[dict]:
         if str(record["name"]) in profiles_by_name:
             record["profile"] = profiles_by_name[str(record["name"])]
 
+    # Carry public identity links across the same person's role/year records so
+    # directory rows never lose a GitHub or LinkedIn URL due to record order.
+    shared_by_name: dict[str, dict[str, object]] = {}
+    for record in output:
+        if not record.get("profile"):
+            continue
+        shared = shared_by_name.setdefault(str(record["name"]), {})
+        for field in ("github", "linkedin", "headshot"):
+            if record.get(field):
+                shared[field] = record[field]
+    for record in output:
+        for field, value in shared_by_name.get(str(record["name"]), {}).items():
+            if not record.get(field):
+                record[field] = value
+
     ids = [p.get("id") for p in output]
     if any(not value for value in ids) or len(ids) != len(set(ids)):
         raise ValueError("people registry contains missing or duplicate ids")
@@ -176,8 +192,8 @@ def md_link(label: str, url: str | None) -> str:
     return f"[{label}]({url})" if url else "—"
 
 
-def github_link(url: str | None) -> str:
-    return md_link("@" + url.rstrip("/").rsplit("/", 1)[-1], url) if url else "—"
+def github_link(url: str | None, status: str | None = None) -> str:
+    return md_link("@" + url.rstrip("/").rsplit("/", 1)[-1], url) if url else (status or "—")
 
 
 def profile_link(profile: str | None) -> str:
@@ -193,7 +209,7 @@ def table(headers: list[str], rows: list[list[str]], align_right: set[int] | Non
 
 
 def role_rows(entries: list[dict]) -> list[list[str]]:
-    return [[p["name"], p.get("role") or str(p["type"]).title(), p.get("affiliation") or "—", github_link(p.get("github")), md_link("Profile", p.get("linkedin")), profile_link(p.get("profile"))] for p in entries]
+    return [[p["name"], p.get("role") or str(p["type"]).title(), p.get("affiliation") or "—", github_link(p.get("github"), p.get("github_status")), md_link("Profile", p.get("linkedin")), profile_link(p.get("profile"))] for p in entries]
 
 
 def directory_readme(title: str, description: str, rows: list[list[str]]) -> str:
@@ -219,8 +235,8 @@ def generate_readmes(people: list[dict]) -> dict[Path, str]:
         if profile and str(profile) not in seen_profiles:
             all_profiles.append(person)
             seen_profiles.add(str(profile))
-    people_rows = [[p["name"], p.get("role") or str(p["type"]).title(), str(p.get("year") or "—"), p.get("affiliation") or "—", github_link(p.get("github")), md_link("Profile", p.get("linkedin")), profile_link(p.get("profile"))] for p in all_profiles]
-    mentee_rows = [[p["name"], str(p["year"]), p.get("major") or "—", p.get("affiliation") or "—", github_link(p.get("github")), md_link("Profile", p.get("linkedin")), profile_link(p.get("profile"))] for p in mentees]
+    people_rows = [[p["name"], p.get("role") or str(p["type"]).title(), str(p.get("year") or "—"), p.get("affiliation") or "—", github_link(p.get("github"), p.get("github_status")), md_link("Profile", p.get("linkedin")), profile_link(p.get("profile"))] for p in all_profiles]
+    mentee_rows = [[p["name"], str(p["year"]), p.get("major") or "—", p.get("affiliation") or "—", github_link(p.get("github"), p.get("github_status")), md_link("Profile", p.get("linkedin")), profile_link(p.get("profile"))] for p in mentees]
     return {
         ROOT / "mentor" / "README.md": directory_readme(f"DS4CABS {year} Mentor Profiles", "Current mentor and admin directory.", role_rows(mentors)),
         ROOT / "admin" / "README.md": directory_readme(f"DS4CABS {year} Admin and Program Leadership", "Current program leadership and administrator directory.", role_rows(administrators)),

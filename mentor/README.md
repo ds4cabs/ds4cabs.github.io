@@ -4,9 +4,9 @@ Current mentor and admin directory. Permanent profile pages live in [`people/`](
 
 | Person | Role | Affiliation | GitHub | LinkedIn | Profile |
 |---|---|---|---|---|---|
-| Baixue Zhang (Doris) | Admin & Mentor | — | — | — | [View](https://ds4cabs.github.io/people/baixue-zhang.html) |
+| Baixue Zhang (Doris) | Admin & Mentor | — | [@DorisTheChef](https://github.com/DorisTheChef) | [Profile](https://www.linkedin.com/in/baixue-doris-zhang-2302b4306/) | [View](https://ds4cabs.github.io/people/baixue-zhang.html) |
 | Quinn Leng | Admin & Mentor | — | — | — | — |
-| Yongli Shan | Admin & Mentor | — | — | [Profile](https://www.linkedin.com/in/yongli-shan-3aa99235/) | [View](https://ds4cabs.github.io/people/yongli-shan.html) |
+| Yongli Shan | Admin & Mentor | — | [@YongliShan](https://github.com/YongliShan) | [Profile](https://www.linkedin.com/in/yongli-shan-3aa99235/) | [View](https://ds4cabs.github.io/people/yongli-shan.html) |
 | Andrews Acheampong | Mentor | — | [@AcheampongAndy](https://github.com/AcheampongAndy) | [Profile](https://www.linkedin.com/in/andrews-acheampong-a889aa195) | [View](https://ds4cabs.github.io/people/andrews-acheampong.html) |
 | Fan Wang, PhD | Mentor | — | [@FanWang0216](https://github.com/FanWang0216) | — | [View](https://ds4cabs.github.io/people/fan-wang.html) |
 | Mahdi Akbarzadeh, Ph.D. | Mentor | — | [@akbarzadehms](https://github.com/akbarzadehms) | — | [View](https://ds4cabs.github.io/people/mahdi-akbarzadeh.html) |

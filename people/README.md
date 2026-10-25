@@ -4,21 +4,21 @@ Permanent profiles for everyone who has engaged with the program across years an
 
 | Person | Role | Year | Affiliation | GitHub | LinkedIn | Profile |
 |---|---|---|---|---|---|---|
-| Shicheng Guo | Program Lead | — | CABS · DS4CABS | — | — | [View](https://ds4cabs.github.io/people/shicheng-guo.html) |
-| Baixue Zhang (Doris) | Admin & Mentor | — | — | — | — | [View](https://ds4cabs.github.io/people/baixue-zhang.html) |
-| Yongli Shan | Admin & Mentor | — | — | — | [Profile](https://www.linkedin.com/in/yongli-shan-3aa99235/) | [View](https://ds4cabs.github.io/people/yongli-shan.html) |
+| Shicheng Guo | Program Lead | — | CABS · DS4CABS | [@Shicheng-Guo](https://github.com/Shicheng-Guo) | — | [View](https://ds4cabs.github.io/people/shicheng-guo.html) |
+| Baixue Zhang (Doris) | Admin & Mentor | — | — | [@DorisTheChef](https://github.com/DorisTheChef) | [Profile](https://www.linkedin.com/in/baixue-doris-zhang-2302b4306/) | [View](https://ds4cabs.github.io/people/baixue-zhang.html) |
+| Yongli Shan | Admin & Mentor | — | — | [@YongliShan](https://github.com/YongliShan) | [Profile](https://www.linkedin.com/in/yongli-shan-3aa99235/) | [View](https://ds4cabs.github.io/people/yongli-shan.html) |
 | Andrews Acheampong | Mentor | — | — | [@AcheampongAndy](https://github.com/AcheampongAndy) | [Profile](https://www.linkedin.com/in/andrews-acheampong-a889aa195) | [View](https://ds4cabs.github.io/people/andrews-acheampong.html) |
 | Fan Wang, PhD | Mentor | — | — | [@FanWang0216](https://github.com/FanWang0216) | — | [View](https://ds4cabs.github.io/people/fan-wang.html) |
 | Mahdi Akbarzadeh, Ph.D. | Mentor | — | — | [@akbarzadehms](https://github.com/akbarzadehms) | — | [View](https://ds4cabs.github.io/people/mahdi-akbarzadeh.html) |
 | Rakesh Ramakrishna Pai | Mentor | — | — | [@developer-rpai](https://github.com/developer-rpai) | — | [View](https://ds4cabs.github.io/people/rakesh-pai.html) |
 | Aaron Wu | Intern | 2026 | Currently a second year undergraduate student at Northeastern University pursuing a degree of a combined major of Data Science and Psychology | [@aaron123-dev](https://github.com/aaron123-dev) | [Profile](https://www.linkedin.com/in/aaron-wu-10a9403a9) | [View](https://ds4cabs.github.io/people/aaron-wu.html) |
-| Anagha Gardane | Intern | 2026 | Student/Jobseeker MS from University of Delaware | — | [Profile](https://www.linkedin.com/in/93006b68/) | [View](https://ds4cabs.github.io/people/anagha-gardane.html) |
+| Anagha Gardane | Intern | 2026 | Student/Jobseeker MS from University of Delaware | [@angdata09](https://github.com/angdata09) | [Profile](https://www.linkedin.com/in/93006b68/) | [View](https://ds4cabs.github.io/people/anagha-gardane.html) |
 | Beyza Yoruk | Intern | 2026 | Undergraduate Student & Researcher, Muğla Sıtkı Koçman University | [@beyzolog](https://github.com/beyzolog) | [Profile](https://www.linkedin.com/in/beyza-y%C3%B6r%C3%BCk-0a118b337/) | [View](https://ds4cabs.github.io/people/beyza-yoruk.html) |
 | Chang Li | Intern | 2026 | M.S. Statistics Student, San José State University | [@Chang-Lii](https://github.com/Chang-Lii) | [Profile](https://www.linkedin.com/in/chang-li-b56a06396) | [View](https://ds4cabs.github.io/people/chang-li.html) |
 | Chengxi Zhang | Intern | 2026 | Graduate student at GT | [@AngryMonsta](https://github.com/AngryMonsta) | [Profile](https://linkedin.com/in/chengxizhang) | [View](https://ds4cabs.github.io/people/chengxi-zhang.html) |
 | Chin Hung Lin | Intern | 2026 | Graduate student at UC Davis | [@chinhunglin0-ctrl](https://github.com/chinhunglin0-ctrl) | [Profile](https://www.linkedin.com/in/chin-hung-lin-407362195) | [View](https://ds4cabs.github.io/people/chin-hung-lin.html) |
 | Christina Fu | Intern | 2026 | Recent BS in Biology graduate from Emory University | [@christinawfu](https://github.com/christinawfu) | [Profile](https://www.linkedin.com/in/christina-w-fu) | [View](https://ds4cabs.github.io/people/christina-fu.html) |
-| Endeshaw Assefa Derso | Intern | 2026 | PostDOc, University of Mlano-Bicocca | — | [Profile](https://www.linkedin.com/in/endeshaw-assefa-d-2363a3132/) | [View](https://ds4cabs.github.io/people/endeshaw-assefa-derso.html) |
+| Endeshaw Assefa Derso | Intern | 2026 | PostDOc, University of Mlano-Bicocca | No GitHub account provided | [Profile](https://www.linkedin.com/in/endeshaw-assefa-d-2363a3132/) | [View](https://ds4cabs.github.io/people/endeshaw-assefa-derso.html) |
 | Hubert Chen | Intern | 2026 | Vanderbilt University | [@hubertchen2020](https://github.com/hubertchen2020) | [Profile](https://www.linkedin.com/in/hubertychen/) | [View](https://ds4cabs.github.io/people/hubert-chen.html) |
 | Ivan Yu | Intern | 2026 | Student -USFCA | [@dataByIvan](https://github.com/dataByIvan) | [Profile](https://www.linkedin.com/in/ivan-yu-a25a32334/) | [View](https://ds4cabs.github.io/people/ivan-yu.html) |
 | Jason Zhou | Intern | 2026 | UCSC undergraduate student | [@Jason-5678](https://github.com/Jason-5678) | [Profile](https://www.linkedin.com/in/jason三) | [View](https://ds4cabs.github.io/people/jason-zhou.html) |
@@ -31,7 +31,7 @@ Permanent profiles for everyone who has engaged with the program across years an
 | Natalie Huang | Intern | 2026 | Undergraduate Student at University of California Davis | [@nath1012](https://github.com/nath1012) | [Profile](https://www.linkedin.com/in/natalie-huang-682818342) | [View](https://ds4cabs.github.io/people/natalie-huang.html) |
 | Reuben N Addison | Intern | 2026 | Assistant Professor, DePauw University | [@reubebe](https://github.com/reubebe) | [Profile](https://www.linkedin.com/in/reuben-newton-addison-ph-d-04394870/) | [View](https://ds4cabs.github.io/people/reuben-addison.html) |
 | Shawn Phan | Intern | 2026 | Data Science Student, University of San Francisco | [@spphan](https://github.com/spphan) | [Profile](https://www.linkedin.com/in/shawnphan) | [View](https://ds4cabs.github.io/people/shawn-phan.html) |
-| Shucheng Cao | Intern | 2026 | PhD Candidate, McGill University | [@SchengC](https://github.com/SchengC) | [Profile](https://www.linkedin.com/in/shucheng-bangli-cao/) | [View](https://ds4cabs.github.io/people/shucheng-cao.html) |
+| Shucheng Cao | Intern | 2026 | PhD Candidate, McGill University | [@shuchengcaoxin](https://github.com/shuchengcaoxin) | [Profile](https://www.linkedin.com/in/shucheng-bangli-cao/) | [View](https://ds4cabs.github.io/people/shucheng-cao.html) |
 | Sicheng Chen | Intern | 2026 | BPharmSci (Advanced) Graduate, Monash University | [@SichengChen-web](https://github.com/SichengChen-web) | [Profile](https://www.linkedin.com/in/sicheng-c-899762306) | [View](https://ds4cabs.github.io/people/sicheng-chen.html) |
 | Tobias Lin | Intern | 2026 | Undergraduate Student | [@TobiasLin6](https://github.com/TobiasLin6) | [Profile](https://www.linkedin.com/in/tobias-lin/) | [View](https://ds4cabs.github.io/people/tobias-lin.html) |
 | Wendi Ma | Intern | 2026 | Graduate Student (University of Miami) | [@Wend1MMM](https://github.com/Wend1MMM) | [Profile](https://www.linkedin.com/in/wend1/) | [View](https://ds4cabs.github.io/people/wendi-ma.html) |
@@ -51,8 +51,8 @@ Permanent profiles for everyone who has engaged with the program across years an
 | Lily Niu | Intern | 2025 | Student, University of Pennsylvania | [@lilyniu88](https://github.com/lilyniu88/) | [Profile](https://www.linkedin.com/in/niulily/) | [View](https://ds4cabs.github.io/people/lily-niu.html) |
 | Sidharth Mallela | Intern | 2025 | Undergraduate Data Science, UC Berkeley | [@sidharth-05](https://github.com/sidharth-05) | [Profile](https://www.linkedin.com/in/sideveloper/) | [View](https://ds4cabs.github.io/people/sidharth-mallela.html) |
 | Sion Zhan | Intern | 2025 | Student, UC Davis | [@sszhan](https://github.com/sszhan) | [Profile](https://www.linkedin.com/in/sion-zhan-333137366/) | [View](https://ds4cabs.github.io/people/sion-zhan.html) |
-| Minji Kim | Intern | 2024 | UC Berkeley, Class of 2024 | — | [Profile](https://www.linkedin.com/in/minjik30/) | [View](https://ds4cabs.github.io/people/minji-kim.html) |
+| Minji Kim | Intern | 2024 | UC Berkeley, Class of 2024 | [@minjikim65](https://github.com/minjikim65) | [Profile](https://www.linkedin.com/in/minjik30/) | [View](https://ds4cabs.github.io/people/minji-kim.html) |
 | Mohamed Habib Abid | Program Applicant | 2026 | Computer Engineering student | [@mohamedhabibabid](https://github.com/mohamedhabibabid) | [Profile](https://www.linkedin.com/in/mohamedhabibabidd/) | [View](https://ds4cabs.github.io/people/mohamed-habib-abid.html) |
-| Nicole Lee | Program Applicant | 2026 | Student, Amador Valley High School | — | — | [View](https://ds4cabs.github.io/people/nicole-lee.html) |
+| Nicole Lee | Program Applicant | 2026 | Student, Amador Valley High School | GitHub account pending | — | [View](https://ds4cabs.github.io/people/nicole-lee.html) |
 
 > Generated from [`people.json`](../people.json). Private emails, locations, CVs, and internal application responses are not published.
