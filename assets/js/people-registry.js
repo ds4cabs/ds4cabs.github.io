@@ -14,6 +14,8 @@
     const active = list.filter(isActive);
     const leadership = active.filter(person => person.type === "leader");
     const mentors = active.filter(person => person.type === "mentor" || person.type === "admin");
+    const admins = active.filter(person => person.type === "admin");
+    const mentorOnly = active.filter(person => person.type === "mentor");
     const mentees = active.filter(person => person.type === "mentee" && person.year === activeYear);
 
     const years = [...new Set(
@@ -29,7 +31,7 @@
 
     return {
       homepage: { leadership, mentors, mentees },
-      mentorPage: { leadership, mentors },
+      mentorPage: { leadership, admins, mentors: mentorOnly },
       cohorts
     };
   }

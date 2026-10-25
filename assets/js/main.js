@@ -28,7 +28,7 @@
   }
   const peopleViews = registryApi
     ? registryApi.buildPeopleViews(people, cohort.year)
-    : { homepage: { leadership: [], mentors: [], mentees: [] }, mentorPage: { leadership: [], mentors: [] }, cohorts: {} };
+    : { homepage: { leadership: [], mentors: [], mentees: [] }, mentorPage: { leadership: [], admins: [], mentors: [] }, cohorts: {} };
 
   // Resolve a dotted path like "dates.window" against the current cohort.
   function resolvePath(obj, path) {
@@ -218,6 +218,7 @@
 
   // ---------- mentor page grids (rendered only if mount points exist) ----------
   renderPeople(peopleViews.mentorPage.leadership, "teamLeaderCards");
+  renderPeople(peopleViews.mentorPage.admins,      "teamAdminCards");
   renderPeople(peopleViews.mentorPage.mentors,    "teamMentorCards");
 
   // ---------- past cohort page (/cohort.html?year=YYYY) ----------

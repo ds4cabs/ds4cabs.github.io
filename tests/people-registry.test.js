@@ -19,7 +19,8 @@ test('buildPeopleViews derives every page roster from one registry', () => {
   assert.deepEqual(views.homepage.mentors.map(p => p.id), ['mentor', 'admin']);
   assert.deepEqual(views.homepage.mentees.map(p => p.id), ['mentee-2026']);
   assert.deepEqual(views.mentorPage.leadership.map(p => p.id), ['lead']);
-  assert.deepEqual(views.mentorPage.mentors.map(p => p.id), ['mentor', 'admin']);
+  assert.deepEqual(views.mentorPage.admins.map(p => p.id), ['admin']);
+  assert.deepEqual(views.mentorPage.mentors.map(p => p.id), ['mentor']);
   assert.deepEqual(Object.keys(views.cohorts), ['2025', '2026']);
   assert.deepEqual(views.cohorts[2025].map(p => p.id), ['mentee-2025']);
 });
@@ -36,6 +37,9 @@ test('the production registry contains every roster and profile page', () => {
   assert.equal(views.homepage.leadership.length, 3);
   assert.equal(views.homepage.mentors.length, 16);
   assert.equal(views.homepage.mentees.length, 30);
+  assert.equal(views.mentorPage.leadership.length, 3);
+  assert.equal(views.mentorPage.admins.length, 12);
+  assert.equal(views.mentorPage.mentors.length, 4);
   assert.equal(views.cohorts[2025].length, 22);
   assert.equal(views.cohorts[2024].length, 2);
 
@@ -55,6 +59,15 @@ test('the production registry contains every roster and profile page', () => {
     assert.ok(person.affiliation, `${person.name} is missing an affiliation`);
     assert.ok(person.github || person.github_status, `${person.name} is missing GitHub information`);
     assert.ok(person.linkedin || person.linkedin_status, `${person.name} is missing LinkedIn information`);
+  }
+
+  const currentMentors = people.filter(person => person.active !== false && ['leader', 'admin', 'mentor'].includes(person.type));
+  assert.equal(currentMentors.length, 19);
+  for (const person of currentMentors) {
+    assert.ok(person.affiliation, `${person.name} is missing a current professional affiliation`);
+    assert.match(person.linkedin || '', /^https:\/\/(www\.)?linkedin\.com\/in\//, `${person.name} is missing a LinkedIn profile`);
+    assert.equal(person.affiliation_source, person.linkedin, `${person.name} affiliation is not sourced to LinkedIn`);
+    assert.equal(person.affiliation_verified, '2026-10-25', `${person.name} affiliation lacks a verification date`);
   }
 });
 

@@ -4,9 +4,9 @@ Permanent profiles for everyone who has engaged with the program across years an
 
 | Person | Role | Year | Affiliation | GitHub | LinkedIn | Profile |
 |---|---|---|---|---|---|---|
-| Shicheng Guo | Program Lead | 2026 | CABS · DS4CABS | [@Shicheng-Guo](https://github.com/Shicheng-Guo) | [Profile](https://www.linkedin.com/in/shg047/) | [View](https://ds4cabs.github.io/people/shicheng-guo.html) |
-| Baixue Zhang (Doris) | Admin & Mentor | 2026 | San Jose State University · CABS/DS4CABS | [@DorisTheChef](https://github.com/DorisTheChef) | [Profile](https://www.linkedin.com/in/baixue-doris-zhang-2302b4306/) | [View](https://ds4cabs.github.io/people/baixue-zhang.html) |
-| Yongli Shan | Admin & Mentor | 2026 | CABS · DS4CABS | [@YongliShan](https://github.com/YongliShan) | [Profile](https://www.linkedin.com/in/yongli-shan-3aa99235/) | [View](https://ds4cabs.github.io/people/yongli-shan.html) |
+| Shicheng Guo | Program Lead | 2026 | Arrowhead Pharmaceuticals | [@Shicheng-Guo](https://github.com/Shicheng-Guo) | [Profile](https://www.linkedin.com/in/shg047/) | [View](https://ds4cabs.github.io/people/shicheng-guo.html) |
+| Baixue Zhang (Doris) | Admin & Mentor | 2026 | San José State University | [@DorisTheChef](https://github.com/DorisTheChef) | [Profile](https://www.linkedin.com/in/baixue-doris-zhang-2302b4306/) | [View](https://ds4cabs.github.io/people/baixue-zhang.html) |
+| Yongli Shan | Admin & Mentor | 2026 | Stealth-stage biotechnology company | [@YongliShan](https://github.com/YongliShan) | [Profile](https://www.linkedin.com/in/yongli-shan-3aa99235/) | [View](https://ds4cabs.github.io/people/yongli-shan.html) |
 | Andrews Acheampong | Mentor | 2026 | Kwame Nkrumah University of Science and Technology (KNUST) | [@AcheampongAndy](https://github.com/AcheampongAndy) | [Profile](https://www.linkedin.com/in/andrews-acheampong-a889aa195) | [View](https://ds4cabs.github.io/people/andrews-acheampong.html) |
 | Fan Wang, PhD | Mentor | 2026 | Department of Biostatistics, Columbia University | [@FanWang0216](https://github.com/FanWang0216) | [Profile](https://www.linkedin.com/in/fan-wang-377019226) | [View](https://ds4cabs.github.io/people/fan-wang.html) |
 | Mahdi Akbarzadeh, Ph.D. | Mentor | 2026 | Research Institute for Endocrine Sciences, Shahid Beheshti University of Medical Sciences | [@akbarzadehms](https://github.com/akbarzadehms) | [Profile](https://www.linkedin.com/in/mahdi-akbarzadeh-b488b324b) | [View](https://ds4cabs.github.io/people/mahdi-akbarzadeh.html) |
