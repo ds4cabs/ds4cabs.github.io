@@ -23,10 +23,10 @@ Standalone profiles for DS4CABS mentee members.
 | Jiayun Liang | 2025 | — | Ohio State University | — | [Profile](https://www.linkedin.com/in/jiayun-sophia-liang) | — | [`assets/js/projects.js`](../assets/js/projects.js) |
 | Jinhao Wang | 2025 | — | University of Michigan | — | [Profile](https://www.linkedin.com/in/wjhlang) | — | [`assets/js/projects.js`](../assets/js/projects.js) |
 | Jun Xiao | 2025 | — | McGill University | [@junxiao0601](https://github.com/junxiao0601) | [Profile](https://www.linkedin.com/in/%E4%BF%8A-%E8%90%A7-5a7883361/) | — | [`assets/js/projects.js`](../assets/js/projects.js) |
-| Lily Niu | 2025 | — | University of Pennsylvania | [@lilyniu88](https://github.com/lilyniu88) | [Profile](https://www.linkedin.com/in/lily-niu-87b6072a4/) | — | [`assets/js/projects.js`](../assets/js/projects.js) |
+| Lily Niu | 2025 | — | University of Pennsylvania | [@lilyniu88](https://github.com/lilyniu88) | [Profile](https://www.linkedin.com/in/niulily/) | — | [`assets/js/projects.js`](../assets/js/projects.js) |
 | Shujie Li | 2025 | — | Columbia University | — | [Profile](https://www.linkedin.com/in/shujie-li/) | — | [`assets/js/projects.js`](../assets/js/projects.js) |
 | Sidharth Mallela | 2025 | Data Science (undergraduate) | UC Berkeley | [@sidharth-05](https://github.com/sidharth-05) | [Profile](https://www.linkedin.com/in/sideveloper/) | — | [`assets/js/projects.js`](../assets/js/projects.js) |
-| Sion Zhan | 2025 | — | UC Davis | — | — | — | [`assets/js/projects.js`](../assets/js/projects.js) |
+| Sion Zhan | 2025 | — | UC Davis | — | [Profile](https://www.linkedin.com/in/sion-zhan-333137366/) | — | [`assets/js/projects.js`](../assets/js/projects.js) |
 | Tejhas Annamalai | 2025 | — | — | — | [Profile](https://www.linkedin.com/in/tejhasannamalai/) | — | [`assets/js/projects.js`](../assets/js/projects.js) |
 | Xiaolong Zheng | 2025 | — | — | [@RobertZheng050](https://github.com/RobertZheng050) | [Profile](https://www.linkedin.com/in/xiaolong-zheng-a87a94248/) | — | [`assets/js/projects.js`](../assets/js/projects.js) |
 | Linda Sun | 2024 | — | Cornell University (Class of 2026) | — | [Profile](https://www.linkedin.com/in/lindahuangsun/) | — | [`assets/js/projects.js`](../assets/js/projects.js) |
