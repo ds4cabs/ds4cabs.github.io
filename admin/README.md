@@ -8,12 +8,9 @@ Current program leadership and administrator directory. Permanent profile pages 
 | Sihong Zhou | Program Lead | Sutro Biopharma | — | [Profile](https://www.linkedin.com/in/sihong-zhou-0a5550b/) | — |
 | Liping Meng | Program Lead | Gilead Sciences | — | [Profile](https://www.linkedin.com/in/liping-meng) | — |
 | Baixue Zhang (Doris) | Admin & Mentor | San José State University | [@DorisTheChef](https://github.com/DorisTheChef) | [Profile](https://www.linkedin.com/in/baixue-doris-zhang-2302b4306/) | [View](https://ds4cabs.github.io/people/baixue-zhang.html) |
-| Quinn Leng | Admin & Mentor | Kylon | — | [Profile](https://www.linkedin.com/in/suanmiao) | — |
 | Yongli Shan | Admin & Mentor | Stealth-stage biotechnology company | [@YongliShan](https://github.com/YongliShan) | [Profile](https://www.linkedin.com/in/yongli-shan-3aa99235/) | [View](https://ds4cabs.github.io/people/yongli-shan.html) |
-| Ying Yang | Admin & Mentor | Cirsium Biosciences | — | [Profile](https://www.linkedin.com/in/yingyang2021) | — |
 | Zuolin Cheng | Admin & Mentor | Stanford University | — | [Profile](https://www.linkedin.com/in/zuolin-cheng-165a6530b) | — |
 | Yuntao Zhang | Admin & Mentor | Bristol Myers Squibb | — | [Profile](https://www.linkedin.com/in/yuntao4drugdiscovery) | — |
-| Alexander Wu | Admin & Mentor | Roche | — | [Profile](https://www.linkedin.com/in/alexanderwu7) | — |
 | Kay Tong | Admin & Mentor | N2N GXPS4U LLC · BioAuraGen | — | [Profile](https://www.linkedin.com/in/qualitywithkaytong) | — |
 | Lena Li | Admin & Mentor | California Department of Pesticide Regulation | — | [Profile](https://www.linkedin.com/in/lenayuanli) | — |
 | Zhiqing Wang | Admin & Mentor | 10x Genomics | — | [Profile](https://www.linkedin.com/in/zhiqing-wang-5a95b568) | — |

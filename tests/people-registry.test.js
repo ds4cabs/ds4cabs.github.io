@@ -38,8 +38,12 @@ test('the production registry contains every roster and profile page', () => {
   assert.equal(views.homepage.mentors.length, 16);
   assert.equal(views.homepage.mentees.length, 30);
   assert.equal(views.mentorPage.leadership.length, 3);
-  assert.equal(views.mentorPage.admins.length, 12);
-  assert.equal(views.mentorPage.mentors.length, 4);
+  assert.equal(views.mentorPage.admins.length, 9);
+  assert.equal(views.mentorPage.mentors.length, 7);
+  for (const name of ['Quinn Leng', 'Ying Yang', 'Alexander Wu']) {
+    assert.ok(views.mentorPage.mentors.some(person => person.name === name), `${name} is not in the mentor-only section`);
+    assert.ok(!views.mentorPage.admins.some(person => person.name === name), `${name} is still in the admin section`);
+  }
   assert.equal(views.cohorts[2025].length, 22);
   assert.equal(views.cohorts[2024].length, 2);
 
