@@ -25,6 +25,7 @@ META_FIELDS = {
     "ds4cabs-github": "github",
     "ds4cabs-github-status": "github_status",
     "ds4cabs-linkedin": "linkedin",
+    "ds4cabs-linkedin-status": "linkedin_status",
     "ds4cabs-headshot": "headshot",
     "ds4cabs-email": "email",
     "ds4cabs-interests": "interests",
@@ -188,8 +189,8 @@ def role_redirects(people: list[dict]) -> dict[Path, str]:
     return outputs
 
 
-def md_link(label: str, url: str | None) -> str:
-    return f"[{label}]({url})" if url else "—"
+def md_link(label: str, url: str | None, status: str | None = None) -> str:
+    return f"[{label}]({url})" if url else (status or "—")
 
 
 def github_link(url: str | None, status: str | None = None) -> str:
@@ -209,7 +210,7 @@ def table(headers: list[str], rows: list[list[str]], align_right: set[int] | Non
 
 
 def role_rows(entries: list[dict]) -> list[list[str]]:
-    return [[p["name"], p.get("role") or str(p["type"]).title(), p.get("affiliation") or "—", github_link(p.get("github"), p.get("github_status")), md_link("Profile", p.get("linkedin")), profile_link(p.get("profile"))] for p in entries]
+    return [[p["name"], p.get("role") or str(p["type"]).title(), p.get("affiliation") or "—", github_link(p.get("github"), p.get("github_status")), md_link("Profile", p.get("linkedin"), p.get("linkedin_status")), profile_link(p.get("profile"))] for p in entries]
 
 
 def directory_readme(title: str, description: str, rows: list[list[str]]) -> str:
@@ -235,8 +236,8 @@ def generate_readmes(people: list[dict]) -> dict[Path, str]:
         if profile and str(profile) not in seen_profiles:
             all_profiles.append(person)
             seen_profiles.add(str(profile))
-    people_rows = [[p["name"], p.get("role") or str(p["type"]).title(), str(p.get("year") or "—"), p.get("affiliation") or "—", github_link(p.get("github"), p.get("github_status")), md_link("Profile", p.get("linkedin")), profile_link(p.get("profile"))] for p in all_profiles]
-    mentee_rows = [[p["name"], str(p["year"]), p.get("major") or "—", p.get("affiliation") or "—", github_link(p.get("github"), p.get("github_status")), md_link("Profile", p.get("linkedin")), profile_link(p.get("profile"))] for p in mentees]
+    people_rows = [[p["name"], p.get("role") or str(p["type"]).title(), str(p.get("year") or "—"), p.get("affiliation") or "—", github_link(p.get("github"), p.get("github_status")), md_link("Profile", p.get("linkedin"), p.get("linkedin_status")), profile_link(p.get("profile"))] for p in all_profiles]
+    mentee_rows = [[p["name"], str(p["year"]), p.get("major") or "—", p.get("affiliation") or "—", github_link(p.get("github"), p.get("github_status")), md_link("Profile", p.get("linkedin"), p.get("linkedin_status")), profile_link(p.get("profile"))] for p in mentees]
     return {
         ROOT / "mentor" / "README.md": directory_readme(f"DS4CABS {year} Mentor Profiles", "Current mentor and admin directory.", role_rows(mentors)),
         ROOT / "admin" / "README.md": directory_readme(f"DS4CABS {year} Admin and Program Leadership", "Current program leadership and administrator directory.", role_rows(administrators)),

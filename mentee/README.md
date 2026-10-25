@@ -32,7 +32,7 @@ Current mentee directory. Permanent profile pages live in [`people/`](../people/
 | Yichen Dai | 2026 | Bechelor | Student | [@daiyichen27](https://github.com/daiyichen27) | [Profile](https://www.linkedin.com/in/yichen-dai-76849b326) | [View](https://ds4cabs.github.io/people/yichen-dai.html) |
 | Yifeng Liang | 2026 | Master | Epidemiology MPH Graduate, New York University | [@leungyeefong](https://github.com/leungyeefong) | [Profile](https://www.linkedin.com/in/yifeng-liang/) | [View](https://ds4cabs.github.io/people/yifeng-liang.html) |
 | Ying Shi | 2026 | Ph.D, Currently enrolled in the Georgia Tech Online Master of Science in Computer Science (OMSCS) program | N/A | [@yshi6125](https://github.com/yshi6125) | [Profile](https://www.linkedin.com/in/yingshi-research) | [View](https://ds4cabs.github.io/people/ying-shi.html) |
-| Yu-Jung Liang | 2026 | Master | master student/ UCSD | [@amberyliang](https://github.com/amberyliang) | — | [View](https://ds4cabs.github.io/people/yu-jung-liang.html) |
+| Yu-Jung Liang | 2026 | Master | master student/ UCSD | [@amberyliang](https://github.com/amberyliang) | [Profile](https://www.linkedin.com/in/ambery-liang-749368227/) | [View](https://ds4cabs.github.io/people/yu-jung-liang.html) |
 | Zechuan Shi | 2026 | Ph.D | PhD Candidate, UC Irvine | [@rootze](https://github.com/rootze) | [Profile](https://www.linkedin.com/in/zechuan-tristan-shi-55b21387/) | [View](https://ds4cabs.github.io/people/zechuan-shi.html) |
 
 > Generated from [`people.json`](../people.json) by `python3 scripts/generate_people_readmes.py`.

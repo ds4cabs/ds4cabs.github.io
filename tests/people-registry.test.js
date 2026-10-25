@@ -48,6 +48,14 @@ test('the production registry contains every roster and profile page', () => {
   const baixue = people.filter(person => person.name === 'Baixue Zhang (Doris)');
   assert.equal(baixue.length, 2);
   assert.ok(baixue.every(person => person.profile === 'people/baixue-zhang.html'));
+
+  const permanent = [...new Map(people.filter(person => person.profile).map(person => [person.profile, person])).values()];
+  for (const person of permanent) {
+    assert.ok(person.year, `${person.name} is missing a program year`);
+    assert.ok(person.affiliation, `${person.name} is missing an affiliation`);
+    assert.ok(person.github || person.github_status, `${person.name} is missing GitHub information`);
+    assert.ok(person.linkedin || person.linkedin_status, `${person.name} is missing LinkedIn information`);
+  }
 });
 
 test('every page that renders cards loads the people registry helper before main.js', () => {
@@ -97,11 +105,16 @@ test('projects.js contains cohort metadata but no duplicated person rosters', ()
 });
 
 test('role README files are generated from people.json', () => {
+  const fs = require('node:fs');
   const path = require('node:path');
   const { spawnSync } = require('node:child_process');
   const script = path.join(__dirname, '..', 'scripts', 'generate_people_readmes.py');
   const result = spawnSync('python3', [script, '--check'], { encoding: 'utf8' });
   assert.equal(result.status, 0, result.stdout + result.stderr);
+  const readme = fs.readFileSync(path.join(__dirname, '..', 'people', 'README.md'), 'utf8');
+  const dataRows = readme.split('\n').filter(line => /^\| [^|-]/.test(line) && !line.startsWith('| Person'));
+  assert.equal(dataRows.length, 50);
+  assert.ok(dataRows.every(line => !line.includes('| — |')), 'people table contains a silent blank cell');
 });
 
 test('people folder provides the template and every permanent profile carries registration metadata', () => {
