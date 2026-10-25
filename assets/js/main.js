@@ -1,6 +1,6 @@
 // DS4CABS — main.js
 // Renders project cards from window.DS4CABS_PROJECTS and people cards from
-// assets/data/people.json, then powers filtering, navigation, and themes.
+// the generated root people.json, then powers filtering, navigation, and themes.
 
 (async function () {
   const data = window.DS4CABS_PROJECTS || { featured: [], cohorts: {}, all: [], filters: [] };
@@ -17,7 +17,7 @@
   const cohort = pickCohort(data.cohorts);
   const registryApi = window.DS4CABS_PEOPLE_REGISTRY;
   const mainScriptUrl = new URL(document.currentScript.src);
-  const peopleUrl = new URL("../data/people.json", mainScriptUrl);
+  const peopleUrl = new URL("../../people.json", mainScriptUrl);
   let people = [];
   try {
     const response = await fetch(peopleUrl);

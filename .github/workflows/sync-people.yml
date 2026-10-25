@@ -1,0 +1,62 @@
+name: Sync people registry
+
+on:
+  pull_request:
+    paths:
+      - "mentor/*.html"
+      - "admin/*.html"
+      - "mentee/*.html"
+      - "assets/data/people-base.json"
+      - "scripts/generate_people_readmes.py"
+  push:
+    branches: [main]
+    paths:
+      - "mentor/*.html"
+      - "admin/*.html"
+      - "mentee/*.html"
+      - "assets/data/people-base.json"
+      - "scripts/generate_people_readmes.py"
+
+permissions:
+  contents: write
+
+jobs:
+  validate-profile-upload:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate profile metadata
+        run: python3 scripts/generate_people_readmes.py --validate
+
+  regenerate-directory:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Generate public registry and directory tables
+        run: python3 scripts/generate_people_readmes.py
+      - name: Test generated rosters
+        run: node --test tests/people-registry.test.js
+      - name: Commit generated files when needed
+        run: |
+          if git diff --quiet -- people.json mentor/README.md admin/README.md mentee/README.md people/README.md; then
+            echo "People directory is already current."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add people.json mentor/README.md admin/README.md mentee/README.md people/README.md
+          git commit -m "chore: regenerate people directory"
+          git push

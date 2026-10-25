@@ -17,13 +17,14 @@ workshops, and the 2026 summer intern cohort.
 ├── index.html                # main page
 ├── mentor.html               # mentors and administrators directory
 ├── cohort.html               # current and past mentee cohorts
-├── mentor/                   # standalone mentor profile pages
-├── admin/                    # admin and program-lead profile pages
-├── mentee/                   # standalone mentee profile pages
+├── people.json               # generated public registry used by the website
+├── mentor/                   # mentor profiles + upload template
+├── admin/                    # admin/program-lead profiles + upload template
+├── mentee/                   # mentee profiles + upload template
 ├── people/                   # legacy redirects for previously shared URLs
 ├── assets/
 │   ├── css/style.css         # all styling, theme variables, light/dark
-│   ├── data/people.json      # single source of truth for every person roster
+│   ├── data/people-base.json # records that do not yet have standalone pages
 │   └── js/
 │       ├── projects.js       # project catalog + cohort schedule metadata
 │       ├── people-registry.js# tested roster selectors
@@ -54,12 +55,16 @@ Store standalone profiles by role:
 - `admin/<name>.html`
 - `mentee/<name>.html`
 
-Add or update the person in [`assets/data/people.json`](assets/data/people.json).
-The homepage, Mentors page, and Cohorts page all derive their rosters from this
-registry. Use `type` (`leader`, `admin`, `mentor`, or `mentee`), set `year` for
-mentees, and set `profile` when a standalone profile exists.
+Contributors add a profile by copying `profile-template.html` inside the
+appropriate `mentor/`, `admin/`, or `mentee/` folder. Fill the visible page and
+the `ds4cabs-*` metadata in its `<head>`, then submit that one HTML file.
 
-Regenerate the role directory tables after editing the registry:
+The generator discovers the new page, infers its role from the folder, merges
+it with records that do not yet have pages, and rebuilds the root
+[`people.json`](people.json) registry. The homepage, Mentors page, Cohorts page,
+and role README tables all derive from that generated registry.
+
+The GitHub workflow performs this generation automatically after merge. To preview and validate locally:
 
 ```bash
 python3 scripts/generate_people_readmes.py
@@ -86,8 +91,8 @@ python3 -m http.server 8080
 - **Dark by default, light toggleable** — persisted via `localStorage`.
 - **One source of truth** for the project list lives in `projects.js`, so
   adding a new repo is a 4-line edit.
-- **One source of truth for people** lives in `assets/data/people.json`; every
-  roster and generated directory table is derived from it.
+- **One-file profile contributions** use standardized HTML metadata in the
+  `mentor/`, `admin/`, and `mentee/` folders; automation generates `people.json`.
 - **Accessible**: semantic landmarks, focusable controls, reduced-motion respected.
 
 ## License

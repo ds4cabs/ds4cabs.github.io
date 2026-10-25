@@ -3,7 +3,7 @@
 // Edit this file to add/update projects. The site reads from window.DS4CABS_PROJECTS.
 
 window.DS4CABS_PROJECTS = {
-  // People rosters live in assets/data/people.json.
+  // People rosters live in the generated root people.json.
   // This file now contains only project catalog and cohort schedule metadata.
 
   featured: [
@@ -77,10 +77,11 @@ window.DS4CABS_PROJECTS = {
   // The site automatically displays the highest year-key found in
   // `cohorts`. To roll over to a new year, just add a new entry
   // (e.g. `2027: { ... }`) and the page flips: titles, dates, key facts,
-  // and the people grids select matching entries from assets/data/people.json.
+  // and the people grids select matching entries from people.json.
   //
   // Per-year blocks contain schedule/application metadata only. Add people,
-  // roles, years, profile links, and social links to assets/data/people.json.
+  // roles, years, profile links, and social links through profile HTML metadata
+  // or assets/data/people-base.json for records without standalone pages.
   // ====================================================================
   cohorts: {
     2026: {

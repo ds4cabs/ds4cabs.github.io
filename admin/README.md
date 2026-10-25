@@ -1,6 +1,6 @@
 # DS4CABS Admin and Program Leadership
 
-Evergreen DS4CABS program leadership and administrator directory.
+Evergreen DS4CABS program leadership and administrator directory. Add a profile by copying [`profile-template.html`](./profile-template.html), filling its `ds4cabs-*` metadata, and submitting the single HTML file.
 
 | Person | Role | Affiliation | GitHub | LinkedIn | Profile |
 |---|---|---|---|---|---|
@@ -20,12 +20,13 @@ Evergreen DS4CABS program leadership and administrator directory.
 | Le Cai | Admin & Mentor | — | — | — | — |
 | Jingyuan Huang | Admin & Mentor | — | — | — | — |
 
-> Generated from [`assets/data/people.json`](../assets/data/people.json). Run `python3 scripts/generate_people_readmes.py` after editing the registry.
+> Generated from [`people.json`](../people.json). Profile HTML metadata is registered automatically by `python3 scripts/generate_people_readmes.py`.
 
-## Local preview
+## Add your profile
 
-From the repository root:
+1. Copy `profile-template.html` in this `admin/` folder.
+2. Rename it to `firstname-lastname.html`.
+3. Fill the `ds4cabs-*` metadata and page content.
+4. Submit the one HTML file in a pull request.
 
-```bash
-python3 -m http.server 8000
-```
+The automation validates and registers the page after merge.

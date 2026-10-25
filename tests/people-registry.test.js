@@ -27,7 +27,7 @@ test('buildPeopleViews derives every page roster from one registry', () => {
 test('the production registry contains every roster and profile page', () => {
   const fs = require('node:fs');
   const path = require('node:path');
-  const registryPath = path.join(__dirname, '..', 'assets', 'data', 'people.json');
+  const registryPath = path.join(__dirname, '..', 'people.json');
   const people = JSON.parse(fs.readFileSync(registryPath, 'utf8'));
   const views = buildPeopleViews(people, 2026);
 
@@ -41,7 +41,7 @@ test('the production registry contains every roster and profile page', () => {
 
   const profileFiles = ['mentor', 'admin', 'mentee']
     .flatMap(directory => fs.readdirSync(path.join(__dirname, '..', directory))
-      .filter(name => name.endsWith('.html'))
+      .filter(name => name.endsWith('.html') && name !== 'profile-template.html')
       .map(name => `${directory}/${name}`));
   const registeredProfiles = people.map(person => person.profile).filter(Boolean);
   assert.deepEqual([...registeredProfiles].sort(), [...profileFiles].sort());
@@ -71,7 +71,8 @@ test('main.js loads people.json and builds page views from the registry', () => 
   const path = require('node:path');
   const source = fs.readFileSync(path.join(__dirname, '..', 'assets', 'js', 'main.js'), 'utf8');
 
-  assert.match(source, /assets\/data\/people\.json|\.\.\/data\/people\.json/);
+  assert.match(source, /new URL\("\.\.\/\.\.\/people\.json"/);
+  assert.doesNotMatch(source, /data\/people\.json/);
   assert.match(source, /buildPeopleViews\(/);
   assert.doesNotMatch(source, /cohort\.mentors|cohort\.interns|cohort\.leadership|data\.team/);
 });
@@ -98,4 +99,41 @@ test('role README files are generated from people.json', () => {
   const script = path.join(__dirname, '..', 'scripts', 'generate_people_readmes.py');
   const result = spawnSync('python3', [script, '--check'], { encoding: 'utf8' });
   assert.equal(result.status, 0, result.stdout + result.stderr);
+});
+
+test('role folders provide templates and every profile carries registration metadata', () => {
+  const fs = require('node:fs');
+  const path = require('node:path');
+  const root = path.join(__dirname, '..');
+
+  for (const directory of ['mentor', 'admin', 'mentee']) {
+    assert.ok(fs.existsSync(path.join(root, directory, 'profile-template.html')), `${directory} template is missing`);
+    const profiles = fs.readdirSync(path.join(root, directory)).filter(name => name.endsWith('.html') && name !== 'profile-template.html');
+    for (const name of profiles) {
+      const html = fs.readFileSync(path.join(root, directory, name), 'utf8');
+      assert.match(html, /<meta name="ds4cabs-name" content="[^"]+"\s*\/?>/, `${directory}/${name} is missing ds4cabs-name`);
+      assert.match(html, /<meta name="ds4cabs-role" content="[^"]+"\s*\/?>/, `${directory}/${name} is missing ds4cabs-role`);
+      if (directory === 'mentee') {
+        assert.match(html, /<meta name="ds4cabs-year" content="\d{4}"\s*\/?>/, `${directory}/${name} is missing ds4cabs-year`);
+      }
+    }
+  }
+
+  const script = path.join(root, 'scripts', 'generate_people_readmes.py');
+  const { spawnSync } = require('node:child_process');
+  const result = spawnSync('python3', [script, '--validate'], { encoding: 'utf8' });
+  assert.equal(result.status, 0, result.stdout + result.stderr);
+});
+
+test('GitHub Actions validates profile uploads and regenerates the public registry', () => {
+  const fs = require('node:fs');
+  const path = require('node:path');
+  const workflow = path.join(__dirname, '..', '.github', 'workflows', 'sync-people.yml');
+  assert.ok(fs.existsSync(workflow), 'sync-people workflow is missing');
+  const source = fs.readFileSync(workflow, 'utf8');
+  assert.match(source, /pull_request:/);
+  assert.match(source, /push:/);
+  assert.match(source, /generate_people_readmes\.py --validate/);
+  assert.match(source, /generate_people_readmes\.py/);
+  assert.match(source, /git push/);
 });
