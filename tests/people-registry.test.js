@@ -145,7 +145,7 @@ test('role README files are generated from people.json', () => {
   assert.equal(result.status, 0, result.stdout + result.stderr);
   const readme = fs.readFileSync(path.join(__dirname, '..', 'people', 'README.md'), 'utf8');
   const dataRows = readme.split('\n').filter(line => /^\| [^|-]/.test(line) && !line.startsWith('| Person'));
-  assert.equal(dataRows.length, 50);
+  assert.equal(dataRows.length, 51);
   assert.ok(dataRows.every(line => !line.includes('| — |')), 'people table contains a silent blank cell');
 });
 
@@ -156,7 +156,7 @@ test('people folder provides the template and every permanent profile carries re
   const directory = 'people';
   assert.ok(fs.existsSync(path.join(root, directory, 'profile-template.html')), 'people template is missing');
   const profiles = fs.readdirSync(path.join(root, directory)).filter(name => name.endsWith('.html') && name !== 'profile-template.html');
-  assert.equal(profiles.length, 50);
+  assert.equal(profiles.length, 51);
   for (const name of profiles) {
     const html = fs.readFileSync(path.join(root, directory, name), 'utf8');
     assert.match(html, /<meta name="ds4cabs-name" content="[^"]+"\s*\/?>/, `${directory}/${name} is missing ds4cabs-name`);
@@ -177,7 +177,7 @@ test('current-year role folders contain generated redirects to permanent people 
   const fs = require('node:fs');
   const path = require('node:path');
   const root = path.join(__dirname, '..');
-  const expected = { mentor: 6, admin: 3, mentee: 30 };
+  const expected = { mentor: 7, admin: 4, mentee: 30 };
   for (const [directory, count] of Object.entries(expected)) {
     const files = fs.readdirSync(path.join(root, directory)).filter(name => name.endsWith('.html') && name !== 'profile-template.html');
     assert.equal(files.length, count, `${directory} redirect count`);
