@@ -34,5 +34,8 @@ Current mentee directory. Permanent profile pages live in [`people/`](../people/
 | Ying Shi | 2026 | Ph.D, Currently enrolled in the Georgia Tech Online Master of Science in Computer Science (OMSCS) program | N/A | [@yshi6125](https://github.com/yshi6125) | [Profile](https://www.linkedin.com/in/yingshi-research) | [View](https://ds4cabs.github.io/people/ying-shi.html) |
 | Yu-Jung Liang | 2026 | Master | master student/ UCSD | [@amberyliang](https://github.com/amberyliang) | [Profile](https://www.linkedin.com/in/ambery-liang-749368227/) | [View](https://ds4cabs.github.io/people/yu-jung-liang.html) |
 | Zechuan Shi | 2026 | Ph.D | PhD Candidate, UC Irvine | [@rootze](https://github.com/rootze) | [Profile](https://www.linkedin.com/in/zechuan-tristan-shi-55b21387/) | [View](https://ds4cabs.github.io/people/zechuan-shi.html) |
+| Akshaya Marri | 2026 | B.Tech Biotechnology | Biotechnology undergraduate | [@marriakshaya](https://github.com/marriakshaya) | [Profile](https://www.linkedin.com/in/akshayamarri) | [View](https://ds4cabs.github.io/people/akshaya-marri.html) |
+| Esi Twi Tawiah | 2026 | Mathematics and Computer Science | University of Ghana | [@Esi-Twi](https://github.com/Esi-Twi) | [Profile](https://www.linkedin.com/in/esi-twi-tawiah) | [View](https://ds4cabs.github.io/people/esi-twi-tawiah.html) |
+| Ziwei He | 2026 | PhD student in Biomedical Engineering | McGill University | [@David-He-1998](https://github.com/David-He-1998) | [Profile](https://www.linkedin.com/in/ziwei-he-639a383a4/) | [View](https://ds4cabs.github.io/people/ziwei-he.html) |
 
 > Generated from [`people.json`](../people.json) by `python3 scripts/generate_people_readmes.py`.

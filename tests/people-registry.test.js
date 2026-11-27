@@ -32,11 +32,11 @@ test('the production registry contains every roster and profile page', () => {
   const people = JSON.parse(fs.readFileSync(registryPath, 'utf8'));
   const views = buildPeopleViews(people, 2026);
 
-  assert.equal(people.length, 75);
-  assert.equal(new Set(people.map(person => person.id)).size, 75);
+  assert.equal(people.length, 78);
+  assert.equal(new Set(people.map(person => person.id)).size, people.length);
   assert.equal(views.homepage.leadership.length, 3);
   assert.equal(views.homepage.mentors.length, 16);
-  assert.equal(views.homepage.mentees.length, 30);
+  assert.equal(views.homepage.mentees.length, 33);
   assert.equal(views.mentorPage.leadership.length, 3);
   assert.equal(views.mentorPage.admins.length, 9);
   assert.equal(views.mentorPage.mentors.length, 7);
@@ -145,7 +145,7 @@ test('role README files are generated from people.json', () => {
   assert.equal(result.status, 0, result.stdout + result.stderr);
   const readme = fs.readFileSync(path.join(__dirname, '..', 'people', 'README.md'), 'utf8');
   const dataRows = readme.split('\n').filter(line => /^\| [^|-]/.test(line) && !line.startsWith('| Person'));
-  assert.equal(dataRows.length, 51);
+  assert.equal(dataRows.length, 54);
   assert.ok(dataRows.every(line => !line.includes('| — |')), 'people table contains a silent blank cell');
 });
 
@@ -156,7 +156,7 @@ test('people folder provides the template and every permanent profile carries re
   const directory = 'people';
   assert.ok(fs.existsSync(path.join(root, directory, 'profile-template.html')), 'people template is missing');
   const profiles = fs.readdirSync(path.join(root, directory)).filter(name => name.endsWith('.html') && name !== 'profile-template.html');
-  assert.equal(profiles.length, 51);
+  assert.equal(profiles.length, 54);
   for (const name of profiles) {
     const html = fs.readFileSync(path.join(root, directory, name), 'utf8');
     assert.match(html, /<meta name="ds4cabs-name" content="[^"]+"\s*\/?>/, `${directory}/${name} is missing ds4cabs-name`);
@@ -177,7 +177,7 @@ test('current-year role folders contain generated redirects to permanent people 
   const fs = require('node:fs');
   const path = require('node:path');
   const root = path.join(__dirname, '..');
-  const expected = { mentor: 7, admin: 4, mentee: 30 };
+  const expected = { mentor: 7, admin: 4, mentee: 33 };
   for (const [directory, count] of Object.entries(expected)) {
     const files = fs.readdirSync(path.join(root, directory)).filter(name => name.endsWith('.html') && name !== 'profile-template.html');
     assert.equal(files.length, count, `${directory} redirect count`);
@@ -199,4 +199,31 @@ test('GitHub Actions validates profile uploads and regenerates the public regist
   assert.match(source, /generate_people_readmes\.py --validate/);
   assert.match(source, /generate_people_readmes\.py/);
   assert.match(source, /git push/);
+});
+
+test('all three 2026 winter interns have public profiles and mentee shortcuts', () => {
+  const fs = require('node:fs');
+  const path = require('node:path');
+  const root = path.join(__dirname, '..');
+  const people = JSON.parse(fs.readFileSync(path.join(root, 'people.json'), 'utf8'));
+  const cohort = buildPeopleViews(people, 2026).cohorts[2026];
+  const expected = {
+    'akshaya-marri': 'Akshaya Marri',
+    'esi-twi-tawiah': 'Esi Twi Tawiah',
+    'ziwei-he': 'Ziwei He'
+  };
+  for (const [slug, name] of Object.entries(expected)) {
+    const profile = `people/${slug}.html`;
+    assert.ok(fs.existsSync(path.join(root, profile)), `${name} is missing a permanent profile`);
+    const person = cohort.find(record => record.profile === profile);
+    assert.ok(person, `${name} is not listed in the 2026 cohort`);
+    assert.equal(person.name, name);
+    assert.equal(person.role, 'Winter Intern');
+    assert.equal(person.email, undefined);
+    const html = fs.readFileSync(path.join(root, profile), 'utf8');
+    assert.match(html, /2026 Winter Intern/);
+    assert.doesNotMatch(html, /mailto:|drive\.google\.com|ds4cabs-email/);
+    const redirect = fs.readFileSync(path.join(root, 'mentee', `${slug}.html`), 'utf8');
+    assert.ok(redirect.includes(`url=../${profile}"`), `${name} shortcut points to the wrong profile`);
+  }
 });

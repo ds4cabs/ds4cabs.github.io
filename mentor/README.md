@@ -13,7 +13,7 @@ Current mentor and admin directory. Permanent profile pages live in [`people/`](
 | Rakesh Ramakrishna Pai | Mentor | Meta | [@developer-rpai](https://github.com/developer-rpai) | [Profile](https://www.linkedin.com/in/rakesh-pai/) | [View](https://ds4cabs.github.io/people/rakesh-pai.html) |
 | Ying Yang | Mentor | Cirsium Biosciences | — | [Profile](https://www.linkedin.com/in/yingyang2021) | — |
 | Zuolin Cheng | Admin & Mentor | Stanford University | — | [Profile](https://www.linkedin.com/in/zuolin-cheng-165a6530b) | — |
-| Yuntao Zhang | Admin & Mentor | Bristol Myers Squibb | — | [Profile](https://www.linkedin.com/in/yuntao4drugdiscovery) | — |
+| Yuntao Zhang | Admin & Mentor | Bristol Myers Squibb | [@yuntaozhang999](https://github.com/yuntaozhang999) | [Profile](https://www.linkedin.com/in/yuntao4drugdiscovery) | [View](https://ds4cabs.github.io/people/yuntao-zhang.html) |
 | Alexander Wu | Mentor | Roche | — | [Profile](https://www.linkedin.com/in/alexanderwu7) | — |
 | Kay Tong | Admin & Mentor | N2N GXPS4U LLC · BioAuraGen | — | [Profile](https://www.linkedin.com/in/qualitywithkaytong) | — |
 | Lena Li | Admin & Mentor | California Department of Pesticide Regulation | — | [Profile](https://www.linkedin.com/in/lenayuanli) | — |
